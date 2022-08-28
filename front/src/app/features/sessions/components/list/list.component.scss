@@ -1,0 +1,16 @@
+.list {
+  margin: 20px;
+
+  .items {
+    gap: 2rem;
+
+    .item {
+      min-width: 250px;
+
+      .picture {
+        max-width: 400px;
+        height: auto;
+      }
+    }
+  }
+}

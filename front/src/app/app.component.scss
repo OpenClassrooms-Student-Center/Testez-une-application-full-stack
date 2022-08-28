@@ -1,0 +1,11 @@
+.app {
+    .link {
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .link + .link {
+        margin-left: 10px;
+    }
+}
