@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { expect } from '@jest/globals';
 
-import { SessionApiService } from './session-api.service';
+import { SessionService } from './session.service';
 
-describe('SessionsService', () => {
-  let service: SessionApiService;
+describe('SessionService', () => {
+  let service: SessionService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SessionApiService);
+    service = TestBed.inject(SessionService);
   });
 
   it('should be created', () => {

@@ -1,0 +1,8372 @@
+{
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/polyfills.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/polyfills.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {},
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AAAA;;;;;;;;;;;;;;;;AAgBA;;;;AAIA;;;;;;;;;;;;;;;;;;;;;;;;AAwBA;;;AAGA,OAAO,SAAP,C,CAAmB;;AAGnB",
+      "names": [],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/polyfills.ts"
+      ],
+      "sourcesContent": [
+        "/**\n * This file includes polyfills needed by Angular and is loaded before the app.\n * You can add your own extra polyfills to this file.\n *\n * This file is divided into 2 sections:\n *   1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.\n *   2. Application imports. Files imported after ZoneJS that should be loaded before your main\n *      file.\n *\n * The current setup is for so-called \"evergreen\" browsers; the last versions of browsers that\n * automatically update themselves. This includes recent versions of Safari, Chrome (including\n * Opera), Edge on the desktop, and iOS and Chrome on mobile.\n *\n * Learn more in https://angular.io/guide/browser-support\n */\n\n/***************************************************************************************************\n * BROWSER POLYFILLS\n */\n\n/**\n * By default, zone.js will patch all possible macroTask and DomEvents\n * user can disable parts of macroTask/DomEvents patch by setting following flags\n * because those flags need to be set before `zone.js` being loaded, and webpack\n * will put import in the top of bundle, so user need to create a separate file\n * in this directory (for example: zone-flags.ts), and put the following flags\n * into that file, and then add the following code before importing zone.js.\n * import './zone-flags';\n *\n * The flags allowed in zone-flags.ts are listed here.\n *\n * The following flags will work for all browsers.\n *\n * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame\n * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick\n * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames\n *\n *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js\n *  with the following flag, it will bypass `zone.js` patch for IE/Edge\n *\n *  (window as any).__Zone_enable_cross_context_check = true;\n *\n */\n\n/***************************************************************************************************\n * Zone JS is required by default for Angular itself.\n */\nimport 'zone.js';  // Included with Angular CLI.\n\n\n/***************************************************************************************************\n * APPLICATION IMPORTS\n */\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "9a3b81ed204555d90d1659e7f003a554453c5c8b"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/session.service.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/session.service.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 41
+        },
+        "end": {
+          "line": 42,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 6,
+          "column": 6
+        },
+        "end": {
+          "line": 6,
+          "column": 28
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 6
+        },
+        "end": {
+          "line": 7,
+          "column": 64
+        }
+      },
+      "3": {
+        "start": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 49
+        }
+      },
+      "4": {
+        "start": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 37
+        }
+      },
+      "5": {
+        "start": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 27
+        }
+      },
+      "6": {
+        "start": {
+          "line": 17,
+          "column": 6
+        },
+        "end": {
+          "line": 17,
+          "column": 18
+        }
+      },
+      "7": {
+        "start": {
+          "line": 21,
+          "column": 6
+        },
+        "end": {
+          "line": 21,
+          "column": 42
+        }
+      },
+      "8": {
+        "start": {
+          "line": 22,
+          "column": 6
+        },
+        "end": {
+          "line": 22,
+          "column": 28
+        }
+      },
+      "9": {
+        "start": {
+          "line": 23,
+          "column": 6
+        },
+        "end": {
+          "line": 23,
+          "column": 18
+        }
+      },
+      "10": {
+        "start": {
+          "line": 27,
+          "column": 6
+        },
+        "end": {
+          "line": 27,
+          "column": 47
+        }
+      },
+      "11": {
+        "start": {
+          "line": 32,
+          "column": 2
+        },
+        "end": {
+          "line": 34,
+          "column": 4
+        }
+      },
+      "12": {
+        "start": {
+          "line": 33,
+          "column": 4
+        },
+        "end": {
+          "line": 33,
+          "column": 39
+        }
+      },
+      "13": {
+        "start": {
+          "line": 36,
+          "column": 2
+        },
+        "end": {
+          "line": 40,
+          "column": 5
+        }
+      },
+      "14": {
+        "start": {
+          "line": 41,
+          "column": 2
+        },
+        "end": {
+          "line": 41,
+          "column": 24
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 3,
+            "column": 42
+          },
+          "end": {
+            "line": 3,
+            "column": 43
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 48
+          },
+          "end": {
+            "line": 42,
+            "column": 1
+          }
+        },
+        "line": 3
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 4
+          },
+          "end": {
+            "line": 5,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 18
+          },
+          "end": {
+            "line": 8,
+            "column": 5
+          }
+        },
+        "line": 5
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 4
+          },
+          "end": {
+            "line": 10,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 16
+          },
+          "end": {
+            "line": 12,
+            "column": 5
+          }
+        },
+        "line": 10
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 14,
+            "column": 4
+          },
+          "end": {
+            "line": 14,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 16
+          },
+          "end": {
+            "line": 18,
+            "column": 5
+          }
+        },
+        "line": 14
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": {
+          "start": {
+            "line": 20,
+            "column": 4
+          },
+          "end": {
+            "line": 20,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 13
+          },
+          "end": {
+            "line": 24,
+            "column": 5
+          }
+        },
+        "line": 20
+      },
+      "5": {
+        "name": "(anonymous_5)",
+        "decl": {
+          "start": {
+            "line": 26,
+            "column": 4
+          },
+          "end": {
+            "line": 26,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 26,
+            "column": 11
+          },
+          "end": {
+            "line": 28,
+            "column": 5
+          }
+        },
+        "line": 26
+      },
+      "6": {
+        "name": "SessionService_Factory",
+        "decl": {
+          "start": {
+            "line": 32,
+            "column": 33
+          },
+          "end": {
+            "line": 32,
+            "column": 55
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 32,
+            "column": 59
+          },
+          "end": {
+            "line": 34,
+            "column": 3
+          }
+        },
+        "line": 32
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 33,
+            "column": 16
+          },
+          "end": {
+            "line": 33,
+            "column": 35
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 33,
+              "column": 16
+            },
+            "end": {
+              "line": 33,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 33,
+              "column": 21
+            },
+            "end": {
+              "line": 33,
+              "column": 35
+            }
+          }
+        ],
+        "line": 33
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 24,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 4,
+      "12": 4,
+      "13": 4,
+      "14": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 4,
+      "2": 24,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 4
+    },
+    "b": {
+      "0": [
+        4,
+        4
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AACA,SAASA,eAAT,QAA4C,MAA5C;;AAMA,WAAaC,cAAb;EAAM,MAAOA,cAAP,CAAqB;IAH3BC;MAKS,gBAAW,KAAX;MAGC,uBAAkB,IAAIF,eAAJ,CAA6B,KAAKG,QAAlC,CAAlB;IAqBT;;IAnBQC,SAAS;MACd,OAAO,KAAKC,eAAL,CAAqBC,YAArB,EAAP;IACD;;IAEMC,KAAK,CAACC,IAAD,EAAyB;MACnC,KAAKC,kBAAL,GAA0BD,IAA1B;MACA,KAAKL,QAAL,GAAgB,IAAhB;MACA,KAAKO,IAAL;IACD;;IAEMC,MAAM;MACX,KAAKF,kBAAL,GAA0BG,SAA1B;MACA,KAAKT,QAAL,GAAgB,KAAhB;MACA,KAAKO,IAAL;IACD;;IAEOA,IAAI;MACV,KAAKL,eAAL,CAAqBK,IAArB,CAA0B,KAAKP,QAA/B;IACD;;EAzBwB;;;qBAAdF;EAAc;;;WAAdA;IAAcY,SAAdZ,cAAc;IAAAa,YAFb;;EAEd,OAAab,cAAb;AAAA",
+      "names": [
+        "BehaviorSubject",
+        "SessionService",
+        "constructor",
+        "isLogged",
+        "$isLogged",
+        "isLoggedSubject",
+        "asObservable",
+        "logIn",
+        "user",
+        "sessionInformation",
+        "next",
+        "logOut",
+        "undefined",
+        "factory",
+        "providedIn"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/session.service.ts"
+      ],
+      "sourcesContent": [
+        "import { Injectable } from '@angular/core';\nimport { BehaviorSubject, Observable } from 'rxjs';\nimport { SessionInformation } from '../interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SessionService {\n\n  public isLogged = false;\n  public sessionInformation: SessionInformation | undefined;\n\n  private isLoggedSubject = new BehaviorSubject<boolean>(this.isLogged);\n\n  public $isLogged(): Observable<boolean> {\n    return this.isLoggedSubject.asObservable();\n  }\n\n  public logIn(user: SessionInformation): void {\n    this.sessionInformation = user;\n    this.isLogged = true;\n    this.next();\n  }\n\n  public logOut(): void {\n    this.sessionInformation = undefined;\n    this.isLogged = false;\n    this.next();\n  }\n\n  private next(): void {\n    this.isLoggedSubject.next(this.isLogged);\n  }\n}\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "1c7580cd9bc2570f9011ad5aeff0fc893b7f5689"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/user.service.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/user.service.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 38
+        },
+        "end": {
+          "line": 30,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 6,
+          "column": 6
+        },
+        "end": {
+          "line": 6,
+          "column": 35
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 6
+        },
+        "end": {
+          "line": 7,
+          "column": 36
+        }
+      },
+      "3": {
+        "start": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 62
+        }
+      },
+      "4": {
+        "start": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 65
+        }
+      },
+      "5": {
+        "start": {
+          "line": 20,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
+          "column": 4
+        }
+      },
+      "6": {
+        "start": {
+          "line": 21,
+          "column": 4
+        },
+        "end": {
+          "line": 21,
+          "column": 62
+        }
+      },
+      "7": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 28,
+          "column": 5
+        }
+      },
+      "8": {
+        "start": {
+          "line": 29,
+          "column": 2
+        },
+        "end": {
+          "line": 29,
+          "column": 21
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 3,
+            "column": 39
+          },
+          "end": {
+            "line": 3,
+            "column": 40
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 45
+          },
+          "end": {
+            "line": 30,
+            "column": 1
+          }
+        },
+        "line": 3
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 4
+          },
+          "end": {
+            "line": 5,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 28
+          },
+          "end": {
+            "line": 8,
+            "column": 5
+          }
+        },
+        "line": 5
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 4
+          },
+          "end": {
+            "line": 10,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 16
+          },
+          "end": {
+            "line": 12,
+            "column": 5
+          }
+        },
+        "line": 10
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 14,
+            "column": 4
+          },
+          "end": {
+            "line": 14,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 15
+          },
+          "end": {
+            "line": 16,
+            "column": 5
+          }
+        },
+        "line": 14
+      },
+      "4": {
+        "name": "UserService_Factory",
+        "decl": {
+          "start": {
+            "line": 20,
+            "column": 30
+          },
+          "end": {
+            "line": 20,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 53
+          },
+          "end": {
+            "line": 22,
+            "column": 3
+          }
+        },
+        "line": 20
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 16
+          },
+          "end": {
+            "line": 21,
+            "column": 32
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 21,
+              "column": 16
+            },
+            "end": {
+              "line": 21,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 21,
+              "column": 21
+            },
+            "end": {
+              "line": 21,
+              "column": 32
+            }
+          }
+        ],
+        "line": 21
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 4,
+      "6": 0,
+      "7": 4,
+      "8": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": ";;AAQA,WAAaA,WAAb;EAAM,MAAOA,WAAP,CAAkB;IAItBC,YAAoBC,UAApB,EAA0C;MAAtB;MAFZ,mBAAc,UAAd;IAEuC;;IAExCC,OAAO,CAACC,EAAD,EAAW;MACvB,OAAO,KAAKF,UAAL,CAAgBG,GAAhB,CAA0B,GAAG,KAAKC,WAAW,IAAIF,EAAE,EAAnD,CAAP;IACD;;IAEMG,MAAM,CAACH,EAAD,EAAW;MACtB,OAAO,KAAKF,UAAL,CAAgBK,MAAhB,CAAuB,GAAG,KAAKD,WAAW,IAAIF,EAAE,EAAhD,CAAP;IACD;;EAZqB;;;qBAAXJ,aAAWQ;EAAA;;;WAAXR;IAAWS,SAAXT,WAAW;IAAAU,YAFV;;EAEd,OAAaV,WAAb;AAAA",
+      "names": [
+        "UserService",
+        "constructor",
+        "httpClient",
+        "getById",
+        "id",
+        "get",
+        "pathService",
+        "delete",
+        "i0",
+        "factory",
+        "providedIn"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/user.service.ts"
+      ],
+      "sourcesContent": [
+        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { User } from '../interfaces/user.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class UserService {\n\n  private pathService = 'api/user';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public getById(id: string): Observable<User> {\n    return this.httpClient.get<User>(`${this.pathService}/${id}`);\n  }\n\n  public delete(id: string): Observable<any> {\n    return this.httpClient.delete(`${this.pathService}/${id}`);\n  }\n}\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "c92e30d6390e2a3675b6f727ab47ea1437227f9e"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 3
+        }
+      },
+      "1": {
+        "start": {
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "line": 14,
+          "column": 33
+        }
+      },
+      "2": {
+        "start": {
+          "line": 15,
+          "column": 4
+        },
+        "end": {
+          "line": 15,
+          "column": 34
+        }
+      },
+      "3": {
+        "start": {
+          "line": 16,
+          "column": 4
+        },
+        "end": {
+          "line": 16,
+          "column": 22
+        }
+      },
+      "4": {
+        "start": {
+          "line": 21,
+          "column": 2
+        },
+        "end": {
+          "line": 39,
+          "column": 3
+        }
+      },
+      "5": {
+        "start": {
+          "line": 22,
+          "column": 16
+        },
+        "end": {
+          "line": 22,
+          "column": 37
+        }
+      },
+      "6": {
+        "start": {
+          "line": 24,
+          "column": 4
+        },
+        "end": {
+          "line": 24,
+          "column": 43
+        }
+      },
+      "7": {
+        "start": {
+          "line": 25,
+          "column": 4
+        },
+        "end": {
+          "line": 25,
+          "column": 39
+        }
+      },
+      "8": {
+        "start": {
+          "line": 26,
+          "column": 4
+        },
+        "end": {
+          "line": 26,
+          "column": 22
+        }
+      },
+      "9": {
+        "start": {
+          "line": 27,
+          "column": 4
+        },
+        "end": {
+          "line": 27,
+          "column": 39
+        }
+      },
+      "10": {
+        "start": {
+          "line": 28,
+          "column": 4
+        },
+        "end": {
+          "line": 32,
+          "column": 7
+        }
+      },
+      "11": {
+        "start": {
+          "line": 29,
+          "column": 6
+        },
+        "end": {
+          "line": 29,
+          "column": 28
+        }
+      },
+      "12": {
+        "start": {
+          "line": 30,
+          "column": 21
+        },
+        "end": {
+          "line": 30,
+          "column": 40
+        }
+      },
+      "13": {
+        "start": {
+          "line": 31,
+          "column": 6
+        },
+        "end": {
+          "line": 31,
+          "column": 45
+        }
+      },
+      "14": {
+        "start": {
+          "line": 33,
+          "column": 4
+        },
+        "end": {
+          "line": 33,
+          "column": 37
+        }
+      },
+      "15": {
+        "start": {
+          "line": 34,
+          "column": 4
+        },
+        "end": {
+          "line": 34,
+          "column": 27
+        }
+      },
+      "16": {
+        "start": {
+          "line": 35,
+          "column": 4
+        },
+        "end": {
+          "line": 35,
+          "column": 22
+        }
+      },
+      "17": {
+        "start": {
+          "line": 36,
+          "column": 4
+        },
+        "end": {
+          "line": 36,
+          "column": 37
+        }
+      },
+      "18": {
+        "start": {
+          "line": 37,
+          "column": 4
+        },
+        "end": {
+          "line": 37,
+          "column": 27
+        }
+      },
+      "19": {
+        "start": {
+          "line": 38,
+          "column": 4
+        },
+        "end": {
+          "line": 38,
+          "column": 26
+        }
+      },
+      "20": {
+        "start": {
+          "line": 43,
+          "column": 2
+        },
+        "end": {
+          "line": 65,
+          "column": 3
+        }
+      },
+      "21": {
+        "start": {
+          "line": 44,
+          "column": 4
+        },
+        "end": {
+          "line": 44,
+          "column": 43
+        }
+      },
+      "22": {
+        "start": {
+          "line": 45,
+          "column": 4
+        },
+        "end": {
+          "line": 45,
+          "column": 17
+        }
+      },
+      "23": {
+        "start": {
+          "line": 46,
+          "column": 4
+        },
+        "end": {
+          "line": 46,
+          "column": 30
+        }
+      },
+      "24": {
+        "start": {
+          "line": 47,
+          "column": 4
+        },
+        "end": {
+          "line": 47,
+          "column": 22
+        }
+      },
+      "25": {
+        "start": {
+          "line": 48,
+          "column": 4
+        },
+        "end": {
+          "line": 48,
+          "column": 30
+        }
+      },
+      "26": {
+        "start": {
+          "line": 49,
+          "column": 4
+        },
+        "end": {
+          "line": 49,
+          "column": 17
+        }
+      },
+      "27": {
+        "start": {
+          "line": 50,
+          "column": 4
+        },
+        "end": {
+          "line": 50,
+          "column": 22
+        }
+      },
+      "28": {
+        "start": {
+          "line": 51,
+          "column": 4
+        },
+        "end": {
+          "line": 51,
+          "column": 68
+        }
+      },
+      "29": {
+        "start": {
+          "line": 52,
+          "column": 4
+        },
+        "end": {
+          "line": 52,
+          "column": 72
+        }
+      },
+      "30": {
+        "start": {
+          "line": 53,
+          "column": 4
+        },
+        "end": {
+          "line": 53,
+          "column": 52
+        }
+      },
+      "31": {
+        "start": {
+          "line": 54,
+          "column": 4
+        },
+        "end": {
+          "line": 54,
+          "column": 33
+        }
+      },
+      "32": {
+        "start": {
+          "line": 55,
+          "column": 4
+        },
+        "end": {
+          "line": 55,
+          "column": 22
+        }
+      },
+      "33": {
+        "start": {
+          "line": 56,
+          "column": 4
+        },
+        "end": {
+          "line": 56,
+          "column": 18
+        }
+      },
+      "34": {
+        "start": {
+          "line": 57,
+          "column": 4
+        },
+        "end": {
+          "line": 57,
+          "column": 26
+        }
+      },
+      "35": {
+        "start": {
+          "line": 58,
+          "column": 4
+        },
+        "end": {
+          "line": 58,
+          "column": 22
+        }
+      },
+      "36": {
+        "start": {
+          "line": 59,
+          "column": 4
+        },
+        "end": {
+          "line": 59,
+          "column": 40
+        }
+      },
+      "37": {
+        "start": {
+          "line": 60,
+          "column": 4
+        },
+        "end": {
+          "line": 60,
+          "column": 35
+        }
+      },
+      "38": {
+        "start": {
+          "line": 61,
+          "column": 4
+        },
+        "end": {
+          "line": 61,
+          "column": 22
+        }
+      },
+      "39": {
+        "start": {
+          "line": 62,
+          "column": 4
+        },
+        "end": {
+          "line": 62,
+          "column": 18
+        }
+      },
+      "40": {
+        "start": {
+          "line": 63,
+          "column": 4
+        },
+        "end": {
+          "line": 63,
+          "column": 26
+        }
+      },
+      "41": {
+        "start": {
+          "line": 64,
+          "column": 4
+        },
+        "end": {
+          "line": 64,
+          "column": 26
+        }
+      },
+      "42": {
+        "start": {
+          "line": 67,
+          "column": 2
+        },
+        "end": {
+          "line": 81,
+          "column": 3
+        }
+      },
+      "43": {
+        "start": {
+          "line": 68,
+          "column": 19
+        },
+        "end": {
+          "line": 68,
+          "column": 37
+        }
+      },
+      "44": {
+        "start": {
+          "line": 69,
+          "column": 4
+        },
+        "end": {
+          "line": 69,
+          "column": 20
+        }
+      },
+      "45": {
+        "start": {
+          "line": 70,
+          "column": 4
+        },
+        "end": {
+          "line": 70,
+          "column": 112
+        }
+      },
+      "46": {
+        "start": {
+          "line": 71,
+          "column": 4
+        },
+        "end": {
+          "line": 71,
+          "column": 20
+        }
+      },
+      "47": {
+        "start": {
+          "line": 72,
+          "column": 4
+        },
+        "end": {
+          "line": 72,
+          "column": 60
+        }
+      },
+      "48": {
+        "start": {
+          "line": 73,
+          "column": 4
+        },
+        "end": {
+          "line": 73,
+          "column": 20
+        }
+      },
+      "49": {
+        "start": {
+          "line": 74,
+          "column": 4
+        },
+        "end": {
+          "line": 74,
+          "column": 45
+        }
+      },
+      "50": {
+        "start": {
+          "line": 75,
+          "column": 4
+        },
+        "end": {
+          "line": 75,
+          "column": 20
+        }
+      },
+      "51": {
+        "start": {
+          "line": 76,
+          "column": 4
+        },
+        "end": {
+          "line": 76,
+          "column": 46
+        }
+      },
+      "52": {
+        "start": {
+          "line": 77,
+          "column": 4
+        },
+        "end": {
+          "line": 77,
+          "column": 20
+        }
+      },
+      "53": {
+        "start": {
+          "line": 78,
+          "column": 4
+        },
+        "end": {
+          "line": 78,
+          "column": 93
+        }
+      },
+      "54": {
+        "start": {
+          "line": 79,
+          "column": 4
+        },
+        "end": {
+          "line": 79,
+          "column": 20
+        }
+      },
+      "55": {
+        "start": {
+          "line": 80,
+          "column": 4
+        },
+        "end": {
+          "line": 80,
+          "column": 94
+        }
+      },
+      "56": {
+        "start": {
+          "line": 84,
+          "column": 38
+        },
+        "end": {
+          "line": 148,
+          "column": 4
+        }
+      },
+      "57": {
+        "start": {
+          "line": 87,
+          "column": 6
+        },
+        "end": {
+          "line": 87,
+          "column": 27
+        }
+      },
+      "58": {
+        "start": {
+          "line": 88,
+          "column": 6
+        },
+        "end": {
+          "line": 88,
+          "column": 43
+        }
+      },
+      "59": {
+        "start": {
+          "line": 89,
+          "column": 6
+        },
+        "end": {
+          "line": 89,
+          "column": 37
+        }
+      },
+      "60": {
+        "start": {
+          "line": 90,
+          "column": 6
+        },
+        "end": {
+          "line": 90,
+          "column": 37
+        }
+      },
+      "61": {
+        "start": {
+          "line": 94,
+          "column": 6
+        },
+        "end": {
+          "line": 94,
+          "column": 121
+        }
+      },
+      "62": {
+        "start": {
+          "line": 94,
+          "column": 103
+        },
+        "end": {
+          "line": 94,
+          "column": 119
+        }
+      },
+      "63": {
+        "start": {
+          "line": 98,
+          "column": 6
+        },
+        "end": {
+          "line": 98,
+          "column": 28
+        }
+      },
+      "64": {
+        "start": {
+          "line": 102,
+          "column": 6
+        },
+        "end": {
+          "line": 108,
+          "column": 9
+        }
+      },
+      "65": {
+        "start": {
+          "line": 103,
+          "column": 8
+        },
+        "end": {
+          "line": 105,
+          "column": 11
+        }
+      },
+      "66": {
+        "start": {
+          "line": 106,
+          "column": 8
+        },
+        "end": {
+          "line": 106,
+          "column": 37
+        }
+      },
+      "67": {
+        "start": {
+          "line": 107,
+          "column": 8
+        },
+        "end": {
+          "line": 107,
+          "column": 36
+        }
+      },
+      "68": {
+        "start": {
+          "line": 113,
+          "column": 2
+        },
+        "end": {
+          "line": 115,
+          "column": 4
+        }
+      },
+      "69": {
+        "start": {
+          "line": 114,
+          "column": 4
+        },
+        "end": {
+          "line": 114,
+          "column": 184
+        }
+      },
+      "70": {
+        "start": {
+          "line": 117,
+          "column": 2
+        },
+        "end": {
+          "line": 146,
+          "column": 5
+        }
+      },
+      "71": {
+        "start": {
+          "line": 124,
+          "column": 6
+        },
+        "end": {
+          "line": 138,
+          "column": 7
+        }
+      },
+      "72": {
+        "start": {
+          "line": 125,
+          "column": 8
+        },
+        "end": {
+          "line": 125,
+          "column": 104
+        }
+      },
+      "73": {
+        "start": {
+          "line": 126,
+          "column": 8
+        },
+        "end": {
+          "line": 128,
+          "column": 11
+        }
+      },
+      "74": {
+        "start": {
+          "line": 127,
+          "column": 10
+        },
+        "end": {
+          "line": 127,
+          "column": 28
+        }
+      },
+      "75": {
+        "start": {
+          "line": 129,
+          "column": 8
+        },
+        "end": {
+          "line": 129,
+          "column": 41
+        }
+      },
+      "76": {
+        "start": {
+          "line": 130,
+          "column": 8
+        },
+        "end": {
+          "line": 130,
+          "column": 35
+        }
+      },
+      "77": {
+        "start": {
+          "line": 131,
+          "column": 8
+        },
+        "end": {
+          "line": 131,
+          "column": 28
+        }
+      },
+      "78": {
+        "start": {
+          "line": 132,
+          "column": 8
+        },
+        "end": {
+          "line": 132,
+          "column": 35
+        }
+      },
+      "79": {
+        "start": {
+          "line": 133,
+          "column": 8
+        },
+        "end": {
+          "line": 133,
+          "column": 41
+        }
+      },
+      "80": {
+        "start": {
+          "line": 134,
+          "column": 8
+        },
+        "end": {
+          "line": 134,
+          "column": 30
+        }
+      },
+      "81": {
+        "start": {
+          "line": 135,
+          "column": 8
+        },
+        "end": {
+          "line": 135,
+          "column": 49
+        }
+      },
+      "82": {
+        "start": {
+          "line": 136,
+          "column": 8
+        },
+        "end": {
+          "line": 136,
+          "column": 73
+        }
+      },
+      "83": {
+        "start": {
+          "line": 137,
+          "column": 8
+        },
+        "end": {
+          "line": 137,
+          "column": 30
+        }
+      },
+      "84": {
+        "start": {
+          "line": 140,
+          "column": 6
+        },
+        "end": {
+          "line": 143,
+          "column": 7
+        }
+      },
+      "85": {
+        "start": {
+          "line": 141,
+          "column": 8
+        },
+        "end": {
+          "line": 141,
+          "column": 25
+        }
+      },
+      "86": {
+        "start": {
+          "line": 142,
+          "column": 8
+        },
+        "end": {
+          "line": 142,
+          "column": 40
+        }
+      },
+      "87": {
+        "start": {
+          "line": 147,
+          "column": 2
+        },
+        "end": {
+          "line": 147,
+          "column": 21
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "MeComponent_div_10_p_6_Template",
+        "decl": {
+          "start": {
+            "line": 12,
+            "column": 9
+          },
+          "end": {
+            "line": 12,
+            "column": 40
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 50
+          },
+          "end": {
+            "line": 18,
+            "column": 1
+          }
+        },
+        "line": 12
+      },
+      "1": {
+        "name": "MeComponent_div_10_div_7_Template",
+        "decl": {
+          "start": {
+            "line": 20,
+            "column": 9
+          },
+          "end": {
+            "line": 20,
+            "column": 42
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 52
+          },
+          "end": {
+            "line": 40,
+            "column": 1
+          }
+        },
+        "line": 20
+      },
+      "2": {
+        "name": "MeComponent_div_10_div_7_Template_button_click_3_listener",
+        "decl": {
+          "start": {
+            "line": 28,
+            "column": 36
+          },
+          "end": {
+            "line": 28,
+            "column": 93
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 28,
+            "column": 96
+          },
+          "end": {
+            "line": 32,
+            "column": 5
+          }
+        },
+        "line": 28
+      },
+      "3": {
+        "name": "MeComponent_div_10_Template",
+        "decl": {
+          "start": {
+            "line": 42,
+            "column": 9
+          },
+          "end": {
+            "line": 42,
+            "column": 36
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 42,
+            "column": 46
+          },
+          "end": {
+            "line": 82,
+            "column": 1
+          }
+        },
+        "line": 42
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": {
+          "start": {
+            "line": 84,
+            "column": 39
+          },
+          "end": {
+            "line": 84,
+            "column": 40
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 84,
+            "column": 45
+          },
+          "end": {
+            "line": 148,
+            "column": 1
+          }
+        },
+        "line": 84
+      },
+      "5": {
+        "name": "(anonymous_5)",
+        "decl": {
+          "start": {
+            "line": 86,
+            "column": 4
+          },
+          "end": {
+            "line": 86,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 86,
+            "column": 66
+          },
+          "end": {
+            "line": 91,
+            "column": 5
+          }
+        },
+        "line": 86
+      },
+      "6": {
+        "name": "(anonymous_6)",
+        "decl": {
+          "start": {
+            "line": 93,
+            "column": 4
+          },
+          "end": {
+            "line": 93,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 93,
+            "column": 15
+          },
+          "end": {
+            "line": 95,
+            "column": 5
+          }
+        },
+        "line": 93
+      },
+      "7": {
+        "name": "(anonymous_7)",
+        "decl": {
+          "start": {
+            "line": 94,
+            "column": 95
+          },
+          "end": {
+            "line": 94,
+            "column": 96
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 94,
+            "column": 103
+          },
+          "end": {
+            "line": 94,
+            "column": 119
+          }
+        },
+        "line": 94
+      },
+      "8": {
+        "name": "(anonymous_8)",
+        "decl": {
+          "start": {
+            "line": 97,
+            "column": 4
+          },
+          "end": {
+            "line": 97,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 97,
+            "column": 11
+          },
+          "end": {
+            "line": 99,
+            "column": 5
+          }
+        },
+        "line": 97
+      },
+      "9": {
+        "name": "(anonymous_9)",
+        "decl": {
+          "start": {
+            "line": 101,
+            "column": 4
+          },
+          "end": {
+            "line": 101,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 101,
+            "column": 13
+          },
+          "end": {
+            "line": 109,
+            "column": 5
+          }
+        },
+        "line": 101
+      },
+      "10": {
+        "name": "(anonymous_10)",
+        "decl": {
+          "start": {
+            "line": 102,
+            "column": 94
+          },
+          "end": {
+            "line": 102,
+            "column": 95
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 102,
+            "column": 99
+          },
+          "end": {
+            "line": 108,
+            "column": 7
+          }
+        },
+        "line": 102
+      },
+      "11": {
+        "name": "MeComponent_Factory",
+        "decl": {
+          "start": {
+            "line": 113,
+            "column": 30
+          },
+          "end": {
+            "line": 113,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 113,
+            "column": 53
+          },
+          "end": {
+            "line": 115,
+            "column": 3
+          }
+        },
+        "line": 113
+      },
+      "12": {
+        "name": "MeComponent_Template",
+        "decl": {
+          "start": {
+            "line": 123,
+            "column": 23
+          },
+          "end": {
+            "line": 123,
+            "column": 43
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 123,
+            "column": 53
+          },
+          "end": {
+            "line": 144,
+            "column": 5
+          }
+        },
+        "line": 123
+      },
+      "13": {
+        "name": "MeComponent_Template_button_click_4_listener",
+        "decl": {
+          "start": {
+            "line": 126,
+            "column": 40
+          },
+          "end": {
+            "line": 126,
+            "column": 84
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 126,
+            "column": 87
+          },
+          "end": {
+            "line": 128,
+            "column": 9
+          }
+        },
+        "line": 126
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 2
+          },
+          "end": {
+            "line": 17,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 13,
+              "column": 2
+            },
+            "end": {
+              "line": 17,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 13,
+              "column": 2
+            },
+            "end": {
+              "line": 17,
+              "column": 3
+            }
+          }
+        ],
+        "line": 13
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 2
+          },
+          "end": {
+            "line": 39,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 21,
+              "column": 2
+            },
+            "end": {
+              "line": 39,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 21,
+              "column": 2
+            },
+            "end": {
+              "line": 39,
+              "column": 3
+            }
+          }
+        ],
+        "line": 21
+      },
+      "2": {
+        "loc": {
+          "start": {
+            "line": 43,
+            "column": 2
+          },
+          "end": {
+            "line": 65,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 43,
+              "column": 2
+            },
+            "end": {
+              "line": 65,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 43,
+              "column": 2
+            },
+            "end": {
+              "line": 65,
+              "column": 3
+            }
+          }
+        ],
+        "line": 43
+      },
+      "3": {
+        "loc": {
+          "start": {
+            "line": 67,
+            "column": 2
+          },
+          "end": {
+            "line": 81,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 67,
+              "column": 2
+            },
+            "end": {
+              "line": 81,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 67,
+              "column": 2
+            },
+            "end": {
+              "line": 81,
+              "column": 3
+            }
+          }
+        ],
+        "line": 67
+      },
+      "4": {
+        "loc": {
+          "start": {
+            "line": 114,
+            "column": 16
+          },
+          "end": {
+            "line": 114,
+            "column": 32
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 114,
+              "column": 16
+            },
+            "end": {
+              "line": 114,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 114,
+              "column": 21
+            },
+            "end": {
+              "line": 114,
+              "column": 32
+            }
+          }
+        ],
+        "line": 114
+      },
+      "5": {
+        "loc": {
+          "start": {
+            "line": 124,
+            "column": 6
+          },
+          "end": {
+            "line": 138,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 124,
+              "column": 6
+            },
+            "end": {
+              "line": 138,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 124,
+              "column": 6
+            },
+            "end": {
+              "line": 138,
+              "column": 7
+            }
+          }
+        ],
+        "line": 124
+      },
+      "6": {
+        "loc": {
+          "start": {
+            "line": 140,
+            "column": 6
+          },
+          "end": {
+            "line": 143,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 140,
+              "column": 6
+            },
+            "end": {
+              "line": 143,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 140,
+              "column": 6
+            },
+            "end": {
+              "line": 143,
+              "column": 7
+            }
+          }
+        ],
+        "line": 140
+      }
+    },
+    "s": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "30": 0,
+      "31": 0,
+      "32": 0,
+      "33": 0,
+      "34": 0,
+      "35": 0,
+      "36": 0,
+      "37": 0,
+      "38": 0,
+      "39": 0,
+      "40": 0,
+      "41": 0,
+      "42": 0,
+      "43": 0,
+      "44": 0,
+      "45": 0,
+      "46": 0,
+      "47": 0,
+      "48": 0,
+      "49": 0,
+      "50": 0,
+      "51": 0,
+      "52": 0,
+      "53": 0,
+      "54": 0,
+      "55": 0,
+      "56": 4,
+      "57": 0,
+      "58": 0,
+      "59": 0,
+      "60": 0,
+      "61": 0,
+      "62": 0,
+      "63": 0,
+      "64": 0,
+      "65": 0,
+      "66": 0,
+      "67": 0,
+      "68": 4,
+      "69": 0,
+      "70": 4,
+      "71": 0,
+      "72": 0,
+      "73": 0,
+      "74": 0,
+      "75": 0,
+      "76": 0,
+      "77": 0,
+      "78": 0,
+      "79": 0,
+      "80": 0,
+      "81": 0,
+      "82": 0,
+      "83": 0,
+      "84": 0,
+      "85": 0,
+      "86": 0,
+      "87": 4
+    },
+    "f": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 4,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0
+      ],
+      "2": [
+        0,
+        0
+      ],
+      "3": [
+        0,
+        0
+      ],
+      "4": [
+        0,
+        0
+      ],
+      "5": [
+        0,
+        0
+      ],
+      "6": [
+        0,
+        0
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": ";;;;;;;;;;;;;IAcQA;IAAkCA;IAAaA;;;;;;;;IAC/CA,+BAAqF,CAArF,EAAqF,GAArF;IACKA;IAAkBA;IACrBA;IAAuCA;MAAAA;MAAA;MAAA,OAASA,+BAAT;IAAiB,CAAjB;IACrCA;IAAUA;IAAMA;IAChBA;IAAkBA;IAAMA;;;;;;IAR9BA,+BAAiE,CAAjE,EAAiE,GAAjE;IACKA;;IAA0DA;IAC7DA;IAAGA;IAAuBA;IAC1BA;IACAA;IAOAA,+BAA0D,CAA1D,EAA0D,GAA1D,EAA0D,EAA1D,EAA0D,GAA1D;IAEQA;IAAWA;IAAKA;;IAAsCA;IAC5DA,2BAAG,EAAH,EAAG,GAAH;IAAMA;IAAaA;IAAKA;;IAAqCA;;;;;IAb5DA;IAAAA;IACAA;IAAAA;IACCA;IAAAA;IACEA;IAAAA;IASkBA;IAAAA;IACEA;IAAAA;;;;ACblC,WAAaC,WAAb;EAAM,MAAOA,WAAP,CAAkB;IAItBC,YAAoBC,MAApB,EACoBC,cADpB,EAEoBC,WAFpB,EAGoBC,WAHpB,EAG4C;MAHxB;MACA;MACA;MACA;IACnB;;IAEMC,QAAQ;MACb,KAAKD,WAAL,CACGE,OADH,CACW,KAAKJ,cAAL,CAAoBK,kBAApB,CAAwCC,EAAxC,CAA2CC,QAA3C,EADX,EAEGC,SAFH,CAEcC,IAAD,IAAgB,KAAKA,IAAL,GAAYA,IAFzC;IAGD;;IAEMC,IAAI;MACTC,MAAM,CAACC,OAAP,CAAeF,IAAf;IACD;;IAEMG,MAAM;MACX,KAAKX,WAAL,CACGW,MADH,CACU,KAAKb,cAAL,CAAoBK,kBAApB,CAAwCC,EAAxC,CAA2CC,QAA3C,EADV,EAEGC,SAFH,CAEcM,CAAD,IAAM;QACf,KAAKb,WAAL,CAAiBc,IAAjB,CAAsB,iCAAtB,EAAyD,OAAzD,EAAkE;UAAEC,QAAQ,EAAE;QAAZ,CAAlE;QACA,KAAKhB,cAAL,CAAoBiB,MAApB;QACA,KAAKlB,MAAL,CAAYmB,QAAZ,CAAqB,CAAC,GAAD,CAArB;MACD,CANH;IAOD;;EA5BqB;;;qBAAXrB,aAAWD;EAAA;;;UAAXC;IAAWsB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QDZxB3B,+BAAgB,CAAhB,EAAgB,UAAhB,EAAgB,CAAhB,EAAgB,gBAAhB,EAAgB,CAAhB,EAAgB,KAAhB,EAAgB,CAAhB,EAAgB,CAAhB,EAAgB,QAAhB,EAAgB,CAAhB;QAIgCA;UAAA,OAAS4B,UAAT;QAAe,CAAf;QACtB5B;QAAUA;QAAUA;QAEtBA;QAAIA;QAAgBA;QAGxBA;QACEA;QAiBFA;;;;QAjBQA;QAAAA;;;;;ECCZ,OAAaC,WAAb;AAAA",
+      "names": [
+        "i0",
+        "MeComponent",
+        "constructor",
+        "router",
+        "sessionService",
+        "matSnackBar",
+        "userService",
+        "ngOnInit",
+        "getById",
+        "sessionInformation",
+        "id",
+        "toString",
+        "subscribe",
+        "user",
+        "back",
+        "window",
+        "history",
+        "delete",
+        "_",
+        "open",
+        "duration",
+        "logOut",
+        "navigate",
+        "selectors",
+        "decls",
+        "vars",
+        "consts",
+        "template",
+        "ctx"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.html",
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.ts"
+      ],
+      "sourcesContent": [
+        "<div class=\"m3\">\n  <mat-card>\n    <mat-card-title>\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <button mat-icon-button (click)=\"back()\">\n          <mat-icon>arrow_back</mat-icon>\n        </button>\n        <h1>User information</h1>\n      </div>\n    </mat-card-title>\n    <mat-card-content>\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\n        <p>Email: {{ user.email }}</p>\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\n          <p>Delete my account:</p>\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\n            <mat-icon>delete</mat-icon>\n            <span class=\"ml1\">Detail</span>\n          </button>\n        </div>\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\n\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\n        </div>\n      </div>\n    </mat-card-content>\n  </mat-card>\n</div>\n",
+        "import { Component, OnInit } from '@angular/core';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { Router } from '@angular/router';\nimport { User } from '../../interfaces/user.interface';\nimport { SessionService } from '../../services/session.service';\nimport { UserService } from '../../services/user.service';\n\n@Component({\n  selector: 'app-me',\n  templateUrl: './me.component.html',\n  styleUrls: ['./me.component.scss']\n})\nexport class MeComponent implements OnInit {\n\n  public user: User | undefined;\n\n  constructor(private router: Router,\n              private sessionService: SessionService,\n              private matSnackBar: MatSnackBar,\n              private userService: UserService) {\n  }\n\n  public ngOnInit(): void {\n    this.userService\n      .getById(this.sessionService.sessionInformation!.id.toString())\n      .subscribe((user: User) => this.user = user);\n  }\n\n  public back(): void {\n    window.history.back();\n  }\n\n  public delete(): void {\n    this.userService\n      .delete(this.sessionService.sessionInformation!.id.toString())\n      .subscribe((_) => {\n        this.matSnackBar.open(\"Your account has been deleted !\", 'Close', { duration: 3000 });\n        this.sessionService.logOut();\n        this.router.navigate(['/']);\n      })\n  }\n\n}\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "cd1ce72cda39fe70df79d86da34755fc5b7e0d2b"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 2,
+          "column": 44
+        },
+        "end": {
+          "line": 25,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 5,
+          "column": 2
+        },
+        "end": {
+          "line": 7,
+          "column": 4
+        }
+      },
+      "2": {
+        "start": {
+          "line": 6,
+          "column": 4
+        },
+        "end": {
+          "line": 6,
+          "column": 42
+        }
+      },
+      "3": {
+        "start": {
+          "line": 9,
+          "column": 2
+        },
+        "end": {
+          "line": 23,
+          "column": 5
+        }
+      },
+      "4": {
+        "start": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 20,
+          "column": 7
+        }
+      },
+      "5": {
+        "start": {
+          "line": 17,
+          "column": 8
+        },
+        "end": {
+          "line": 17,
+          "column": 48
+        }
+      },
+      "6": {
+        "start": {
+          "line": 18,
+          "column": 8
+        },
+        "end": {
+          "line": 18,
+          "column": 41
+        }
+      },
+      "7": {
+        "start": {
+          "line": 19,
+          "column": 8
+        },
+        "end": {
+          "line": 19,
+          "column": 28
+        }
+      },
+      "8": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 27
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 2,
+            "column": 45
+          },
+          "end": {
+            "line": 2,
+            "column": 46
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 51
+          },
+          "end": {
+            "line": 25,
+            "column": 1
+          }
+        },
+        "line": 2
+      },
+      "1": {
+        "name": "NotFoundComponent_Factory",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 36
+          },
+          "end": {
+            "line": 5,
+            "column": 61
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 65
+          },
+          "end": {
+            "line": 7,
+            "column": 3
+          }
+        },
+        "line": 5
+      },
+      "2": {
+        "name": "NotFoundComponent_Template",
+        "decl": {
+          "start": {
+            "line": 15,
+            "column": 23
+          },
+          "end": {
+            "line": 15,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 59
+          },
+          "end": {
+            "line": 21,
+            "column": 5
+          }
+        },
+        "line": 15
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 16
+          },
+          "end": {
+            "line": 6,
+            "column": 38
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 6,
+              "column": 16
+            },
+            "end": {
+              "line": 6,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 6,
+              "column": 21
+            },
+            "end": {
+              "line": 6,
+              "column": 38
+            }
+          }
+        ],
+        "line": 6
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 6
+          },
+          "end": {
+            "line": 20,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 16,
+              "column": 6
+            },
+            "end": {
+              "line": 20,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 16,
+              "column": 6
+            },
+            "end": {
+              "line": 20,
+              "column": 7
+            }
+          }
+        ],
+        "line": 16
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 0,
+      "3": 4,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 0,
+      "2": 0
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": ";AAOA,WAAaA,iBAAb;EAAM,MAAOA,iBAAP,CAAwB;;;qBAAjBA;EAAiB;;;UAAjBA;IAAiBC;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCP9BC,+BAAqC,CAArC,EAAqC,IAArC;QACYA;QAAgBA;;;;;EDM5B,OAAaN,iBAAb;AAAA",
+      "names": [
+        "NotFoundComponent",
+        "selectors",
+        "decls",
+        "vars",
+        "consts",
+        "template",
+        "i0"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.ts",
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.html"
+      ],
+      "sourcesContent": [
+        "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-not-found',\n  templateUrl: './not-found.component.html',\n  styleUrls: ['./not-found.component.scss']\n})\nexport class NotFoundComponent {\n}\n",
+        "<div class=\"flex justify-center mt3\">\n        <h1>Page not found !</h1>\n</div>"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "fb1db802cda7c85e5a5621a8c60eef41cbe301d2"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/auth.guard.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/auth.guard.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 5,
+          "column": 36
+        },
+        "end": {
+          "line": 33,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 8,
+          "column": 6
+        },
+        "end": {
+          "line": 8,
+          "column": 27
+        }
+      },
+      "2": {
+        "start": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 43
+        }
+      },
+      "3": {
+        "start": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 7
+        }
+      },
+      "4": {
+        "start": {
+          "line": 14,
+          "column": 8
+        },
+        "end": {
+          "line": 14,
+          "column": 40
+        }
+      },
+      "5": {
+        "start": {
+          "line": 15,
+          "column": 8
+        },
+        "end": {
+          "line": 15,
+          "column": 21
+        }
+      },
+      "6": {
+        "start": {
+          "line": 18,
+          "column": 6
+        },
+        "end": {
+          "line": 18,
+          "column": 18
+        }
+      },
+      "7": {
+        "start": {
+          "line": 23,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
+          "column": 4
+        }
+      },
+      "8": {
+        "start": {
+          "line": 24,
+          "column": 4
+        },
+        "end": {
+          "line": 24,
+          "column": 88
+        }
+      },
+      "9": {
+        "start": {
+          "line": 27,
+          "column": 2
+        },
+        "end": {
+          "line": 31,
+          "column": 5
+        }
+      },
+      "10": {
+        "start": {
+          "line": 32,
+          "column": 2
+        },
+        "end": {
+          "line": 32,
+          "column": 19
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 37
+          },
+          "end": {
+            "line": 5,
+            "column": 38
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 43
+          },
+          "end": {
+            "line": 33,
+            "column": 1
+          }
+        },
+        "line": 5
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 7,
+            "column": 4
+          },
+          "end": {
+            "line": 7,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 40
+          },
+          "end": {
+            "line": 10,
+            "column": 5
+          }
+        },
+        "line": 7
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 12,
+            "column": 4
+          },
+          "end": {
+            "line": 12,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 18
+          },
+          "end": {
+            "line": 19,
+            "column": 5
+          }
+        },
+        "line": 12
+      },
+      "3": {
+        "name": "AuthGuard_Factory",
+        "decl": {
+          "start": {
+            "line": 23,
+            "column": 28
+          },
+          "end": {
+            "line": 23,
+            "column": 45
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 49
+          },
+          "end": {
+            "line": 25,
+            "column": 3
+          }
+        },
+        "line": 23
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 6
+          },
+          "end": {
+            "line": 16,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 13,
+              "column": 6
+            },
+            "end": {
+              "line": 16,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 13,
+              "column": 6
+            },
+            "end": {
+              "line": 16,
+              "column": 7
+            }
+          }
+        ],
+        "line": 13
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 16
+          },
+          "end": {
+            "line": 24,
+            "column": 30
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 24,
+              "column": 16
+            },
+            "end": {
+              "line": 24,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 24,
+              "column": 21
+            },
+            "end": {
+              "line": 24,
+              "column": 30
+            }
+          }
+        ],
+        "line": 24
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 4,
+      "8": 0,
+      "9": 4,
+      "10": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AACA,SAAqBA,MAArB,QAAkC,iBAAlC;;;;AAIA,WAAaC,SAAb;EAAM,MAAOA,SAAP,CAAgB;IAEpBC,YACUC,MADV,EAEUC,cAFV,EAEwC;MAD9B;MACA;IAET;;IAEMC,WAAW;MAChB,IAAI,CAAC,KAAKD,cAAL,CAAoBE,QAAzB,EAAmC;QACjC,KAAKH,MAAL,CAAYI,QAAZ,CAAqB,CAAC,OAAD,CAArB;QACA,OAAO,KAAP;MACD;;MACD,OAAO,IAAP;IACD;;EAdmB;;;qBAATN,WAASO;EAAA;;;WAATP;IAASQ,SAATR,SAAS;IAAAS,YADG;;EACzB,OAAaT,SAAb;AAAA",
+      "names": [
+        "Router",
+        "AuthGuard",
+        "constructor",
+        "router",
+        "sessionService",
+        "canActivate",
+        "isLogged",
+        "navigate",
+        "i0",
+        "factory",
+        "providedIn"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/auth.guard.ts"
+      ],
+      "sourcesContent": [
+        "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class AuthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (!this.sessionService.isLogged) {\n      this.router.navigate(['login']);\n      return false;\n    }\n    return true;\n  }\n}"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "2346bd7b83dc6466475cd81a46141c16bc2bec67"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/unauth.guard.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/unauth.guard.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 5,
+          "column": 38
+        },
+        "end": {
+          "line": 33,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 8,
+          "column": 6
+        },
+        "end": {
+          "line": 8,
+          "column": 27
+        }
+      },
+      "2": {
+        "start": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 43
+        }
+      },
+      "3": {
+        "start": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 7
+        }
+      },
+      "4": {
+        "start": {
+          "line": 14,
+          "column": 8
+        },
+        "end": {
+          "line": 14,
+          "column": 42
+        }
+      },
+      "5": {
+        "start": {
+          "line": 15,
+          "column": 8
+        },
+        "end": {
+          "line": 15,
+          "column": 21
+        }
+      },
+      "6": {
+        "start": {
+          "line": 18,
+          "column": 6
+        },
+        "end": {
+          "line": 18,
+          "column": 18
+        }
+      },
+      "7": {
+        "start": {
+          "line": 23,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
+          "column": 4
+        }
+      },
+      "8": {
+        "start": {
+          "line": 24,
+          "column": 4
+        },
+        "end": {
+          "line": 24,
+          "column": 90
+        }
+      },
+      "9": {
+        "start": {
+          "line": 27,
+          "column": 2
+        },
+        "end": {
+          "line": 31,
+          "column": 5
+        }
+      },
+      "10": {
+        "start": {
+          "line": 32,
+          "column": 2
+        },
+        "end": {
+          "line": 32,
+          "column": 21
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 39
+          },
+          "end": {
+            "line": 5,
+            "column": 40
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 45
+          },
+          "end": {
+            "line": 33,
+            "column": 1
+          }
+        },
+        "line": 5
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 7,
+            "column": 4
+          },
+          "end": {
+            "line": 7,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 40
+          },
+          "end": {
+            "line": 10,
+            "column": 5
+          }
+        },
+        "line": 7
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 12,
+            "column": 4
+          },
+          "end": {
+            "line": 12,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 18
+          },
+          "end": {
+            "line": 19,
+            "column": 5
+          }
+        },
+        "line": 12
+      },
+      "3": {
+        "name": "UnauthGuard_Factory",
+        "decl": {
+          "start": {
+            "line": 23,
+            "column": 30
+          },
+          "end": {
+            "line": 23,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 53
+          },
+          "end": {
+            "line": 25,
+            "column": 3
+          }
+        },
+        "line": 23
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 6
+          },
+          "end": {
+            "line": 16,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 13,
+              "column": 6
+            },
+            "end": {
+              "line": 16,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 13,
+              "column": 6
+            },
+            "end": {
+              "line": 16,
+              "column": 7
+            }
+          }
+        ],
+        "line": 13
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 16
+          },
+          "end": {
+            "line": 24,
+            "column": 32
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 24,
+              "column": 16
+            },
+            "end": {
+              "line": 24,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 24,
+              "column": 21
+            },
+            "end": {
+              "line": 24,
+              "column": 32
+            }
+          }
+        ],
+        "line": 24
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 0,
+      "5": 0,
+      "6": 4,
+      "7": 4,
+      "8": 4,
+      "9": 4,
+      "10": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4
+    },
+    "b": {
+      "0": [
+        0,
+        4
+      ],
+      "1": [
+        4,
+        4
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AACA,SAAqBA,MAArB,QAAkC,iBAAlC;;;;AAIA,WAAaC,WAAb;EAAM,MAAOA,WAAP,CAAkB;IAEtBC,YACUC,MADV,EAEUC,cAFV,EAEwC;MAD9B;MACA;IAET;;IAEMC,WAAW;MAChB,IAAI,KAAKD,cAAL,CAAoBE,QAAxB,EAAkC;QAChC,KAAKH,MAAL,CAAYI,QAAZ,CAAqB,CAAC,SAAD,CAArB;QACA,OAAO,KAAP;MACD;;MACD,OAAO,IAAP;IACD;;EAdqB;;;qBAAXN,aAAWO;EAAA;;;WAAXP;IAAWQ,SAAXR,WAAW;IAAAS,YADC;;EACzB,OAAaT,WAAb;AAAA",
+      "names": [
+        "Router",
+        "UnauthGuard",
+        "constructor",
+        "router",
+        "sessionService",
+        "canActivate",
+        "isLogged",
+        "navigate",
+        "i0",
+        "factory",
+        "providedIn"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/unauth.guard.ts"
+      ],
+      "sourcesContent": [
+        "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class UnauthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (this.sessionService.isLogged) {\n      this.router.navigate(['rentals']);\n      return false;\n    }\n    return true;\n  }\n}"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "5b8da90e39f22933f4fa8fd881d7fc357bae7576"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app-routing.module.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app-routing.module.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 8,
+          "column": 15
+        },
+        "end": {
+          "line": 26,
+          "column": 2
+        }
+      },
+      "1": {
+        "start": {
+          "line": 11,
+          "column": 22
+        },
+        "end": {
+          "line": 11,
+          "column": 83
+        }
+      },
+      "2": {
+        "start": {
+          "line": 11,
+          "column": 70
+        },
+        "end": {
+          "line": 11,
+          "column": 82
+        }
+      },
+      "3": {
+        "start": {
+          "line": 15,
+          "column": 22
+        },
+        "end": {
+          "line": 15,
+          "column": 95
+        }
+      },
+      "4": {
+        "start": {
+          "line": 15,
+          "column": 78
+        },
+        "end": {
+          "line": 15,
+          "column": 94
+        }
+      },
+      "5": {
+        "start": {
+          "line": 27,
+          "column": 43
+        },
+        "end": {
+          "line": 41,
+          "column": 4
+        }
+      },
+      "6": {
+        "start": {
+          "line": 30,
+          "column": 2
+        },
+        "end": {
+          "line": 32,
+          "column": 4
+        }
+      },
+      "7": {
+        "start": {
+          "line": 31,
+          "column": 4
+        },
+        "end": {
+          "line": 31,
+          "column": 41
+        }
+      },
+      "8": {
+        "start": {
+          "line": 34,
+          "column": 2
+        },
+        "end": {
+          "line": 36,
+          "column": 5
+        }
+      },
+      "9": {
+        "start": {
+          "line": 37,
+          "column": 2
+        },
+        "end": {
+          "line": 39,
+          "column": 5
+        }
+      },
+      "10": {
+        "start": {
+          "line": 40,
+          "column": 2
+        },
+        "end": {
+          "line": 40,
+          "column": 26
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 11,
+            "column": 16
+          },
+          "end": {
+            "line": 11,
+            "column": 17
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 22
+          },
+          "end": {
+            "line": 11,
+            "column": 83
+          }
+        },
+        "line": 11
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 11,
+            "column": 65
+          },
+          "end": {
+            "line": 11,
+            "column": 66
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 70
+          },
+          "end": {
+            "line": 11,
+            "column": 82
+          }
+        },
+        "line": 11
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 15,
+            "column": 16
+          },
+          "end": {
+            "line": 15,
+            "column": 17
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 22
+          },
+          "end": {
+            "line": 15,
+            "column": 95
+          }
+        },
+        "line": 15
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 15,
+            "column": 73
+          },
+          "end": {
+            "line": 15,
+            "column": 74
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 78
+          },
+          "end": {
+            "line": 15,
+            "column": 94
+          }
+        },
+        "line": 15
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": {
+          "start": {
+            "line": 27,
+            "column": 44
+          },
+          "end": {
+            "line": 27,
+            "column": 45
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 27,
+            "column": 50
+          },
+          "end": {
+            "line": 41,
+            "column": 1
+          }
+        },
+        "line": 27
+      },
+      "5": {
+        "name": "AppRoutingModule_Factory",
+        "decl": {
+          "start": {
+            "line": 30,
+            "column": 35
+          },
+          "end": {
+            "line": 30,
+            "column": 59
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 30,
+            "column": 63
+          },
+          "end": {
+            "line": 32,
+            "column": 3
+          }
+        },
+        "line": 30
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 31,
+            "column": 16
+          },
+          "end": {
+            "line": 31,
+            "column": 37
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 31,
+              "column": 16
+            },
+            "end": {
+              "line": 31,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 31,
+              "column": 21
+            },
+            "end": {
+              "line": 31,
+              "column": 37
+            }
+          }
+        ],
+        "line": 31
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 0,
+      "4": 0,
+      "5": 4,
+      "6": 4,
+      "7": 4,
+      "8": 4,
+      "9": 4,
+      "10": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 4,
+      "2": 0,
+      "3": 0,
+      "4": 4,
+      "5": 4
+    },
+    "b": {
+      "0": [
+        4,
+        4
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AACA,SAASA,YAAT,QAAqC,iBAArC;AACA,SAASC,WAAT,QAA4B,8BAA5B;AACA,SAASC,iBAAT,QAAkC,4CAAlC;AACA,SAASC,SAAT,QAA0B,qBAA1B;AACA,SAASC,WAAT,QAA4B,uBAA5B;;;AAEA,MAAMC,MAAM,GAAW,CACrB;EACEC,IAAI,EAAE,EADR;EAEEC,WAAW,EAAE,CAACH,WAAD,CAFf;EAGEI,YAAY,EAAE,MAAM,OAAO,6BAAP,EAAsCC,IAAtC,CAA2CC,CAAC,IAAIA,CAAC,CAACC,UAAlD;AAHtB,CADqB,EAMrB;EACEL,IAAI,EAAE,UADR;EAEEC,WAAW,EAAE,CAACJ,SAAD,CAFf;EAGEK,YAAY,EAAE,MAAM,OAAO,qCAAP,EAA8CC,IAA9C,CAAmDC,CAAC,IAAIA,CAAC,CAACE,cAA1D;AAHtB,CANqB,EAWrB;EACEN,IAAI,EAAE,IADR;EAEEC,WAAW,EAAE,CAACJ,SAAD,CAFf;EAGEU,SAAS,EAAEZ;AAHb,CAXqB,EAgBrB;EAAEK,IAAI,EAAE,KAAR;EAAeO,SAAS,EAAEX;AAA1B,CAhBqB,EAiBrB;EAAEI,IAAI,EAAE,IAAR;EAAcQ,UAAU,EAAE;AAA1B,CAjBqB,CAAvB;AAwBA,WAAaC,gBAAb;EAAM,MAAOA,gBAAP,CAAuB;;;qBAAhBA;EAAgB;;;UAAhBA;;;cAHDf,YAAY,CAACgB,OAAb,CAAqBX,MAArB,GACAL;;EAEZ,OAAae,gBAAb;AAAA",
+      "names": [
+        "RouterModule",
+        "MeComponent",
+        "NotFoundComponent",
+        "AuthGuard",
+        "UnauthGuard",
+        "routes",
+        "path",
+        "canActivate",
+        "loadChildren",
+        "then",
+        "m",
+        "AuthModule",
+        "SessionsModule",
+        "component",
+        "redirectTo",
+        "AppRoutingModule",
+        "forRoot"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app-routing.module.ts"
+      ],
+      "sourcesContent": [
+        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { MeComponent } from './components/me/me.component';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { AuthGuard } from './guards/auth.guard';\nimport { UnauthGuard } from './guards/unauth.guard';\n\nconst routes: Routes = [\n  {\n    path: '',\n    canActivate: [UnauthGuard],\n    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)\n  },\n  {\n    path: 'sessions',\n    canActivate: [AuthGuard],\n    loadChildren: () => import('./features/sessions/sessions.module').then(m => m.SessionsModule)\n  },\n  {\n    path: 'me',\n    canActivate: [AuthGuard],\n    component: MeComponent\n  },\n  { path: '404', component: NotFoundComponent },\n  { path: '**', redirectTo: '404' }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule {\n}\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "75882c59e0ba1deb60c90d44def4d81b31f6902b"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/services/auth.service.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/services/auth.service.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 38
+        },
+        "end": {
+          "line": 30,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 6,
+          "column": 6
+        },
+        "end": {
+          "line": 6,
+          "column": 35
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 6
+        },
+        "end": {
+          "line": 7,
+          "column": 36
+        }
+      },
+      "3": {
+        "start": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 83
+        }
+      },
+      "4": {
+        "start": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 77
+        }
+      },
+      "5": {
+        "start": {
+          "line": 20,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
+          "column": 4
+        }
+      },
+      "6": {
+        "start": {
+          "line": 21,
+          "column": 4
+        },
+        "end": {
+          "line": 21,
+          "column": 62
+        }
+      },
+      "7": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 28,
+          "column": 5
+        }
+      },
+      "8": {
+        "start": {
+          "line": 29,
+          "column": 2
+        },
+        "end": {
+          "line": 29,
+          "column": 21
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 3,
+            "column": 39
+          },
+          "end": {
+            "line": 3,
+            "column": 40
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 45
+          },
+          "end": {
+            "line": 30,
+            "column": 1
+          }
+        },
+        "line": 3
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 4
+          },
+          "end": {
+            "line": 5,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 28
+          },
+          "end": {
+            "line": 8,
+            "column": 5
+          }
+        },
+        "line": 5
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 4
+          },
+          "end": {
+            "line": 10,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 30
+          },
+          "end": {
+            "line": 12,
+            "column": 5
+          }
+        },
+        "line": 10
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 14,
+            "column": 4
+          },
+          "end": {
+            "line": 14,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 24
+          },
+          "end": {
+            "line": 16,
+            "column": 5
+          }
+        },
+        "line": 14
+      },
+      "4": {
+        "name": "AuthService_Factory",
+        "decl": {
+          "start": {
+            "line": 20,
+            "column": 30
+          },
+          "end": {
+            "line": 20,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 53
+          },
+          "end": {
+            "line": 22,
+            "column": 3
+          }
+        },
+        "line": 20
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 16
+          },
+          "end": {
+            "line": 21,
+            "column": 32
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 21,
+              "column": 16
+            },
+            "end": {
+              "line": 21,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 21,
+              "column": 21
+            },
+            "end": {
+              "line": 21,
+              "column": 32
+            }
+          }
+        ],
+        "line": 21
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 0,
+      "4": 0,
+      "5": 4,
+      "6": 4,
+      "7": 4,
+      "8": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 4,
+      "2": 0,
+      "3": 0,
+      "4": 4
+    },
+    "b": {
+      "0": [
+        4,
+        4
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": ";;AAWA,WAAaA,WAAb;EAAM,MAAOA,WAAP,CAAkB;IAItBC,YAAoBC,UAApB,EAA0C;MAAtB;MAFZ,mBAAc,UAAd;IAEuC;;IAExCC,QAAQ,CAACC,eAAD,EAAiC;MAC9C,OAAO,KAAKF,UAAL,CAAgBG,IAAhB,CAAkC,GAAG,KAAKC,WAAW,WAArD,EAAkEF,eAAlE,CAAP;IACD;;IAEMG,KAAK,CAACC,YAAD,EAA2B;MACrC,OAAO,KAAKN,UAAL,CAAgBG,IAAhB,CAAyC,GAAG,KAAKC,WAAW,QAA5D,EAAsEE,YAAtE,CAAP;IACD;;EAZqB;;;qBAAXR,aAAWS;EAAA;;;WAAXT;IAAWU,SAAXV,WAAW;IAAAW,YAFV;;EAEd,OAAaX,WAAb;AAAA",
+      "names": [
+        "AuthService",
+        "constructor",
+        "httpClient",
+        "register",
+        "registerRequest",
+        "post",
+        "pathService",
+        "login",
+        "loginRequest",
+        "i0",
+        "factory",
+        "providedIn"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/services/auth.service.ts"
+      ],
+      "sourcesContent": [
+        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { LoginRequest } from '../interfaces/loginRequest.interface';\nimport { AuthSuccess  } from '../interfaces/authSuccess.interface';\nimport { RegisterRequest } from '../interfaces/registerRequest.interface';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class AuthService {\n\n  private pathService = 'api/auth';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public register(registerRequest: RegisterRequest): Observable<AuthSuccess> {\n    return this.httpClient.post<AuthSuccess>(`${this.pathService}/register`, registerRequest);\n  }\n\n  public login(loginRequest: LoginRequest): Observable<SessionInformation> {\n    return this.httpClient.post<SessionInformation>(`${this.pathService}/login`, loginRequest);\n  }\n}\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "9d5ec93e8ac0d6ccfb1c34b169de605b7b354f1a"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 10,
+          "column": 2
+        },
+        "end": {
+          "line": 27,
+          "column": 3
+        }
+      },
+      "1": {
+        "start": {
+          "line": 11,
+          "column": 16
+        },
+        "end": {
+          "line": 11,
+          "column": 37
+        }
+      },
+      "2": {
+        "start": {
+          "line": 13,
+          "column": 4
+        },
+        "end": {
+          "line": 13,
+          "column": 46
+        }
+      },
+      "3": {
+        "start": {
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "line": 14,
+          "column": 29
+        }
+      },
+      "4": {
+        "start": {
+          "line": 15,
+          "column": 4
+        },
+        "end": {
+          "line": 15,
+          "column": 22
+        }
+      },
+      "5": {
+        "start": {
+          "line": 16,
+          "column": 4
+        },
+        "end": {
+          "line": 16,
+          "column": 36
+        }
+      },
+      "6": {
+        "start": {
+          "line": 17,
+          "column": 4
+        },
+        "end": {
+          "line": 17,
+          "column": 28
+        }
+      },
+      "7": {
+        "start": {
+          "line": 18,
+          "column": 4
+        },
+        "end": {
+          "line": 18,
+          "column": 22
+        }
+      },
+      "8": {
+        "start": {
+          "line": 19,
+          "column": 4
+        },
+        "end": {
+          "line": 19,
+          "column": 36
+        }
+      },
+      "9": {
+        "start": {
+          "line": 20,
+          "column": 4
+        },
+        "end": {
+          "line": 24,
+          "column": 7
+        }
+      },
+      "10": {
+        "start": {
+          "line": 21,
+          "column": 6
+        },
+        "end": {
+          "line": 21,
+          "column": 28
+        }
+      },
+      "11": {
+        "start": {
+          "line": 22,
+          "column": 21
+        },
+        "end": {
+          "line": 22,
+          "column": 39
+        }
+      },
+      "12": {
+        "start": {
+          "line": 23,
+          "column": 6
+        },
+        "end": {
+          "line": 23,
+          "column": 45
+        }
+      },
+      "13": {
+        "start": {
+          "line": 25,
+          "column": 4
+        },
+        "end": {
+          "line": 25,
+          "column": 27
+        }
+      },
+      "14": {
+        "start": {
+          "line": 26,
+          "column": 4
+        },
+        "end": {
+          "line": 26,
+          "column": 24
+        }
+      },
+      "15": {
+        "start": {
+          "line": 31,
+          "column": 2
+        },
+        "end": {
+          "line": 38,
+          "column": 3
+        }
+      },
+      "16": {
+        "start": {
+          "line": 32,
+          "column": 4
+        },
+        "end": {
+          "line": 32,
+          "column": 46
+        }
+      },
+      "17": {
+        "start": {
+          "line": 33,
+          "column": 4
+        },
+        "end": {
+          "line": 33,
+          "column": 26
+        }
+      },
+      "18": {
+        "start": {
+          "line": 34,
+          "column": 4
+        },
+        "end": {
+          "line": 34,
+          "column": 22
+        }
+      },
+      "19": {
+        "start": {
+          "line": 35,
+          "column": 4
+        },
+        "end": {
+          "line": 35,
+          "column": 36
+        }
+      },
+      "20": {
+        "start": {
+          "line": 36,
+          "column": 4
+        },
+        "end": {
+          "line": 36,
+          "column": 29
+        }
+      },
+      "21": {
+        "start": {
+          "line": 37,
+          "column": 4
+        },
+        "end": {
+          "line": 37,
+          "column": 24
+        }
+      },
+      "22": {
+        "start": {
+          "line": 41,
+          "column": 39
+        },
+        "end": {
+          "line": 95,
+          "column": 4
+        }
+      },
+      "23": {
+        "start": {
+          "line": 44,
+          "column": 6
+        },
+        "end": {
+          "line": 44,
+          "column": 37
+        }
+      },
+      "24": {
+        "start": {
+          "line": 45,
+          "column": 6
+        },
+        "end": {
+          "line": 45,
+          "column": 27
+        }
+      },
+      "25": {
+        "start": {
+          "line": 46,
+          "column": 6
+        },
+        "end": {
+          "line": 46,
+          "column": 43
+        }
+      },
+      "26": {
+        "start": {
+          "line": 50,
+          "column": 6
+        },
+        "end": {
+          "line": 50,
+          "column": 45
+        }
+      },
+      "27": {
+        "start": {
+          "line": 54,
+          "column": 6
+        },
+        "end": {
+          "line": 54,
+          "column": 35
+        }
+      },
+      "28": {
+        "start": {
+          "line": 55,
+          "column": 6
+        },
+        "end": {
+          "line": 55,
+          "column": 33
+        }
+      },
+      "29": {
+        "start": {
+          "line": 60,
+          "column": 2
+        },
+        "end": {
+          "line": 62,
+          "column": 4
+        }
+      },
+      "30": {
+        "start": {
+          "line": 61,
+          "column": 4
+        },
+        "end": {
+          "line": 61,
+          "column": 147
+        }
+      },
+      "31": {
+        "start": {
+          "line": 64,
+          "column": 2
+        },
+        "end": {
+          "line": 93,
+          "column": 5
+        }
+      },
+      "32": {
+        "start": {
+          "line": 71,
+          "column": 6
+        },
+        "end": {
+          "line": 82,
+          "column": 7
+        }
+      },
+      "33": {
+        "start": {
+          "line": 72,
+          "column": 8
+        },
+        "end": {
+          "line": 72,
+          "column": 71
+        }
+      },
+      "34": {
+        "start": {
+          "line": 73,
+          "column": 8
+        },
+        "end": {
+          "line": 73,
+          "column": 33
+        }
+      },
+      "35": {
+        "start": {
+          "line": 74,
+          "column": 8
+        },
+        "end": {
+          "line": 74,
+          "column": 26
+        }
+      },
+      "36": {
+        "start": {
+          "line": 75,
+          "column": 8
+        },
+        "end": {
+          "line": 75,
+          "column": 70
+        }
+      },
+      "37": {
+        "start": {
+          "line": 76,
+          "column": 8
+        },
+        "end": {
+          "line": 76,
+          "column": 30
+        }
+      },
+      "38": {
+        "start": {
+          "line": 77,
+          "column": 8
+        },
+        "end": {
+          "line": 77,
+          "column": 119
+        }
+      },
+      "39": {
+        "start": {
+          "line": 78,
+          "column": 8
+        },
+        "end": {
+          "line": 78,
+          "column": 26
+        }
+      },
+      "40": {
+        "start": {
+          "line": 79,
+          "column": 8
+        },
+        "end": {
+          "line": 79,
+          "column": 36
+        }
+      },
+      "41": {
+        "start": {
+          "line": 80,
+          "column": 8
+        },
+        "end": {
+          "line": 80,
+          "column": 41
+        }
+      },
+      "42": {
+        "start": {
+          "line": 81,
+          "column": 8
+        },
+        "end": {
+          "line": 81,
+          "column": 28
+        }
+      },
+      "43": {
+        "start": {
+          "line": 84,
+          "column": 6
+        },
+        "end": {
+          "line": 89,
+          "column": 7
+        }
+      },
+      "44": {
+        "start": {
+          "line": 85,
+          "column": 20
+        },
+        "end": {
+          "line": 85,
+          "column": 37
+        }
+      },
+      "45": {
+        "start": {
+          "line": 87,
+          "column": 8
+        },
+        "end": {
+          "line": 87,
+          "column": 24
+        }
+      },
+      "46": {
+        "start": {
+          "line": 88,
+          "column": 8
+        },
+        "end": {
+          "line": 88,
+          "column": 86
+        }
+      },
+      "47": {
+        "start": {
+          "line": 94,
+          "column": 2
+        },
+        "end": {
+          "line": 94,
+          "column": 22
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "AppComponent_div_4_Template",
+        "decl": {
+          "start": {
+            "line": 9,
+            "column": 9
+          },
+          "end": {
+            "line": 9,
+            "column": 36
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 46
+          },
+          "end": {
+            "line": 28,
+            "column": 1
+          }
+        },
+        "line": 9
+      },
+      "1": {
+        "name": "AppComponent_div_4_Template_span_click_5_listener",
+        "decl": {
+          "start": {
+            "line": 20,
+            "column": 36
+          },
+          "end": {
+            "line": 20,
+            "column": 85
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 88
+          },
+          "end": {
+            "line": 24,
+            "column": 5
+          }
+        },
+        "line": 20
+      },
+      "2": {
+        "name": "AppComponent_ng_template_6_Template",
+        "decl": {
+          "start": {
+            "line": 30,
+            "column": 9
+          },
+          "end": {
+            "line": 30,
+            "column": 44
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 30,
+            "column": 54
+          },
+          "end": {
+            "line": 39,
+            "column": 1
+          }
+        },
+        "line": 30
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 41,
+            "column": 40
+          },
+          "end": {
+            "line": 41,
+            "column": 41
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 41,
+            "column": 46
+          },
+          "end": {
+            "line": 95,
+            "column": 1
+          }
+        },
+        "line": 41
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": {
+          "start": {
+            "line": 43,
+            "column": 4
+          },
+          "end": {
+            "line": 43,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 43,
+            "column": 53
+          },
+          "end": {
+            "line": 47,
+            "column": 5
+          }
+        },
+        "line": 43
+      },
+      "5": {
+        "name": "(anonymous_5)",
+        "decl": {
+          "start": {
+            "line": 49,
+            "column": 4
+          },
+          "end": {
+            "line": 49,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 49,
+            "column": 16
+          },
+          "end": {
+            "line": 51,
+            "column": 5
+          }
+        },
+        "line": 49
+      },
+      "6": {
+        "name": "(anonymous_6)",
+        "decl": {
+          "start": {
+            "line": 53,
+            "column": 4
+          },
+          "end": {
+            "line": 53,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 53,
+            "column": 13
+          },
+          "end": {
+            "line": 56,
+            "column": 5
+          }
+        },
+        "line": 53
+      },
+      "7": {
+        "name": "AppComponent_Factory",
+        "decl": {
+          "start": {
+            "line": 60,
+            "column": 31
+          },
+          "end": {
+            "line": 60,
+            "column": 51
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 60,
+            "column": 55
+          },
+          "end": {
+            "line": 62,
+            "column": 3
+          }
+        },
+        "line": 60
+      },
+      "8": {
+        "name": "AppComponent_Template",
+        "decl": {
+          "start": {
+            "line": 70,
+            "column": 23
+          },
+          "end": {
+            "line": 70,
+            "column": 44
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 70,
+            "column": 54
+          },
+          "end": {
+            "line": 90,
+            "column": 5
+          }
+        },
+        "line": 70
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 2
+          },
+          "end": {
+            "line": 27,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 10,
+              "column": 2
+            },
+            "end": {
+              "line": 27,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 10,
+              "column": 2
+            },
+            "end": {
+              "line": 27,
+              "column": 3
+            }
+          }
+        ],
+        "line": 10
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 31,
+            "column": 2
+          },
+          "end": {
+            "line": 38,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 31,
+              "column": 2
+            },
+            "end": {
+              "line": 38,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 31,
+              "column": 2
+            },
+            "end": {
+              "line": 38,
+              "column": 3
+            }
+          }
+        ],
+        "line": 31
+      },
+      "2": {
+        "loc": {
+          "start": {
+            "line": 61,
+            "column": 16
+          },
+          "end": {
+            "line": 61,
+            "column": 33
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 61,
+              "column": 16
+            },
+            "end": {
+              "line": 61,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 61,
+              "column": 21
+            },
+            "end": {
+              "line": 61,
+              "column": 33
+            }
+          }
+        ],
+        "line": 61
+      },
+      "3": {
+        "loc": {
+          "start": {
+            "line": 71,
+            "column": 6
+          },
+          "end": {
+            "line": 82,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 71,
+              "column": 6
+            },
+            "end": {
+              "line": 82,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 71,
+              "column": 6
+            },
+            "end": {
+              "line": 82,
+              "column": 7
+            }
+          }
+        ],
+        "line": 71
+      },
+      "4": {
+        "loc": {
+          "start": {
+            "line": 84,
+            "column": 6
+          },
+          "end": {
+            "line": 89,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 84,
+              "column": 6
+            },
+            "end": {
+              "line": 89,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 84,
+              "column": 6
+            },
+            "end": {
+              "line": 89,
+              "column": 7
+            }
+          }
+        ],
+        "line": 84
+      }
+    },
+    "s": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 28,
+      "16": 4,
+      "17": 4,
+      "18": 4,
+      "19": 4,
+      "20": 4,
+      "21": 4,
+      "22": 4,
+      "23": 4,
+      "24": 4,
+      "25": 4,
+      "26": 24,
+      "27": 0,
+      "28": 0,
+      "29": 4,
+      "30": 4,
+      "31": 4,
+      "32": 28,
+      "33": 4,
+      "34": 4,
+      "35": 4,
+      "36": 4,
+      "37": 4,
+      "38": 4,
+      "39": 4,
+      "40": 4,
+      "41": 4,
+      "42": 4,
+      "43": 28,
+      "44": 24,
+      "45": 24,
+      "46": 24,
+      "47": 4
+    },
+    "f": {
+      "0": 0,
+      "1": 0,
+      "2": 28,
+      "3": 4,
+      "4": 4,
+      "5": 24,
+      "6": 0,
+      "7": 4,
+      "8": 28
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ],
+      "1": [
+        4,
+        24
+      ],
+      "2": [
+        4,
+        4
+      ],
+      "3": [
+        4,
+        24
+      ],
+      "4": [
+        24,
+        4
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": ";;;;;;;;;;;;IAGIA,4BAAiD,CAAjD,EAAiD,MAAjD,EAAiD,CAAjD;IAC2CA;IAAQA;IACjDA;IAAmCA;IAAOA;IAC1CA;IAAMA;MAAAA;MAAA;MAAA,OAASA,+BAAT;IAAiB,CAAjB;IAAgCA;IAAMA;;;;;;IAG5CA,4BAAK,CAAL,EAAK,MAAL,EAAK,CAAL;IACwCA;IAAKA;IAC3CA;IAAyCA;IAAQA;;;;ACCzD,WAAaC,YAAb;EAAM,MAAOA,YAAP,CAAmB;IACvBC,YACUC,WADV,EAEUC,MAFV,EAGUC,cAHV,EAGwC;MAF9B;MACA;MACA;IACT;;IAEMC,SAAS;MACd,OAAO,KAAKD,cAAL,CAAoBC,SAApB,EAAP;IACD;;IAEMC,MAAM;MACX,KAAKF,cAAL,CAAoBG,MAApB;MACA,KAAKJ,MAAL,CAAYK,QAAZ,CAAqB,CAAC,EAAD,CAArB;IACD;;EAdsB;;;qBAAZR,cAAYD;EAAA;;;UAAZC;IAAYS;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QDZzBd,+BAAiB,CAAjB,EAAiB,aAAjB,EAAiB,CAAjB,EAAiB,CAAjB,EAAiB,MAAjB;QAEUA;QAAQA;QACdA;;QAKAA;QAMFA;QACAA;QACEA;QACFA;;;;;;QAdQA;QAAAA,6DAA2B,UAA3B,EAA2Be,GAA3B;;;;;;ECSV,OAAad,YAAb;AAAA",
+      "names": [
+        "i0",
+        "AppComponent",
+        "constructor",
+        "authService",
+        "router",
+        "sessionService",
+        "$isLogged",
+        "logout",
+        "logOut",
+        "navigate",
+        "selectors",
+        "decls",
+        "vars",
+        "consts",
+        "template",
+        "_r1"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.html",
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.ts"
+      ],
+      "sourcesContent": [
+        "<div class=\"app\">\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n    <span>Yoga app</span>\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\n      <span routerLink=\"me\" class=\"link\">Account</span>\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\n    </div>\n    <ng-template #notLogged>\n      <div>\n        <span routerLink=\"login\" class=\"link\">Login</span>\n        <span routerLink=\"register\" class=\"link\">Register</span>\n      </div>\n    </ng-template>\n  </mat-toolbar>\n  <div>\n    <router-outlet></router-outlet>\n  </div>\n</div>\n",
+        "import { Component, OnInit } from '@angular/core';\nimport { Router } from '@angular/router';\nimport { Observable } from 'rxjs';\nimport { AuthService } from './features/auth/services/auth.service';\nimport { SessionInformation } from './interfaces/sessionInformation.interface';\nimport { SessionService } from './services/session.service';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  constructor(\n    private authService: AuthService,\n    private router: Router,\n    private sessionService: SessionService) {\n  }\n\n  public $isLogged(): Observable<boolean> {\n    return this.sessionService.$isLogged();\n  }\n\n  public logout(): void {\n    this.sessionService.logOut();\n    this.router.navigate([''])\n  }\n}\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "a0b025bc8a7a905de33180a3ffc6bee8b727add4"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/interceptors/jwt.interceptor.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/interceptors/jwt.interceptor.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 4,
+          "column": 41
+        },
+        "end": {
+          "line": 34,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 7,
+          "column": 6
+        },
+        "end": {
+          "line": 7,
+          "column": 43
+        }
+      },
+      "2": {
+        "start": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 17,
+          "column": 7
+        }
+      },
+      "3": {
+        "start": {
+          "line": 12,
+          "column": 8
+        },
+        "end": {
+          "line": 16,
+          "column": 11
+        }
+      },
+      "4": {
+        "start": {
+          "line": 19,
+          "column": 6
+        },
+        "end": {
+          "line": 19,
+          "column": 34
+        }
+      },
+      "5": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 26,
+          "column": 4
+        }
+      },
+      "6": {
+        "start": {
+          "line": 25,
+          "column": 4
+        },
+        "end": {
+          "line": 25,
+          "column": 69
+        }
+      },
+      "7": {
+        "start": {
+          "line": 28,
+          "column": 2
+        },
+        "end": {
+          "line": 32,
+          "column": 5
+        }
+      },
+      "8": {
+        "start": {
+          "line": 33,
+          "column": 2
+        },
+        "end": {
+          "line": 33,
+          "column": 24
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 4,
+            "column": 42
+          },
+          "end": {
+            "line": 4,
+            "column": 43
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 48
+          },
+          "end": {
+            "line": 34,
+            "column": 1
+          }
+        },
+        "line": 4
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 6,
+            "column": 4
+          },
+          "end": {
+            "line": 6,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 32
+          },
+          "end": {
+            "line": 8,
+            "column": 5
+          }
+        },
+        "line": 6
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 4
+          },
+          "end": {
+            "line": 10,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 29
+          },
+          "end": {
+            "line": 20,
+            "column": 5
+          }
+        },
+        "line": 10
+      },
+      "3": {
+        "name": "JwtInterceptor_Factory",
+        "decl": {
+          "start": {
+            "line": 24,
+            "column": 33
+          },
+          "end": {
+            "line": 24,
+            "column": 55
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 59
+          },
+          "end": {
+            "line": 26,
+            "column": 3
+          }
+        },
+        "line": 24
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 6
+          },
+          "end": {
+            "line": 17,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 11,
+              "column": 6
+            },
+            "end": {
+              "line": 17,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 11,
+              "column": 6
+            },
+            "end": {
+              "line": 17,
+              "column": 7
+            }
+          }
+        ],
+        "line": 11
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 25,
+            "column": 16
+          },
+          "end": {
+            "line": 25,
+            "column": 35
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 25,
+              "column": 16
+            },
+            "end": {
+              "line": 25,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 25,
+              "column": 21
+            },
+            "end": {
+              "line": 25,
+              "column": 35
+            }
+          }
+        ],
+        "line": 25
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 4,
+      "6": 0,
+      "7": 4,
+      "8": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AAAA,SAASA,WAAT,EAAuCC,WAAvC,QAA0D,sBAA1D;;;AAKA,WAAaC,cAAb;EAAM,MAAOA,cAAP,CAAqB;IACzBC,YAAoBC,cAApB,EAAkD;MAA9B;IAAkC;;IAE/CC,SAAS,CAACC,OAAD,EAA4BC,IAA5B,EAA6C;MAC3D,IAAI,KAAKH,cAAL,CAAoBI,QAAxB,EAAkC;QAChCF,OAAO,GAAGA,OAAO,CAACG,KAAR,CAAc;UACtBC,UAAU,EAAE;YACVC,aAAa,EAAE,UAAU,KAAKP,cAAL,CAAoBQ,kBAApB,CAAwCC,KAAK;UAD5D;QADU,CAAd,CAAV;MAKD;;MACD,OAAON,IAAI,CAACO,MAAL,CAAYR,OAAZ,CAAP;IACD;;EAZwB;;;qBAAdJ,gBAAca;EAAA;;;WAAdb;IAAcc,SAAdd,cAAc;IAAAe,YADD;;EAC1B,OAAaf,cAAb;AAAA",
+      "names": [
+        "HttpHandler",
+        "HttpRequest",
+        "JwtInterceptor",
+        "constructor",
+        "sessionService",
+        "intercept",
+        "request",
+        "next",
+        "isLogged",
+        "clone",
+        "setHeaders",
+        "Authorization",
+        "sessionInformation",
+        "token",
+        "handle",
+        "i0",
+        "factory",
+        "providedIn"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/interceptors/jwt.interceptor.ts"
+      ],
+      "sourcesContent": [
+        "import { HttpHandler, HttpInterceptor, HttpRequest } from \"@angular/common/http\";\nimport { Injectable } from \"@angular/core\";\nimport { SessionService } from '../services/session.service';\n\n@Injectable({ providedIn: 'root' })\nexport class JwtInterceptor implements HttpInterceptor {\n  constructor(private sessionService: SessionService) {}\n\n  public intercept(request: HttpRequest<any>, next: HttpHandler) {\n    if (this.sessionService.isLogged) {\n      request = request.clone({\n        setHeaders: {\n          Authorization: `Bearer ${this.sessionService.sessionInformation!.token}`,\n        },\n      });\n    }\n    return next.handle(request);\n  }\n}\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "b8fe7a2b4606d34c9e34046a6168eb10b739bd91"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.module.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.module.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 14,
+          "column": 23
+        },
+        "end": {
+          "line": 14,
+          "column": 107
+        }
+      },
+      "1": {
+        "start": {
+          "line": 15,
+          "column": 36
+        },
+        "end": {
+          "line": 35,
+          "column": 4
+        }
+      },
+      "2": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 20,
+          "column": 4
+        }
+      },
+      "3": {
+        "start": {
+          "line": 19,
+          "column": 4
+        },
+        "end": {
+          "line": 19,
+          "column": 34
+        }
+      },
+      "4": {
+        "start": {
+          "line": 22,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
+          "column": 5
+        }
+      },
+      "5": {
+        "start": {
+          "line": 26,
+          "column": 2
+        },
+        "end": {
+          "line": 33,
+          "column": 5
+        }
+      },
+      "6": {
+        "start": {
+          "line": 34,
+          "column": 2
+        },
+        "end": {
+          "line": 34,
+          "column": 19
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 15,
+            "column": 37
+          },
+          "end": {
+            "line": 15,
+            "column": 38
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 43
+          },
+          "end": {
+            "line": 35,
+            "column": 1
+          }
+        },
+        "line": 15
+      },
+      "1": {
+        "name": "AppModule_Factory",
+        "decl": {
+          "start": {
+            "line": 18,
+            "column": 28
+          },
+          "end": {
+            "line": 18,
+            "column": 45
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 49
+          },
+          "end": {
+            "line": 20,
+            "column": 3
+          }
+        },
+        "line": 18
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 19,
+            "column": 16
+          },
+          "end": {
+            "line": 19,
+            "column": 30
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 19,
+              "column": 16
+            },
+            "end": {
+              "line": 19,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 19,
+              "column": 21
+            },
+            "end": {
+              "line": 19,
+              "column": 30
+            }
+          }
+        ],
+        "line": 19
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 4
+    },
+    "b": {
+      "0": [
+        4,
+        4
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AACA,SAASA,iBAAT,QAAkC,6BAAlC;AACA,SAASC,aAAT,QAA8B,2BAA9B;AAEA,SAASC,gBAAT,QAAiC,sBAAjC;AACA,SAASC,YAAT,QAA6B,iBAA7B;AACA,SAASC,uBAAT,QAAwC,sCAAxC;AAEA,SAASC,eAAT,QAAgC,0BAAhC;AACA,SAASC,aAAT,QAA8B,wBAA9B;AACA,SAASC,gBAAT,QAAiC,2BAAjC;AACA,SAASC,gBAAT,EAA2BC,iBAA3B,QAAoD,sBAApD;AACA,SAASC,cAAT,QAA+B,gCAA/B;AACA,SAASC,aAAT,QAA8B,wBAA9B;AACA,SAASC,gBAAT,QAAiC,sBAAjC;;AAGA,MAAMC,cAAc,GAAG,CACrBR,eADqB,EAErBM,aAFqB,EAGrBL,aAHqB,EAIrBN,iBAJqB,EAKrBO,gBALqB,CAAvB;AA2BA,WAAaO,SAAb;EAAM,MAAOA,SAAP,CAAgB;;;qBAATA;EAAS;;;UAATA;IAASC,YAFRZ,YAEQ;;;eALT,CACT;MAAEa,OAAO,EAAEP,iBAAX;MAA8BQ,QAAQ,EAAEP,cAAxC;MAAwDQ,KAAK,EAAE;IAA/D,CADS;IAEVC,UATClB,aASD,EARCC,gBAQD,EAPCE,uBAOD,EANCQ,gBAMD,EALCJ,gBAKD,EAJIK,cAIJ;;EAGH,OAAaC,SAAb;AAAA",
+      "names": [
+        "MatSnackBarModule",
+        "BrowserModule",
+        "AppRoutingModule",
+        "AppComponent",
+        "BrowserAnimationsModule",
+        "MatButtonModule",
+        "MatIconModule",
+        "MatToolbarModule",
+        "HttpClientModule",
+        "HTTP_INTERCEPTORS",
+        "JwtInterceptor",
+        "MatCardModule",
+        "FlexLayoutModule",
+        "materialModule",
+        "AppModule",
+        "bootstrap",
+        "provide",
+        "useClass",
+        "multi",
+        "imports"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.module.ts"
+      ],
+      "sourcesContent": [
+        "import { NgModule } from '@angular/core';\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';\nimport { JwtInterceptor } from './interceptors/jwt.interceptor';\nimport { MatCardModule } from '@angular/material/card';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { MeComponent } from './components/me/me.component';\n\nconst materialModule = [\n  MatButtonModule,\n  MatCardModule,\n  MatIconModule,\n  MatSnackBarModule,\n  MatToolbarModule,\n]\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    NotFoundComponent,\n    MeComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule, \n    FlexLayoutModule,\n    HttpClientModule,\n    ...materialModule\n  ],\n  providers: [\n    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },\n  ],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "a6e698b4c5d51521d451569e045fa650a0352018"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/environments/environment.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/environments/environment.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 1,
+          "column": 27
+        },
+        "end": {
+          "line": 4,
+          "column": 1
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 4
+    },
+    "f": {},
+    "b": {},
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AAAA,OAAO,MAAMA,WAAW,GAAG;EACzBC,OAAO,EAAE,qBADgB;EAEzBC,UAAU,EAAE;AAFa,CAApB",
+      "names": [
+        "environment",
+        "baseUrl",
+        "production"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/environments/environment.ts"
+      ],
+      "sourcesContent": [
+        "export const environment = {\n  baseUrl: 'localhost:8080/api/',\n  production: false\n};\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "bb9194866a829376438d80f96707aeddc8f5ff60"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/main.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/main.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 7,
+          "column": 19
+        }
+      },
+      "2": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 98
+        }
+      },
+      "3": {
+        "start": {
+          "line": 10,
+          "column": 78
+        },
+        "end": {
+          "line": 10,
+          "column": 96
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 71
+          },
+          "end": {
+            "line": 10,
+            "column": 72
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 78
+          },
+          "end": {
+            "line": 10,
+            "column": 96
+          }
+        },
+        "line": 10
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 0
+          },
+          "end": {
+            "line": 8,
+            "column": 1
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 6,
+              "column": 0
+            },
+            "end": {
+              "line": 8,
+              "column": 1
+            }
+          },
+          {
+            "start": {
+              "line": 6,
+              "column": 0
+            },
+            "end": {
+              "line": 8,
+              "column": 1
+            }
+          }
+        ],
+        "line": 6
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 0,
+      "2": 4,
+      "3": 0
+    },
+    "f": {
+      "0": 0
+    },
+    "b": {
+      "0": [
+        0,
+        4
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": ";AAAA,SAASA,cAAT,QAA+B,eAA/B;AAGA,SAASC,SAAT,QAA0B,kBAA1B;AACA,SAASC,WAAT,QAA4B,4BAA5B;;AAEA,IAAIA,WAAW,CAACC,UAAhB,EAA4B;EAC1BH,cAAc;AACf;;AAEDI,sCAAyBC,eAAzB,CAAyCJ,SAAzC,EACGK,KADH,CACSC,GAAG,IAAIC,OAAO,CAACC,KAAR,CAAcF,GAAd,CADhB",
+      "names": [
+        "enableProdMode",
+        "AppModule",
+        "environment",
+        "production",
+        "__NgCli_bootstrap_1",
+        "bootstrapModule",
+        "catch",
+        "err",
+        "console",
+        "error"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/main.ts"
+      ],
+      "sourcesContent": [
+        "import { enableProdMode } from '@angular/core';\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n\nimport { AppModule } from './app/app.module';\nimport { environment } from './environments/environment';\n\nif (environment.production) {\n  enableProdMode();\n}\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "4a6fc756c5eab4a652a40ac79e03ba54c4d35c88"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 16,
+          "column": 2
+        },
+        "end": {
+          "line": 20,
+          "column": 3
+        }
+      },
+      "1": {
+        "start": {
+          "line": 17,
+          "column": 4
+        },
+        "end": {
+          "line": 17,
+          "column": 34
+        }
+      },
+      "2": {
+        "start": {
+          "line": 18,
+          "column": 4
+        },
+        "end": {
+          "line": 18,
+          "column": 38
+        }
+      },
+      "3": {
+        "start": {
+          "line": 19,
+          "column": 4
+        },
+        "end": {
+          "line": 19,
+          "column": 22
+        }
+      },
+      "4": {
+        "start": {
+          "line": 23,
+          "column": 41
+        },
+        "end": {
+          "line": 109,
+          "column": 4
+        }
+      },
+      "5": {
+        "start": {
+          "line": 26,
+          "column": 6
+        },
+        "end": {
+          "line": 26,
+          "column": 37
+        }
+      },
+      "6": {
+        "start": {
+          "line": 27,
+          "column": 6
+        },
+        "end": {
+          "line": 27,
+          "column": 19
+        }
+      },
+      "7": {
+        "start": {
+          "line": 28,
+          "column": 6
+        },
+        "end": {
+          "line": 28,
+          "column": 27
+        }
+      },
+      "8": {
+        "start": {
+          "line": 29,
+          "column": 6
+        },
+        "end": {
+          "line": 29,
+          "column": 43
+        }
+      },
+      "9": {
+        "start": {
+          "line": 30,
+          "column": 6
+        },
+        "end": {
+          "line": 30,
+          "column": 23
+        }
+      },
+      "10": {
+        "start": {
+          "line": 31,
+          "column": 6
+        },
+        "end": {
+          "line": 31,
+          "column": 27
+        }
+      },
+      "11": {
+        "start": {
+          "line": 32,
+          "column": 6
+        },
+        "end": {
+          "line": 36,
+          "column": 9
+        }
+      },
+      "12": {
+        "start": {
+          "line": 40,
+          "column": 27
+        },
+        "end": {
+          "line": 40,
+          "column": 42
+        }
+      },
+      "13": {
+        "start": {
+          "line": 41,
+          "column": 6
+        },
+        "end": {
+          "line": 47,
+          "column": 9
+        }
+      },
+      "14": {
+        "start": {
+          "line": 43,
+          "column": 10
+        },
+        "end": {
+          "line": 43,
+          "column": 46
+        }
+      },
+      "15": {
+        "start": {
+          "line": 44,
+          "column": 10
+        },
+        "end": {
+          "line": 44,
+          "column": 46
+        }
+      },
+      "16": {
+        "start": {
+          "line": 46,
+          "column": 24
+        },
+        "end": {
+          "line": 46,
+          "column": 43
+        }
+      },
+      "17": {
+        "start": {
+          "line": 52,
+          "column": 2
+        },
+        "end": {
+          "line": 54,
+          "column": 4
+        }
+      },
+      "18": {
+        "start": {
+          "line": 53,
+          "column": 4
+        },
+        "end": {
+          "line": 53,
+          "column": 187
+        }
+      },
+      "19": {
+        "start": {
+          "line": 56,
+          "column": 2
+        },
+        "end": {
+          "line": 107,
+          "column": 5
+        }
+      },
+      "20": {
+        "start": {
+          "line": 63,
+          "column": 6
+        },
+        "end": {
+          "line": 88,
+          "column": 7
+        }
+      },
+      "21": {
+        "start": {
+          "line": 64,
+          "column": 8
+        },
+        "end": {
+          "line": 64,
+          "column": 100
+        }
+      },
+      "22": {
+        "start": {
+          "line": 65,
+          "column": 8
+        },
+        "end": {
+          "line": 65,
+          "column": 30
+        }
+      },
+      "23": {
+        "start": {
+          "line": 66,
+          "column": 8
+        },
+        "end": {
+          "line": 66,
+          "column": 28
+        }
+      },
+      "24": {
+        "start": {
+          "line": 67,
+          "column": 8
+        },
+        "end": {
+          "line": 67,
+          "column": 40
+        }
+      },
+      "25": {
+        "start": {
+          "line": 68,
+          "column": 8
+        },
+        "end": {
+          "line": 70,
+          "column": 11
+        }
+      },
+      "26": {
+        "start": {
+          "line": 69,
+          "column": 10
+        },
+        "end": {
+          "line": 69,
+          "column": 30
+        }
+      },
+      "27": {
+        "start": {
+          "line": 71,
+          "column": 8
+        },
+        "end": {
+          "line": 71,
+          "column": 76
+        }
+      },
+      "28": {
+        "start": {
+          "line": 72,
+          "column": 8
+        },
+        "end": {
+          "line": 72,
+          "column": 36
+        }
+      },
+      "29": {
+        "start": {
+          "line": 73,
+          "column": 8
+        },
+        "end": {
+          "line": 73,
+          "column": 26
+        }
+      },
+      "30": {
+        "start": {
+          "line": 74,
+          "column": 8
+        },
+        "end": {
+          "line": 74,
+          "column": 50
+        }
+      },
+      "31": {
+        "start": {
+          "line": 75,
+          "column": 8
+        },
+        "end": {
+          "line": 75,
+          "column": 37
+        }
+      },
+      "32": {
+        "start": {
+          "line": 76,
+          "column": 8
+        },
+        "end": {
+          "line": 76,
+          "column": 43
+        }
+      },
+      "33": {
+        "start": {
+          "line": 77,
+          "column": 8
+        },
+        "end": {
+          "line": 79,
+          "column": 11
+        }
+      },
+      "34": {
+        "start": {
+          "line": 78,
+          "column": 10
+        },
+        "end": {
+          "line": 78,
+          "column": 38
+        }
+      },
+      "35": {
+        "start": {
+          "line": 80,
+          "column": 8
+        },
+        "end": {
+          "line": 80,
+          "column": 42
+        }
+      },
+      "36": {
+        "start": {
+          "line": 81,
+          "column": 8
+        },
+        "end": {
+          "line": 81,
+          "column": 22
+        }
+      },
+      "37": {
+        "start": {
+          "line": 82,
+          "column": 8
+        },
+        "end": {
+          "line": 82,
+          "column": 32
+        }
+      },
+      "38": {
+        "start": {
+          "line": 83,
+          "column": 8
+        },
+        "end": {
+          "line": 83,
+          "column": 43
+        }
+      },
+      "39": {
+        "start": {
+          "line": 84,
+          "column": 8
+        },
+        "end": {
+          "line": 84,
+          "column": 32
+        }
+      },
+      "40": {
+        "start": {
+          "line": 85,
+          "column": 8
+        },
+        "end": {
+          "line": 85,
+          "column": 26
+        }
+      },
+      "41": {
+        "start": {
+          "line": 86,
+          "column": 8
+        },
+        "end": {
+          "line": 86,
+          "column": 70
+        }
+      },
+      "42": {
+        "start": {
+          "line": 87,
+          "column": 8
+        },
+        "end": {
+          "line": 87,
+          "column": 30
+        }
+      },
+      "43": {
+        "start": {
+          "line": 90,
+          "column": 6
+        },
+        "end": {
+          "line": 103,
+          "column": 7
+        }
+      },
+      "44": {
+        "start": {
+          "line": 91,
+          "column": 8
+        },
+        "end": {
+          "line": 91,
+          "column": 24
+        }
+      },
+      "45": {
+        "start": {
+          "line": 92,
+          "column": 8
+        },
+        "end": {
+          "line": 92,
+          "column": 45
+        }
+      },
+      "46": {
+        "start": {
+          "line": 93,
+          "column": 8
+        },
+        "end": {
+          "line": 93,
+          "column": 24
+        }
+      },
+      "47": {
+        "start": {
+          "line": 94,
+          "column": 8
+        },
+        "end": {
+          "line": 94,
+          "column": 62
+        }
+      },
+      "48": {
+        "start": {
+          "line": 95,
+          "column": 8
+        },
+        "end": {
+          "line": 95,
+          "column": 24
+        }
+      },
+      "49": {
+        "start": {
+          "line": 96,
+          "column": 8
+        },
+        "end": {
+          "line": 96,
+          "column": 80
+        }
+      },
+      "50": {
+        "start": {
+          "line": 97,
+          "column": 8
+        },
+        "end": {
+          "line": 97,
+          "column": 24
+        }
+      },
+      "51": {
+        "start": {
+          "line": 98,
+          "column": 8
+        },
+        "end": {
+          "line": 98,
+          "column": 73
+        }
+      },
+      "52": {
+        "start": {
+          "line": 99,
+          "column": 8
+        },
+        "end": {
+          "line": 99,
+          "column": 24
+        }
+      },
+      "53": {
+        "start": {
+          "line": 100,
+          "column": 8
+        },
+        "end": {
+          "line": 100,
+          "column": 52
+        }
+      },
+      "54": {
+        "start": {
+          "line": 101,
+          "column": 8
+        },
+        "end": {
+          "line": 101,
+          "column": 24
+        }
+      },
+      "55": {
+        "start": {
+          "line": 102,
+          "column": 8
+        },
+        "end": {
+          "line": 102,
+          "column": 43
+        }
+      },
+      "56": {
+        "start": {
+          "line": 108,
+          "column": 2
+        },
+        "end": {
+          "line": 108,
+          "column": 24
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "LoginComponent_p_16_Template",
+        "decl": {
+          "start": {
+            "line": 15,
+            "column": 9
+          },
+          "end": {
+            "line": 15,
+            "column": 37
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 47
+          },
+          "end": {
+            "line": 21,
+            "column": 1
+          }
+        },
+        "line": 15
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 23,
+            "column": 42
+          },
+          "end": {
+            "line": 23,
+            "column": 43
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 48
+          },
+          "end": {
+            "line": 109,
+            "column": 1
+          }
+        },
+        "line": 23
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 25,
+            "column": 4
+          },
+          "end": {
+            "line": 25,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 25,
+            "column": 57
+          },
+          "end": {
+            "line": 37,
+            "column": 5
+          }
+        },
+        "line": 25
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 39,
+            "column": 4
+          },
+          "end": {
+            "line": 39,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 39,
+            "column": 13
+          },
+          "end": {
+            "line": 48,
+            "column": 5
+          }
+        },
+        "line": 39
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": {
+          "start": {
+            "line": 42,
+            "column": 14
+          },
+          "end": {
+            "line": 42,
+            "column": 15
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 42,
+            "column": 26
+          },
+          "end": {
+            "line": 45,
+            "column": 9
+          }
+        },
+        "line": 42
+      },
+      "5": {
+        "name": "(anonymous_5)",
+        "decl": {
+          "start": {
+            "line": 46,
+            "column": 15
+          },
+          "end": {
+            "line": 46,
+            "column": 16
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 46,
+            "column": 24
+          },
+          "end": {
+            "line": 46,
+            "column": 43
+          }
+        },
+        "line": 46
+      },
+      "6": {
+        "name": "LoginComponent_Factory",
+        "decl": {
+          "start": {
+            "line": 52,
+            "column": 33
+          },
+          "end": {
+            "line": 52,
+            "column": 55
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 52,
+            "column": 59
+          },
+          "end": {
+            "line": 54,
+            "column": 3
+          }
+        },
+        "line": 52
+      },
+      "7": {
+        "name": "LoginComponent_Template",
+        "decl": {
+          "start": {
+            "line": 62,
+            "column": 23
+          },
+          "end": {
+            "line": 62,
+            "column": 46
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 62,
+            "column": 56
+          },
+          "end": {
+            "line": 104,
+            "column": 5
+          }
+        },
+        "line": 62
+      },
+      "8": {
+        "name": "LoginComponent_Template_form_ngSubmit_5_listener",
+        "decl": {
+          "start": {
+            "line": 68,
+            "column": 43
+          },
+          "end": {
+            "line": 68,
+            "column": 91
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 68,
+            "column": 94
+          },
+          "end": {
+            "line": 70,
+            "column": 9
+          }
+        },
+        "line": 68
+      },
+      "9": {
+        "name": "LoginComponent_Template_button_click_11_listener",
+        "decl": {
+          "start": {
+            "line": 77,
+            "column": 40
+          },
+          "end": {
+            "line": 77,
+            "column": 88
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 77,
+            "column": 91
+          },
+          "end": {
+            "line": 79,
+            "column": 9
+          }
+        },
+        "line": 77
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 2
+          },
+          "end": {
+            "line": 20,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 16,
+              "column": 2
+            },
+            "end": {
+              "line": 20,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 16,
+              "column": 2
+            },
+            "end": {
+              "line": 20,
+              "column": 3
+            }
+          }
+        ],
+        "line": 16
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 53,
+            "column": 16
+          },
+          "end": {
+            "line": 53,
+            "column": 35
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 53,
+              "column": 16
+            },
+            "end": {
+              "line": 53,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 53,
+              "column": 21
+            },
+            "end": {
+              "line": 53,
+              "column": 35
+            }
+          }
+        ],
+        "line": 53
+      },
+      "2": {
+        "loc": {
+          "start": {
+            "line": 63,
+            "column": 6
+          },
+          "end": {
+            "line": 88,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 63,
+              "column": 6
+            },
+            "end": {
+              "line": 88,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 63,
+              "column": 6
+            },
+            "end": {
+              "line": 88,
+              "column": 7
+            }
+          }
+        ],
+        "line": 63
+      },
+      "3": {
+        "loc": {
+          "start": {
+            "line": 90,
+            "column": 6
+          },
+          "end": {
+            "line": 103,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 90,
+              "column": 6
+            },
+            "end": {
+              "line": 103,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 90,
+              "column": 6
+            },
+            "end": {
+              "line": 103,
+              "column": 7
+            }
+          }
+        ],
+        "line": 90
+      },
+      "4": {
+        "loc": {
+          "start": {
+            "line": 94,
+            "column": 30
+          },
+          "end": {
+            "line": 94,
+            "column": 60
+          }
+        },
+        "type": "cond-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 94,
+              "column": 41
+            },
+            "end": {
+              "line": 94,
+              "column": 51
+            }
+          },
+          {
+            "start": {
+              "line": 94,
+              "column": 54
+            },
+            "end": {
+              "line": 94,
+              "column": 60
+            }
+          }
+        ],
+        "line": 94
+      },
+      "5": {
+        "loc": {
+          "start": {
+            "line": 98,
+            "column": 29
+          },
+          "end": {
+            "line": 98,
+            "column": 71
+          }
+        },
+        "type": "cond-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 98,
+              "column": 40
+            },
+            "end": {
+              "line": 98,
+              "column": 56
+            }
+          },
+          {
+            "start": {
+              "line": 98,
+              "column": 59
+            },
+            "end": {
+              "line": 98,
+              "column": 71
+            }
+          }
+        ],
+        "line": 98
+      }
+    },
+    "s": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 4,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 4,
+      "18": 0,
+      "19": 4,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "30": 0,
+      "31": 0,
+      "32": 0,
+      "33": 0,
+      "34": 0,
+      "35": 0,
+      "36": 0,
+      "37": 0,
+      "38": 0,
+      "39": 0,
+      "40": 0,
+      "41": 0,
+      "42": 0,
+      "43": 0,
+      "44": 0,
+      "45": 0,
+      "46": 0,
+      "47": 0,
+      "48": 0,
+      "49": 0,
+      "50": 0,
+      "51": 0,
+      "52": 0,
+      "53": 0,
+      "54": 0,
+      "55": 0,
+      "56": 4
+    },
+    "f": {
+      "0": 0,
+      "1": 4,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0
+      ],
+      "2": [
+        0,
+        0
+      ],
+      "3": [
+        0,
+        0
+      ],
+      "4": [
+        0,
+        0
+      ],
+      "5": [
+        0,
+        0
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;;;ICmBYC;IAAiCA;IAAiBA;;;;ADP9D,WAAaC,cAAb;EAAM,MAAOA,cAAP,CAAqB;IAsBzBC,YAAoBC,WAApB,EACoBC,EADpB,EAEoBC,MAFpB,EAGoBC,cAHpB,EAGkD;MAH9B;MACA;MACA;MACA;MAxBb,YAAO,IAAP;MACA,eAAU,KAAV;MAEA,YAAO,KAAKF,EAAL,CAAQG,KAAR,CAAc;QAC1BC,KAAK,EAAE,CACL;QACA,gBAFK,EAGL,CACET,UAAU,CAACU,QADb,EAEEV,UAAU,CAACS,KAFb,CAHK,CADmB;QAS1BE,QAAQ,EAAE,CACR,WADQ,EAER,CACEX,UAAU,CAACU,QADb,EAEEV,UAAU,CAACY,GAAX,CAAe,CAAf,CAFF,CAFQ;MATgB,CAAd,CAAP;IAsBN;;IAEMC,MAAM;MACX,MAAMC,YAAY,GAAG,KAAKC,IAAL,CAAUC,KAA/B;MACA,KAAKZ,WAAL,CAAiBa,KAAjB,CAAuBH,YAAvB,EAAqCI,SAArC,CAA+C;QAC7CC,IAAI,EAAGC,QAAD,IAAiC;UACrC,KAAKb,cAAL,CAAoBc,KAApB,CAA0BD,QAA1B;UACA,KAAKd,MAAL,CAAYgB,QAAZ,CAAqB,CAAC,WAAD,CAArB;QACD,CAJ4C;QAK7CC,KAAK,EAAEA,KAAK,IAAI,KAAKC,OAAL,GAAe;MALc,CAA/C;IAOD;;EArCwB;;;qBAAdtB,gBAAcD;EAAA;;;UAAdC;IAAcuB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCb3B5B,+BAAgE,CAAhE,EAAgE,UAAhE,EAAgE,CAAhE,EAAgE,iBAAhE,EAAgE,CAAhE,EAAgE,CAAhE,EAAgE,gBAAhE;QAG4BA;QAAKA;QAEzBA;QAA4CA;UAAA,OAAY6B,YAAZ;QAAoB,CAApB;QACxC7B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QAEAA;QAAkCA;UAAA;QAAA;QAE9BA;QAAUA;QAA0CA;QAIhEA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAhByBA;QAAAA;QAMGA;QAAAA;QAEyCA;QAAAA,8CAAmC,cAAnC,EAAmC6B,QAAnC;QAE3C7B;QAAAA;QAIkCA;QAAAA;QACpDA;QAAAA;;;;;;EDPhB,OAAaC,cAAb;AAAA",
+      "names": [
+        "Validators",
+        "i0",
+        "LoginComponent",
+        "constructor",
+        "authService",
+        "fb",
+        "router",
+        "sessionService",
+        "group",
+        "email",
+        "required",
+        "password",
+        "min",
+        "submit",
+        "loginRequest",
+        "form",
+        "value",
+        "login",
+        "subscribe",
+        "next",
+        "response",
+        "logIn",
+        "navigate",
+        "error",
+        "onError",
+        "selectors",
+        "decls",
+        "vars",
+        "consts",
+        "template",
+        "ctx"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.ts",
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.html"
+      ],
+      "sourcesContent": [
+        "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\nimport { SessionService } from 'src/app/services/session.service';\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\nimport { AuthService } from '../../services/auth.service';\n\n@Component({\n  selector: 'app-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss']\n})\nexport class LoginComponent {\n  public hide = true;\n  public onError = false;\n\n  public form = this.fb.group({\n    email: [\n      // 'test@test.com',\n      'toto3@toto.com',\n      [\n        Validators.required,\n        Validators.email\n      ]\n    ],\n    password: [\n      'test!1234',\n      [\n        Validators.required,\n        Validators.min(3)\n      ]\n    ]\n  });\n\n  constructor(private authService: AuthService,\n              private fb: FormBuilder,\n              private router: Router,\n              private sessionService: SessionService) {\n  }\n\n  public submit(): void {\n    const loginRequest = this.form.value as LoginRequest;\n    this.authService.login(loginRequest).subscribe({\n      next: (response: SessionInformation) => {\n        this.sessionService.logIn(response);\n        this.router.navigate(['/sessions']);\n      },\n      error: error => this.onError = true,\n    });\n  }\n}\n",
+        "<div class=\"login\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card>\n        <mat-card-header fxLayoutAlign=\"center center\">\n            <mat-card-title>Login</mat-card-title>\n        </mat-card-header>\n        <form class=\"login-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n            <mat-card-content fxLayout=\"column\">\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"Password\"\n                        formControlName=\"password\">\n                    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\n                        [attr.aria-pressed]=\"hide\">\n                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n                    </button>\n                </mat-form-field>\n            </mat-card-content>\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\n            <p *ngIf=\"onError\" class=\"error\">An error occurred</p>\n        </form>\n    </mat-card>\n</div>"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "0f72f0c15c34fb65167da907c2a5dc61f48c42de"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 14,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+          "column": 3
+        }
+      },
+      "1": {
+        "start": {
+          "line": 15,
+          "column": 4
+        },
+        "end": {
+          "line": 15,
+          "column": 37
+        }
+      },
+      "2": {
+        "start": {
+          "line": 16,
+          "column": 4
+        },
+        "end": {
+          "line": 16,
+          "column": 38
+        }
+      },
+      "3": {
+        "start": {
+          "line": 17,
+          "column": 4
+        },
+        "end": {
+          "line": 17,
+          "column": 22
+        }
+      },
+      "4": {
+        "start": {
+          "line": 21,
+          "column": 44
+        },
+        "end": {
+          "line": 97,
+          "column": 4
+        }
+      },
+      "5": {
+        "start": {
+          "line": 24,
+          "column": 6
+        },
+        "end": {
+          "line": 24,
+          "column": 37
+        }
+      },
+      "6": {
+        "start": {
+          "line": 25,
+          "column": 6
+        },
+        "end": {
+          "line": 25,
+          "column": 19
+        }
+      },
+      "7": {
+        "start": {
+          "line": 26,
+          "column": 6
+        },
+        "end": {
+          "line": 26,
+          "column": 27
+        }
+      },
+      "8": {
+        "start": {
+          "line": 27,
+          "column": 6
+        },
+        "end": {
+          "line": 27,
+          "column": 27
+        }
+      },
+      "9": {
+        "start": {
+          "line": 28,
+          "column": 6
+        },
+        "end": {
+          "line": 33,
+          "column": 9
+        }
+      },
+      "10": {
+        "start": {
+          "line": 37,
+          "column": 30
+        },
+        "end": {
+          "line": 37,
+          "column": 45
+        }
+      },
+      "11": {
+        "start": {
+          "line": 38,
+          "column": 6
+        },
+        "end": {
+          "line": 41,
+          "column": 9
+        }
+      },
+      "12": {
+        "start": {
+          "line": 39,
+          "column": 19
+        },
+        "end": {
+          "line": 39,
+          "column": 51
+        }
+      },
+      "13": {
+        "start": {
+          "line": 40,
+          "column": 20
+        },
+        "end": {
+          "line": 40,
+          "column": 39
+        }
+      },
+      "14": {
+        "start": {
+          "line": 46,
+          "column": 2
+        },
+        "end": {
+          "line": 48,
+          "column": 4
+        }
+      },
+      "15": {
+        "start": {
+          "line": 47,
+          "column": 4
+        },
+        "end": {
+          "line": 47,
+          "column": 149
+        }
+      },
+      "16": {
+        "start": {
+          "line": 50,
+          "column": 2
+        },
+        "end": {
+          "line": 95,
+          "column": 5
+        }
+      },
+      "17": {
+        "start": {
+          "line": 57,
+          "column": 6
+        },
+        "end": {
+          "line": 82,
+          "column": 7
+        }
+      },
+      "18": {
+        "start": {
+          "line": 58,
+          "column": 8
+        },
+        "end": {
+          "line": 58,
+          "column": 100
+        }
+      },
+      "19": {
+        "start": {
+          "line": 59,
+          "column": 8
+        },
+        "end": {
+          "line": 59,
+          "column": 33
+        }
+      },
+      "20": {
+        "start": {
+          "line": 60,
+          "column": 8
+        },
+        "end": {
+          "line": 60,
+          "column": 28
+        }
+      },
+      "21": {
+        "start": {
+          "line": 61,
+          "column": 8
+        },
+        "end": {
+          "line": 61,
+          "column": 40
+        }
+      },
+      "22": {
+        "start": {
+          "line": 62,
+          "column": 8
+        },
+        "end": {
+          "line": 64,
+          "column": 11
+        }
+      },
+      "23": {
+        "start": {
+          "line": 63,
+          "column": 10
+        },
+        "end": {
+          "line": 63,
+          "column": 30
+        }
+      },
+      "24": {
+        "start": {
+          "line": 65,
+          "column": 8
+        },
+        "end": {
+          "line": 65,
+          "column": 76
+        }
+      },
+      "25": {
+        "start": {
+          "line": 66,
+          "column": 8
+        },
+        "end": {
+          "line": 66,
+          "column": 36
+        }
+      },
+      "26": {
+        "start": {
+          "line": 67,
+          "column": 8
+        },
+        "end": {
+          "line": 67,
+          "column": 26
+        }
+      },
+      "27": {
+        "start": {
+          "line": 68,
+          "column": 8
+        },
+        "end": {
+          "line": 68,
+          "column": 50
+        }
+      },
+      "28": {
+        "start": {
+          "line": 69,
+          "column": 8
+        },
+        "end": {
+          "line": 69,
+          "column": 37
+        }
+      },
+      "29": {
+        "start": {
+          "line": 70,
+          "column": 8
+        },
+        "end": {
+          "line": 70,
+          "column": 26
+        }
+      },
+      "30": {
+        "start": {
+          "line": 71,
+          "column": 8
+        },
+        "end": {
+          "line": 71,
+          "column": 51
+        }
+      },
+      "31": {
+        "start": {
+          "line": 72,
+          "column": 8
+        },
+        "end": {
+          "line": 72,
+          "column": 37
+        }
+      },
+      "32": {
+        "start": {
+          "line": 73,
+          "column": 8
+        },
+        "end": {
+          "line": 73,
+          "column": 26
+        }
+      },
+      "33": {
+        "start": {
+          "line": 74,
+          "column": 8
+        },
+        "end": {
+          "line": 74,
+          "column": 51
+        }
+      },
+      "34": {
+        "start": {
+          "line": 75,
+          "column": 8
+        },
+        "end": {
+          "line": 75,
+          "column": 37
+        }
+      },
+      "35": {
+        "start": {
+          "line": 76,
+          "column": 8
+        },
+        "end": {
+          "line": 76,
+          "column": 28
+        }
+      },
+      "36": {
+        "start": {
+          "line": 77,
+          "column": 8
+        },
+        "end": {
+          "line": 77,
+          "column": 43
+        }
+      },
+      "37": {
+        "start": {
+          "line": 78,
+          "column": 8
+        },
+        "end": {
+          "line": 78,
+          "column": 32
+        }
+      },
+      "38": {
+        "start": {
+          "line": 79,
+          "column": 8
+        },
+        "end": {
+          "line": 79,
+          "column": 26
+        }
+      },
+      "39": {
+        "start": {
+          "line": 80,
+          "column": 8
+        },
+        "end": {
+          "line": 80,
+          "column": 80
+        }
+      },
+      "40": {
+        "start": {
+          "line": 81,
+          "column": 8
+        },
+        "end": {
+          "line": 81,
+          "column": 30
+        }
+      },
+      "41": {
+        "start": {
+          "line": 84,
+          "column": 6
+        },
+        "end": {
+          "line": 91,
+          "column": 7
+        }
+      },
+      "42": {
+        "start": {
+          "line": 85,
+          "column": 8
+        },
+        "end": {
+          "line": 85,
+          "column": 24
+        }
+      },
+      "43": {
+        "start": {
+          "line": 86,
+          "column": 8
+        },
+        "end": {
+          "line": 86,
+          "column": 45
+        }
+      },
+      "44": {
+        "start": {
+          "line": 87,
+          "column": 8
+        },
+        "end": {
+          "line": 87,
+          "column": 25
+        }
+      },
+      "45": {
+        "start": {
+          "line": 88,
+          "column": 8
+        },
+        "end": {
+          "line": 88,
+          "column": 52
+        }
+      },
+      "46": {
+        "start": {
+          "line": 89,
+          "column": 8
+        },
+        "end": {
+          "line": 89,
+          "column": 24
+        }
+      },
+      "47": {
+        "start": {
+          "line": 90,
+          "column": 8
+        },
+        "end": {
+          "line": 90,
+          "column": 43
+        }
+      },
+      "48": {
+        "start": {
+          "line": 96,
+          "column": 2
+        },
+        "end": {
+          "line": 96,
+          "column": 27
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "RegisterComponent_span_17_Template",
+        "decl": {
+          "start": {
+            "line": 13,
+            "column": 9
+          },
+          "end": {
+            "line": 13,
+            "column": 43
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 53
+          },
+          "end": {
+            "line": 19,
+            "column": 1
+          }
+        },
+        "line": 13
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 21,
+            "column": 45
+          },
+          "end": {
+            "line": 21,
+            "column": 46
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 51
+          },
+          "end": {
+            "line": 97,
+            "column": 1
+          }
+        },
+        "line": 21
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 23,
+            "column": 4
+          },
+          "end": {
+            "line": 23,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 41
+          },
+          "end": {
+            "line": 34,
+            "column": 5
+          }
+        },
+        "line": 23
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 36,
+            "column": 4
+          },
+          "end": {
+            "line": 36,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 36,
+            "column": 13
+          },
+          "end": {
+            "line": 42,
+            "column": 5
+          }
+        },
+        "line": 36
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": {
+          "start": {
+            "line": 39,
+            "column": 14
+          },
+          "end": {
+            "line": 39,
+            "column": 15
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 39,
+            "column": 19
+          },
+          "end": {
+            "line": 39,
+            "column": 51
+          }
+        },
+        "line": 39
+      },
+      "5": {
+        "name": "(anonymous_5)",
+        "decl": {
+          "start": {
+            "line": 40,
+            "column": 15
+          },
+          "end": {
+            "line": 40,
+            "column": 16
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 40,
+            "column": 20
+          },
+          "end": {
+            "line": 40,
+            "column": 39
+          }
+        },
+        "line": 40
+      },
+      "6": {
+        "name": "RegisterComponent_Factory",
+        "decl": {
+          "start": {
+            "line": 46,
+            "column": 36
+          },
+          "end": {
+            "line": 46,
+            "column": 61
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 46,
+            "column": 65
+          },
+          "end": {
+            "line": 48,
+            "column": 3
+          }
+        },
+        "line": 46
+      },
+      "7": {
+        "name": "RegisterComponent_Template",
+        "decl": {
+          "start": {
+            "line": 56,
+            "column": 23
+          },
+          "end": {
+            "line": 56,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 56,
+            "column": 59
+          },
+          "end": {
+            "line": 92,
+            "column": 5
+          }
+        },
+        "line": 56
+      },
+      "8": {
+        "name": "RegisterComponent_Template_form_ngSubmit_5_listener",
+        "decl": {
+          "start": {
+            "line": 62,
+            "column": 43
+          },
+          "end": {
+            "line": 62,
+            "column": 94
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 62,
+            "column": 97
+          },
+          "end": {
+            "line": 64,
+            "column": 9
+          }
+        },
+        "line": 62
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 2
+          },
+          "end": {
+            "line": 18,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 14,
+              "column": 2
+            },
+            "end": {
+              "line": 18,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 14,
+              "column": 2
+            },
+            "end": {
+              "line": 18,
+              "column": 3
+            }
+          }
+        ],
+        "line": 14
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 47,
+            "column": 16
+          },
+          "end": {
+            "line": 47,
+            "column": 38
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 47,
+              "column": 16
+            },
+            "end": {
+              "line": 47,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 47,
+              "column": 21
+            },
+            "end": {
+              "line": 47,
+              "column": 38
+            }
+          }
+        ],
+        "line": 47
+      },
+      "2": {
+        "loc": {
+          "start": {
+            "line": 57,
+            "column": 6
+          },
+          "end": {
+            "line": 82,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 57,
+              "column": 6
+            },
+            "end": {
+              "line": 82,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 57,
+              "column": 6
+            },
+            "end": {
+              "line": 82,
+              "column": 7
+            }
+          }
+        ],
+        "line": 57
+      },
+      "3": {
+        "loc": {
+          "start": {
+            "line": 84,
+            "column": 6
+          },
+          "end": {
+            "line": 91,
+            "column": 7
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 84,
+              "column": 6
+            },
+            "end": {
+              "line": 91,
+              "column": 7
+            }
+          },
+          {
+            "start": {
+              "line": 84,
+              "column": 6
+            },
+            "end": {
+              "line": 91,
+              "column": 7
+            }
+          }
+        ],
+        "line": 84
+      }
+    },
+    "s": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 4,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 4,
+      "15": 0,
+      "16": 4,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "30": 0,
+      "31": 0,
+      "32": 0,
+      "33": 0,
+      "34": 0,
+      "35": 0,
+      "36": 0,
+      "37": 0,
+      "38": 0,
+      "39": 0,
+      "40": 0,
+      "41": 0,
+      "42": 0,
+      "43": 0,
+      "44": 0,
+      "45": 0,
+      "46": 0,
+      "47": 0,
+      "48": 4
+    },
+    "f": {
+      "0": 0,
+      "1": 4,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0
+      ],
+      "2": [
+        0,
+        0
+      ],
+      "3": [
+        0,
+        0
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;ICoBYC;IAAoCA;IAAiBA;;;;ADPjE,WAAaC,iBAAb;EAAM,MAAOA,iBAAP,CAAwB;IAW5BC,YAAoBC,WAApB,EACUC,EADV,EAEUC,MAFV,EAEwB;MAFJ;MACV;MACA;MAXH,eAAU,KAAV;MAEA,YAAO,KAAKD,EAAL,CAAQE,KAAR,CAAc;QAC1BC,KAAK,EAAE,CAAC,EAAD,EAAK,CAACR,UAAU,CAACS,QAAZ,EAAsBT,UAAU,CAACQ,KAAjC,CAAL,CADmB;QAE1BE,SAAS,EAAE,CAAC,EAAD,EAAK,CAACV,UAAU,CAACS,QAAZ,EAAsBT,UAAU,CAACW,GAAX,CAAe,CAAf,CAAtB,EAAyCX,UAAU,CAACY,GAAX,CAAe,EAAf,CAAzC,CAAL,CAFe;QAG1BC,QAAQ,EAAE,CAAC,EAAD,EAAK,CAACb,UAAU,CAACS,QAAZ,EAAsBT,UAAU,CAACW,GAAX,CAAe,CAAf,CAAtB,EAAyCX,UAAU,CAACY,GAAX,CAAe,EAAf,CAAzC,CAAL,CAHgB;QAI1BE,QAAQ,EAAE,CAAC,EAAD,EAAK,CAACd,UAAU,CAACS,QAAZ,EAAsBT,UAAU,CAACW,GAAX,CAAe,CAAf,CAAtB,EAAyCX,UAAU,CAACY,GAAX,CAAe,EAAf,CAAzC,CAAL;MAJgB,CAAd,CAAP;IASsB;;IAEtBG,MAAM;MACX,MAAMC,eAAe,GAAG,KAAKC,IAAL,CAAUC,KAAlC;MACA,KAAKd,WAAL,CAAiBe,QAAjB,CAA0BH,eAA1B,EAA2CI,SAA3C,CAAqD;QACjDC,IAAI,EAAGC,CAAD,IAAoB,KAAKhB,MAAL,CAAYiB,QAAZ,CAAqB,CAAC,QAAD,CAArB,CADuB;QAEjDC,KAAK,EAAEF,CAAC,IAAI,KAAKG,OAAL,GAAe;MAFsB,CAArD;IAKD;;EAtB2B;;;qBAAjBvB,mBAAiBD;EAAA;;;UAAjBC;IAAiBwB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCd9B7B,+BAAmE,CAAnE,EAAmE,UAAnE,EAAmE,CAAnE,EAAmE,iBAAnE,EAAmE,CAAnE,EAAmE,CAAnE,EAAmE,gBAAnE;QAG4BA;QAAQA;QAE5BA;QAA+CA;UAAA,OAAY8B,YAAZ;QAAoB,CAApB;QAC3C9B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QAEJA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAjB4BA;QAAAA;QAegCA;QAAAA;QACjDA;QAAAA;;;;;;EDPnB,OAAaC,iBAAb;AAAA",
+      "names": [
+        "Validators",
+        "i0",
+        "RegisterComponent",
+        "constructor",
+        "authService",
+        "fb",
+        "router",
+        "group",
+        "email",
+        "required",
+        "firstName",
+        "min",
+        "max",
+        "lastName",
+        "password",
+        "submit",
+        "registerRequest",
+        "form",
+        "value",
+        "register",
+        "subscribe",
+        "next",
+        "_",
+        "navigate",
+        "error",
+        "onError",
+        "selectors",
+        "decls",
+        "vars",
+        "consts",
+        "template",
+        "ctx"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.ts",
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.html"
+      ],
+      "sourcesContent": [
+        "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { SessionService } from 'src/app/services/session.service';\nimport { AuthService } from '../../services/auth.service';\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\nimport { AuthSuccess } from '../../interfaces/authSuccess.interface';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\n\n@Component({\n  selector: 'app-register',\n  templateUrl: './register.component.html',\n  styleUrls: ['./register.component.scss']\n})\nexport class RegisterComponent {\n\n  public onError = false;\n\n  public form = this.fb.group({\n    email: ['', [Validators.required, Validators.email]],\n    firstName: ['', [Validators.required, Validators.min(3), Validators.max(20)]],\n    lastName: ['', [Validators.required, Validators.min(3), Validators.max(20)]],\n    password: ['', [Validators.required, Validators.min(3), Validators.max(40)]]\n  });\n\n  constructor(private authService: AuthService,\n    private fb: FormBuilder,\n    private router: Router) { }\n\n  public submit(): void {\n    const registerRequest = this.form.value as RegisterRequest;\n    this.authService.register(registerRequest).subscribe({\n        next: (_: AuthSuccess) => this.router.navigate(['/login']),\n        error: _ => this.onError = true,\n      }\n    );\n  }\n\n}\n",
+        "<div class=\"register\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card>\n        <mat-card-header fxLayoutAlign=\"center center\">\n            <mat-card-title>Register</mat-card-title>\n        </mat-card-header>\n        <form class=\"register-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n            <mat-card-content fxLayout=\"column\">\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\n                </mat-form-field>\n            </mat-card-content>\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\n            <span *ngIf=\"onError\" class=\"error\">An error occurred</span>\n        </form>\n    </mat-card>\n</div>\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "993ead6b15608357c11d8b4c96f877374374b8b2"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth-routing.module.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth-routing.module.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 6,
+          "column": 15
+        },
+        "end": {
+          "line": 14,
+          "column": 2
+        }
+      },
+      "1": {
+        "start": {
+          "line": 15,
+          "column": 44
+        },
+        "end": {
+          "line": 29,
+          "column": 4
+        }
+      },
+      "2": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 20,
+          "column": 4
+        }
+      },
+      "3": {
+        "start": {
+          "line": 19,
+          "column": 4
+        },
+        "end": {
+          "line": 19,
+          "column": 42
+        }
+      },
+      "4": {
+        "start": {
+          "line": 22,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 5
+        }
+      },
+      "5": {
+        "start": {
+          "line": 25,
+          "column": 2
+        },
+        "end": {
+          "line": 27,
+          "column": 5
+        }
+      },
+      "6": {
+        "start": {
+          "line": 28,
+          "column": 2
+        },
+        "end": {
+          "line": 28,
+          "column": 27
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 15,
+            "column": 45
+          },
+          "end": {
+            "line": 15,
+            "column": 46
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 51
+          },
+          "end": {
+            "line": 29,
+            "column": 1
+          }
+        },
+        "line": 15
+      },
+      "1": {
+        "name": "AuthRoutingModule_Factory",
+        "decl": {
+          "start": {
+            "line": 18,
+            "column": 36
+          },
+          "end": {
+            "line": 18,
+            "column": 61
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 65
+          },
+          "end": {
+            "line": 20,
+            "column": 3
+          }
+        },
+        "line": 18
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 19,
+            "column": 16
+          },
+          "end": {
+            "line": 19,
+            "column": 38
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 19,
+              "column": 16
+            },
+            "end": {
+              "line": 19,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 19,
+              "column": 21
+            },
+            "end": {
+              "line": 19,
+              "column": 38
+            }
+          }
+        ],
+        "line": 19
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 4
+    },
+    "b": {
+      "0": [
+        4,
+        4
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AACA,SAASA,YAAT,QAAqC,iBAArC;AACA,SAASC,cAAT,QAA+B,oCAA/B;AACA,SAASC,iBAAT,QAAkC,0CAAlC;;;AAGA,MAAMC,MAAM,GAAW,CACrB;EAAEC,KAAK,EAAE,OAAT;EAAkBC,IAAI,EAAE,OAAxB;EAAiCC,SAAS,EAAEL;AAA5C,CADqB,EAErB;EAAEG,KAAK,EAAE,UAAT;EAAqBC,IAAI,EAAE,UAA3B;EAAuCC,SAAS,EAAEJ;AAAlD,CAFqB,CAAvB;AASA,WAAaK,iBAAb;EAAM,MAAOA,iBAAP,CAAwB;;;qBAAjBA;EAAiB;;;UAAjBA;;;cAHDP,YAAY,CAACQ,QAAb,CAAsBL,MAAtB,GACAH;;EAEZ,OAAaO,iBAAb;AAAA",
+      "names": [
+        "RouterModule",
+        "LoginComponent",
+        "RegisterComponent",
+        "routes",
+        "title",
+        "path",
+        "component",
+        "AuthRoutingModule",
+        "forChild"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth-routing.module.ts"
+      ],
+      "sourcesContent": [
+        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { LoginComponent } from './components/login/login.component';\nimport { RegisterComponent } from './components/register/register.component';\n\n\nconst routes: Routes = [\n  { title: 'Login', path: 'login', component: LoginComponent },\n  { title: 'Register', path: 'register', component: RegisterComponent }\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class AuthRoutingModule { }\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "5f99d4e85e42c81bb488846d88df0e0ccca7405d"
+  },
+  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth.module.ts": {
+    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth.module.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 11,
+          "column": 24
+        },
+        "end": {
+          "line": 11,
+          "column": 107
+        }
+      },
+      "1": {
+        "start": {
+          "line": 12,
+          "column": 37
+        },
+        "end": {
+          "line": 26,
+          "column": 4
+        }
+      },
+      "2": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 4
+        }
+      },
+      "3": {
+        "start": {
+          "line": 16,
+          "column": 4
+        },
+        "end": {
+          "line": 16,
+          "column": 35
+        }
+      },
+      "4": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 21,
+          "column": 5
+        }
+      },
+      "5": {
+        "start": {
+          "line": 22,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 5
+        }
+      },
+      "6": {
+        "start": {
+          "line": 25,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
+          "column": 20
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 12,
+            "column": 38
+          },
+          "end": {
+            "line": 12,
+            "column": 39
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 44
+          },
+          "end": {
+            "line": 26,
+            "column": 1
+          }
+        },
+        "line": 12
+      },
+      "1": {
+        "name": "AuthModule_Factory",
+        "decl": {
+          "start": {
+            "line": 15,
+            "column": 29
+          },
+          "end": {
+            "line": 15,
+            "column": 47
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 51
+          },
+          "end": {
+            "line": 17,
+            "column": 3
+          }
+        },
+        "line": 15
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 16
+          },
+          "end": {
+            "line": 16,
+            "column": 31
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 16,
+              "column": 16
+            },
+            "end": {
+              "line": 16,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 16,
+              "column": 21
+            },
+            "end": {
+              "line": 16,
+              "column": 31
+            }
+          }
+        ],
+        "line": 16
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 4
+    },
+    "b": {
+      "0": [
+        4,
+        4
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "mappings": "AACA,SAASA,YAAT,QAA6B,iBAA7B;AACA,SAASC,iBAAT,QAAkC,uBAAlC;AAGA,SAASC,aAAT,QAA8B,wBAA9B;AACA,SAASC,kBAAT,QAAmC,8BAAnC;AACA,SAASC,eAAT,QAAgC,0BAAhC;AACA,SAASC,cAAT,QAA+B,yBAA/B;AACA,SAASC,gBAAT,QAAiC,sBAAjC;AACA,SAASC,WAAT,EAAsBC,mBAAtB,QAAiD,gBAAjD;AACA,SAASC,aAAT,QAA8B,wBAA9B;;AAEA,MAAMC,eAAe,GAAG,CACtBN,eADsB,EAEtBF,aAFsB,EAGtBC,kBAHsB,EAItBM,aAJsB,EAKtBJ,cALsB,CAAxB;AAsBA,WAAaM,UAAb;EAAM,MAAOA,UAAP,CAAiB;;;qBAAVA;EAAU;;;UAAVA;;;cARTV,mBACAD,cACAM,kBACAC,aACAC,qBACGE;;EAGP,OAAaC,UAAb;AAAA",
+      "names": [
+        "CommonModule",
+        "AuthRoutingModule",
+        "MatCardModule",
+        "MatFormFieldModule",
+        "MatButtonModule",
+        "MatInputModule",
+        "FlexLayoutModule",
+        "FormsModule",
+        "ReactiveFormsModule",
+        "MatIconModule",
+        "materialModules",
+        "AuthModule"
+      ],
+      "sourceRoot": "",
+      "sources": [
+        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth.module.ts"
+      ],
+      "sourcesContent": [
+        "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { AuthRoutingModule } from './auth-routing.module';\nimport { RegisterComponent } from './components/register/register.component';\nimport { LoginComponent } from './components/login/login.component';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatInputModule } from '@angular/material/input';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { MatIconModule } from '@angular/material/icon';\n\nconst materialModules = [\n  MatButtonModule,\n  MatCardModule,\n  MatFormFieldModule,\n  MatIconModule,\n  MatInputModule\n]\n\n@NgModule({\n  declarations: [\n    RegisterComponent,\n    LoginComponent\n  ],\n  imports: [\n    AuthRoutingModule,\n    CommonModule,\n    FlexLayoutModule,\n    FormsModule,\n    ReactiveFormsModule,\n    ...materialModules\n  ]\n})\nexport class AuthModule { }\n"
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "e192f57dfbc63135d054f57c145470af830b1d27"
+  }
+}
