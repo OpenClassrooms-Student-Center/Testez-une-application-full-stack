@@ -8,10 +8,10 @@ import { Session } from '../interfaces/session.interface';
 })
 export class SessionApiService {
 
-
   private pathService = 'api/session';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+  }
 
   public all(): Observable<Session[]> {
     return this.httpClient.get<Session[]>(this.pathService);
@@ -32,4 +32,13 @@ export class SessionApiService {
   public update(id: string, session: Session): Observable<Session> {
     return this.httpClient.put<Session>(`${this.pathService}/${id}`, session);
   }
+
+  public participate(id: string, userId: string): Observable<void> {
+    return this.httpClient.post<void>(`${this.pathService}/${id}/participate/${userId}`, null);
+  }
+
+  public unParticipate(id: string, userId: string): Observable<void> {
+    return this.httpClient.delete<void>(`${this.pathService}/${id}/participate/${userId}`);
+  }
+
 }

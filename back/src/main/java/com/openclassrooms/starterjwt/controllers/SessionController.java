@@ -85,4 +85,26 @@ public class SessionController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @PostMapping("{id}/participate/{userId}")
+    public ResponseEntity<?> participate(@PathVariable("id") String id, @PathVariable("userId") String userId) {
+        try {
+            this.sessionService.participate(Long.parseLong(id), Long.parseLong(userId));
+
+            return ResponseEntity.ok().build();
+        } catch (NumberFormatException e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
+
+    @DeleteMapping("{id}/participate/{userId}")
+    public ResponseEntity<?> noLongerParticipate(@PathVariable("id") String id, @PathVariable("userId") String userId) {
+        try {
+            this.sessionService.noLongerParticipate(Long.parseLong(id), Long.parseLong(userId));
+
+            return ResponseEntity.ok().build();
+        } catch (NumberFormatException e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+}

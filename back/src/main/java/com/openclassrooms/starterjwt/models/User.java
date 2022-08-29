@@ -2,7 +2,6 @@ package com.openclassrooms.starterjwt.models;
 
 import lombok.*;
 import lombok.experimental.Accessors;
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -37,10 +36,12 @@ public class User {
 
   @NonNull
   @Size(max = 20)
+  @Column(name = "last_name")
   private String lastName;
 
   @NonNull
   @Size(max = 20)
+  @Column(name = "first_name")
   private String firstName;
 
   @NonNull

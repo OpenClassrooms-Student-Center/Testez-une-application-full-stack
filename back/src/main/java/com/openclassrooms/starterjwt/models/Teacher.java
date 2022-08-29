@@ -28,10 +28,12 @@ public class Teacher {
 
     @NotBlank
     @Size(max = 20)
+    @Column(name = "last_name")
     private String lastName;
 
     @NotBlank
     @Size(max = 20)
+    @Column(name = "first_name")
     private String firstName;
 
     @CreatedDate

@@ -16,7 +16,12 @@ import { SessionApiService } from '../../services/session-api.service';
 export class DetailComponent implements OnInit {
   public session: Session | undefined;
   public teacher: Teacher | undefined;
+
+  public isParticipate = false;
   public isAdmin = false;
+
+  public sessionId: string;
+  public userId: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,19 +31,13 @@ export class DetailComponent implements OnInit {
     private teacherService: TeacherService,
     private matSnackBar: MatSnackBar,
     private router: Router) {
+    this.sessionId = this.route.snapshot.paramMap.get('id')!;
+    this.isAdmin = this.sessionService.sessionInformation!.admin;
+    this.userId = this.sessionService.sessionInformation!.id.toString();
   }
 
   public ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')!;
-    this.isAdmin = this.sessionService.sessionInformation!.admin;
-    this.sessionApiService
-      .detail(id)
-      .subscribe((session: Session) => {
-        this.session = session;
-        this.teacherService
-          .detail(session.teacher_id.toString())
-          .subscribe((teacher: Teacher) => this.teacher = teacher);
-      });
+    this.fetchSession();
   }
 
   public back() {
@@ -46,16 +45,33 @@ export class DetailComponent implements OnInit {
   }
 
   public delete(): void {
-    const id = this.route.snapshot.paramMap.get('id')!;
-
     this.sessionApiService
-      .delete(id)
-      .subscribe((response: any) => {
-          console.log(response);
+      .delete(this.sessionId)
+      .subscribe((_: any) => {
           this.matSnackBar.open('Session deleted !', 'Close', { duration: 3000 });
           this.router.navigate(['sessions']);
         }
       );
+  }
+
+  public participate(): void {
+    this.sessionApiService.participate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());
+  }
+
+  public unParticipate(): void {
+    this.sessionApiService.unParticipate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());
+  }
+
+  private fetchSession(): void {
+    this.sessionApiService
+      .detail(this.sessionId)
+      .subscribe((session: Session) => {
+        this.session = session;
+        this.isParticipate = session.users.some(u => u === this.sessionService.sessionInformation!.id);
+        this.teacherService
+          .detail(session.teacher_id.toString())
+          .subscribe((teacher: Teacher) => this.teacher = teacher);
+      });
   }
 
 }

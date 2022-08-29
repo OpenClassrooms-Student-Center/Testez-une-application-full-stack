@@ -8,7 +8,6 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -48,9 +47,9 @@ public class Session {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
-            name = "participate",
-            joinColumns = @JoinColumn( name = "user_id" ),
-            inverseJoinColumns = @JoinColumn( name = "session_id" ) )
+            name = "PARTICIPATE",
+            joinColumns = @JoinColumn( name = "session_id" ),
+            inverseJoinColumns = @JoinColumn( name = "user_id" ) )
     private List<User> users;
 
     @CreatedDate
