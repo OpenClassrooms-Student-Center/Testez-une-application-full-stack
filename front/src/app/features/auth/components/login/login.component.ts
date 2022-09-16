@@ -17,14 +17,14 @@ export class LoginComponent {
 
   public form = this.fb.group({
     email: [
-      'yoga@studio.com',
+      '',
       [
         Validators.required,
         Validators.email
       ]
     ],
     password: [
-      'test!1234',
+      '',
       [
         Validators.required,
         Validators.min(3)
