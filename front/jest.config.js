@@ -15,4 +15,13 @@ module.exports = {
       statements: 80
     },
   },
+  roots: [
+    "<rootDir>"
+  ],
+  modulePaths: [
+    "<rootDir>"
+  ],
+  moduleDirectories: [
+    "node_modules"
+  ],
 };
