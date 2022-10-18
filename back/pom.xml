@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.openclassrooms</groupId>
-	<artifactId>spring-boot-security-jwt</artifactId>
+	<artifactId>yoga-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-security-jwt</name>
-	<description>Demo project for Spring Boot Security - JWT</description>
+	<name>yoga-app</name>
+	<description>The best backend for an Yoga app !</description>
 
 	<properties>
 		<java.version>1.8</java.version>
