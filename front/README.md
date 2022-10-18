@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Git clone:
 
-> git clone https://github.com/OpenClassrooms-Student-Center/P3-Full-Stack-portail-locataire
+> git clone https://github.com/OpenClassrooms-Student-Center/P5-Full-Stack-testing
 
 Go inside folder:
 
