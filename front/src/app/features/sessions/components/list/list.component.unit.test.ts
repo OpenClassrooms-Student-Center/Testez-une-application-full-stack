@@ -6,6 +6,7 @@ import { expect } from '@jest/globals';
 import { SessionService } from 'src/app/services/session.service';
 
 import { ListComponent } from './list.component';
+import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
 
 describe('ListComponent', () => {
   let component: ListComponent;
@@ -33,4 +34,5 @@ describe('ListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
