@@ -1,3 +1,5 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "jest.rootPath": "./front",
+    "jest.jestCommandLine": "npm test --"
 }
