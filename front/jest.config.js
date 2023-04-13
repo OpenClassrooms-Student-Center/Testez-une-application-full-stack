@@ -8,7 +8,7 @@ module.exports = {
   verbose: false,
   collectCoverage: false,
   coverageDirectory: './coverage/jest',
-  testPathIgnorePatterns: ['<rootDir>/node_modules/'],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/','/cypress'],
   coveragePathIgnorePatterns: ['<rootDir>/node_modules/'],
   coverageThreshold: {
     global: {

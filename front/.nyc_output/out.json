@@ -385,35 +385,35 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 54,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 1,
-      "11": 1,
-      "12": 1,
-      "13": 1,
-      "14": 1
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 164,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 4,
+      "11": 3,
+      "12": 3,
+      "13": 3,
+      "14": 3
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 54,
-      "3": 1,
-      "4": 0,
-      "5": 1,
-      "6": 1
+      "0": 3,
+      "1": 3,
+      "2": 164,
+      "3": 3,
+      "4": 1,
+      "5": 4,
+      "6": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -702,27 +702,27 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 1,
-      "6": 0,
-      "7": 1,
-      "8": 1
+      "0": 3,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 2,
+      "7": 3,
+      "8": 3
     },
     "f": {
-      "0": 1,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0
+      "0": 3,
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 2
     },
     "b": {
       "0": [
-        0,
-        0
+        2,
+        2
       ]
     },
     "inputSourceMap": {
@@ -2233,105 +2233,105 @@
       "1": 0,
       "2": 0,
       "3": 0,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 0,
-      "11": 0,
-      "12": 0,
-      "13": 0,
-      "14": 0,
-      "15": 0,
-      "16": 0,
-      "17": 0,
-      "18": 0,
-      "19": 0,
-      "20": 0,
-      "21": 0,
-      "22": 0,
-      "23": 0,
-      "24": 0,
-      "25": 0,
-      "26": 0,
-      "27": 0,
-      "28": 0,
-      "29": 0,
-      "30": 0,
-      "31": 0,
-      "32": 0,
-      "33": 0,
-      "34": 0,
-      "35": 0,
-      "36": 0,
-      "37": 0,
-      "38": 0,
-      "39": 0,
-      "40": 0,
-      "41": 0,
-      "42": 0,
-      "43": 0,
-      "44": 0,
-      "45": 0,
-      "46": 0,
-      "47": 0,
-      "48": 0,
-      "49": 0,
-      "50": 0,
-      "51": 0,
-      "52": 0,
-      "53": 0,
-      "54": 0,
-      "55": 0,
-      "56": 1,
-      "57": 0,
-      "58": 0,
-      "59": 0,
-      "60": 0,
-      "61": 0,
-      "62": 0,
+      "4": 8,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 2,
+      "9": 2,
+      "10": 2,
+      "11": 1,
+      "12": 1,
+      "13": 1,
+      "14": 2,
+      "15": 2,
+      "16": 2,
+      "17": 2,
+      "18": 2,
+      "19": 2,
+      "20": 8,
+      "21": 2,
+      "22": 2,
+      "23": 2,
+      "24": 2,
+      "25": 2,
+      "26": 2,
+      "27": 2,
+      "28": 2,
+      "29": 2,
+      "30": 2,
+      "31": 2,
+      "32": 2,
+      "33": 2,
+      "34": 2,
+      "35": 2,
+      "36": 2,
+      "37": 2,
+      "38": 2,
+      "39": 2,
+      "40": 2,
+      "41": 2,
+      "42": 8,
+      "43": 6,
+      "44": 6,
+      "45": 6,
+      "46": 6,
+      "47": 6,
+      "48": 6,
+      "49": 6,
+      "50": 6,
+      "51": 6,
+      "52": 6,
+      "53": 6,
+      "54": 6,
+      "55": 6,
+      "56": 3,
+      "57": 2,
+      "58": 2,
+      "59": 2,
+      "60": 2,
+      "61": 2,
+      "62": 2,
       "63": 0,
-      "64": 0,
-      "65": 0,
-      "66": 0,
-      "67": 0,
-      "68": 1,
-      "69": 0,
-      "70": 1,
-      "71": 0,
-      "72": 0,
-      "73": 0,
+      "64": 1,
+      "65": 1,
+      "66": 1,
+      "67": 1,
+      "68": 3,
+      "69": 2,
+      "70": 3,
+      "71": 18,
+      "72": 2,
+      "73": 2,
       "74": 0,
-      "75": 0,
-      "76": 0,
-      "77": 0,
-      "78": 0,
-      "79": 0,
-      "80": 0,
-      "81": 0,
-      "82": 0,
-      "83": 0,
-      "84": 0,
-      "85": 0,
-      "86": 0,
-      "87": 1
+      "75": 2,
+      "76": 2,
+      "77": 2,
+      "78": 2,
+      "79": 2,
+      "80": 2,
+      "81": 2,
+      "82": 2,
+      "83": 2,
+      "84": 18,
+      "85": 16,
+      "86": 16,
+      "87": 3
     },
     "f": {
       "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 1,
-      "5": 0,
-      "6": 0,
-      "7": 0,
+      "1": 8,
+      "2": 1,
+      "3": 8,
+      "4": 3,
+      "5": 2,
+      "6": 2,
+      "7": 2,
       "8": 0,
-      "9": 0,
-      "10": 0,
-      "11": 0,
-      "12": 0,
+      "9": 1,
+      "10": 1,
+      "11": 2,
+      "12": 18,
       "13": 0
     },
     "b": {
@@ -2340,28 +2340,28 @@
         0
       ],
       "1": [
-        0,
-        0
+        2,
+        6
       ],
       "2": [
-        0,
-        0
+        2,
+        6
       ],
       "3": [
-        0,
-        0
+        6,
+        2
       ],
       "4": [
-        0,
-        0
+        2,
+        2
       ],
       "5": [
-        0,
-        0
+        2,
+        16
       ],
       "6": [
-        0,
-        0
+        16,
+        2
       ]
     },
     "inputSourceMap": {
@@ -2404,12 +2404,12 @@
         "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\components\\me\\me.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"m3\">\r\n  <mat-card>\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <button mat-icon-button (click)=\"back()\">\r\n          <mat-icon>arrow_back</mat-icon>\r\n        </button>\r\n        <h1>User information</h1>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-content>\r\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\r\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\r\n        <p>Email: {{ user.email }}</p>\r\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\r\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\r\n          <p>Delete my account:</p>\r\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n        </div>\r\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\r\n\r\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\r\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\r\n        </div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
+        "<div class=\"m3\">\r\n  <mat-card>\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <button mat-icon-button (click)=\"back()\">\r\n          <mat-icon>arrow_back</mat-icon>\r\n        </button>\r\n        <h1>User information</h1>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-content>\r\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\r\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\r\n        <p>Email: {{ user.email }}</p>\r\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\r\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\r\n          <p>Delete my account:</p>\r\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\" data-test-id=delete-btn>\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n        </div>\r\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\r\n\r\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\r\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\r\n        </div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
         "import { Component, OnInit } from '@angular/core';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { Router } from '@angular/router';\r\nimport { User } from '../../interfaces/user.interface';\r\nimport { SessionService } from '../../services/session.service';\r\nimport { UserService } from '../../services/user.service';\r\n\r\n@Component({\r\n  selector: 'app-me',\r\n  templateUrl: './me.component.html',\r\n  styleUrls: ['./me.component.scss']\r\n})\r\nexport class MeComponent implements OnInit {\r\n\r\n  public user: User | undefined;\r\n\r\n  constructor(private router: Router,\r\n              private sessionService: SessionService,\r\n              private matSnackBar: MatSnackBar,\r\n              private userService: UserService) {\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    this.userService\r\n      .getById(this.sessionService.sessionInformation!.id.toString())\r\n      .subscribe((user: User) => this.user = user);\r\n  }\r\n\r\n  public back(): void {\r\n    window.history.back();\r\n  }\r\n\r\n  public delete(): void {\r\n    this.userService\r\n      .delete(this.sessionService.sessionInformation!.id.toString())\r\n      .subscribe((_) => {\r\n        this.matSnackBar.open(\"Your account has been deleted !\", 'Close', { duration: 3000 });\r\n        this.sessionService.logOut();\r\n        this.router.navigate(['/']);\r\n      })\r\n  }\r\n\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "f2ac11df50f9f2b12caf15327497c6fde92ff6bd"
+    "hash": "7fa7a02a3028730d54f520526499fac0e5a4ec62"
   },
   "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.ts": {
     "path": "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.ts",
@@ -2654,18 +2654,18 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
+      "0": 3,
+      "1": 3,
       "2": 0,
-      "3": 1,
+      "3": 3,
       "4": 0,
       "5": 0,
       "6": 0,
       "7": 0,
-      "8": 1
+      "8": 3
     },
     "f": {
-      "0": 1,
+      "0": 3,
       "1": 0,
       "2": 0
     },
@@ -2991,32 +2991,32 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 5,
       "4": 0,
       "5": 0,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
-      "10": 1
+      "6": 5,
+      "7": 3,
+      "8": 3,
+      "9": 3,
+      "10": 3
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1
+      "0": 3,
+      "1": 3,
+      "2": 5,
+      "3": 3
     },
     "b": {
       "0": [
         0,
-        1
+        5
       ],
       "1": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -3333,32 +3333,32 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 4,
       "4": 0,
       "5": 0,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
-      "10": 1
+      "6": 4,
+      "7": 3,
+      "8": 3,
+      "9": 3,
+      "10": 3
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1
+      "0": 3,
+      "1": 3,
+      "2": 4,
+      "3": 3
     },
     "b": {
       "0": [
         0,
-        1
+        4
       ],
       "1": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -3687,30 +3687,30 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
-      "10": 1
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 3,
+      "10": 3
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -4001,27 +4001,27 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
+      "0": 3,
+      "1": 3,
+      "2": 3,
       "3": 0,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3
     },
     "f": {
-      "0": 1,
-      "1": 1,
+      "0": 3,
+      "1": 3,
       "2": 0,
-      "3": 1,
-      "4": 1
+      "3": 3,
+      "4": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -4937,91 +4937,91 @@
       }
     },
     "s": {
-      "0": 11,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
+      "0": 49,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 3,
       "10": 0,
       "11": 0,
       "12": 0,
-      "13": 1,
-      "14": 1,
-      "15": 45,
-      "16": 1,
-      "17": 1,
-      "18": 1,
-      "19": 1,
-      "20": 1,
-      "21": 1,
-      "22": 1,
-      "23": 1,
-      "24": 1,
-      "25": 1,
-      "26": 54,
+      "13": 3,
+      "14": 3,
+      "15": 122,
+      "16": 4,
+      "17": 4,
+      "18": 4,
+      "19": 4,
+      "20": 4,
+      "21": 4,
+      "22": 3,
+      "23": 3,
+      "24": 3,
+      "25": 3,
+      "26": 164,
       "27": 0,
       "28": 0,
-      "29": 1,
-      "30": 1,
-      "31": 1,
-      "32": 55,
-      "33": 1,
-      "34": 1,
-      "35": 1,
-      "36": 1,
-      "37": 1,
-      "38": 1,
-      "39": 1,
-      "40": 1,
-      "41": 1,
-      "42": 1,
-      "43": 55,
-      "44": 54,
-      "45": 54,
-      "46": 54,
-      "47": 1
+      "29": 3,
+      "30": 3,
+      "31": 3,
+      "32": 167,
+      "33": 3,
+      "34": 3,
+      "35": 3,
+      "36": 3,
+      "37": 3,
+      "38": 3,
+      "39": 3,
+      "40": 3,
+      "41": 3,
+      "42": 3,
+      "43": 167,
+      "44": 164,
+      "45": 164,
+      "46": 164,
+      "47": 3
     },
     "f": {
-      "0": 11,
+      "0": 49,
       "1": 0,
-      "2": 45,
-      "3": 1,
-      "4": 1,
-      "5": 54,
+      "2": 122,
+      "3": 3,
+      "4": 3,
+      "5": 164,
       "6": 0,
-      "7": 1,
-      "8": 55
+      "7": 3,
+      "8": 167
     },
     "b": {
       "0": [
-        1,
-        10
+        3,
+        46
       ],
       "1": [
-        1,
-        44
+        4,
+        118
       ],
       "2": [
-        1,
-        1
+        3,
+        3
       ],
       "3": [
-        1,
-        54
+        3,
+        164
       ],
       "4": [
-        54,
-        1
+        164,
+        3
       ]
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": ";;;;;;;;;;;;IAGIA,4BAAiD,CAAjD,EAAiD,MAAjD,EAAiD,CAAjD;IAC2CA;IAAQA;IACjDA;IAAmCA;IAAOA;IAC1CA;IAAMA;MAAAA;MAAA;MAAA,OAASA,+BAAT;IAAiB,CAAjB;IAAgCA;IAAMA;;;;;;IAG5CA,4BAAK,CAAL,EAAK,MAAL,EAAK,CAAL;IACwCA;IAAKA;IAC3CA;IAAyCA;IAAQA;;;;ACCzD,WAAaC,YAAb;EAAM,MAAOA,YAAP,CAAmB;IACvBC,YACUC,WADV,EAEUC,MAFV,EAGUC,cAHV,EAGwC;MAF9B;MACA;MACA;IACT;;IAEMC,SAAS;MACd,OAAO,KAAKD,cAAL,CAAoBC,SAApB,EAAP;IACD;;IAEMC,MAAM;MACX,KAAKF,cAAL,CAAoBG,MAApB;MACA,KAAKJ,MAAL,CAAYK,QAAZ,CAAqB,CAAC,EAAD,CAArB;IACD;;EAdsB;;;qBAAZR,cAAYD;EAAA;;;UAAZC;IAAYS;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QDZzBd,+BAAiB,CAAjB,EAAiB,aAAjB,EAAiB,CAAjB,EAAiB,CAAjB,EAAiB,MAAjB;QAEUA;QAAQA;QACdA;;QAKAA;QAMFA;QACAA;QACEA;QACFA;;;;;;QAdQA;QAAAA,6DAA2B,UAA3B,EAA2Be,GAA3B;;;;;;ECSV,OAAad,YAAb;AAAA",
+      "mappings": ";;;;;;;;;;;;IAGIA,4BAAiD,CAAjD,EAAiD,MAAjD,EAAiD,CAAjD;IAC2CA;IAAQA;IACjDA;IAA8DA;IAAOA;IACrEA;IAAMA;MAAAA;MAAA;MAAA,OAASA,+BAAT;IAAiB,CAAjB;IAA0DA;IAAMA;;;;;;IAGtEA,4BAAK,CAAL,EAAK,MAAL,EAAK,CAAL;IACiEA;IAAKA;IACpEA;IAAqEA;IAAQA;;;;ACCrF,WAAaC,YAAb;EAAM,MAAOA,YAAP,CAAmB;IACvBC,YACUC,WADV,EAEUC,MAFV,EAGUC,cAHV,EAGwC;MAF9B;MACA;MACA;IACT;;IAEMC,SAAS;MACd,OAAO,KAAKD,cAAL,CAAoBC,SAApB,EAAP;IACD;;IAEMC,MAAM;MACX,KAAKF,cAAL,CAAoBG,MAApB;MACA,KAAKJ,MAAL,CAAYK,QAAZ,CAAqB,CAAC,EAAD,CAArB;IACD;;EAdsB;;;qBAAZR,cAAYD;EAAA;;;UAAZC;IAAYS;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QDZzBd,+BAAiB,CAAjB,EAAiB,aAAjB,EAAiB,CAAjB,EAAiB,CAAjB,EAAiB,MAAjB;QAEUA;QAAQA;QACdA;;QAKAA;QAMFA;QACAA;QACEA;QACFA;;;;;;QAdQA;QAAAA,6DAA2B,UAA3B,EAA2Be,GAA3B;;;;;;ECSV,OAAad,YAAb;AAAA",
       "names": [
         "i0",
         "AppComponent",
@@ -5046,12 +5046,12 @@
         "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\app.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"app\">\r\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n    <span>Yoga app</span>\r\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\r\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\r\n      <span routerLink=\"me\" class=\"link\">Account</span>\r\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\r\n    </div>\r\n    <ng-template #notLogged>\r\n      <div>\r\n        <span routerLink=\"login\" class=\"link\">Login</span>\r\n        <span routerLink=\"register\" class=\"link\">Register</span>\r\n      </div>\r\n    </ng-template>\r\n  </mat-toolbar>\r\n  <div>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n",
+        "<div class=\"app\">\r\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n    <span>Yoga app</span>\r\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\r\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\r\n      <span routerLink=\"me\" class=\"link\" data-test-id=\"account-btn\">Account</span>\r\n      <span (click)=\"logout()\" class=\"link\" data-test-id=\"logout-btn\">Logout</span>\r\n    </div>\r\n    <ng-template #notLogged>\r\n      <div>\r\n        <span routerLink=\"login\" class=\"link\" data-test-id=\"login-btn\">Login</span>\r\n        <span routerLink=\"register\" class=\"link\" data-test-id=\"register-btn\">Register</span>\r\n      </div>\r\n    </ng-template>\r\n  </mat-toolbar>\r\n  <div>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n",
         "import { Component, OnInit } from '@angular/core';\r\nimport { Router } from '@angular/router';\r\nimport { Observable } from 'rxjs';\r\nimport { AuthService } from './features/auth/services/auth.service';\r\nimport { SessionInformation } from './interfaces/sessionInformation.interface';\r\nimport { SessionService } from './services/session.service';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  constructor(\r\n    private authService: AuthService,\r\n    private router: Router,\r\n    private sessionService: SessionService) {\r\n  }\r\n\r\n  public $isLogged(): Observable<boolean> {\r\n    return this.sessionService.$isLogged();\r\n  }\r\n\r\n  public logout(): void {\r\n    this.sessionService.logOut();\r\n    this.router.navigate([''])\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "74310f5eae510a3c802cf95ce39f435ef7489188"
+    "hash": "a9c24eb15536b1332ea3d2fe366aae572a237b42"
   },
   "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\interceptors\\jwt.interceptor.ts": {
     "path": "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\interceptors\\jwt.interceptor.ts",
@@ -5320,30 +5320,30 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 2,
-      "3": 1,
-      "4": 2,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1
+      "0": 3,
+      "1": 3,
+      "2": 9,
+      "3": 6,
+      "4": 9,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 2,
-      "3": 1
+      "0": 3,
+      "1": 3,
+      "2": 9,
+      "3": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        6,
+        3
       ],
       "1": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -5543,22 +5543,22 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 3,
+      "1": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -5614,7 +5614,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 1
+      "0": 3
     },
     "f": {},
     "b": {},
@@ -5746,9 +5746,9 @@
       }
     },
     "s": {
-      "0": 1,
+      "0": 3,
       "1": 0,
-      "2": 1,
+      "2": 3,
       "3": 0
     },
     "f": {
@@ -5757,7 +5757,7 @@
     "b": {
       "0": [
         0,
-        1
+        3
       ]
     },
     "inputSourceMap": {
@@ -6825,71 +6825,71 @@
       "1": 0,
       "2": 0,
       "3": 0,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
-      "10": 1,
-      "11": 1,
-      "12": 1,
-      "13": 1,
-      "14": 1,
-      "15": 1,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 3,
+      "10": 3,
+      "11": 3,
+      "12": 3,
+      "13": 3,
+      "14": 3,
+      "15": 3,
       "16": 0,
-      "17": 1,
-      "18": 1,
-      "19": 1,
-      "20": 43,
-      "21": 1,
-      "22": 1,
-      "23": 1,
-      "24": 1,
-      "25": 1,
-      "26": 1,
-      "27": 1,
-      "28": 1,
-      "29": 1,
-      "30": 1,
-      "31": 1,
-      "32": 1,
-      "33": 1,
-      "34": 2,
-      "35": 1,
-      "36": 1,
-      "37": 1,
-      "38": 1,
-      "39": 1,
-      "40": 1,
-      "41": 1,
-      "42": 1,
-      "43": 43,
-      "44": 42,
-      "45": 42,
-      "46": 42,
-      "47": 42,
-      "48": 42,
-      "49": 42,
-      "50": 42,
-      "51": 42,
-      "52": 42,
-      "53": 42,
-      "54": 42,
-      "55": 42,
-      "56": 1
+      "17": 3,
+      "18": 3,
+      "19": 3,
+      "20": 114,
+      "21": 3,
+      "22": 3,
+      "23": 3,
+      "24": 3,
+      "25": 3,
+      "26": 3,
+      "27": 3,
+      "28": 3,
+      "29": 3,
+      "30": 3,
+      "31": 3,
+      "32": 3,
+      "33": 3,
+      "34": 6,
+      "35": 3,
+      "36": 3,
+      "37": 3,
+      "38": 3,
+      "39": 3,
+      "40": 3,
+      "41": 3,
+      "42": 3,
+      "43": 114,
+      "44": 111,
+      "45": 111,
+      "46": 111,
+      "47": 111,
+      "48": 111,
+      "49": 111,
+      "50": 111,
+      "51": 111,
+      "52": 111,
+      "53": 111,
+      "54": 111,
+      "55": 111,
+      "56": 3
     },
     "f": {
       "0": 0,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
       "5": 0,
-      "6": 1,
-      "7": 43,
-      "8": 1,
-      "9": 2
+      "6": 3,
+      "7": 114,
+      "8": 3,
+      "9": 6
     },
     "b": {
       "0": [
@@ -6897,29 +6897,29 @@
         0
       ],
       "1": [
-        1,
-        1
+        3,
+        3
       ],
       "2": [
-        1,
-        42
+        3,
+        111
       ],
       "3": [
-        42,
-        1
+        111,
+        3
       ],
       "4": [
-        40,
-        2
+        105,
+        6
       ],
       "5": [
-        40,
-        2
+        105,
+        6
       ]
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;;;ICmBYC;IAAiCA;IAAiBA;;;;ADP9D,WAAaC,cAAb;EAAM,MAAOA,cAAP,CAAqB;IAqBzBC,YAAoBC,WAApB,EACoBC,EADpB,EAEoBC,MAFpB,EAGoBC,cAHpB,EAGkD;MAH9B;MACA;MACA;MACA;MAvBb,YAAO,IAAP;MACA,eAAU,KAAV;MAEA,YAAO,KAAKF,EAAL,CAAQG,KAAR,CAAc;QAC1BC,KAAK,EAAE,CACL,EADK,EAEL,CACET,UAAU,CAACU,QADb,EAEEV,UAAU,CAACS,KAFb,CAFK,CADmB;QAQ1BE,QAAQ,EAAE,CACR,EADQ,EAER,CACEX,UAAU,CAACU,QADb,EAEEV,UAAU,CAACY,GAAX,CAAe,CAAf,CAFF,CAFQ;MARgB,CAAd,CAAP;IAqBN;;IAEMC,MAAM;MACX,MAAMC,YAAY,GAAG,KAAKC,IAAL,CAAUC,KAA/B;MACA,KAAKZ,WAAL,CAAiBa,KAAjB,CAAuBH,YAAvB,EAAqCI,SAArC,CAA+C;QAC7CC,IAAI,EAAGC,QAAD,IAAiC;UACrC,KAAKb,cAAL,CAAoBc,KAApB,CAA0BD,QAA1B;UACA,KAAKd,MAAL,CAAYgB,QAAZ,CAAqB,CAAC,WAAD,CAArB;QACD,CAJ4C;QAK7CC,KAAK,EAAEA,KAAK,IAAI,KAAKC,OAAL,GAAe;MALc,CAA/C;IAOD;;EApCwB;;;qBAAdtB,gBAAcD;EAAA;;;UAAdC;IAAcuB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCb3B5B,+BAAgE,CAAhE,EAAgE,UAAhE,EAAgE,CAAhE,EAAgE,iBAAhE,EAAgE,CAAhE,EAAgE,CAAhE,EAAgE,gBAAhE;QAG4BA;QAAKA;QAEzBA;QAA4CA;UAAA,OAAY6B,YAAZ;QAAoB,CAApB;QACxC7B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QAEAA;QAAkCA;UAAA;QAAA;QAE9BA;QAAUA;QAA0CA;QAIhEA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAhByBA;QAAAA;QAMGA;QAAAA;QAEyCA;QAAAA,8CAAmC,cAAnC,EAAmC6B,QAAnC;QAE3C7B;QAAAA;QAIkCA;QAAAA;QACpDA;QAAAA;;;;;;EDPhB,OAAaC,cAAb;AAAA",
+      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;;;ICmBYC;IAAsDA;IAAiBA;;;;ADPnF,WAAaC,cAAb;EAAM,MAAOA,cAAP,CAAqB;IAqBzBC,YAAoBC,WAApB,EACoBC,EADpB,EAEoBC,MAFpB,EAGoBC,cAHpB,EAGkD;MAH9B;MACA;MACA;MACA;MAvBb,YAAO,IAAP;MACA,eAAU,KAAV;MAEA,YAAO,KAAKF,EAAL,CAAQG,KAAR,CAAc;QAC1BC,KAAK,EAAE,CACL,EADK,EAEL,CACET,UAAU,CAACU,QADb,EAEEV,UAAU,CAACS,KAFb,CAFK,CADmB;QAQ1BE,QAAQ,EAAE,CACR,EADQ,EAER,CACEX,UAAU,CAACU,QADb,EAEEV,UAAU,CAACY,GAAX,CAAe,CAAf,CAFF,CAFQ;MARgB,CAAd,CAAP;IAqBN;;IAEMC,MAAM;MACX,MAAMC,YAAY,GAAG,KAAKC,IAAL,CAAUC,KAA/B;MACA,KAAKZ,WAAL,CAAiBa,KAAjB,CAAuBH,YAAvB,EAAqCI,SAArC,CAA+C;QAC7CC,IAAI,EAAGC,QAAD,IAAiC;UACrC,KAAKb,cAAL,CAAoBc,KAApB,CAA0BD,QAA1B;UACA,KAAKd,MAAL,CAAYgB,QAAZ,CAAqB,CAAC,WAAD,CAArB;QACD,CAJ4C;QAK7CC,KAAK,EAAEA,KAAK,IAAI,KAAKC,OAAL,GAAe;MALc,CAA/C;IAOD;;EApCwB;;;qBAAdtB,gBAAcD;EAAA;;;UAAdC;IAAcuB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCb3B5B,+BAAgE,CAAhE,EAAgE,UAAhE,EAAgE,CAAhE,EAAgE,iBAAhE,EAAgE,CAAhE,EAAgE,CAAhE,EAAgE,gBAAhE;QAG4BA;QAAKA;QAEzBA;QAA4CA;UAAA,OAAY6B,YAAZ;QAAoB,CAApB;QACxC7B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QAEAA;QAAkCA;UAAA;QAAA;QAE9BA;QAAUA;QAA0CA;QAIhEA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAhByBA;QAAAA;QAMGA;QAAAA;QAEyCA;QAAAA,8CAAmC,cAAnC,EAAmC6B,QAAnC;QAE3C7B;QAAAA;QAIkCA;QAAAA;QACpDA;QAAAA;;;;;;EDPhB,OAAaC,cAAb;AAAA",
       "names": [
         "Validators",
         "i0",
@@ -6960,11 +6960,11 @@
       ],
       "sourcesContent": [
         "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\r\nimport { SessionService } from 'src/app/services/session.service';\r\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\r\nimport { AuthService } from '../../services/auth.service';\r\n\r\n@Component({\r\n  selector: 'app-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.scss']\r\n})\r\nexport class LoginComponent {\r\n  public hide = true;\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(private authService: AuthService,\r\n              private fb: FormBuilder,\r\n              private router: Router,\r\n              private sessionService: SessionService) {\r\n  }\r\n\r\n  public submit(): void {\r\n    const loginRequest = this.form.value as LoginRequest;\r\n    this.authService.login(loginRequest).subscribe({\r\n      next: (response: SessionInformation) => {\r\n        this.sessionService.logIn(response);\r\n        this.router.navigate(['/sessions']);\r\n      },\r\n      error: error => this.onError = true,\r\n    });\r\n  }\r\n}\r\n",
-        "<div class=\"login\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Login</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"login-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"Password\"\r\n                        formControlName=\"password\">\r\n                    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\r\n                        [attr.aria-pressed]=\"hide\">\r\n                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\r\n                    </button>\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <p *ngIf=\"onError\" class=\"error\">An error occurred</p>\r\n        </form>\r\n    </mat-card>\r\n</div>"
+        "<div class=\"login\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Login</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"login-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"Password\"\r\n                        formControlName=\"password\">\r\n                    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\r\n                        [attr.aria-pressed]=\"hide\">\r\n                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\r\n                    </button>\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <p *ngIf=\"onError\" class=\"error\" data-test-id=error-p>An error occurred</p>\r\n        </form>\r\n    </mat-card>\r\n</div>\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "da93773578c5c2e9aeefd68ded610ecbf1480337"
+    "hash": "98eb81e2005cca077a20857be565408622d21244"
   },
   "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts": {
     "path": "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
@@ -7829,7 +7829,7 @@
       "1": 0,
       "2": 0,
       "3": 0,
-      "4": 1,
+      "4": 3,
       "5": 0,
       "6": 0,
       "7": 0,
@@ -7839,9 +7839,9 @@
       "11": 0,
       "12": 0,
       "13": 0,
-      "14": 1,
+      "14": 3,
       "15": 0,
-      "16": 1,
+      "16": 3,
       "17": 0,
       "18": 0,
       "19": 0,
@@ -7873,11 +7873,11 @@
       "45": 0,
       "46": 0,
       "47": 0,
-      "48": 1
+      "48": 3
     },
     "f": {
       "0": 0,
-      "1": 1,
+      "1": 3,
       "2": 0,
       "3": 0,
       "4": 0,
@@ -7906,7 +7906,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;ICoBYC;IAAwCA;IAAiBA;;;;ADVrE,WAAaC,iBAAb;EAAM,MAAOA,iBAAP,CAAwB;IAsC5BC,YAAoBC,WAApB,EACoBC,EADpB,EAEoBC,MAFpB,EAEkC;MAFd;MACA;MACA;MAtCb,eAAU,KAAV;MAEA,YAAO,KAAKD,EAAL,CAAQE,KAAR,CAAc;QAC1BC,KAAK,EAAE,CACL,EADK,EAEL,CACER,UAAU,CAACS,QADb,EAEET,UAAU,CAACQ,KAFb,CAFK,CADmB;QAQ1BE,SAAS,EAAE,CACT,EADS,EAET,CACEV,UAAU,CAACS,QADb,EAEET,UAAU,CAACW,GAAX,CAAe,CAAf,CAFF,EAGEX,UAAU,CAACY,GAAX,CAAe,EAAf,CAHF,CAFS,CARe;QAgB1BC,QAAQ,EAAE,CACR,EADQ,EAER,CACEb,UAAU,CAACS,QADb,EAEET,UAAU,CAACW,GAAX,CAAe,CAAf,CAFF,EAGEX,UAAU,CAACY,GAAX,CAAe,EAAf,CAHF,CAFQ,CAhBgB;QAwB1BE,QAAQ,EAAE,CACR,EADQ,EAER,CACEd,UAAU,CAACS,QADb,EAEET,UAAU,CAACW,GAAX,CAAe,CAAf,CAFF,EAGEX,UAAU,CAACY,GAAX,CAAe,EAAf,CAHF,CAFQ;MAxBgB,CAAd,CAAP;IAqCN;;IAEMG,MAAM;MACX,MAAMC,eAAe,GAAG,KAAKC,IAAL,CAAUC,KAAlC;MACA,KAAKd,WAAL,CAAiBe,QAAjB,CAA0BH,eAA1B,EAA2CI,SAA3C,CAAqD;QACjDC,IAAI,EAAGC,CAAD,IAAa,KAAKhB,MAAL,CAAYiB,QAAZ,CAAqB,CAAC,QAAD,CAArB,CAD8B;QAEjDC,KAAK,EAAEF,CAAC,IAAI,KAAKG,OAAL,GAAe;MAFsB,CAArD;IAKD;;EAlD2B;;;qBAAjBvB,mBAAiBD;EAAA;;;UAAjBC;IAAiBwB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCX9B7B,+BAAmE,CAAnE,EAAmE,UAAnE,EAAmE,CAAnE,EAAmE,iBAAnE,EAAmE,CAAnE,EAAmE,CAAnE,EAAmE,gBAAnE;QAG4BA;QAAQA;QAE5BA;QAA+CA;UAAA,OAAY8B,YAAZ;QAAoB,CAApB;QAC3C9B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QAEJA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAjB4BA;QAAAA;QAegCA;QAAAA;QACjDA;QAAAA;;;;;;EDVnB,OAAaC,iBAAb;AAAA",
+      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;ICoBYC;IAAoEA;IAAiBA;;;;ADVjG,WAAaC,iBAAb;EAAM,MAAOA,iBAAP,CAAwB;IAsC5BC,YAAoBC,WAApB,EACoBC,EADpB,EAEoBC,MAFpB,EAEkC;MAFd;MACA;MACA;MAtCb,eAAU,KAAV;MAEA,YAAO,KAAKD,EAAL,CAAQE,KAAR,CAAc;QAC1BC,KAAK,EAAE,CACL,EADK,EAEL,CACER,UAAU,CAACS,QADb,EAEET,UAAU,CAACQ,KAFb,CAFK,CADmB;QAQ1BE,SAAS,EAAE,CACT,EADS,EAET,CACEV,UAAU,CAACS,QADb,EAEET,UAAU,CAACW,GAAX,CAAe,CAAf,CAFF,EAGEX,UAAU,CAACY,GAAX,CAAe,EAAf,CAHF,CAFS,CARe;QAgB1BC,QAAQ,EAAE,CACR,EADQ,EAER,CACEb,UAAU,CAACS,QADb,EAEET,UAAU,CAACW,GAAX,CAAe,CAAf,CAFF,EAGEX,UAAU,CAACY,GAAX,CAAe,EAAf,CAHF,CAFQ,CAhBgB;QAwB1BE,QAAQ,EAAE,CACR,EADQ,EAER,CACEd,UAAU,CAACS,QADb,EAEET,UAAU,CAACW,GAAX,CAAe,CAAf,CAFF,EAGEX,UAAU,CAACY,GAAX,CAAe,EAAf,CAHF,CAFQ;MAxBgB,CAAd,CAAP;IAqCN;;IAEMG,MAAM;MACX,MAAMC,eAAe,GAAG,KAAKC,IAAL,CAAUC,KAAlC;MACA,KAAKd,WAAL,CAAiBe,QAAjB,CAA0BH,eAA1B,EAA2CI,SAA3C,CAAqD;QACjDC,IAAI,EAAGC,CAAD,IAAa,KAAKhB,MAAL,CAAYiB,QAAZ,CAAqB,CAAC,QAAD,CAArB,CAD8B;QAEjDC,KAAK,EAAEF,CAAC,IAAI,KAAKG,OAAL,GAAe;MAFsB,CAArD;IAKD;;EAlD2B;;;qBAAjBvB,mBAAiBD;EAAA;;;UAAjBC;IAAiBwB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCX9B7B,+BAAmE,CAAnE,EAAmE,UAAnE,EAAmE,CAAnE,EAAmE,iBAAnE,EAAmE,CAAnE,EAAmE,CAAnE,EAAmE,gBAAnE;QAG4BA;QAAQA;QAE5BA;QAA+CA;UAAA,OAAY8B,YAAZ;QAAoB,CAApB;QAC3C9B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QAEJA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAjB4BA;QAAAA;QAegCA;QAAAA;QACjDA;QAAAA;;;;;;EDVnB,OAAaC,iBAAb;AAAA",
       "names": [
         "Validators",
         "i0",
@@ -7948,11 +7948,11 @@
       ],
       "sourcesContent": [
         "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { AuthService } from '../../services/auth.service';\r\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\r\n\r\n@Component({\r\n  selector: 'app-register',\r\n  templateUrl: './register.component.html',\r\n  styleUrls: ['./register.component.scss']\r\n})\r\nexport class RegisterComponent {\r\n\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    firstName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(20)\r\n      ]\r\n    ],\r\n    lastName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(20)\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(40)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(private authService: AuthService,\r\n              private fb: FormBuilder,\r\n              private router: Router) {\r\n  }\r\n\r\n  public submit(): void {\r\n    const registerRequest = this.form.value as RegisterRequest;\r\n    this.authService.register(registerRequest).subscribe({\r\n        next: (_: void) => this.router.navigate(['/login']),\r\n        error: _ => this.onError = true,\r\n      }\r\n    );\r\n  }\r\n\r\n}\r\n",
-        "<div class=\"register\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Register</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"register-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <span *ngIf=\"onError\" class=\"error ml2\">An error occurred</span>\r\n        </form>\r\n    </mat-card>\r\n</div>\r\n"
+        "<div class=\"register\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Register</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"register-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <span *ngIf=\"onError\" class=\"error ml2\" data-test-id=error-register>An error occurred</span>\r\n        </form>\r\n    </mat-card>\r\n</div>\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "fa7904d2b997c5868bf884351b704fd79ba1cbc9"
+    "hash": "1602830a8c1b0bb070fe406bda58d95061de8f7d"
   },
   "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth-routing.module.ts": {
     "path": "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth-routing.module.ts",
@@ -8117,22 +8117,22 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 3,
+      "1": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -8323,22 +8323,22 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 3,
+      "1": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -8794,37 +8794,37 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
       "4": 0,
       "5": 0,
       "6": 0,
       "7": 0,
       "8": 0,
       "9": 0,
-      "10": 1,
-      "11": 1,
-      "12": 1,
-      "13": 1
+      "10": 3,
+      "11": 3,
+      "12": 3,
+      "13": 3
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
+      "0": 3,
+      "1": 3,
+      "2": 3,
       "3": 0,
       "4": 0,
       "5": 0,
       "6": 0,
       "7": 0,
       "8": 0,
-      "9": 1
+      "9": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -9118,18 +9118,18 @@
       }
     },
     "s": {
-      "0": 1,
+      "0": 3,
       "1": 0,
       "2": 0,
       "3": 0,
       "4": 0,
-      "5": 1,
+      "5": 3,
       "6": 0,
-      "7": 1,
-      "8": 1
+      "7": 3,
+      "8": 3
     },
     "f": {
-      "0": 1,
+      "0": 3,
       "1": 0,
       "2": 0,
       "3": 0,
@@ -9598,7 +9598,7 @@
         },
         "end": {
           "line": 75,
-          "column": 93
+          "column": 94
         }
       },
       "43": {
@@ -12108,7 +12108,7 @@
       "132": 0,
       "133": 0,
       "134": 0,
-      "135": 1,
+      "135": 3,
       "136": 0,
       "137": 0,
       "138": 0,
@@ -12136,9 +12136,9 @@
       "160": 0,
       "161": 0,
       "162": 0,
-      "163": 1,
+      "163": 3,
       "164": 0,
-      "165": 1,
+      "165": 3,
       "166": 0,
       "167": 0,
       "168": 0,
@@ -12146,7 +12146,7 @@
       "170": 0,
       "171": 0,
       "172": 0,
-      "173": 1
+      "173": 3
     },
     "f": {
       "0": 0,
@@ -12159,7 +12159,7 @@
       "7": 0,
       "8": 0,
       "9": 0,
-      "10": 1,
+      "10": 3,
       "11": 0,
       "12": 0,
       "13": 0,
@@ -12283,12 +12283,12 @@
         "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"m3\">\r\n  <mat-card *ngIf=\"session\">\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n          <button mat-icon-button (click)=\"back()\">\r\n            <mat-icon>arrow_back</mat-icon>\r\n          </button>\r\n          <h1>{{session.name | titlecase}}</h1>\r\n        </div>\r\n        <div>\r\n          <button *ngIf=\"isAdmin\" mat-raised-button color=\"warn\" (click)=\"delete()\">\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Delete</span>\r\n          </button>\r\n          <div *ngIf=\"!isAdmin\">\r\n            <button *ngIf=\"!isParticipate\" mat-raised-button color=\"primary\" (click)=\"participate()\">\r\n              <mat-icon>person_add</mat-icon>\r\n              <span class=\"ml1\">Participate</span>\r\n            </button>\r\n            <button *ngIf=\"isParticipate\" mat-raised-button color=\"warn\" (click)=\"unParticipate()\">\r\n              <mat-icon>person_remove</mat-icon>\r\n              <span class=\"ml1\">Do not participate</span>\r\n            </button>\r\n\r\n          </div>\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-subtitle *ngIf=\"teacher\">\r\n      <div fxLayoutAlign=\"start center\" class=\"ml3\">\r\n        <mat-icon>\r\n          people\r\n        </mat-icon>\r\n        <span class=\"ml1\">{{ teacher.firstName }} {{ teacher.lastName | uppercase }}</span>\r\n      </div>\r\n    </mat-card-subtitle>\r\n    <div mat-card-image fxLayoutAlign=\"center center\">\r\n      <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n    </div>\r\n    <mat-card-content>\r\n      <div class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            group\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.users.length }} attendees</span>\r\n        </div>\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            calendar_month\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.date | date: 'longDate'}}</span>\r\n        </div>\r\n      </div>\r\n      <div class=\"description\">\r\n        <p>Description:</p>\r\n        {{ session.description }}\r\n        <br>\r\n      </div>\r\n      <div class=\"date\" class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div class=\"created\"><i>Create at: </i> {{ session.createdAt| date: 'longDate'}}</div>\r\n        <div class=\"updated\"><i>Last update: </i> {{ session.updatedAt| date: 'longDate'}}</div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
+        "<div class=\"m3\">\r\n  <mat-card *ngIf=\"session\">\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n          <button mat-icon-button (click)=\"back()\">\r\n            <mat-icon>arrow_back</mat-icon>\r\n          </button>\r\n          <h1>{{session.name | titlecase}}</h1>\r\n        </div>\r\n        <div>\r\n          <button *ngIf=\"isAdmin\" mat-raised-button color=\"warn\" (click)=\"delete()\" data-test-id=delete-btn>\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Delete</span>\r\n          </button>\r\n          <div *ngIf=\"!isAdmin\">\r\n            <button *ngIf=\"!isParticipate\" mat-raised-button color=\"primary\" (click)=\"participate()\" data-test-id=participate-btn>\r\n              <mat-icon>person_add</mat-icon>\r\n              <span class=\"ml1\">Participate</span>\r\n            </button>\r\n            <button *ngIf=\"isParticipate\" mat-raised-button color=\"warn\" (click)=\"unParticipate()\" data-test-id=unparticipate-btn>\r\n              <mat-icon>person_remove</mat-icon>\r\n              <span class=\"ml1\">Do not participate</span>\r\n            </button>\r\n\r\n          </div>\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-subtitle *ngIf=\"teacher\">\r\n      <div fxLayoutAlign=\"start center\" class=\"ml3\">\r\n        <mat-icon>\r\n          people\r\n        </mat-icon>\r\n        <span class=\"ml1\">{{ teacher.firstName }} {{ teacher.lastName | uppercase }}</span>\r\n      </div>\r\n    </mat-card-subtitle>\r\n    <div mat-card-image fxLayoutAlign=\"center center\">\r\n      <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n    </div>\r\n    <mat-card-content>\r\n      <div class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            group\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.users.length }} attendees</span>\r\n        </div>\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            calendar_month\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.date | date: 'longDate'}}</span>\r\n        </div>\r\n      </div>\r\n      <div class=\"description\">\r\n        <p>Description:</p>\r\n        {{ session.description }}\r\n        <br>\r\n      </div>\r\n      <div class=\"date\" class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div class=\"created\"><i>Create at: </i> {{ session.createdAt| date: 'longDate'}}</div>\r\n        <div class=\"updated\"><i>Last update: </i> {{ session.updatedAt| date: 'longDate'}}</div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
         "import { Component, OnInit } from '@angular/core';\r\nimport { FormBuilder } from '@angular/forms';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { ActivatedRoute, Router } from '@angular/router';\r\nimport { Teacher } from '../../../../interfaces/teacher.interface';\r\nimport { SessionService } from '../../../../services/session.service';\r\nimport { TeacherService } from '../../../../services/teacher.service';\r\nimport { Session } from '../../interfaces/session.interface';\r\nimport { SessionApiService } from '../../services/session-api.service';\r\n\r\n@Component({\r\n  selector: 'app-detail',\r\n  templateUrl: './detail.component.html',\r\n  styleUrls: ['./detail.component.scss']\r\n})\r\nexport class DetailComponent implements OnInit {\r\n  public session: Session | undefined;\r\n  public teacher: Teacher | undefined;\r\n\r\n  public isParticipate = false;\r\n  public isAdmin = false;\r\n\r\n  public sessionId: string;\r\n  public userId: string;\r\n\r\n  constructor(\r\n    private route: ActivatedRoute,\r\n    private fb: FormBuilder,\r\n    private sessionService: SessionService,\r\n    private sessionApiService: SessionApiService,\r\n    private teacherService: TeacherService,\r\n    private matSnackBar: MatSnackBar,\r\n    private router: Router) {\r\n    this.sessionId = this.route.snapshot.paramMap.get('id')!;\r\n    this.isAdmin = this.sessionService.sessionInformation!.admin;\r\n    this.userId = this.sessionService.sessionInformation!.id.toString();\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    this.fetchSession();\r\n  }\r\n\r\n  public back() {\r\n    window.history.back();\r\n  }\r\n\r\n  public delete(): void {\r\n    this.sessionApiService\r\n      .delete(this.sessionId)\r\n      .subscribe((_: any) => {\r\n          this.matSnackBar.open('Session deleted !', 'Close', { duration: 3000 });\r\n          this.router.navigate(['sessions']);\r\n        }\r\n      );\r\n  }\r\n\r\n  public participate(): void {\r\n    this.sessionApiService.participate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\r\n  }\r\n\r\n  public unParticipate(): void {\r\n    this.sessionApiService.unParticipate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\r\n  }\r\n\r\n  private fetchSession(): void {\r\n    this.sessionApiService\r\n      .detail(this.sessionId)\r\n      .subscribe((session: Session) => {\r\n        this.session = session;\r\n        this.isParticipate = session.users.some(u => u === this.sessionService.sessionInformation!.id);\r\n        this.teacherService\r\n          .detail(session.teacher_id.toString())\r\n          .subscribe((teacher: Teacher) => this.teacher = teacher);\r\n      });\r\n  }\r\n\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "2ae5bc84e35dcd524e1af218af56d5ac2fc6896c"
+    "hash": "c1eec331c128a7700feed7e8d48ad4d97d18c7d5"
   },
   "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts": {
     "path": "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts",
@@ -14366,7 +14366,7 @@
       "54": 0,
       "55": 0,
       "56": 0,
-      "57": 1,
+      "57": 3,
       "58": 0,
       "59": 0,
       "60": 0,
@@ -14394,9 +14394,9 @@
       "82": 0,
       "83": 0,
       "84": 0,
-      "85": 1,
+      "85": 3,
       "86": 0,
-      "87": 1,
+      "87": 3,
       "88": 0,
       "89": 0,
       "90": 0,
@@ -14413,7 +14413,7 @@
       "101": 0,
       "102": 0,
       "103": 0,
-      "104": 1
+      "104": 3
     },
     "f": {
       "0": 0,
@@ -14421,7 +14421,7 @@
       "2": 0,
       "3": 0,
       "4": 0,
-      "5": 1,
+      "5": 3,
       "6": 0,
       "7": 0,
       "8": 0,
@@ -15906,14 +15906,14 @@
       }
     },
     "s": {
-      "0": 9,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
+      "0": 27,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 3,
       "8": 0,
       "9": 0,
       "10": 0,
@@ -15925,7 +15925,7 @@
       "16": 0,
       "17": 0,
       "18": 0,
-      "19": 1,
+      "19": 3,
       "20": 0,
       "21": 0,
       "22": 0,
@@ -15962,47 +15962,47 @@
       "53": 0,
       "54": 0,
       "55": 0,
-      "56": 1,
-      "57": 1,
-      "58": 1,
-      "59": 1,
-      "60": 8,
-      "61": 1,
-      "62": 1,
-      "63": 1,
-      "64": 9,
-      "65": 1,
-      "66": 1,
-      "67": 1,
-      "68": 1,
-      "69": 1,
-      "70": 1,
-      "71": 1,
-      "72": 1,
-      "73": 1,
-      "74": 9,
-      "75": 8,
-      "76": 8,
-      "77": 8,
-      "78": 8,
-      "79": 1
+      "56": 3,
+      "57": 3,
+      "58": 3,
+      "59": 3,
+      "60": 24,
+      "61": 3,
+      "62": 3,
+      "63": 3,
+      "64": 27,
+      "65": 3,
+      "66": 3,
+      "67": 3,
+      "68": 3,
+      "69": 3,
+      "70": 3,
+      "71": 3,
+      "72": 3,
+      "73": 3,
+      "74": 27,
+      "75": 24,
+      "76": 24,
+      "77": 24,
+      "78": 24,
+      "79": 3
     },
     "f": {
-      "0": 9,
+      "0": 27,
       "1": 0,
       "2": 0,
       "3": 0,
       "4": 0,
-      "5": 1,
-      "6": 1,
-      "7": 8,
-      "8": 1,
-      "9": 9
+      "5": 3,
+      "6": 3,
+      "7": 24,
+      "8": 3,
+      "9": 27
     },
     "b": {
       "0": [
-        1,
-        8
+        3,
+        24
       ],
       "1": [
         0,
@@ -16021,21 +16021,21 @@
         0
       ],
       "5": [
-        1,
-        1
+        3,
+        3
       ],
       "6": [
-        1,
-        8
+        3,
+        24
       ],
       "7": [
-        8,
-        1
+        24,
+        3
       ]
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": ";;;;;;;;;;;;IAIMA,kCAAkF,CAAlF,EAAkF,UAAlF;IACYA;IAAGA;IACbA;IAAkBA;IAAMA;;;;;;;;;;IAwBtBA,mCAC6C,CAD7C,EAC6C,UAD7C;IAEYA;IAAIA;IACdA;IAAkBA;IAAIA;;;;;IAFhBA;;;;;;;;;;IArBZA,oCAA0E,CAA1E,EAA0E,iBAA1E,EAA0E,CAA1E,EAA0E,gBAA1E;IAEoBA;IAAkBA;IAClCA;IACEA;;IACFA;IAEFA;IACEA;IACFA;IACAA,yCAAkB,EAAlB,EAAkB,GAAlB;IAEIA;IACFA;IAEFA,0CAAkB,EAAlB,EAAkB,QAAlB,EAAkB,EAAlB,EAAkB,EAAlB,EAAkB,UAAlB;IAEcA;IAAMA;IAChBA;IAAkBA;IAAMA;IAE1BA;IAKFA;;;;;;IAvBkBA;IAAAA;IAEdA;IAAAA;IAQAA;IAAAA;IAIwCA;IAAAA;IAIjCA;IAAAA;;;;AClBnB,WAAaC,aAAb;EAAM,MAAOA,aAAP,CAAoB;IAIxBC,YACUC,cADV,EAEUC,iBAFV,EAE8C;MADpC;MACA;MAJH,iBAAmC,KAAKA,iBAAL,CAAuBC,GAAvB,EAAnC;IAKF;;IAEG,IAAJC,IAAI;MACN,OAAO,KAAKH,cAAL,CAAoBI,kBAA3B;IACD;;EAXuB;;;qBAAbN,eAAaD;EAAA;;;UAAbC;IAAaO;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QDZ1BZ,+BAAkB,CAAlB,EAAkB,UAAlB,EAAkB,CAAlB,EAAkB,iBAAlB,EAAkB,CAAlB,EAAkB,CAAlB,EAAkB,gBAAlB,EAAkB,CAAlB;QAGiCA;QAAiBA;QAC5CA;QAIFA;QACAA;QACEA;;QA2BFA;;;;QAjCWA;QAAAA;QAMkCA;QAAAA;;;;;;ECEjD,OAAaC,aAAb;AAAA",
+      "mappings": ";;;;;;;;;;;;IAIMA,kCAAkF,CAAlF,EAAkF,UAAlF;IACYA;IAAGA;IACbA;IAAkBA;IAAMA;;;;;;;;;;IAwBtBA,mCAAqH,CAArH,EAAqH,UAArH;IACYA;IAAIA;IACdA;IAAkBA;IAAIA;;;;;IAFsCA;;;;;;;;;;IApBlEA,oCAA0E,CAA1E,EAA0E,iBAA1E,EAA0E,CAA1E,EAA0E,gBAA1E;IAEoBA;IAAkBA;IAClCA;IACEA;;IACFA;IAEFA;IACEA;IACFA;IACAA,yCAAkB,EAAlB,EAAkB,GAAlB;IAEIA;IACFA;IAEFA,0CAAkB,EAAlB,EAAkB,QAAlB,EAAkB,EAAlB,EAAkB,EAAlB,EAAkB,UAAlB;IAEcA;IAAMA;IAChBA;IAAkBA;IAAMA;IAE1BA;IAIFA;;;;;;IAtBkBA;IAAAA;IAEdA;IAAAA;IAQAA;IAAAA;IAIwCA;IAAAA;IAIjCA;IAAAA;;;;AClBnB,WAAaC,aAAb;EAAM,MAAOA,aAAP,CAAoB;IAIxBC,YACUC,cADV,EAEUC,iBAFV,EAE8C;MADpC;MACA;MAJH,iBAAmC,KAAKA,iBAAL,CAAuBC,GAAvB,EAAnC;IAKF;;IAEG,IAAJC,IAAI;MACN,OAAO,KAAKH,cAAL,CAAoBI,kBAA3B;IACD;;EAXuB;;;qBAAbN,eAAaD;EAAA;;;UAAbC;IAAaO;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QDZ1BZ,+BAAkB,CAAlB,EAAkB,UAAlB,EAAkB,CAAlB,EAAkB,iBAAlB,EAAkB,CAAlB,EAAkB,CAAlB,EAAkB,gBAAlB,EAAkB,CAAlB;QAGiCA;QAAiBA;QAC5CA;QAIFA;QACAA;QACEA;;QA0BFA;;;;QAhCWA;QAAAA;QAMkCA;QAAAA;;;;;;ECEjD,OAAaC,aAAb;AAAA",
       "names": [
         "i0",
         "ListComponent",
@@ -16057,12 +16057,12 @@
         "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"list\">\r\n  <mat-card>\r\n    <mat-card-header fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n      <mat-card-title class=\"m0\">Rentals available</mat-card-title>\r\n      <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\" routerLink=\"create\">\r\n        <mat-icon>add</mat-icon>\r\n        <span class=\"ml1\">Create</span>\r\n      </button>\r\n    </mat-card-header>\r\n    <div class=\"items mt2\" fxLayout=\"row wrap\" fxLayout.lt-md=\"column\">\r\n      <mat-card class=\"item\" *ngFor=\"let session of (sessions$ | async)\" fxFlex>\r\n        <mat-card-header>\r\n          <mat-card-title>{{ session.name }}</mat-card-title>\r\n          <mat-card-subtitle>\r\n            Session on {{ session.date | date: 'longDate'}}\r\n          </mat-card-subtitle>\r\n        </mat-card-header>\r\n        <div mat-card-image fxLayoutAlign=\"center center\">\r\n          <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n        </div>\r\n        <mat-card-content>\r\n          <p>\r\n            {{ session.description }}\r\n          </p>\r\n        </mat-card-content>\r\n        <mat-card-actions>\r\n          <button mat-raised-button color=\"primary\" [routerLink]=\"['detail',session.id]\">\r\n            <mat-icon>search</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n          <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\"\r\n                  [routerLink]=\"['update',session.id]\">\r\n            <mat-icon>edit</mat-icon>\r\n            <span class=\"ml1\">Edit</span>\r\n          </button>\r\n        </mat-card-actions>\r\n      </mat-card>\r\n    </div>\r\n  </mat-card>\r\n</div>\r\n",
+        "<div class=\"list\">\r\n  <mat-card>\r\n    <mat-card-header fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n      <mat-card-title class=\"m0\">Rentals available</mat-card-title>\r\n      <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\" routerLink=\"create\">\r\n        <mat-icon>add</mat-icon>\r\n        <span class=\"ml1\">Create</span>\r\n      </button>\r\n    </mat-card-header>\r\n    <div class=\"items mt2\" fxLayout=\"row wrap\" fxLayout.lt-md=\"column\">\r\n      <mat-card class=\"item\" *ngFor=\"let session of (sessions$ | async)\" fxFlex>\r\n        <mat-card-header>\r\n          <mat-card-title>{{ session.name }}</mat-card-title>\r\n          <mat-card-subtitle>\r\n            Session on {{ session.date | date: 'longDate'}}\r\n          </mat-card-subtitle>\r\n        </mat-card-header>\r\n        <div mat-card-image fxLayoutAlign=\"center center\">\r\n          <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n        </div>\r\n        <mat-card-content>\r\n          <p>\r\n            {{ session.description }}\r\n          </p>\r\n        </mat-card-content>\r\n        <mat-card-actions>\r\n          <button mat-raised-button color=\"primary\" [routerLink]=\"['detail',session.id]\" data-test-id=\"detail\">\r\n            <mat-icon>search</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n          <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\" [routerLink]=\"['update',session.id]\" data-test-id=edit>\r\n            <mat-icon>edit</mat-icon>\r\n            <span class=\"ml1\">Edit</span>\r\n          </button>\r\n        </mat-card-actions>\r\n      </mat-card>\r\n    </div>\r\n  </mat-card>\r\n</div>\r\n",
         "import { Component } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { SessionInformation } from '../../../../interfaces/sessionInformation.interface';\r\nimport { SessionService } from '../../../../services/session.service';\r\nimport { Session } from '../../interfaces/session.interface';\r\nimport { SessionApiService } from '../../services/session-api.service';\r\n\r\n@Component({\r\n  selector: 'app-list',\r\n  templateUrl: './list.component.html',\r\n  styleUrls: ['./list.component.scss']\r\n})\r\nexport class ListComponent {\r\n\r\n  public sessions$: Observable<Session[]> = this.sessionApiService.all();\r\n\r\n  constructor(\r\n    private sessionService: SessionService,\r\n    private sessionApiService: SessionApiService\r\n  ) { }\r\n\r\n  get user(): SessionInformation | undefined {\r\n    return this.sessionService.sessionInformation;\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "6523edb2e0730c800549f7a91f5be8a5a06a81b4"
+    "hash": "1bf91c186380638f598ee135f2bb54a7da869b6e"
   },
   "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts": {
     "path": "C:\\Users\\Tony\\Documents\\Admin\\Formation\\OpenClassrooms\\Projets\\P5\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts",
@@ -16227,22 +16227,22 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 3,
+      "1": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
@@ -16444,23 +16444,23 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 3
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 3,
+      "1": 3
     },
     "b": {
       "0": [
-        1,
-        1
+        3,
+        3
       ]
     },
     "inputSourceMap": {
