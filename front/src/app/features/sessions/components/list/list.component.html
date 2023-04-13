@@ -24,12 +24,11 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button color="primary" [routerLink]="['detail',session.id]">
+          <button mat-raised-button color="primary" [routerLink]="['detail',session.id]" data-test-id="detail">
             <mat-icon>search</mat-icon>
             <span class="ml1">Detail</span>
           </button>
-          <button *ngIf="user!.admin" mat-raised-button color="primary"
-                  [routerLink]="['update',session.id]">
+          <button *ngIf="user!.admin" mat-raised-button color="primary" [routerLink]="['update',session.id]" data-test-id=edit>
             <mat-icon>edit</mat-icon>
             <span class="ml1">Edit</span>
           </button>

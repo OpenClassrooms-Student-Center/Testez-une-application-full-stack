@@ -9,16 +9,16 @@
           <h1>{{session.name | titlecase}}</h1>
         </div>
         <div>
-          <button *ngIf="isAdmin" mat-raised-button color="warn" (click)="delete()">
+          <button *ngIf="isAdmin" mat-raised-button color="warn" (click)="delete()" data-test-id=delete-btn>
             <mat-icon>delete</mat-icon>
             <span class="ml1">Delete</span>
           </button>
           <div *ngIf="!isAdmin">
-            <button *ngIf="!isParticipate" mat-raised-button color="primary" (click)="participate()">
+            <button *ngIf="!isParticipate" mat-raised-button color="primary" (click)="participate()" data-test-id=participate-btn>
               <mat-icon>person_add</mat-icon>
               <span class="ml1">Participate</span>
             </button>
-            <button *ngIf="isParticipate" mat-raised-button color="warn" (click)="unParticipate()">
+            <button *ngIf="isParticipate" mat-raised-button color="warn" (click)="unParticipate()" data-test-id=unparticipate-btn>
               <mat-icon>person_remove</mat-icon>
               <span class="ml1">Do not participate</span>
             </button>
