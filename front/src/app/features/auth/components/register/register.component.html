@@ -19,7 +19,7 @@
                 </mat-form-field>
             </mat-card-content>
             <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Submit</button>
-            <span *ngIf="onError" class="error ml2">An error occurred</span>
+            <span *ngIf="onError" class="error ml2" data-test-id=error-register>An error occurred</span>
         </form>
     </mat-card>
 </div>
