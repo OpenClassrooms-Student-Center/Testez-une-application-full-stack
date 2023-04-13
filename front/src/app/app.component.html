@@ -3,13 +3,13 @@
     <span>Yoga app</span>
     <div *ngIf="$isLogged() | async; else notLogged">
       <span routerLink="sessions" class="link">Sessions</span>
-      <span routerLink="me" class="link">Account</span>
-      <span (click)="logout()" class="link">Logout</span>
+      <span routerLink="me" class="link" data-test-id="account-btn">Account</span>
+      <span (click)="logout()" class="link" data-test-id="logout-btn">Logout</span>
     </div>
     <ng-template #notLogged>
       <div>
-        <span routerLink="login" class="link">Login</span>
-        <span routerLink="register" class="link">Register</span>
+        <span routerLink="login" class="link" data-test-id="login-btn">Login</span>
+        <span routerLink="register" class="link" data-test-id="register-btn">Register</span>
       </div>
     </ng-template>
   </mat-toolbar>
