@@ -1,3 +1,7 @@
+CREATE DATABASE test;
+
+USE test;
+
 CREATE TABLE `TEACHERS` (
   `id` INT PRIMARY KEY AUTO_INCREMENT,
   `last_name` VARCHAR(40),
@@ -42,5 +46,5 @@ VALUES ('Margot', 'DELAHAYE'),
 
 
 INSERT INTO USERS (first_name, last_name, admin, email, password)
-VALUES ('Admin', 'Admin', true, 'yoga@studio.com', '$2a$10$.Hsa/ZjUVaHqi0tp9xieMeewrnZxrZ5pQRzddUXE/WjDu2ZThe6Iq'); 
+VALUES ('Admin', 'Admin', true, 'yoga@studio.com', '$2a$10$.Hsa/ZjUVaHqi0tp9xieMeewrnZxrZ5pQRzddUXE/WjDu2ZThe6Iq');
 
