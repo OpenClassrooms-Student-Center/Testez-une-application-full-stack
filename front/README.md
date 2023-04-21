@@ -6,20 +6,25 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Git clone:
 
-> git clone https://github.com/OpenClassrooms-Student-Center/P5-Full-Stack-testing
-
+```` bash
+git clone https://github.com/OpenClassrooms-Student-Center/P5-Full-Stack-testing
+````
 Go inside folder:
 
-> cd yoga
+```bash
+cd yoga
+````
 
 Install dependencies:
 
-> npm install
-
+```bash
+npm install
+````
 Launch Front-end:
 
-> npm run start;
-
+```bash 
+npm run start;
+````
 
 ## Ressources
 
@@ -29,7 +34,9 @@ Launch Front-end:
 
 For Postman import the collection
 
-> ressources/postman/yoga.postman_collection.json 
+``
+ressources/postman/yoga.postman_collection.json 
+``
 
 by following the documentation: 
 
@@ -51,22 +58,33 @@ By default the admin account is:
 
 Launching e2e test:
 
-> npm run e2e
+````bash
+npm run e2e
+````
 
 Generate coverage report (you should launch e2e test before):
 
-> npm run e2e:coverage
+````bash
+npm run e2e:coverage
+````
+
 
 Report is available here:
 
-> front/coverage/lcov-report/index.html
+````bash
+front/coverage/lcov-report/index.html
+````
 
 #### Unitary test
 
 Launching test:
 
-> npm run test
+````bash
+npm run test
+````
 
 for following change:
 
-> npm run test:watch
+````bash
+npm run test:watch
+````

@@ -40,6 +40,15 @@ describe('MeComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeTruthy()
   });
+
+  it('should return undefined when back', () => {
+    expect(component.back()).toBeUndefined();
+  });
+
+  it('should return undefined when delete', () => {
+    expect(component.delete()).toBeUndefined();
+  });
+
 });

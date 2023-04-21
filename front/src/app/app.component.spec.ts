@@ -26,4 +26,17 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
+
+  it('should return $isLogged truthy', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.$isLogged()).toBeTruthy();
+  });
+
+  it('should return undefined when logout', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.logout()).toBeUndefined();
+  });
+
 });

@@ -4,7 +4,7 @@ import { expect } from '@jest/globals';
 
 import { UserService } from './user.service';
 
-describe('UserService', () => {
+describe('UserService Unit Test Suites', () => {
   let service: UserService;
 
   beforeEach(() => {
@@ -18,5 +18,9 @@ describe('UserService', () => {
 
   it('should be created', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('should have deleted user given its id', () => {
+    expect(service.delete('1')).toBeTruthy();
   });
 });
