@@ -4,7 +4,7 @@ import { expect } from '@jest/globals';
 
 import { TeacherService } from './teacher.service';
 
-describe('TeacherService', () => {
+describe('TeacherService Unit Test Suites', () => {
   let service: TeacherService;
 
   beforeEach(() => {
@@ -19,4 +19,9 @@ describe('TeacherService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('Should return the detail of the teacher', () => {
+   expect(service.detail('1')).toBeTruthy();
+  });
+
 });

@@ -39,4 +39,8 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return undefined when login', () => {
+    expect(component.submit()).toBeUndefined();
+  });
 });

@@ -20,7 +20,7 @@ describe('RegisterComponent', () => {
       imports: [
         BrowserAnimationsModule,
         HttpClientModule,
-        ReactiveFormsModule,  
+        ReactiveFormsModule,
         MatCardModule,
         MatFormFieldModule,
         MatIconModule,
@@ -36,5 +36,9 @@ describe('RegisterComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should return undefined when submit', () => {
+    expect(component.submit()).toBeUndefined();
   });
 });
