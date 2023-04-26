@@ -1,5 +1,7 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic",
-    "jest.rootPath": "./front",
-    "jest.jestCommandLine": "npm test --"
+  "java.compile.nullAnalysis.mode": "automatic",
+  "jest.rootPath": "./front",
+  "jest.jestCommandLine": "npm test --",
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.debug.settings.onBuildFailureProceed": true
 }
