@@ -23,7 +23,7 @@ describe('FormComponent', () => {
     sessionInformation: {
       admin: true
     }
-  } 
+  }
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -35,13 +35,13 @@ describe('FormComponent', () => {
         MatIconModule,
         MatFormFieldModule,
         MatInputModule,
-        ReactiveFormsModule, 
+        ReactiveFormsModule,
         MatSnackBarModule,
         MatSelectModule,
         BrowserAnimationsModule
       ],
       providers: [
-        { provide: SessionService, useValue: mockSessionService },
+        {provide: SessionService, useValue: mockSessionService},
         SessionApiService
       ],
       declarations: [FormComponent]
@@ -55,5 +55,21 @@ describe('FormComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have a form', () => {
+    expect(component.sessionForm).toBeTruthy();
+  });
+
+  it('should have an observable of teachers', () => {
+    expect(component.teachers$).toBeTruthy();
+  });
+
+  it('should have a method to submit the form', () => {
+    expect(component.submit).toBeTruthy();
+  });
+
+  it('should have a method to init the component', () => {
+    expect(component.ngOnInit).toBeTruthy();
   });
 });
