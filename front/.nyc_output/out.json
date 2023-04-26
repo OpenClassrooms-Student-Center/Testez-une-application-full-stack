@@ -1,6 +1,6 @@
 {
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/polyfills.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/polyfills.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\polyfills.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\polyfills.ts",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -13,17 +13,17 @@
       "names": [],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/polyfills.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\polyfills.ts"
       ],
       "sourcesContent": [
-        "/**\n * This file includes polyfills needed by Angular and is loaded before the app.\n * You can add your own extra polyfills to this file.\n *\n * This file is divided into 2 sections:\n *   1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.\n *   2. Application imports. Files imported after ZoneJS that should be loaded before your main\n *      file.\n *\n * The current setup is for so-called \"evergreen\" browsers; the last versions of browsers that\n * automatically update themselves. This includes recent versions of Safari, Chrome (including\n * Opera), Edge on the desktop, and iOS and Chrome on mobile.\n *\n * Learn more in https://angular.io/guide/browser-support\n */\n\n/***************************************************************************************************\n * BROWSER POLYFILLS\n */\n\n/**\n * By default, zone.js will patch all possible macroTask and DomEvents\n * user can disable parts of macroTask/DomEvents patch by setting following flags\n * because those flags need to be set before `zone.js` being loaded, and webpack\n * will put import in the top of bundle, so user need to create a separate file\n * in this directory (for example: zone-flags.ts), and put the following flags\n * into that file, and then add the following code before importing zone.js.\n * import './zone-flags';\n *\n * The flags allowed in zone-flags.ts are listed here.\n *\n * The following flags will work for all browsers.\n *\n * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame\n * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick\n * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames\n *\n *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js\n *  with the following flag, it will bypass `zone.js` patch for IE/Edge\n *\n *  (window as any).__Zone_enable_cross_context_check = true;\n *\n */\n\n/***************************************************************************************************\n * Zone JS is required by default for Angular itself.\n */\nimport 'zone.js';  // Included with Angular CLI.\n\n\n/***************************************************************************************************\n * APPLICATION IMPORTS\n */\n"
+        "/**\r\n * This file includes polyfills needed by Angular and is loaded before the app.\r\n * You can add your own extra polyfills to this file.\r\n *\r\n * This file is divided into 2 sections:\r\n *   1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.\r\n *   2. Application imports. Files imported after ZoneJS that should be loaded before your main\r\n *      file.\r\n *\r\n * The current setup is for so-called \"evergreen\" browsers; the last versions of browsers that\r\n * automatically update themselves. This includes recent versions of Safari, Chrome (including\r\n * Opera), Edge on the desktop, and iOS and Chrome on mobile.\r\n *\r\n * Learn more in https://angular.io/guide/browser-support\r\n */\r\n\r\n/***************************************************************************************************\r\n * BROWSER POLYFILLS\r\n */\r\n\r\n/**\r\n * By default, zone.js will patch all possible macroTask and DomEvents\r\n * user can disable parts of macroTask/DomEvents patch by setting following flags\r\n * because those flags need to be set before `zone.js` being loaded, and webpack\r\n * will put import in the top of bundle, so user need to create a separate file\r\n * in this directory (for example: zone-flags.ts), and put the following flags\r\n * into that file, and then add the following code before importing zone.js.\r\n * import './zone-flags';\r\n *\r\n * The flags allowed in zone-flags.ts are listed here.\r\n *\r\n * The following flags will work for all browsers.\r\n *\r\n * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame\r\n * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick\r\n * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames\r\n *\r\n *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js\r\n *  with the following flag, it will bypass `zone.js` patch for IE/Edge\r\n *\r\n *  (window as any).__Zone_enable_cross_context_check = true;\r\n *\r\n */\r\n\r\n/***************************************************************************************************\r\n * Zone JS is required by default for Angular itself.\r\n */\r\nimport 'zone.js';  // Included with Angular CLI.\r\n\r\n\r\n/***************************************************************************************************\r\n * APPLICATION IMPORTS\r\n */\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "c5240fda8993b40aab97fd9dc2b92f7089ae9904"
+    "hash": "2d466ddad00dc5e3c8ebae6fd3a354cadddbb6ed"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/services/session.service.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/services/session.service.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\services\\session.service.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\services\\session.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -385,35 +385,35 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 48,
-      "4": 1,
-      "5": 1,
-      "6": 1,
+      "0": 7,
+      "1": 7,
+      "2": 7,
+      "3": 303,
+      "4": 2,
+      "5": 2,
+      "6": 2,
       "7": 0,
       "8": 0,
       "9": 0,
-      "10": 1,
-      "11": 1,
-      "12": 1,
-      "13": 1,
-      "14": 1
+      "10": 2,
+      "11": 7,
+      "12": 7,
+      "13": 7,
+      "14": 7
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 48,
-      "3": 1,
+      "0": 7,
+      "1": 7,
+      "2": 303,
+      "3": 2,
       "4": 0,
-      "5": 1,
-      "6": 1
+      "5": 2,
+      "6": 7
     },
     "b": {
       "0": [
-        1,
-        1
+        7,
+        7
       ]
     },
     "inputSourceMap": {
@@ -438,17 +438,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/services/session.service.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\services\\session.service.ts"
       ],
       "sourcesContent": [
-        "import { Injectable } from '@angular/core';\nimport { BehaviorSubject, Observable } from 'rxjs';\nimport { SessionInformation } from '../interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SessionService {\n\n  public isLogged = false;\n  public sessionInformation: SessionInformation | undefined;\n\n  private isLoggedSubject = new BehaviorSubject<boolean>(this.isLogged);\n\n  public $isLogged(): Observable<boolean> {\n    return this.isLoggedSubject.asObservable();\n  }\n\n  public logIn(user: SessionInformation): void {\n    this.sessionInformation = user;\n    this.isLogged = true;\n    this.next();\n  }\n\n  public logOut(): void {\n    this.sessionInformation = undefined;\n    this.isLogged = false;\n    this.next();\n  }\n\n  private next(): void {\n    this.isLoggedSubject.next(this.isLogged);\n  }\n}\n"
+        "import { Injectable } from '@angular/core';\r\nimport { BehaviorSubject, Observable } from 'rxjs';\r\nimport { SessionInformation } from '../interfaces/sessionInformation.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class SessionService {\r\n\r\n  public isLogged = false;\r\n  public sessionInformation: SessionInformation | undefined;\r\n\r\n  private isLoggedSubject = new BehaviorSubject<boolean>(this.isLogged);\r\n\r\n  public $isLogged(): Observable<boolean> {\r\n    return this.isLoggedSubject.asObservable();\r\n  }\r\n\r\n  public logIn(user: SessionInformation): void {\r\n    this.sessionInformation = user;\r\n    this.isLogged = true;\r\n    this.next();\r\n  }\r\n\r\n  public logOut(): void {\r\n    this.sessionInformation = undefined;\r\n    this.isLogged = false;\r\n    this.next();\r\n  }\r\n\r\n  private next(): void {\r\n    this.isLoggedSubject.next(this.isLogged);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "c3a72bc23c8cf6176532ff3d5990ddceaa9945f1"
+    "hash": "6ef2e592c5a492f7d310ee70fe06a5d78a17838e"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/services/user.service.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/services/user.service.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\services\\user.service.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\services\\user.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -702,18 +702,18 @@
       }
     },
     "s": {
-      "0": 1,
+      "0": 7,
       "1": 0,
       "2": 0,
       "3": 0,
       "4": 0,
-      "5": 1,
+      "5": 7,
       "6": 0,
-      "7": 1,
-      "8": 1
+      "7": 7,
+      "8": 7
     },
     "f": {
-      "0": 1,
+      "0": 7,
       "1": 0,
       "2": 0,
       "3": 0,
@@ -743,17 +743,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/services/user.service.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\services\\user.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { User } from '../interfaces/user.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class UserService {\n\n  private pathService = 'api/user';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public getById(id: string): Observable<User> {\n    return this.httpClient.get<User>(`${this.pathService}/${id}`);\n  }\n\n  public delete(id: string): Observable<any> {\n    return this.httpClient.delete(`${this.pathService}/${id}`);\n  }\n}\n"
+        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { User } from '../interfaces/user.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class UserService {\r\n\r\n  private pathService = 'api/user';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public getById(id: string): Observable<User> {\r\n    return this.httpClient.get<User>(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public delete(id: string): Observable<any> {\r\n    return this.httpClient.delete(`${this.pathService}/${id}`);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "f119a9caae2b6f1da287d45fb375fa2268112c9a"
+    "hash": "9a2b07422bc7251a64d862323ae3d5693a9e7c16"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/components/me/me.component.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/components/me/me.component.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\components\\me\\me.component.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\components\\me\\me.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2285,7 +2285,7 @@
       "53": 0,
       "54": 0,
       "55": 0,
-      "56": 1,
+      "56": 7,
       "57": 0,
       "58": 0,
       "59": 0,
@@ -2297,9 +2297,9 @@
       "65": 0,
       "66": 0,
       "67": 0,
-      "68": 1,
+      "68": 7,
       "69": 0,
-      "70": 1,
+      "70": 7,
       "71": 0,
       "72": 0,
       "73": 0,
@@ -2316,14 +2316,14 @@
       "84": 0,
       "85": 0,
       "86": 0,
-      "87": 1
+      "87": 7
     },
     "f": {
       "0": 0,
       "1": 0,
       "2": 0,
       "3": 0,
-      "4": 1,
+      "4": 7,
       "5": 0,
       "6": 0,
       "7": 0,
@@ -2400,19 +2400,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/components/me/me.component.html",
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/components/me/me.component.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\components\\me\\me.component.html",
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\components\\me\\me.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"m3\">\n  <mat-card>\n    <mat-card-title>\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <button mat-icon-button (click)=\"back()\">\n          <mat-icon>arrow_back</mat-icon>\n        </button>\n        <h1>User information</h1>\n      </div>\n    </mat-card-title>\n    <mat-card-content>\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\n        <p>Email: {{ user.email }}</p>\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\n          <p>Delete my account:</p>\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\n            <mat-icon>delete</mat-icon>\n            <span class=\"ml1\">Detail</span>\n          </button>\n        </div>\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\n\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\n        </div>\n      </div>\n    </mat-card-content>\n  </mat-card>\n</div>\n",
-        "import { Component, OnInit } from '@angular/core';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { Router } from '@angular/router';\nimport { User } from '../../interfaces/user.interface';\nimport { SessionService } from '../../services/session.service';\nimport { UserService } from '../../services/user.service';\n\n@Component({\n  selector: 'app-me',\n  templateUrl: './me.component.html',\n  styleUrls: ['./me.component.scss']\n})\nexport class MeComponent implements OnInit {\n\n  public user: User | undefined;\n\n  constructor(private router: Router,\n              private sessionService: SessionService,\n              private matSnackBar: MatSnackBar,\n              private userService: UserService) {\n  }\n\n  public ngOnInit(): void {\n    this.userService\n      .getById(this.sessionService.sessionInformation!.id.toString())\n      .subscribe((user: User) => this.user = user);\n  }\n\n  public back(): void {\n    window.history.back();\n  }\n\n  public delete(): void {\n    this.userService\n      .delete(this.sessionService.sessionInformation!.id.toString())\n      .subscribe((_) => {\n        this.matSnackBar.open(\"Your account has been deleted !\", 'Close', { duration: 3000 });\n        this.sessionService.logOut();\n        this.router.navigate(['/']);\n      })\n  }\n\n}\n"
+        "<div class=\"m3\">\r\n  <mat-card>\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <button mat-icon-button (click)=\"back()\">\r\n          <mat-icon>arrow_back</mat-icon>\r\n        </button>\r\n        <h1>User information</h1>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-content>\r\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\r\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\r\n        <p>Email: {{ user.email }}</p>\r\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\r\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\r\n          <p>Delete my account:</p>\r\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n        </div>\r\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\r\n\r\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\r\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\r\n        </div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
+        "import { Component, OnInit } from '@angular/core';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { Router } from '@angular/router';\r\nimport { User } from '../../interfaces/user.interface';\r\nimport { SessionService } from '../../services/session.service';\r\nimport { UserService } from '../../services/user.service';\r\n\r\n@Component({\r\n  selector: 'app-me',\r\n  templateUrl: './me.component.html',\r\n  styleUrls: ['./me.component.scss']\r\n})\r\nexport class MeComponent implements OnInit {\r\n\r\n  public user: User | undefined;\r\n\r\n  constructor(private router: Router,\r\n              private sessionService: SessionService,\r\n              private matSnackBar: MatSnackBar,\r\n              private userService: UserService) {\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    this.userService\r\n      .getById(this.sessionService.sessionInformation!.id.toString())\r\n      .subscribe((user: User) => this.user = user);\r\n  }\r\n\r\n  public back(): void {\r\n    window.history.back();\r\n  }\r\n\r\n  public delete(): void {\r\n    this.userService\r\n      .delete(this.sessionService.sessionInformation!.id.toString())\r\n      .subscribe((_) => {\r\n        this.matSnackBar.open(\"Your account has been deleted !\", 'Close', { duration: 3000 });\r\n        this.sessionService.logOut();\r\n        this.router.navigate(['/']);\r\n      })\r\n  }\r\n\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "16a528358378ea8b386a355de415803c16fe21e5"
+    "hash": "99a256a80e7f21bd868abc06d0f32dae753ba666"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/components/not-found/not-found.component.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/components/not-found/not-found.component.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2654,18 +2654,18 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
+      "0": 7,
+      "1": 7,
       "2": 0,
-      "3": 1,
+      "3": 7,
       "4": 0,
       "5": 0,
       "6": 0,
       "7": 0,
-      "8": 1
+      "8": 7
     },
     "f": {
-      "0": 1,
+      "0": 7,
       "1": 0,
       "2": 0
     },
@@ -2693,19 +2693,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/components/not-found/not-found.component.ts",
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/components/not-found/not-found.component.html"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.ts",
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.html"
       ],
       "sourcesContent": [
-        "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-not-found',\n  templateUrl: './not-found.component.html',\n  styleUrls: ['./not-found.component.scss']\n})\nexport class NotFoundComponent {\n}\n",
-        "<div class=\"flex justify-center mt3\">\n        <h1>Page not found !</h1>\n</div>"
+        "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-not-found',\r\n  templateUrl: './not-found.component.html',\r\n  styleUrls: ['./not-found.component.scss']\r\n})\r\nexport class NotFoundComponent {\r\n}\r\n",
+        "<div class=\"flex justify-center mt3\">\r\n        <h1>Page not found !</h1>\r\n</div>"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "feb28cc23a5346a15374c6a44bbd30b5c5ee8eef"
+    "hash": "0b40c1f33271292bb736918a4b5fa9944c0d558e"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/guards/auth.guard.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/guards/auth.guard.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\guards\\auth.guard.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\guards\\auth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2991,32 +2991,32 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
+      "0": 7,
+      "1": 2,
+      "2": 2,
+      "3": 2,
       "4": 0,
       "5": 0,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
-      "10": 1
+      "6": 2,
+      "7": 7,
+      "8": 2,
+      "9": 7,
+      "10": 7
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1
+      "0": 7,
+      "1": 2,
+      "2": 2,
+      "3": 2
     },
     "b": {
       "0": [
         0,
-        1
+        2
       ],
       "1": [
-        1,
-        1
+        2,
+        2
       ]
     },
     "inputSourceMap": {
@@ -3037,17 +3037,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/guards/auth.guard.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\guards\\auth.guard.ts"
       ],
       "sourcesContent": [
-        "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class AuthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (!this.sessionService.isLogged) {\n      this.router.navigate(['login']);\n      return false;\n    }\n    return true;\n  }\n}"
+        "import {Injectable} from \"@angular/core\";\r\nimport {CanActivate, Router} from \"@angular/router\"; \r\nimport { SessionService } from \"../services/session.service\";\r\n\r\n@Injectable({providedIn: 'root'})\r\nexport class AuthGuard implements CanActivate {\r\n\r\n  constructor( \r\n    private router: Router,\r\n    private sessionService: SessionService,\r\n  ) {\r\n  }\r\n\r\n  public canActivate(): boolean {\r\n    if (!this.sessionService.isLogged) {\r\n      this.router.navigate(['login']);\r\n      return false;\r\n    }\r\n    return true;\r\n  }\r\n}"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "a27649d1a5948be6f926604cc4dddc2df52c6d9e"
+    "hash": "8671fa6d6c655241b731eeead4b94cc5d73ce502"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/guards/unauth.guard.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/guards/unauth.guard.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\guards\\unauth.guard.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\guards\\unauth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3333,32 +3333,32 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
+      "0": 7,
+      "1": 7,
+      "2": 7,
+      "3": 7,
       "4": 0,
       "5": 0,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
-      "10": 1
+      "6": 7,
+      "7": 7,
+      "8": 7,
+      "9": 7,
+      "10": 7
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1
+      "0": 7,
+      "1": 7,
+      "2": 7,
+      "3": 7
     },
     "b": {
       "0": [
         0,
-        1
+        7
       ],
       "1": [
-        1,
-        1
+        7,
+        7
       ]
     },
     "inputSourceMap": {
@@ -3379,17 +3379,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/guards/unauth.guard.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\guards\\unauth.guard.ts"
       ],
       "sourcesContent": [
-        "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class UnauthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (this.sessionService.isLogged) {\n      this.router.navigate(['rentals']);\n      return false;\n    }\n    return true;\n  }\n}"
+        "import {Injectable} from \"@angular/core\";\r\nimport {CanActivate, Router} from \"@angular/router\"; \r\nimport { SessionService } from \"../services/session.service\";\r\n\r\n@Injectable({providedIn: 'root'})\r\nexport class UnauthGuard implements CanActivate {\r\n\r\n  constructor( \r\n    private router: Router,\r\n    private sessionService: SessionService,\r\n  ) {\r\n  }\r\n\r\n  public canActivate(): boolean {\r\n    if (this.sessionService.isLogged) {\r\n      this.router.navigate(['rentals']);\r\n      return false;\r\n    }\r\n    return true;\r\n  }\r\n}"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "0019a639212f7a94a17cbaef032227935e1846ef"
+    "hash": "31c0dbd89c1b66428a14352ffaac4c9db865e150"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app-routing.module.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app-routing.module.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app-routing.module.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3687,30 +3687,30 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
-      "10": 1
+      "0": 7,
+      "1": 7,
+      "2": 7,
+      "3": 2,
+      "4": 2,
+      "5": 7,
+      "6": 7,
+      "7": 7,
+      "8": 7,
+      "9": 7,
+      "10": 7
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1
+      "0": 7,
+      "1": 7,
+      "2": 2,
+      "3": 2,
+      "4": 7,
+      "5": 7
     },
     "b": {
       "0": [
-        1,
-        1
+        7,
+        7
       ]
     },
     "inputSourceMap": {
@@ -3737,17 +3737,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app-routing.module.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app-routing.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { MeComponent } from './components/me/me.component';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { AuthGuard } from './guards/auth.guard';\nimport { UnauthGuard } from './guards/unauth.guard';\n\nconst routes: Routes = [\n  {\n    path: '',\n    canActivate: [UnauthGuard],\n    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)\n  },\n  {\n    path: 'sessions',\n    canActivate: [AuthGuard],\n    loadChildren: () => import('./features/sessions/sessions.module').then(m => m.SessionsModule)\n  },\n  {\n    path: 'me',\n    canActivate: [AuthGuard],\n    component: MeComponent\n  },\n  { path: '404', component: NotFoundComponent },\n  { path: '**', redirectTo: '404' }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule {\n}\n"
+        "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { MeComponent } from './components/me/me.component';\r\nimport { NotFoundComponent } from './components/not-found/not-found.component';\r\nimport { AuthGuard } from './guards/auth.guard';\r\nimport { UnauthGuard } from './guards/unauth.guard';\r\n\r\nconst routes: Routes = [\r\n  {\r\n    path: '',\r\n    canActivate: [UnauthGuard],\r\n    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)\r\n  },\r\n  {\r\n    path: 'sessions',\r\n    canActivate: [AuthGuard],\r\n    loadChildren: () => import('./features/sessions/sessions.module').then(m => m.SessionsModule)\r\n  },\r\n  {\r\n    path: 'me',\r\n    canActivate: [AuthGuard],\r\n    component: MeComponent\r\n  },\r\n  { path: '404', component: NotFoundComponent },\r\n  { path: '**', redirectTo: '404' }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule {\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "6cb13a3dc158801639dbf923da90eff149a3b9a9"
+    "hash": "79b7fa493b3d4c8285e9fd06851dab1736db2bbd"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/services/auth.service.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/services/auth.service.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\services\\auth.service.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\services\\auth.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -4001,27 +4001,27 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
+      "0": 7,
+      "1": 7,
+      "2": 7,
       "3": 0,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1
+      "4": 7,
+      "5": 7,
+      "6": 7,
+      "7": 7,
+      "8": 7
     },
     "f": {
-      "0": 1,
-      "1": 1,
+      "0": 7,
+      "1": 7,
       "2": 0,
-      "3": 1,
-      "4": 1
+      "3": 7,
+      "4": 7
     },
     "b": {
       "0": [
-        1,
-        1
+        7,
+        7
       ]
     },
     "inputSourceMap": {
@@ -4043,17 +4043,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/services/auth.service.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\services\\auth.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { LoginRequest } from '../interfaces/loginRequest.interface';\nimport { RegisterRequest } from '../interfaces/registerRequest.interface';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class AuthService {\n\n  private pathService = 'api/auth';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public register(registerRequest: RegisterRequest): Observable<void> {\n    return this.httpClient.post<void>(`${this.pathService}/register`, registerRequest);\n  }\n\n  public login(loginRequest: LoginRequest): Observable<SessionInformation> {\n    return this.httpClient.post<SessionInformation>(`${this.pathService}/login`, loginRequest);\n  }\n}\n"
+        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { LoginRequest } from '../interfaces/loginRequest.interface';\r\nimport { RegisterRequest } from '../interfaces/registerRequest.interface';\r\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class AuthService {\r\n\r\n  private pathService = 'api/auth';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public register(registerRequest: RegisterRequest): Observable<void> {\r\n    return this.httpClient.post<void>(`${this.pathService}/register`, registerRequest);\r\n  }\r\n\r\n  public login(loginRequest: LoginRequest): Observable<SessionInformation> {\r\n    return this.httpClient.post<SessionInformation>(`${this.pathService}/login`, loginRequest);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "46091126ffd6e5a728a3915ba8c09836967caa45"
+    "hash": "f8a2c256b5b4eb9d53bc8820e123ca51dd37e442"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app.component.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app.component.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app.component.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -4342,10 +4342,20 @@
         },
         "end": {
           "line": 55,
-          "column": 33
+          "column": 49
         }
       },
       "29": {
+        "start": {
+          "line": 55,
+          "column": 43
+        },
+        "end": {
+          "line": 55,
+          "column": 47
+        }
+      },
+      "30": {
         "start": {
           "line": 60,
           "column": 2
@@ -4355,7 +4365,7 @@
           "column": 4
         }
       },
-      "30": {
+      "31": {
         "start": {
           "line": 61,
           "column": 4
@@ -4365,7 +4375,7 @@
           "column": 147
         }
       },
-      "31": {
+      "32": {
         "start": {
           "line": 64,
           "column": 2
@@ -4375,7 +4385,7 @@
           "column": 5
         }
       },
-      "32": {
+      "33": {
         "start": {
           "line": 71,
           "column": 6
@@ -4385,7 +4395,7 @@
           "column": 7
         }
       },
-      "33": {
+      "34": {
         "start": {
           "line": 72,
           "column": 8
@@ -4395,7 +4405,7 @@
           "column": 71
         }
       },
-      "34": {
+      "35": {
         "start": {
           "line": 73,
           "column": 8
@@ -4405,7 +4415,7 @@
           "column": 33
         }
       },
-      "35": {
+      "36": {
         "start": {
           "line": 74,
           "column": 8
@@ -4415,7 +4425,7 @@
           "column": 26
         }
       },
-      "36": {
+      "37": {
         "start": {
           "line": 75,
           "column": 8
@@ -4425,7 +4435,7 @@
           "column": 70
         }
       },
-      "37": {
+      "38": {
         "start": {
           "line": 76,
           "column": 8
@@ -4435,7 +4445,7 @@
           "column": 30
         }
       },
-      "38": {
+      "39": {
         "start": {
           "line": 77,
           "column": 8
@@ -4445,7 +4455,7 @@
           "column": 119
         }
       },
-      "39": {
+      "40": {
         "start": {
           "line": 78,
           "column": 8
@@ -4455,7 +4465,7 @@
           "column": 26
         }
       },
-      "40": {
+      "41": {
         "start": {
           "line": 79,
           "column": 8
@@ -4465,7 +4475,7 @@
           "column": 36
         }
       },
-      "41": {
+      "42": {
         "start": {
           "line": 80,
           "column": 8
@@ -4475,7 +4485,7 @@
           "column": 41
         }
       },
-      "42": {
+      "43": {
         "start": {
           "line": 81,
           "column": 8
@@ -4485,7 +4495,7 @@
           "column": 28
         }
       },
-      "43": {
+      "44": {
         "start": {
           "line": 84,
           "column": 6
@@ -4495,7 +4505,7 @@
           "column": 7
         }
       },
-      "44": {
+      "45": {
         "start": {
           "line": 85,
           "column": 20
@@ -4505,7 +4515,7 @@
           "column": 37
         }
       },
-      "45": {
+      "46": {
         "start": {
           "line": 87,
           "column": 8
@@ -4515,7 +4525,7 @@
           "column": 24
         }
       },
-      "46": {
+      "47": {
         "start": {
           "line": 88,
           "column": 8
@@ -4525,7 +4535,7 @@
           "column": 86
         }
       },
-      "47": {
+      "48": {
         "start": {
           "line": 94,
           "column": 2
@@ -4706,6 +4716,30 @@
         "line": 53
       },
       "7": {
+        "name": "(anonymous_7)",
+        "decl": {
+          "start": {
+            "line": 55,
+            "column": 38
+          },
+          "end": {
+            "line": 55,
+            "column": 39
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 55,
+            "column": 43
+          },
+          "end": {
+            "line": 55,
+            "column": 47
+          }
+        },
+        "line": 55
+      },
+      "8": {
         "name": "AppComponent_Factory",
         "decl": {
           "start": {
@@ -4729,7 +4763,7 @@
         },
         "line": 60
       },
-      "8": {
+      "9": {
         "name": "AppComponent_Template",
         "decl": {
           "start": {
@@ -4937,91 +4971,93 @@
       }
     },
     "s": {
-      "0": 5,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
+      "0": 22,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 2,
+      "9": 2,
       "10": 0,
       "11": 0,
       "12": 0,
-      "13": 1,
-      "14": 1,
-      "15": 45,
-      "16": 1,
-      "17": 1,
-      "18": 1,
-      "19": 1,
-      "20": 1,
-      "21": 1,
-      "22": 1,
-      "23": 1,
-      "24": 1,
-      "25": 1,
-      "26": 48,
+      "13": 2,
+      "14": 2,
+      "15": 290,
+      "16": 7,
+      "17": 7,
+      "18": 7,
+      "19": 7,
+      "20": 7,
+      "21": 7,
+      "22": 7,
+      "23": 7,
+      "24": 7,
+      "25": 7,
+      "26": 303,
       "27": 0,
       "28": 0,
-      "29": 1,
-      "30": 1,
-      "31": 1,
-      "32": 49,
-      "33": 1,
-      "34": 1,
-      "35": 1,
-      "36": 1,
-      "37": 1,
-      "38": 1,
-      "39": 1,
-      "40": 1,
-      "41": 1,
-      "42": 1,
-      "43": 49,
-      "44": 48,
-      "45": 48,
-      "46": 48,
-      "47": 1
+      "29": 0,
+      "30": 7,
+      "31": 7,
+      "32": 7,
+      "33": 310,
+      "34": 7,
+      "35": 7,
+      "36": 7,
+      "37": 7,
+      "38": 7,
+      "39": 7,
+      "40": 7,
+      "41": 7,
+      "42": 7,
+      "43": 7,
+      "44": 310,
+      "45": 303,
+      "46": 303,
+      "47": 303,
+      "48": 7
     },
     "f": {
-      "0": 5,
+      "0": 22,
       "1": 0,
-      "2": 45,
-      "3": 1,
-      "4": 1,
-      "5": 48,
+      "2": 290,
+      "3": 7,
+      "4": 7,
+      "5": 303,
       "6": 0,
-      "7": 1,
-      "8": 49
+      "7": 0,
+      "8": 7,
+      "9": 310
     },
     "b": {
       "0": [
-        1,
-        4
+        2,
+        20
       ],
       "1": [
-        1,
-        44
+        7,
+        283
       ],
       "2": [
-        1,
-        1
+        7,
+        7
       ],
       "3": [
-        1,
-        48
+        7,
+        303
       ],
       "4": [
-        48,
-        1
+        303,
+        7
       ]
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": ";;;;;;;;;;;;IAGIA,4BAAiD,CAAjD,EAAiD,MAAjD,EAAiD,CAAjD;IAC2CA;IAAQA;IACjDA;IAAmCA;IAAOA;IAC1CA;IAAMA;MAAAA;MAAA;MAAA,OAASA,+BAAT;IAAiB,CAAjB;IAAgCA;IAAMA;;;;;;IAG5CA,4BAAK,CAAL,EAAK,MAAL,EAAK,CAAL;IACwCA;IAAKA;IAC3CA;IAAyCA;IAAQA;;;;ACCzD,WAAaC,YAAb;EAAM,MAAOA,YAAP,CAAmB;IACvBC,YACUC,WADV,EAEUC,MAFV,EAGUC,cAHV,EAGwC;MAF9B;MACA;MACA;IACT;;IAEMC,SAAS;MACd,OAAO,KAAKD,cAAL,CAAoBC,SAApB,EAAP;IACD;;IAEMC,MAAM;MACX,KAAKF,cAAL,CAAoBG,MAApB;MACA,KAAKJ,MAAL,CAAYK,QAAZ,CAAqB,CAAC,EAAD,CAArB;IACD;;EAdsB;;;qBAAZR,cAAYD;EAAA;;;UAAZC;IAAYS;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QDZzBd,+BAAiB,CAAjB,EAAiB,aAAjB,EAAiB,CAAjB,EAAiB,CAAjB,EAAiB,MAAjB;QAEUA;QAAQA;QACdA;;QAKAA;QAMFA;QACAA;QACEA;QACFA;;;;;;QAdQA;QAAAA,6DAA2B,UAA3B,EAA2Be,GAA3B;;;;;;ECSV,OAAad,YAAb;AAAA",
+      "mappings": ";;;;;;;;;;;;IAGIA,4BAAiD,CAAjD,EAAiD,MAAjD,EAAiD,CAAjD;IAC2CA;IAAQA;IACjDA;IAAmCA;IAAOA;IAC1CA;IAAMA;MAAAA;MAAA;MAAA,OAASA,+BAAT;IAAiB,CAAjB;IAAgCA;IAAMA;;;;;;IAG5CA,4BAAK,CAAL,EAAK,MAAL,EAAK,CAAL;IACwCA;IAAKA;IAC3CA;IAAyCA;IAAQA;;;;ACAzD,WAAaC,YAAb;EAAM,MAAOA,YAAP,CAAmB;IACvBC,YACUC,WADV,EAEUC,MAFV,EAGUC,cAHV,EAGwC;MAF9B;MACA;MACA;IACT;;IAEMC,SAAS;MACd,OAAO,KAAKD,cAAL,CAAoBC,SAApB,EAAP;IACD;;IAEMC,MAAM;MACX,KAAKF,cAAL,CAAoBG,MAApB;MACA,KAAKJ,MAAL,CAAYK,QAAZ,CAAqB,CAAC,EAAD,CAArB,EAA2BC,IAA3B,CAAgCC,CAAC,IAAI,IAArC;IACD;;EAdsB;;;qBAAZV,cAAYD;EAAA;;;UAAZC;IAAYW;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QDXzBhB,+BAAiB,CAAjB,EAAiB,aAAjB,EAAiB,CAAjB,EAAiB,CAAjB,EAAiB,MAAjB;QAEUA;QAAQA;QACdA;;QAKAA;QAMFA;QACAA;QACEA;QACFA;;;;;;QAdQA;QAAAA,6DAA2B,UAA3B,EAA2BiB,GAA3B;;;;;;ECQV,OAAahB,YAAb;AAAA",
       "names": [
         "i0",
         "AppComponent",
@@ -5033,6 +5069,8 @@
         "logout",
         "logOut",
         "navigate",
+        "then",
+        "r",
         "selectors",
         "decls",
         "vars",
@@ -5042,19 +5080,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app.component.html",
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app.component.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app.component.html",
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"app\">\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n    <span>Yoga app</span>\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\n      <span routerLink=\"me\" class=\"link\">Account</span>\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\n    </div>\n    <ng-template #notLogged>\n      <div>\n        <span routerLink=\"login\" class=\"link\">Login</span>\n        <span routerLink=\"register\" class=\"link\">Register</span>\n      </div>\n    </ng-template>\n  </mat-toolbar>\n  <div>\n    <router-outlet></router-outlet>\n  </div>\n</div>\n",
-        "import { Component, OnInit } from '@angular/core';\nimport { Router } from '@angular/router';\nimport { Observable } from 'rxjs';\nimport { AuthService } from './features/auth/services/auth.service';\nimport { SessionInformation } from './interfaces/sessionInformation.interface';\nimport { SessionService } from './services/session.service';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  constructor(\n    private authService: AuthService,\n    private router: Router,\n    private sessionService: SessionService) {\n  }\n\n  public $isLogged(): Observable<boolean> {\n    return this.sessionService.$isLogged();\n  }\n\n  public logout(): void {\n    this.sessionService.logOut();\n    this.router.navigate([''])\n  }\n}\n"
+        "<div class=\"app\">\r\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n    <span>Yoga app</span>\r\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\r\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\r\n      <span routerLink=\"me\" class=\"link\">Account</span>\r\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\r\n    </div>\r\n    <ng-template #notLogged>\r\n      <div>\r\n        <span routerLink=\"login\" class=\"link\">Login</span>\r\n        <span routerLink=\"register\" class=\"link\">Register</span>\r\n      </div>\r\n    </ng-template>\r\n  </mat-toolbar>\r\n  <div>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n",
+        "import {Component} from '@angular/core';\r\nimport {Router} from '@angular/router';\r\nimport {Observable} from 'rxjs';\r\nimport {AuthService} from './features/auth/services/auth.service';\r\nimport {SessionService} from './services/session.service';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  constructor(\r\n    private authService: AuthService,\r\n    private router: Router,\r\n    private sessionService: SessionService) {\r\n  }\r\n\r\n  public $isLogged(): Observable<boolean> {\r\n    return this.sessionService.$isLogged();\r\n  }\r\n\r\n  public logout(): void {\r\n    this.sessionService.logOut();\r\n    this.router.navigate(['']).then(r => true);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "09efd1e7b846745cfcab8a4b0da8901148cdbde0"
+    "hash": "ca007700ecd3b736383a4970329231ca0fa891a4"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/interceptors/jwt.interceptor.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/interceptors/jwt.interceptor.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\interceptors\\jwt.interceptor.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\interceptors\\jwt.interceptor.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5320,30 +5358,30 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 2,
-      "3": 1,
-      "4": 2,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1
+      "0": 7,
+      "1": 7,
+      "2": 9,
+      "3": 2,
+      "4": 9,
+      "5": 7,
+      "6": 7,
+      "7": 7,
+      "8": 7
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 2,
-      "3": 1
+      "0": 7,
+      "1": 7,
+      "2": 9,
+      "3": 7
     },
     "b": {
       "0": [
-        1,
-        1
+        2,
+        7
       ],
       "1": [
-        1,
-        1
+        7,
+        7
       ]
     },
     "inputSourceMap": {
@@ -5371,17 +5409,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/interceptors/jwt.interceptor.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\interceptors\\jwt.interceptor.ts"
       ],
       "sourcesContent": [
-        "import { HttpHandler, HttpInterceptor, HttpRequest } from \"@angular/common/http\";\nimport { Injectable } from \"@angular/core\";\nimport { SessionService } from '../services/session.service';\n\n@Injectable({ providedIn: 'root' })\nexport class JwtInterceptor implements HttpInterceptor {\n  constructor(private sessionService: SessionService) {}\n\n  public intercept(request: HttpRequest<any>, next: HttpHandler) {\n    if (this.sessionService.isLogged) {\n      request = request.clone({\n        setHeaders: {\n          Authorization: `Bearer ${this.sessionService.sessionInformation!.token}`,\n        },\n      });\n    }\n    return next.handle(request);\n  }\n}\n"
+        "import { HttpHandler, HttpInterceptor, HttpRequest } from \"@angular/common/http\";\r\nimport { Injectable } from \"@angular/core\";\r\nimport { SessionService } from '../services/session.service';\r\n\r\n@Injectable({ providedIn: 'root' })\r\nexport class JwtInterceptor implements HttpInterceptor {\r\n  constructor(private sessionService: SessionService) {}\r\n\r\n  public intercept(request: HttpRequest<any>, next: HttpHandler) {\r\n    if (this.sessionService.isLogged) {\r\n      request = request.clone({\r\n        setHeaders: {\r\n          Authorization: `Bearer ${this.sessionService.sessionInformation!.token}`,\r\n        },\r\n      });\r\n    }\r\n    return next.handle(request);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "3a84d8ade0df27ad0e8f091afb3ffa4ac2be84ed"
+    "hash": "a7a1d20b96aa088be3c31fe5e3266610f3d8e6fb"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app.module.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app.module.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app.module.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5543,22 +5581,22 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1
+      "0": 7,
+      "1": 7,
+      "2": 7,
+      "3": 7,
+      "4": 7,
+      "5": 7,
+      "6": 7
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 7,
+      "1": 7
     },
     "b": {
       "0": [
-        1,
-        1
+        7,
+        7
       ]
     },
     "inputSourceMap": {
@@ -5588,17 +5626,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/app.module.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\app.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';\nimport { JwtInterceptor } from './interceptors/jwt.interceptor';\nimport { MatCardModule } from '@angular/material/card';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { MeComponent } from './components/me/me.component';\n\nconst materialModule = [\n  MatButtonModule,\n  MatCardModule,\n  MatIconModule,\n  MatSnackBarModule,\n  MatToolbarModule,\n]\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    NotFoundComponent,\n    MeComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule, \n    FlexLayoutModule,\n    HttpClientModule,\n    ...materialModule\n  ],\n  providers: [\n    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },\n  ],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n"
+        "import { NgModule } from '@angular/core';\r\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { NotFoundComponent } from './components/not-found/not-found.component';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatToolbarModule } from '@angular/material/toolbar';\r\nimport { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';\r\nimport { JwtInterceptor } from './interceptors/jwt.interceptor';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { MeComponent } from './components/me/me.component';\r\n\r\nconst materialModule = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatIconModule,\r\n  MatSnackBarModule,\r\n  MatToolbarModule,\r\n]\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    NotFoundComponent,\r\n    MeComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule, \r\n    FlexLayoutModule,\r\n    HttpClientModule,\r\n    ...materialModule\r\n  ],\r\n  providers: [\r\n    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "cdbcc6e2c83a9a0ca52f0a86739a4ade0600bb40"
+    "hash": "ec37ce58809c356a49de7c5e0a2de6ade64a22d5"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/environments/environment.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/environments/environment.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\environments\\environment.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\environments\\environment.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5614,7 +5652,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 1
+      "0": 7
     },
     "f": {},
     "b": {},
@@ -5628,17 +5666,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/environments/environment.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\environments\\environment.ts"
       ],
       "sourcesContent": [
-        "export const environment = {\n  baseUrl: 'localhost:8080/api/',\n  production: false\n};\n"
+        "export const environment = {\r\n  baseUrl: 'localhost:8080/api/',\r\n  production: false\r\n};\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5fcf10cfd7bdef9e0615dd49305245caf15f3f4d"
+    "hash": "ee5e81d6269b1a573afc6aa5298b47b928ecfe2c"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/main.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/main.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\main.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\main.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5746,9 +5784,9 @@
       }
     },
     "s": {
-      "0": 1,
+      "0": 7,
       "1": 0,
-      "2": 1,
+      "2": 7,
       "3": 0
     },
     "f": {
@@ -5757,7 +5795,7 @@
     "b": {
       "0": [
         0,
-        1
+        7
       ]
     },
     "inputSourceMap": {
@@ -5777,17 +5815,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/main.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\main.ts"
       ],
       "sourcesContent": [
-        "import { enableProdMode } from '@angular/core';\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n\nimport { AppModule } from './app/app.module';\nimport { environment } from './environments/environment';\n\nif (environment.production) {\n  enableProdMode();\n}\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"
+        "import { enableProdMode } from '@angular/core';\r\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\r\n\r\nimport { AppModule } from './app/app.module';\r\nimport { environment } from './environments/environment';\r\n\r\nif (environment.production) {\r\n  enableProdMode();\r\n}\r\n\r\nplatformBrowserDynamic().bootstrapModule(AppModule)\r\n  .catch(err => console.error(err));\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "8df866028491d109cde27a287c468b1a7f7985d2"
+    "hash": "3099e7f4cb6172364c7f8139d0ede0e709f12c34"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/components/login/login.component.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/components/login/login.component.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -6821,100 +6859,100 @@
       }
     },
     "s": {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
-      "8": 1,
-      "9": 1,
-      "10": 1,
-      "11": 1,
-      "12": 1,
-      "13": 1,
-      "14": 1,
-      "15": 1,
-      "16": 0,
-      "17": 1,
-      "18": 1,
-      "19": 1,
-      "20": 43,
-      "21": 1,
-      "22": 1,
-      "23": 1,
-      "24": 1,
-      "25": 1,
-      "26": 1,
-      "27": 1,
-      "28": 1,
-      "29": 1,
-      "30": 1,
-      "31": 1,
-      "32": 1,
-      "33": 1,
-      "34": 2,
-      "35": 1,
-      "36": 1,
-      "37": 1,
-      "38": 1,
-      "39": 1,
-      "40": 1,
-      "41": 1,
-      "42": 1,
-      "43": 43,
-      "44": 42,
-      "45": 42,
-      "46": 42,
-      "47": 42,
-      "48": 42,
-      "49": 42,
-      "50": 42,
-      "51": 42,
-      "52": 42,
-      "53": 42,
-      "54": 42,
-      "55": 42,
-      "56": 1
+      "0": 15,
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 7,
+      "5": 7,
+      "6": 7,
+      "7": 7,
+      "8": 7,
+      "9": 7,
+      "10": 7,
+      "11": 7,
+      "12": 7,
+      "13": 7,
+      "14": 2,
+      "15": 2,
+      "16": 5,
+      "17": 7,
+      "18": 7,
+      "19": 7,
+      "20": 266,
+      "21": 7,
+      "22": 7,
+      "23": 7,
+      "24": 7,
+      "25": 7,
+      "26": 7,
+      "27": 7,
+      "28": 7,
+      "29": 7,
+      "30": 7,
+      "31": 7,
+      "32": 7,
+      "33": 7,
+      "34": 14,
+      "35": 7,
+      "36": 7,
+      "37": 7,
+      "38": 7,
+      "39": 7,
+      "40": 7,
+      "41": 7,
+      "42": 7,
+      "43": 266,
+      "44": 259,
+      "45": 259,
+      "46": 259,
+      "47": 259,
+      "48": 259,
+      "49": 259,
+      "50": 259,
+      "51": 259,
+      "52": 259,
+      "53": 259,
+      "54": 259,
+      "55": 259,
+      "56": 7
     },
     "f": {
-      "0": 0,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 0,
-      "6": 1,
-      "7": 43,
-      "8": 1,
-      "9": 2
+      "0": 15,
+      "1": 7,
+      "2": 7,
+      "3": 7,
+      "4": 2,
+      "5": 5,
+      "6": 7,
+      "7": 266,
+      "8": 7,
+      "9": 14
     },
     "b": {
       "0": [
-        0,
-        0
+        5,
+        10
       ],
       "1": [
-        1,
-        1
+        7,
+        7
       ],
       "2": [
-        1,
-        42
+        7,
+        259
       ],
       "3": [
-        42,
-        1
+        259,
+        7
       ],
       "4": [
-        40,
-        2
+        245,
+        14
       ],
       "5": [
-        40,
-        2
+        245,
+        14
       ]
     },
     "inputSourceMap": {
@@ -6955,19 +6993,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/components/login/login.component.ts",
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/components/login/login.component.html"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\login\\login.component.html"
       ],
       "sourcesContent": [
-        "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\nimport { SessionService } from 'src/app/services/session.service';\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\nimport { AuthService } from '../../services/auth.service';\n\n@Component({\n  selector: 'app-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss']\n})\nexport class LoginComponent {\n  public hide = true;\n  public onError = false;\n\n  public form = this.fb.group({\n    email: [\n      '',\n      [\n        Validators.required,\n        Validators.email\n      ]\n    ],\n    password: [\n      '',\n      [\n        Validators.required,\n        Validators.min(3)\n      ]\n    ]\n  });\n\n  constructor(private authService: AuthService,\n              private fb: FormBuilder,\n              private router: Router,\n              private sessionService: SessionService) {\n  }\n\n  public submit(): void {\n    const loginRequest = this.form.value as LoginRequest;\n    this.authService.login(loginRequest).subscribe({\n      next: (response: SessionInformation) => {\n        this.sessionService.logIn(response);\n        this.router.navigate(['/sessions']);\n      },\n      error: error => this.onError = true,\n    });\n  }\n}\n",
-        "<div class=\"login\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card>\n        <mat-card-header fxLayoutAlign=\"center center\">\n            <mat-card-title>Login</mat-card-title>\n        </mat-card-header>\n        <form class=\"login-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n            <mat-card-content fxLayout=\"column\">\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"Password\"\n                        formControlName=\"password\">\n                    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\n                        [attr.aria-pressed]=\"hide\">\n                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n                    </button>\n                </mat-form-field>\n            </mat-card-content>\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\n            <p *ngIf=\"onError\" class=\"error\">An error occurred</p>\n        </form>\n    </mat-card>\n</div>"
+        "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\r\nimport { SessionService } from 'src/app/services/session.service';\r\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\r\nimport { AuthService } from '../../services/auth.service';\r\n\r\n@Component({\r\n  selector: 'app-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.scss']\r\n})\r\nexport class LoginComponent {\r\n  public hide = true;\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(private authService: AuthService,\r\n              private fb: FormBuilder,\r\n              private router: Router,\r\n              private sessionService: SessionService) {\r\n  }\r\n\r\n  public submit(): void {\r\n    const loginRequest = this.form.value as LoginRequest;\r\n    this.authService.login(loginRequest).subscribe({\r\n      next: (response: SessionInformation) => {\r\n        this.sessionService.logIn(response);\r\n        this.router.navigate(['/sessions']);\r\n      },\r\n      error: error => this.onError = true,\r\n    });\r\n  }\r\n}\r\n",
+        "<div class=\"login\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Login</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"login-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"Password\"\r\n                        formControlName=\"password\">\r\n                    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\r\n                        [attr.aria-pressed]=\"hide\">\r\n                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\r\n                    </button>\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <p *ngIf=\"onError\" class=\"error\">An error occurred</p>\r\n        </form>\r\n    </mat-card>\r\n</div>"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "52786b37759ef3ef1e7d7af86c54ba08627173e9"
+    "hash": "209769ad9633862a926741287ca308f6f51c5f7a"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/components/register/register.component.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/components/register/register.component.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -7829,7 +7867,7 @@
       "1": 0,
       "2": 0,
       "3": 0,
-      "4": 1,
+      "4": 7,
       "5": 0,
       "6": 0,
       "7": 0,
@@ -7839,9 +7877,9 @@
       "11": 0,
       "12": 0,
       "13": 0,
-      "14": 1,
+      "14": 7,
       "15": 0,
-      "16": 1,
+      "16": 7,
       "17": 0,
       "18": 0,
       "19": 0,
@@ -7873,11 +7911,11 @@
       "45": 0,
       "46": 0,
       "47": 0,
-      "48": 1
+      "48": 7
     },
     "f": {
       "0": 0,
-      "1": 1,
+      "1": 7,
       "2": 0,
       "3": 0,
       "4": 0,
@@ -7943,19 +7981,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/components/register/register.component.ts",
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/components/register/register.component.html"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.html"
       ],
       "sourcesContent": [
-        "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { AuthService } from '../../services/auth.service';\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\n\n@Component({\n  selector: 'app-register',\n  templateUrl: './register.component.html',\n  styleUrls: ['./register.component.scss']\n})\nexport class RegisterComponent {\n\n  public onError = false;\n\n  public form = this.fb.group({\n    email: [\n      '',\n      [\n        Validators.required,\n        Validators.email\n      ]\n    ],\n    firstName: [\n      '',\n      [\n        Validators.required,\n        Validators.min(3),\n        Validators.max(20)\n      ]\n    ],\n    lastName: [\n      '',\n      [\n        Validators.required,\n        Validators.min(3),\n        Validators.max(20)\n      ]\n    ],\n    password: [\n      '',\n      [\n        Validators.required,\n        Validators.min(3),\n        Validators.max(40)\n      ]\n    ]\n  });\n\n  constructor(private authService: AuthService,\n              private fb: FormBuilder,\n              private router: Router) {\n  }\n\n  public submit(): void {\n    const registerRequest = this.form.value as RegisterRequest;\n    this.authService.register(registerRequest).subscribe({\n        next: (_: void) => this.router.navigate(['/login']),\n        error: _ => this.onError = true,\n      }\n    );\n  }\n\n}\n",
-        "<div class=\"register\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card>\n        <mat-card-header fxLayoutAlign=\"center center\">\n            <mat-card-title>Register</mat-card-title>\n        </mat-card-header>\n        <form class=\"register-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n            <mat-card-content fxLayout=\"column\">\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\n                </mat-form-field>\n            </mat-card-content>\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\n            <span *ngIf=\"onError\" class=\"error ml2\">An error occurred</span>\n        </form>\n    </mat-card>\n</div>\n"
+        "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { AuthService } from '../../services/auth.service';\r\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\r\n\r\n@Component({\r\n  selector: 'app-register',\r\n  templateUrl: './register.component.html',\r\n  styleUrls: ['./register.component.scss']\r\n})\r\nexport class RegisterComponent {\r\n\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    firstName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(20)\r\n      ]\r\n    ],\r\n    lastName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(20)\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(40)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(private authService: AuthService,\r\n              private fb: FormBuilder,\r\n              private router: Router) {\r\n  }\r\n\r\n  public submit(): void {\r\n    const registerRequest = this.form.value as RegisterRequest;\r\n    this.authService.register(registerRequest).subscribe({\r\n        next: (_: void) => this.router.navigate(['/login']),\r\n        error: _ => this.onError = true,\r\n      }\r\n    );\r\n  }\r\n\r\n}\r\n",
+        "<div class=\"register\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Register</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"register-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <span *ngIf=\"onError\" class=\"error ml2\">An error occurred</span>\r\n        </form>\r\n    </mat-card>\r\n</div>\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "bcd89de5927d36acd3eabb63e613d3e08607d207"
+    "hash": "7eeb9b9684481d2ed83bd2f122085a646e56f2c3"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/auth-routing.module.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/auth-routing.module.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth-routing.module.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8117,22 +8155,22 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1
+      "0": 7,
+      "1": 7,
+      "2": 7,
+      "3": 7,
+      "4": 7,
+      "5": 7,
+      "6": 7
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 7,
+      "1": 7
     },
     "b": {
       "0": [
-        1,
-        1
+        7,
+        7
       ]
     },
     "inputSourceMap": {
@@ -8151,17 +8189,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/auth-routing.module.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth-routing.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { LoginComponent } from './components/login/login.component';\nimport { RegisterComponent } from './components/register/register.component';\n\n\nconst routes: Routes = [\n  { title: 'Login', path: 'login', component: LoginComponent },\n  { title: 'Register', path: 'register', component: RegisterComponent }\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class AuthRoutingModule { }\n"
+        "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { LoginComponent } from './components/login/login.component';\r\nimport { RegisterComponent } from './components/register/register.component';\r\n\r\n\r\nconst routes: Routes = [\r\n  { title: 'Login', path: 'login', component: LoginComponent },\r\n  { title: 'Register', path: 'register', component: RegisterComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AuthRoutingModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "9f8f195cce7fbc1ad97519fc1499a53d1fb2f2ee"
+    "hash": "f2497234cb7adf0cf68888a1c0192928f85c75b0"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/auth.module.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/auth.module.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth.module.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8323,22 +8361,22 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1
+      "0": 7,
+      "1": 7,
+      "2": 7,
+      "3": 7,
+      "4": 7,
+      "5": 7,
+      "6": 7
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 7,
+      "1": 7
     },
     "b": {
       "0": [
-        1,
-        1
+        7,
+        7
       ]
     },
     "inputSourceMap": {
@@ -8360,17 +8398,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/auth/auth.module.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { AuthRoutingModule } from './auth-routing.module';\nimport { RegisterComponent } from './components/register/register.component';\nimport { LoginComponent } from './components/login/login.component';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatInputModule } from '@angular/material/input';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { MatIconModule } from '@angular/material/icon';\n\nconst materialModules = [\n  MatButtonModule,\n  MatCardModule,\n  MatFormFieldModule,\n  MatIconModule,\n  MatInputModule\n]\n\n@NgModule({\n  declarations: [\n    RegisterComponent,\n    LoginComponent\n  ],\n  imports: [\n    AuthRoutingModule,\n    CommonModule,\n    FlexLayoutModule,\n    FormsModule,\n    ReactiveFormsModule,\n    ...materialModules\n  ]\n})\nexport class AuthModule { }\n"
+        "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { AuthRoutingModule } from './auth-routing.module';\r\nimport { RegisterComponent } from './components/register/register.component';\r\nimport { LoginComponent } from './components/login/login.component';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\nconst materialModules = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatFormFieldModule,\r\n  MatIconModule,\r\n  MatInputModule\r\n]\r\n\r\n@NgModule({\r\n  declarations: [\r\n    RegisterComponent,\r\n    LoginComponent\r\n  ],\r\n  imports: [\r\n    AuthRoutingModule,\r\n    CommonModule,\r\n    FlexLayoutModule,\r\n    FormsModule,\r\n    ReactiveFormsModule,\r\n    ...materialModules\r\n  ]\r\n})\r\nexport class AuthModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "f10943d0607a222100caa46330f9187d547e4670"
+    "hash": "2b1c470caa676faf9cc1eb97f1557867e60e86d0"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/services/session-api.service.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/services/session-api.service.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8794,37 +8832,37 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
       "4": 0,
       "5": 0,
       "6": 0,
       "7": 0,
       "8": 0,
       "9": 0,
-      "10": 1,
-      "11": 1,
-      "12": 1,
-      "13": 1
+      "10": 2,
+      "11": 2,
+      "12": 2,
+      "13": 2
     },
     "f": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
+      "0": 2,
+      "1": 2,
+      "2": 2,
       "3": 0,
       "4": 0,
       "5": 0,
       "6": 0,
       "7": 0,
       "8": 0,
-      "9": 1
+      "9": 2
     },
     "b": {
       "0": [
-        1,
-        1
+        2,
+        2
       ]
     },
     "inputSourceMap": {
@@ -8854,17 +8892,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/services/session-api.service.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { Session } from '../interfaces/session.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SessionApiService {\n\n  private pathService = 'api/session';\n\n  constructor(private httpClient: HttpClient) {\n  }\n\n  public all(): Observable<Session[]> {\n    return this.httpClient.get<Session[]>(this.pathService);\n  }\n\n  public detail(id: string): Observable<Session> {\n    return this.httpClient.get<Session>(`${this.pathService}/${id}`);\n  }\n\n  public delete(id: string): Observable<any> {\n    return this.httpClient.delete(`${this.pathService}/${id}`);\n  }\n\n  public create(session: Session): Observable<Session> {\n    return this.httpClient.post<Session>(this.pathService, session);\n  }\n\n  public update(id: string, session: Session): Observable<Session> {\n    return this.httpClient.put<Session>(`${this.pathService}/${id}`, session);\n  }\n\n  public participate(id: string, userId: string): Observable<void> {\n    return this.httpClient.post<void>(`${this.pathService}/${id}/participate/${userId}`, null);\n  }\n\n  public unParticipate(id: string, userId: string): Observable<void> {\n    return this.httpClient.delete<void>(`${this.pathService}/${id}/participate/${userId}`);\n  }\n\n}\n"
+        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { Session } from '../interfaces/session.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class SessionApiService {\r\n\r\n  private pathService = 'api/session';\r\n\r\n  constructor(private httpClient: HttpClient) {\r\n  }\r\n\r\n  public all(): Observable<Session[]> {\r\n    return this.httpClient.get<Session[]>(this.pathService);\r\n  }\r\n\r\n  public detail(id: string): Observable<Session> {\r\n    return this.httpClient.get<Session>(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public delete(id: string): Observable<any> {\r\n    return this.httpClient.delete(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public create(session: Session): Observable<Session> {\r\n    return this.httpClient.post<Session>(this.pathService, session);\r\n  }\r\n\r\n  public update(id: string, session: Session): Observable<Session> {\r\n    return this.httpClient.put<Session>(`${this.pathService}/${id}`, session);\r\n  }\r\n\r\n  public participate(id: string, userId: string): Observable<void> {\r\n    return this.httpClient.post<void>(`${this.pathService}/${id}/participate/${userId}`, null);\r\n  }\r\n\r\n  public unParticipate(id: string, userId: string): Observable<void> {\r\n    return this.httpClient.delete<void>(`${this.pathService}/${id}/participate/${userId}`);\r\n  }\r\n\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5f866b0a37626be723b08ea0bcdb3889d3cb4b7f"
+    "hash": "d1aa9aad609327b4dda69adb3c240dfa5f76235f"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/services/teacher.service.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/services/teacher.service.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\services\\teacher.service.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\services\\teacher.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -9118,18 +9156,18 @@
       }
     },
     "s": {
-      "0": 1,
+      "0": 2,
       "1": 0,
       "2": 0,
       "3": 0,
       "4": 0,
-      "5": 1,
+      "5": 2,
       "6": 0,
-      "7": 1,
-      "8": 1
+      "7": 2,
+      "8": 2
     },
     "f": {
-      "0": 1,
+      "0": 2,
       "1": 0,
       "2": 0,
       "3": 0,
@@ -9159,17 +9197,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/services/teacher.service.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\services\\teacher.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { Teacher } from '../interfaces/teacher.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class TeacherService {\n\n  private pathService = 'api/teacher';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public all(): Observable<Teacher[]> {\n    return this.httpClient.get<Teacher[]>(this.pathService);\n  }\n\n  public detail(id: string): Observable<Teacher> {\n    return this.httpClient.get<Teacher>(`${this.pathService}/${id}`);\n  }\n}\n"
+        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { Teacher } from '../interfaces/teacher.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class TeacherService {\r\n\r\n  private pathService = 'api/teacher';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public all(): Observable<Teacher[]> {\r\n    return this.httpClient.get<Teacher[]>(this.pathService);\r\n  }\r\n\r\n  public detail(id: string): Observable<Teacher> {\r\n    return this.httpClient.get<Teacher>(`${this.pathService}/${id}`);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "56080a7e75cdf8a66ae51b1a599c77336af3f9af"
+    "hash": "793e34de0a671a459a3826d710bb1be0b4b1b1fb"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/detail/detail.component.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/detail/detail.component.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -12108,7 +12146,7 @@
       "132": 0,
       "133": 0,
       "134": 0,
-      "135": 1,
+      "135": 2,
       "136": 0,
       "137": 0,
       "138": 0,
@@ -12136,9 +12174,9 @@
       "160": 0,
       "161": 0,
       "162": 0,
-      "163": 1,
+      "163": 2,
       "164": 0,
-      "165": 1,
+      "165": 2,
       "166": 0,
       "167": 0,
       "168": 0,
@@ -12146,7 +12184,7 @@
       "170": 0,
       "171": 0,
       "172": 0,
-      "173": 1
+      "173": 2
     },
     "f": {
       "0": 0,
@@ -12159,7 +12197,7 @@
       "7": 0,
       "8": 0,
       "9": 0,
-      "10": 1,
+      "10": 2,
       "11": 0,
       "12": 0,
       "13": 0,
@@ -12279,19 +12317,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/detail/detail.component.html",
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/detail/detail.component.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.html",
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"m3\">\n  <mat-card *ngIf=\"session\">\n    <mat-card-title>\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\n          <button mat-icon-button (click)=\"back()\">\n            <mat-icon>arrow_back</mat-icon>\n          </button>\n          <h1>{{session.name | titlecase}}</h1>\n        </div>\n        <div>\n          <button *ngIf=\"isAdmin\" mat-raised-button color=\"warn\" (click)=\"delete()\">\n            <mat-icon>delete</mat-icon>\n            <span class=\"ml1\">Delete</span>\n          </button>\n          <div *ngIf=\"!isAdmin\">\n            <button *ngIf=\"!isParticipate\" mat-raised-button color=\"primary\" (click)=\"participate()\">\n              <mat-icon>person_add</mat-icon>\n              <span class=\"ml1\">Participate</span>\n            </button>\n            <button *ngIf=\"isParticipate\" mat-raised-button color=\"warn\" (click)=\"unParticipate()\">\n              <mat-icon>person_remove</mat-icon>\n              <span class=\"ml1\">Do not participate</span>\n            </button>\n\n          </div>\n\n\n        </div>\n      </div>\n    </mat-card-title>\n    <mat-card-subtitle *ngIf=\"teacher\">\n      <div fxLayoutAlign=\"start center\" class=\"ml3\">\n        <mat-icon>\n          people\n        </mat-icon>\n        <span class=\"ml1\">{{ teacher.firstName }} {{ teacher.lastName | uppercase }}</span>\n      </div>\n    </mat-card-subtitle>\n    <div mat-card-image fxLayoutAlign=\"center center\">\n      <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\n    </div>\n    <mat-card-content>\n      <div class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n        <div fxLayoutAlign=\"start center\">\n          <mat-icon>\n            group\n          </mat-icon>\n          <span class=\"ml1\">{{ session.users.length }} attendees</span>\n        </div>\n        <div fxLayoutAlign=\"start center\">\n          <mat-icon>\n            calendar_month\n          </mat-icon>\n          <span class=\"ml1\">{{ session.date | date: 'longDate'}}</span>\n        </div>\n      </div>\n      <div class=\"description\">\n        <p>Description:</p>\n        {{ session.description }}\n        <br>\n      </div>\n      <div class=\"date\" class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n        <div class=\"created\"><i>Create at: </i> {{ session.createdAt| date: 'longDate'}}</div>\n        <div class=\"updated\"><i>Last update: </i> {{ session.updatedAt| date: 'longDate'}}</div>\n      </div>\n    </mat-card-content>\n  </mat-card>\n</div>\n",
-        "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder } from '@angular/forms';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { ActivatedRoute, Router } from '@angular/router';\nimport { Teacher } from '../../../../interfaces/teacher.interface';\nimport { SessionService } from '../../../../services/session.service';\nimport { TeacherService } from '../../../../services/teacher.service';\nimport { Session } from '../../interfaces/session.interface';\nimport { SessionApiService } from '../../services/session-api.service';\n\n@Component({\n  selector: 'app-detail',\n  templateUrl: './detail.component.html',\n  styleUrls: ['./detail.component.scss']\n})\nexport class DetailComponent implements OnInit {\n  public session: Session | undefined;\n  public teacher: Teacher | undefined;\n\n  public isParticipate = false;\n  public isAdmin = false;\n\n  public sessionId: string;\n  public userId: string;\n\n  constructor(\n    private route: ActivatedRoute,\n    private fb: FormBuilder,\n    private sessionService: SessionService,\n    private sessionApiService: SessionApiService,\n    private teacherService: TeacherService,\n    private matSnackBar: MatSnackBar,\n    private router: Router) {\n    this.sessionId = this.route.snapshot.paramMap.get('id')!;\n    this.isAdmin = this.sessionService.sessionInformation!.admin;\n    this.userId = this.sessionService.sessionInformation!.id.toString();\n  }\n\n  public ngOnInit(): void {\n    this.fetchSession();\n  }\n\n  public back() {\n    window.history.back();\n  }\n\n  public delete(): void {\n    this.sessionApiService\n      .delete(this.sessionId)\n      .subscribe((_: any) => {\n          this.matSnackBar.open('Session deleted !', 'Close', { duration: 3000 });\n          this.router.navigate(['sessions']);\n        }\n      );\n  }\n\n  public participate(): void {\n    this.sessionApiService.participate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\n  }\n\n  public unParticipate(): void {\n    this.sessionApiService.unParticipate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\n  }\n\n  private fetchSession(): void {\n    this.sessionApiService\n      .detail(this.sessionId)\n      .subscribe((session: Session) => {\n        this.session = session;\n        this.isParticipate = session.users.some(u => u === this.sessionService.sessionInformation!.id);\n        this.teacherService\n          .detail(session.teacher_id.toString())\n          .subscribe((teacher: Teacher) => this.teacher = teacher);\n      });\n  }\n\n}\n"
+        "<div class=\"m3\">\r\n  <mat-card *ngIf=\"session\">\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n          <button mat-icon-button (click)=\"back()\">\r\n            <mat-icon>arrow_back</mat-icon>\r\n          </button>\r\n          <h1>{{session.name | titlecase}}</h1>\r\n        </div>\r\n        <div>\r\n          <button *ngIf=\"isAdmin\" mat-raised-button color=\"warn\" (click)=\"delete()\">\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Delete</span>\r\n          </button>\r\n          <div *ngIf=\"!isAdmin\">\r\n            <button *ngIf=\"!isParticipate\" mat-raised-button color=\"primary\" (click)=\"participate()\">\r\n              <mat-icon>person_add</mat-icon>\r\n              <span class=\"ml1\">Participate</span>\r\n            </button>\r\n            <button *ngIf=\"isParticipate\" mat-raised-button color=\"warn\" (click)=\"unParticipate()\">\r\n              <mat-icon>person_remove</mat-icon>\r\n              <span class=\"ml1\">Do not participate</span>\r\n            </button>\r\n\r\n          </div>\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-subtitle *ngIf=\"teacher\">\r\n      <div fxLayoutAlign=\"start center\" class=\"ml3\">\r\n        <mat-icon>\r\n          people\r\n        </mat-icon>\r\n        <span class=\"ml1\">{{ teacher.firstName }} {{ teacher.lastName | uppercase }}</span>\r\n      </div>\r\n    </mat-card-subtitle>\r\n    <div mat-card-image fxLayoutAlign=\"center center\">\r\n      <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n    </div>\r\n    <mat-card-content>\r\n      <div class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            group\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.users.length }} attendees</span>\r\n        </div>\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            calendar_month\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.date | date: 'longDate'}}</span>\r\n        </div>\r\n      </div>\r\n      <div class=\"description\">\r\n        <p>Description:</p>\r\n        {{ session.description }}\r\n        <br>\r\n      </div>\r\n      <div class=\"date\" class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div class=\"created\"><i>Create at: </i> {{ session.createdAt| date: 'longDate'}}</div>\r\n        <div class=\"updated\"><i>Last update: </i> {{ session.updatedAt| date: 'longDate'}}</div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
+        "import { Component, OnInit } from '@angular/core';\r\nimport { FormBuilder } from '@angular/forms';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { ActivatedRoute, Router } from '@angular/router';\r\nimport { Teacher } from '../../../../interfaces/teacher.interface';\r\nimport { SessionService } from '../../../../services/session.service';\r\nimport { TeacherService } from '../../../../services/teacher.service';\r\nimport { Session } from '../../interfaces/session.interface';\r\nimport { SessionApiService } from '../../services/session-api.service';\r\n\r\n@Component({\r\n  selector: 'app-detail',\r\n  templateUrl: './detail.component.html',\r\n  styleUrls: ['./detail.component.scss']\r\n})\r\nexport class DetailComponent implements OnInit {\r\n  public session: Session | undefined;\r\n  public teacher: Teacher | undefined;\r\n\r\n  public isParticipate = false;\r\n  public isAdmin = false;\r\n\r\n  public sessionId: string;\r\n  public userId: string;\r\n\r\n  constructor(\r\n    private route: ActivatedRoute,\r\n    private fb: FormBuilder,\r\n    private sessionService: SessionService,\r\n    private sessionApiService: SessionApiService,\r\n    private teacherService: TeacherService,\r\n    private matSnackBar: MatSnackBar,\r\n    private router: Router) {\r\n    this.sessionId = this.route.snapshot.paramMap.get('id')!;\r\n    this.isAdmin = this.sessionService.sessionInformation!.admin;\r\n    this.userId = this.sessionService.sessionInformation!.id.toString();\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    this.fetchSession();\r\n  }\r\n\r\n  public back() {\r\n    window.history.back();\r\n  }\r\n\r\n  public delete(): void {\r\n    this.sessionApiService\r\n      .delete(this.sessionId)\r\n      .subscribe((_: any) => {\r\n          this.matSnackBar.open('Session deleted !', 'Close', { duration: 3000 });\r\n          this.router.navigate(['sessions']);\r\n        }\r\n      );\r\n  }\r\n\r\n  public participate(): void {\r\n    this.sessionApiService.participate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\r\n  }\r\n\r\n  public unParticipate(): void {\r\n    this.sessionApiService.unParticipate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\r\n  }\r\n\r\n  private fetchSession(): void {\r\n    this.sessionApiService\r\n      .detail(this.sessionId)\r\n      .subscribe((session: Session) => {\r\n        this.session = session;\r\n        this.isParticipate = session.users.some(u => u === this.sessionService.sessionInformation!.id);\r\n        this.teacherService\r\n          .detail(session.teacher_id.toString())\r\n          .subscribe((teacher: Teacher) => this.teacher = teacher);\r\n      });\r\n  }\r\n\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "12cf312b518030a49632556066f158d9918efd3e"
+    "hash": "9a8d850c7267eed5a9c3e855b7de0b3157c264ef"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/form/form.component.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/form/form.component.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -14366,7 +14404,7 @@
       "54": 0,
       "55": 0,
       "56": 0,
-      "57": 1,
+      "57": 2,
       "58": 0,
       "59": 0,
       "60": 0,
@@ -14394,9 +14432,9 @@
       "82": 0,
       "83": 0,
       "84": 0,
-      "85": 1,
+      "85": 2,
       "86": 0,
-      "87": 1,
+      "87": 2,
       "88": 0,
       "89": 0,
       "90": 0,
@@ -14413,7 +14451,7 @@
       "101": 0,
       "102": 0,
       "103": 0,
-      "104": 1
+      "104": 2
     },
     "f": {
       "0": 0,
@@ -14421,7 +14459,7 @@
       "2": 0,
       "3": 0,
       "4": 0,
-      "5": 1,
+      "5": 2,
       "6": 0,
       "7": 0,
       "8": 0,
@@ -14558,19 +14596,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/form/form.component.ts",
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/form/form.component.html"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts",
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\form\\form.component.html"
       ],
       "sourcesContent": [
-        "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { ActivatedRoute, Router } from '@angular/router';\nimport { SessionService } from '../../../../services/session.service';\nimport { TeacherService } from '../../../../services/teacher.service';\nimport { Session } from '../../interfaces/session.interface';\nimport { SessionApiService } from '../../services/session-api.service';\n\n@Component({\n  selector: 'app-form',\n  templateUrl: './form.component.html',\n  styleUrls: ['./form.component.scss']\n})\nexport class FormComponent implements OnInit {\n\n  public onUpdate: boolean = false;\n  public sessionForm: FormGroup | undefined;\n  public teachers$ = this.teacherService.all();\n  private id: string | undefined;\n\n  constructor(\n    private route: ActivatedRoute,\n    private fb: FormBuilder,\n    private matSnackBar: MatSnackBar,\n    private sessionApiService: SessionApiService,\n    private sessionService: SessionService,\n    private teacherService: TeacherService,\n    private router: Router\n  ) {\n  }\n\n  public ngOnInit(): void {\n    if (!this.sessionService.sessionInformation!.admin) {\n      this.router.navigate(['/sessions']);\n    }\n    const url = this.router.url;\n    if (url.includes('update')) {\n      this.onUpdate = true;\n      this.id = this.route.snapshot.paramMap.get('id')!;\n      this.sessionApiService\n        .detail(this.id)\n        .subscribe((session: Session) => this.initForm(session));\n    } else {\n      this.initForm();\n    }\n  }\n\n  public submit(): void {\n    const session = this.sessionForm?.value as Session;\n\n    if (!this.onUpdate) {\n      this.sessionApiService\n        .create(session)\n        .subscribe((_: Session) => this.exitPage('Session created !'));\n    } else {\n      this.sessionApiService\n        .update(this.id!, session)\n        .subscribe((_: Session) => this.exitPage('Session updated !'));\n    }\n  }\n\n  private initForm(session?: Session): void {\n    this.sessionForm = this.fb.group({\n      name: [\n        session ? session.name : '',\n        [Validators.required]\n      ],\n      date: [\n        session ? new Date(session.date).toISOString().split('T')[0] : '',\n        [Validators.required]\n      ],\n      teacher_id: [\n        session ? session.teacher_id : '',\n        [Validators.required]\n      ],\n      description: [\n        session ? session.description : '',\n        [\n          Validators.required,\n          Validators.max(2000)\n        ]\n      ],\n    });\n  }\n\n  private exitPage(message: string): void {\n    this.matSnackBar.open(message, 'Close', { duration: 3000 });\n    this.router.navigate(['sessions']);\n  }\n}\n",
-        "<div class=\"create m3\">\n  <mat-card>\n    <mat-card-title>\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <button mat-icon-button routerLink=\"/sessions\">\n          <mat-icon>arrow_back</mat-icon>\n        </button>\n        <h1 *ngIf=\"!onUpdate\">Create session</h1>\n        <h1 *ngIf=\"onUpdate\">Update session</h1>\n      </div>\n    </mat-card-title>\n    <mat-card-content *ngIf=\"sessionForm\">\n      <form class=\"mt2\" fxLayout=\"column\" [formGroup]=\"sessionForm\" (ngSubmit)=\"submit()\">\n        <mat-form-field appearance=\"outline\" class=\"\" fxFlex>\n          <mat-label>Name</mat-label>\n          <input matInput formControlName=\"name\">\n        </mat-form-field>\n        <mat-form-field appearance=\"outline\" fxFlex>\n          <mat-label>Date</mat-label>\n          <input matInput type=\"date\" formControlName=\"date\">\n        </mat-form-field>\n        <mat-form-field appearance=\"outline\">\n          <mat-label>Teacher</mat-label>\n          <mat-select ngDefaultControl formControlName=\"teacher_id\">\n            <mat-option *ngFor=\"let teacher of teachers$ | async\" [value]=\"teacher.id\">\n              {{teacher.firstName}} {{teacher.lastName}}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n        <mat-form-field appearance=\"outline\" fxFlex>\n          <mat-label>Description</mat-label>\n          <textarea matInput rows=\"8\" formControlName=\"description\"></textarea>\n        </mat-form-field>\n        <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\n          <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"sessionForm.invalid\">\n            Save\n          </button>\n        </div>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+        "import { Component, OnInit } from '@angular/core';\r\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { ActivatedRoute, Router } from '@angular/router';\r\nimport { SessionService } from '../../../../services/session.service';\r\nimport { TeacherService } from '../../../../services/teacher.service';\r\nimport { Session } from '../../interfaces/session.interface';\r\nimport { SessionApiService } from '../../services/session-api.service';\r\n\r\n@Component({\r\n  selector: 'app-form',\r\n  templateUrl: './form.component.html',\r\n  styleUrls: ['./form.component.scss']\r\n})\r\nexport class FormComponent implements OnInit {\r\n\r\n  public onUpdate: boolean = false;\r\n  public sessionForm: FormGroup | undefined;\r\n  public teachers$ = this.teacherService.all();\r\n  private id: string | undefined;\r\n\r\n  constructor(\r\n    private route: ActivatedRoute,\r\n    private fb: FormBuilder,\r\n    private matSnackBar: MatSnackBar,\r\n    private sessionApiService: SessionApiService,\r\n    private sessionService: SessionService,\r\n    private teacherService: TeacherService,\r\n    private router: Router\r\n  ) {\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    if (!this.sessionService.sessionInformation!.admin) {\r\n      this.router.navigate(['/sessions']);\r\n    }\r\n    const url = this.router.url;\r\n    if (url.includes('update')) {\r\n      this.onUpdate = true;\r\n      this.id = this.route.snapshot.paramMap.get('id')!;\r\n      this.sessionApiService\r\n        .detail(this.id)\r\n        .subscribe((session: Session) => this.initForm(session));\r\n    } else {\r\n      this.initForm();\r\n    }\r\n  }\r\n\r\n  public submit(): void {\r\n    const session = this.sessionForm?.value as Session;\r\n\r\n    if (!this.onUpdate) {\r\n      this.sessionApiService\r\n        .create(session)\r\n        .subscribe((_: Session) => this.exitPage('Session created !'));\r\n    } else {\r\n      this.sessionApiService\r\n        .update(this.id!, session)\r\n        .subscribe((_: Session) => this.exitPage('Session updated !'));\r\n    }\r\n  }\r\n\r\n  private initForm(session?: Session): void {\r\n    this.sessionForm = this.fb.group({\r\n      name: [\r\n        session ? session.name : '',\r\n        [Validators.required]\r\n      ],\r\n      date: [\r\n        session ? new Date(session.date).toISOString().split('T')[0] : '',\r\n        [Validators.required]\r\n      ],\r\n      teacher_id: [\r\n        session ? session.teacher_id : '',\r\n        [Validators.required]\r\n      ],\r\n      description: [\r\n        session ? session.description : '',\r\n        [\r\n          Validators.required,\r\n          Validators.max(2000)\r\n        ]\r\n      ],\r\n    });\r\n  }\r\n\r\n  private exitPage(message: string): void {\r\n    this.matSnackBar.open(message, 'Close', { duration: 3000 });\r\n    this.router.navigate(['sessions']);\r\n  }\r\n}\r\n",
+        "<div class=\"create m3\">\r\n  <mat-card>\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <button mat-icon-button routerLink=\"/sessions\">\r\n          <mat-icon>arrow_back</mat-icon>\r\n        </button>\r\n        <h1 *ngIf=\"!onUpdate\">Create session</h1>\r\n        <h1 *ngIf=\"onUpdate\">Update session</h1>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-content *ngIf=\"sessionForm\">\r\n      <form class=\"mt2\" fxLayout=\"column\" [formGroup]=\"sessionForm\" (ngSubmit)=\"submit()\">\r\n        <mat-form-field appearance=\"outline\" class=\"\" fxFlex>\r\n          <mat-label>Name</mat-label>\r\n          <input matInput formControlName=\"name\">\r\n        </mat-form-field>\r\n        <mat-form-field appearance=\"outline\" fxFlex>\r\n          <mat-label>Date</mat-label>\r\n          <input matInput type=\"date\" formControlName=\"date\">\r\n        </mat-form-field>\r\n        <mat-form-field appearance=\"outline\">\r\n          <mat-label>Teacher</mat-label>\r\n          <mat-select ngDefaultControl formControlName=\"teacher_id\">\r\n            <mat-option *ngFor=\"let teacher of teachers$ | async\" [value]=\"teacher.id\">\r\n              {{teacher.firstName}} {{teacher.lastName}}\r\n            </mat-option>\r\n          </mat-select>\r\n        </mat-form-field>\r\n        <mat-form-field appearance=\"outline\" fxFlex>\r\n          <mat-label>Description</mat-label>\r\n          <textarea matInput rows=\"8\" formControlName=\"description\"></textarea>\r\n        </mat-form-field>\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n          <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"sessionForm.invalid\">\r\n            Save\r\n          </button>\r\n        </div>\r\n      </form>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "7a3c8d6dd5acd83da3b4ef42347934737549b9bd"
+    "hash": "2ff79d8f8bd61e0dd4118877209bb3c523367b8c"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/list/list.component.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/list/list.component.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -15906,14 +15944,14 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1,
+      "0": 18,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2,
       "8": 0,
       "9": 0,
       "10": 0,
@@ -15925,7 +15963,7 @@
       "16": 0,
       "17": 0,
       "18": 0,
-      "19": 1,
+      "19": 2,
       "20": 0,
       "21": 0,
       "22": 0,
@@ -15962,47 +16000,47 @@
       "53": 0,
       "54": 0,
       "55": 0,
-      "56": 1,
-      "57": 1,
-      "58": 1,
-      "59": 1,
-      "60": 2,
-      "61": 1,
-      "62": 1,
-      "63": 1,
-      "64": 3,
-      "65": 1,
-      "66": 1,
-      "67": 1,
-      "68": 1,
-      "69": 1,
-      "70": 1,
-      "71": 1,
-      "72": 1,
-      "73": 1,
-      "74": 3,
-      "75": 2,
-      "76": 2,
-      "77": 2,
-      "78": 2,
-      "79": 1
+      "56": 2,
+      "57": 2,
+      "58": 2,
+      "59": 2,
+      "60": 16,
+      "61": 2,
+      "62": 2,
+      "63": 2,
+      "64": 18,
+      "65": 2,
+      "66": 2,
+      "67": 2,
+      "68": 2,
+      "69": 2,
+      "70": 2,
+      "71": 2,
+      "72": 2,
+      "73": 2,
+      "74": 18,
+      "75": 16,
+      "76": 16,
+      "77": 16,
+      "78": 16,
+      "79": 2
     },
     "f": {
-      "0": 3,
+      "0": 18,
       "1": 0,
       "2": 0,
       "3": 0,
       "4": 0,
-      "5": 1,
-      "6": 1,
-      "7": 2,
-      "8": 1,
-      "9": 3
+      "5": 2,
+      "6": 2,
+      "7": 16,
+      "8": 2,
+      "9": 18
     },
     "b": {
       "0": [
-        1,
-        2
+        2,
+        16
       ],
       "1": [
         0,
@@ -16021,16 +16059,16 @@
         0
       ],
       "5": [
-        1,
-        1
-      ],
-      "6": [
-        1,
+        2,
         2
       ],
-      "7": [
+      "6": [
         2,
-        1
+        16
+      ],
+      "7": [
+        16,
+        2
       ]
     },
     "inputSourceMap": {
@@ -16053,19 +16091,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/list/list.component.html",
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/components/list/list.component.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\list\\list.component.html",
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"list\">\n  <mat-card>\n    <mat-card-header fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n      <mat-card-title class=\"m0\">Rentals available</mat-card-title>\n      <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\" routerLink=\"create\">\n        <mat-icon>add</mat-icon>\n        <span class=\"ml1\">Create</span>\n      </button>\n    </mat-card-header>\n    <div class=\"items mt2\" fxLayout=\"row wrap\" fxLayout.lt-md=\"column\">\n      <mat-card class=\"item\" *ngFor=\"let session of (sessions$ | async)\" fxFlex>\n        <mat-card-header>\n          <mat-card-title>{{ session.name }}</mat-card-title>\n          <mat-card-subtitle>\n            Session on {{ session.date | date: 'longDate'}}\n          </mat-card-subtitle>\n        </mat-card-header>\n        <div mat-card-image fxLayoutAlign=\"center center\">\n          <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\n        </div>\n        <mat-card-content>\n          <p>\n            {{ session.description }}\n          </p>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [routerLink]=\"['detail',session.id]\">\n            <mat-icon>search</mat-icon>\n            <span class=\"ml1\">Detail</span>\n          </button>\n          <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\"\n                  [routerLink]=\"['update',session.id]\">\n            <mat-icon>edit</mat-icon>\n            <span class=\"ml1\">Edit</span>\n          </button>\n        </mat-card-actions>\n      </mat-card>\n    </div>\n  </mat-card>\n</div>\n",
-        "import { Component } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { SessionInformation } from '../../../../interfaces/sessionInformation.interface';\nimport { SessionService } from '../../../../services/session.service';\nimport { Session } from '../../interfaces/session.interface';\nimport { SessionApiService } from '../../services/session-api.service';\n\n@Component({\n  selector: 'app-list',\n  templateUrl: './list.component.html',\n  styleUrls: ['./list.component.scss']\n})\nexport class ListComponent {\n\n  public sessions$: Observable<Session[]> = this.sessionApiService.all();\n\n  constructor(\n    private sessionService: SessionService,\n    private sessionApiService: SessionApiService\n  ) { }\n\n  get user(): SessionInformation | undefined {\n    return this.sessionService.sessionInformation;\n  }\n}\n"
+        "<div class=\"list\">\r\n  <mat-card>\r\n    <mat-card-header fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n      <mat-card-title class=\"m0\">Rentals available</mat-card-title>\r\n      <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\" routerLink=\"create\">\r\n        <mat-icon>add</mat-icon>\r\n        <span class=\"ml1\">Create</span>\r\n      </button>\r\n    </mat-card-header>\r\n    <div class=\"items mt2\" fxLayout=\"row wrap\" fxLayout.lt-md=\"column\">\r\n      <mat-card class=\"item\" *ngFor=\"let session of (sessions$ | async)\" fxFlex>\r\n        <mat-card-header>\r\n          <mat-card-title>{{ session.name }}</mat-card-title>\r\n          <mat-card-subtitle>\r\n            Session on {{ session.date | date: 'longDate'}}\r\n          </mat-card-subtitle>\r\n        </mat-card-header>\r\n        <div mat-card-image fxLayoutAlign=\"center center\">\r\n          <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n        </div>\r\n        <mat-card-content>\r\n          <p>\r\n            {{ session.description }}\r\n          </p>\r\n        </mat-card-content>\r\n        <mat-card-actions>\r\n          <button mat-raised-button color=\"primary\" [routerLink]=\"['detail',session.id]\">\r\n            <mat-icon>search</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n          <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\"\r\n                  [routerLink]=\"['update',session.id]\">\r\n            <mat-icon>edit</mat-icon>\r\n            <span class=\"ml1\">Edit</span>\r\n          </button>\r\n        </mat-card-actions>\r\n      </mat-card>\r\n    </div>\r\n  </mat-card>\r\n</div>\r\n",
+        "import { Component } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { SessionInformation } from '../../../../interfaces/sessionInformation.interface';\r\nimport { SessionService } from '../../../../services/session.service';\r\nimport { Session } from '../../interfaces/session.interface';\r\nimport { SessionApiService } from '../../services/session-api.service';\r\n\r\n@Component({\r\n  selector: 'app-list',\r\n  templateUrl: './list.component.html',\r\n  styleUrls: ['./list.component.scss']\r\n})\r\nexport class ListComponent {\r\n\r\n  public sessions$: Observable<Session[]> = this.sessionApiService.all();\r\n\r\n  constructor(\r\n    private sessionService: SessionService,\r\n    private sessionApiService: SessionApiService\r\n  ) { }\r\n\r\n  get user(): SessionInformation | undefined {\r\n    return this.sessionService.sessionInformation;\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "85322cc465a38740f1b8b087795b7217948951a2"
+    "hash": "39fec5e30c27ea8461f27aabd6ee44ff0fd769bb"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/sessions-routing.module.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/sessions-routing.module.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -16227,22 +16265,22 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 2,
+      "1": 2
     },
     "b": {
       "0": [
-        1,
-        1
+        2,
+        2
       ]
     },
     "inputSourceMap": {
@@ -16262,17 +16300,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/sessions-routing.module.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { DetailComponent } from './components/detail/detail.component';\nimport { FormComponent } from './components/form/form.component';\nimport { ListComponent } from './components/list/list.component';\n\nconst routes: Routes = [\n  { path: '', title: 'Sessions', component: ListComponent },\n  { path: 'detail/:id', title: 'Sessions - detail', component: DetailComponent },\n  { path: 'create', title: 'Sessions - create', component: FormComponent },\n  { path: 'update/:id', title: 'Sessions - update', component: FormComponent }\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class SessionsRoutingModule {\n}\n"
+        "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { DetailComponent } from './components/detail/detail.component';\r\nimport { FormComponent } from './components/form/form.component';\r\nimport { ListComponent } from './components/list/list.component';\r\n\r\nconst routes: Routes = [\r\n  { path: '', title: 'Sessions', component: ListComponent },\r\n  { path: 'detail/:id', title: 'Sessions - detail', component: DetailComponent },\r\n  { path: 'create', title: 'Sessions - create', component: FormComponent },\r\n  { path: 'update/:id', title: 'Sessions - update', component: FormComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class SessionsRoutingModule {\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "243e9bb00cda383aad096a88f2fe9f7527d5e573"
+    "hash": "d85a52af571e489f6014c24d2a5d8e89c4576a3b"
   },
-  "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/sessions.module.ts": {
-    "path": "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/sessions.module.ts",
+  "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\sessions.module.ts": {
+    "path": "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\sessions.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -16444,23 +16482,23 @@
       }
     },
     "s": {
-      "0": 1,
-      "1": 1,
-      "2": 1,
-      "3": 1,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 1
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2
     },
     "f": {
-      "0": 1,
-      "1": 1
+      "0": 2,
+      "1": 2
     },
     "b": {
       "0": [
-        1,
-        1
+        2,
+        2
       ]
     },
     "inputSourceMap": {
@@ -16485,13 +16523,13 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/home/qwincy/code/Testez-une-application-full-stack/front/src/app/features/sessions/sessions.module.ts"
+        "C:\\code\\Testez-une-application-full-stack\\front\\src\\app\\features\\sessions\\sessions.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { CommonModule, registerLocaleData } from '@angular/common';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatSelectModule } from '@angular/material/select';\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\nimport { ListComponent } from './components/list/list.component';\nimport { FormComponent } from './components/form/form.component';\nimport { DetailComponent } from './components/detail/detail.component';\nimport { SessionsRoutingModule } from './sessions-routing.module';\nimport localeFr from '@angular/common/locales/fr';\nregisterLocaleData(localeFr);\n\nconst materialModules = [\n  MatButtonModule,\n  MatCardModule,\n  MatFormFieldModule,\n  MatIconModule,\n  MatInputModule,\n  MatSnackBarModule,\n  MatSelectModule\n];\n\n@NgModule({\n  declarations: [\n    ListComponent,\n    FormComponent,\n    DetailComponent\n  ],\n  imports: [\n    CommonModule,\n    FlexLayoutModule,\n    ReactiveFormsModule,\n    SessionsRoutingModule,\n    ...materialModules\n  ]\n})\nexport class SessionsModule { }\n"
+        "import { NgModule } from '@angular/core';\r\nimport { CommonModule, registerLocaleData } from '@angular/common';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { ReactiveFormsModule } from '@angular/forms';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\r\nimport { ListComponent } from './components/list/list.component';\r\nimport { FormComponent } from './components/form/form.component';\r\nimport { DetailComponent } from './components/detail/detail.component';\r\nimport { SessionsRoutingModule } from './sessions-routing.module';\r\nimport localeFr from '@angular/common/locales/fr';\r\nregisterLocaleData(localeFr);\r\n\r\nconst materialModules = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatFormFieldModule,\r\n  MatIconModule,\r\n  MatInputModule,\r\n  MatSnackBarModule,\r\n  MatSelectModule\r\n];\r\n\r\n@NgModule({\r\n  declarations: [\r\n    ListComponent,\r\n    FormComponent,\r\n    DetailComponent\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    FlexLayoutModule,\r\n    ReactiveFormsModule,\r\n    SessionsRoutingModule,\r\n    ...materialModules\r\n  ]\r\n})\r\nexport class SessionsModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "a1a362692f081548fa642ba0b89af39a32e8cfd3"
+    "hash": "2c3383baf75a9831a5eaf79192aa1089bce62efb"
   }
 }
