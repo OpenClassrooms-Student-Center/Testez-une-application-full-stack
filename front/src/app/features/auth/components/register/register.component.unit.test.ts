@@ -16,20 +16,23 @@ import { of, throwError } from 'rxjs';
 describe('RegisterComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
-  let mockAuthService: AuthService;
-  let mockRouter: Router;
+  let mockAuthService: jest.Mocked<AuthService>;
+  let mockRouter: jest.Mocked<any>;
+
+  mockAuthService = {
+    register: jest.fn().mockReturnValue(of(undefined)),
+  } as unknown as jest.Mocked<AuthService>;
 
   mockRouter = {
-    navigate: jest.fn()
- } as unknown as jest.Mocked<Router>
+    navigate: jest.fn(),
+  } as unknown as jest.Mocked<Router>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [RegisterComponent],
       providers: [
-        AuthService,
-        { provide: Router, useValue: mockRouter }
-
+        { provide: AuthService, useValue: mockAuthService },
+        { provide: Router, useValue: mockRouter },
       ],
       imports: [
         BrowserAnimationsModule,
@@ -38,27 +41,23 @@ describe('RegisterComponent', () => {
         MatCardModule,
         MatFormFieldModule,
         MatIconModule,
-        MatInputModule
-      ]
-    })
-      .compileComponents();
+        MatInputModule,
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-
-    mockAuthService = TestBed.inject(AuthService);
-    mockRouter = TestBed.inject(Router);
-
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-
   it('should navigate to login page when register request succeeds', () => {
-    const registerSpy = jest.spyOn(mockAuthService, 'register').mockReturnValue(of(void 0));
+    const registerSpy = jest
+      .spyOn(mockAuthService, 'register')
+      .mockReturnValue(of(void 0));
     const navigateSpy = jest.spyOn(mockRouter, 'navigate');
     component.submit();
 
@@ -67,9 +66,10 @@ describe('RegisterComponent', () => {
   });
 
   it('should set onError to true on error during register', () => {
-    const errorSpy = jest.spyOn(mockAuthService, 'register').mockReturnValueOnce(throwError(new Error()));
+    const errorSpy = jest
+      .spyOn(mockAuthService, 'register')
+      .mockReturnValueOnce(throwError(new Error()));
     component.submit();
     expect(component.onError).toBeTruthy();
   });
-
 });
