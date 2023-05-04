@@ -1,4 +1,5 @@
 import * as cypress from "cypress";
+
 describe('Login spec', () => {
   beforeEach(() => {
     cy.intercept('POST', '/api/auth/login', {
@@ -75,44 +76,42 @@ describe('Login spec', () => {
         updatedAt: "2023-04-28T11:08:31"
       }
     }).as('teacher1');
+    cy.intercept('GET', '/api/user/1', {
+      body: {
+        id: 1,
+        email: "yoga@studio.com",
+        lastName: "Admin",
+        firstName: "Admin",
+        admin: true,
+        createdAt: "2023-04-28T11:08:31",
+        updatedAt: "2023-04-28T11:08:31"
+      }
+    }).as('user1');
   });
 
   it('Session should show Create and detail if user is admin', () => {
     //Given
-    cy.visit('/sessions');
+    cy.visit('/me');
     cy.get('@login');
     cy.get('@session');
   });
-  it('Session should show Create and detail if user is admin', () => {
-      //Given
-      cy.visit('/sessions/detail/1')
+  it('Session should access account info from user and show he is admin', () => {
+    //Given
+    cy.visit('/me')
 
-      cy.get('input[formControlName=email]').type("yoga@studio.com")
-      cy.get('input[formControlName=password]').type(`${"test!1234"}{enter}{enter}`)
-
-      cy.get('@session');
-
-      //When
-      cy.url().should('include', '/sessions')
-      //Then
-      cy.get('button[routerLink="create"]').should('contain', 'Create')
-      cy.get('div[class="ng-star-inserted"]').should('contain', 'Logout')
-      cy.get('span[class="mat-button-wrapper"]').should('contain', 'Detail')
-      cy.get('span[class="mat-button-wrapper"]').should('contain', 'Edit')
-      cy.get('span[routerLink="sessions"]').should('contain', 'Sessions')
-      cy.get('span[routerLink="me"]').should('contain', 'Account')
-    }
-  );
-
-  it('Session should show Edit and Delete in Detail page if you are the owner', () => {
-    cy.visit('/sessions');
-    cy.get('@login');
     cy.get('input[formControlName=email]').type("yoga@studio.com")
     cy.get('input[formControlName=password]').type(`${"test!1234"}{enter}{enter}`)
+
     cy.get('@session');
-    cy.contains('Detail').click();
-    cy.wait('@teacher1');
-    cy.get('button[color="warn"]').should('contain', 'Delete');
-    cy.get('div[class="description"]').should('contain', 'Yoga doux pour débutant');
+
+    //When
+    cy.url().should('include', '/sessions')
+    //Then
+    cy.contains('Account').click();
+    cy.get('@user1')
+    cy.url().should('include', '/me')
+    cy.get('p').should('contain', 'Name: Admin ADMIN');
+    cy.get('p').should('contain', 'Email: yoga@studio.com');
+    cy.get('p').should('contain', 'You are admin');
   });
 });

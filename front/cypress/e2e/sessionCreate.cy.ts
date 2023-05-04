@@ -1,3 +1,5 @@
+import * as cypress from "cypress";
+
 describe('Login spec', () => {
   beforeEach(() => {
     cy.intercept('POST', '/api/auth/login', {
@@ -142,49 +144,48 @@ describe('Login spec', () => {
     }).as('createSession');
   });
 
-  it('Session should show Create and create the session if user is admin', () => {
+  it('Should show Creation page and create the yoga session. Session appears on the Session List page', () => {
     //Given
     cy.visit('/sessions/create');
     cy.get('@login');
     cy.get('input[formControlName=email]').type("yoga@studio.com")
     cy.get('input[formControlName=password]').type(`${"test!1234"}{enter}{enter}`)
-
     cy.get('@session');
+    //When
     cy.contains('Create').click();
     cy.get('@teacher');
-
     cy.url().should('include', '/sessions/create');
     cy.get('input[formControlName=name]').type("Yoga intermédiaire")
     cy.get('input[formControlName=date]').type("2020-12-12")
     cy.get('mat-select[formControlName=teacher_id]').click().get('mat-option').contains('Margot DELAHAYE').click();
     cy.get('textarea[formControlName=description]').type("Yoga doux pour intermédiaire")
     cy.get('button[type=submit]').click();
+    //Then
     cy.get('@sessionCreated');
     cy.get('button[routerLink="create"]').should('contain', 'Create')
     cy.url().should('include', '/sessions')
+  });
 
+  it('Should show Creation page and create the yoga session. Session appears on the Session List page', () => {
+    //Given
+    cy.visit('/sessions/create');
+    cy.get('@login');
+    cy.get('input[formControlName=email]').type("yoga@studio.com")
+    cy.get('input[formControlName=password]').type(`${"test!1234"}{enter}{enter}`)
+    cy.get('@session');
+    //When
+    cy.contains('Create').click();
+    cy.get('@teacher');
 
+    cy.url().should('include', '/sessions/create');
+    cy.get('input[formControlName=name]').type("Yoga intermédiaire")
+    cy.get('input[formControlName=date]').clear();
+    cy.get('textarea[formControlName=description]').type("Yoga doux pour intermédiaire")
+    //Then
+    cy.get('button[type=submit]').should('be.disabled');
+    // cy.get('input["aria-invalid"]').should('contain', 'true');
+    // cy.get('input["aria-required"]').should('contain',  'true');
 
   });
-  // it('Session should click Create', () => {
-  //     //Given
-  //     cy.visit('/sessions/detail/1')
-  //
-  //     cy.get('input[formControlName=email]').type("yoga@studio.com")
-  //     cy.get('input[formControlName=password]').type(`${"test!1234"}{enter}{enter}`)
-  //
-  //     cy.get('@session');
-  //
-  //     //When
-  //     cy.url().should('include', '/sessions')
-  //     //Then
-  //     cy.get('button[routerLink="create"]').should('contain', 'Create')
-  //     cy.get('div[class="ng-star-inserted"]').should('contain', 'Logout')
-  //     cy.get('span[class="mat-button-wrapper"]').should('contain', 'Detail')
-  //     cy.get('span[class="mat-button-wrapper"]').should('contain', 'Edit')
-  //     cy.get('span[routerLink="sessions"]').should('contain', 'Sessions')
-  //     cy.get('span[routerLink="me"]').should('contain', 'Account')
-  //   }
-  // );
 
 });

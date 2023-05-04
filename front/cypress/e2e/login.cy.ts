@@ -1,3 +1,5 @@
+import * as cypress from "cypress";
+
 describe('Login spec', () => {
   it('Login successful', () => {
     cy.visit('/login')
@@ -75,8 +77,8 @@ describe('Login spec', () => {
   });
 
   it('Login failed because of lack of email', () => {
+    //Given
     cy.visit('/login')
-
     cy.intercept('POST', '/api/auth/login', {
       statusCode: 400,
       body: {
@@ -90,13 +92,11 @@ describe('Login spec', () => {
         url: '/api/session',
       },
       []).as('session')
-
+    //When
     cy.get('input[formControlName=email]').type(" ")
     cy.get('input[formControlName=password]').type(`${"test"}{enter}{enter}`)
-
+    //Then
     cy.url().should('include', '/login')
     cy.get('p[class="error ng-star-inserted"]').should('contain', 'An error occurred')
-
   });
-
 });
