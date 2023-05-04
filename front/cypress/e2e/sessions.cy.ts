@@ -1,63 +1,85 @@
 describe('Login spec', () => {
+
+  beforeEach(() => {
+    cy.intercept('POST', '/api/auth/login', {
+      body: {
+        id: 1,
+        username: 'userName',
+        firstName: 'firstName',
+        lastName: 'lastName',
+        admin: true
+      },
+    }).as('login');
+
+    cy.intercept('GET', '/api/session', {
+      body: [
+        {
+          "id": 1,
+          "name": "Yoga doux",
+          "date": "2020-12-12T10:00:00.000+00:00",
+          "teacher_id": 1,
+          "description": "Yoga doux pour débutant",
+          "users": [],
+          "createdAt": "2023-04-28T11:12:11",
+          "updatedAt": "2023-04-28T11:12:11"
+        },
+        {
+          "id": 2,
+          "name": "Yoga dynamique",
+          "date": "2020-12-12T12:00:00.000+00:00",
+          "teacher_id": 2,
+          "description": "Yoga dynamique pour confirmé",
+          "users": [],
+          "createdAt": "2023-04-28T11:12:11",
+          "updatedAt": "2023-04-28T11:12:11"
+        },
+        {
+          "id": 3,
+          "name": "Yoga doux",
+          "date": "2020-12-12T14:00:00.000+00:00",
+          "teacher_id": 1,
+          "description": "Yoga doux pour débutant",
+          "users": [],
+          "createdAt": "2023-04-28T11:12:11",
+          "updatedAt": "2023-04-28T11:12:11"
+        },
+        {
+          "id": 4,
+          "name": "Yoga dynamique",
+          "date": "2020-12-12T16:00:00.000+00:00",
+          "teacher_id": 2,
+          "description": "Yoga dynamique pour confirmé",
+          "users": [],
+          "createdAt": "2023-04-28T11:12:11",
+          "updatedAt": "2023-04-28T11:12:11"
+        }
+      ]
+    }).as('session');
+
+    cy.intercept('GET', '/api/session/1', {
+      body: {
+        "id": 1,
+        "name": "Yoga doux",
+        "date": "2020-12-12T10:00:00.000+00:00",
+        "teacher_id": 1,
+        "description": "Yoga doux pour débutant",
+        "users": [],
+        "createdAt": "2023-04-28T11:12:11",
+        "updatedAt": "2023-04-28T11:12:11"
+      }
+    }).as('sessionWithId1');
+  });
+
   it('Session should show Create and detail if user is admin', () => {
       //Given
-      cy.visit('/sessions')
-      cy.intercept('POST', '/api/auth/login', {
-        body: {
-          id: 1,
-          username: 'userName',
-          firstName: 'firstName',
-          lastName: 'lastName',
-          admin: true
-        },
-      })
-      cy.intercept('GET', '/api/session', {
-        body: [
-          {
-            "id": 1,
-            "name": "Yoga doux",
-            "date": "2020-12-12T10:00:00.000+00:00",
-            "teacher_id": 1,
-            "description": "Yoga doux pour débutant",
-            "users": [],
-            "createdAt": "2023-04-28T11:12:11",
-            "updatedAt": "2023-04-28T11:12:11"
-          },
-          {
-            "id": 2,
-            "name": "Yoga dynamique",
-            "date": "2020-12-12T12:00:00.000+00:00",
-            "teacher_id": 2,
-            "description": "Yoga dynamique pour confirmé",
-            "users": [],
-            "createdAt": "2023-04-28T11:12:11",
-            "updatedAt": "2023-04-28T11:12:11"
-          },
-          {
-            "id": 3,
-            "name": "Yoga doux",
-            "date": "2020-12-12T14:00:00.000+00:00",
-            "teacher_id": 1,
-            "description": "Yoga doux pour débutant",
-            "users": [],
-            "createdAt": "2023-04-28T11:12:11",
-            "updatedAt": "2023-04-28T11:12:11"
-          },
-          {
-            "id": 4,
-            "name": "Yoga dynamique",
-            "date": "2020-12-12T16:00:00.000+00:00",
-            "teacher_id": 2,
-            "description": "Yoga dynamique pour confirmé",
-            "users": [],
-            "createdAt": "2023-04-28T11:12:11",
-            "updatedAt": "2023-04-28T11:12:11"
-          }
-        ]
-      });
+      cy.visit('/sessions');
+      cy.get('@login');
 
       cy.get('input[formControlName=email]').type("yoga@studio.com")
       cy.get('input[formControlName=password]').type(`${"test!1234"}{enter}{enter}`)
+
+      cy.wait('@session');
+
       //When
       cy.url().should('include', '/sessions')
       //Then
@@ -69,4 +91,17 @@ describe('Login spec', () => {
       cy.get('span[routerLink="me"]').should('contain', 'Account')
     }
   );
+
+  it('Session should show Edit and Delete in Detail page if you are the owner', () => {
+    cy.visit('/sessions');
+    cy.get('@login');
+    cy.get('input[formControlName=email]').type("yoga@studio.com")
+    cy.get('input[formControlName=password]').type(`${"test!1234"}{enter}{enter}`)
+    cy.wait('@session');
+
+    cy.get('ng-reflect-router-link="detail,1"').click;
+
+    cy.get('span[class="mat-button-wrapper"]').should('contain', 'Edit');
+    cy.get('span[class="mat-button-wrapper"]').should('contain', 'Delete');
+  });
 });
