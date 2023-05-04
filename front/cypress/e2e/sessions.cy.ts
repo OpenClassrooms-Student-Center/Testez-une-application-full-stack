@@ -1,3 +1,4 @@
+///<reference path="../../node_modules/cypress/types/cypress.d.ts"/>
 describe('Login spec', () => {
   it('Session should show Create and detail if user is admin', () => {
       //Given
@@ -25,7 +26,7 @@ describe('Login spec', () => {
           },
           {
             "id": 2,
-            "name": "Yoga dynamique",
+            "name": "Yoga dynamic",
             "date": "2020-12-12T12:00:00.000+00:00",
             "teacher_id": 2,
             "description": "Yoga dynamique pour confirmé",
