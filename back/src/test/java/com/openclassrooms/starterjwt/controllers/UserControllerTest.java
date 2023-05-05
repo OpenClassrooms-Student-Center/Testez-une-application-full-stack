@@ -13,6 +13,8 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.test.context.support.WithMockUser;
 
 import java.time.LocalDateTime;
 
@@ -28,6 +30,9 @@ class UserControllerTest {
 
     @Mock
     UserService userService;
+
+    @Mock
+    SecurityContextHolder securityContext;
 
     User thomas;
     UserDto thomasDto;
@@ -72,7 +77,61 @@ class UserControllerTest {
     }
 
     @Test
-    void save() {
+    @DisplayName("findById returns 404 when user is not found")
+    void findById_404() {
         //Given
+        when(this.userService.findById(1L)).thenReturn(null);
+        //When
+        ResponseEntity response = controller.findById("1");
+        //Then
+        assertThat(response.getStatusCodeValue()).isEqualTo(404);
+    }
+
+    @Test
+    @WithMockUser(username = "thomas@robert.com", password = "password", roles = "ADMIN")
+    @DisplayName("Delete user will proceed with 200 when user is found and coherent with the logged user")
+    void delete_200() {
+        //Given
+        when(this.userService.findById(thomas.getId())).thenReturn(thomas);
+        //When
+        ResponseEntity<?> response = controller.delete("1");
+        //Then
+        assertThat(response.getStatusCodeValue()).isEqualTo(200);
+    }
+
+    @Test
+    @WithMockUser(username = "martha@bebert.com", password = "password", roles = "ADMIN")
+    @DisplayName("Delete user will proceed with 401 when user is found but not coherent with the logged user")
+    void delete_401() {
+        //Given
+        when(this.userService.findById(thomas.getId())).thenReturn(thomas);
+        //When
+        ResponseEntity<?> response = controller.delete("1");
+        //Then
+        assertThat(response.getStatusCodeValue()).isEqualTo(401);
+    }
+
+    @Test
+    @WithMockUser(username = "thomas@robert.com", password = "password", roles = "ADMIN")
+    @DisplayName("Delete user will proceed with 404 when user is not found")
+    void delete_404() {
+        //Given
+        when(this.userService.findById(thomas.getId())).thenReturn(null);
+        //When
+        ResponseEntity<?> response = controller.delete("1");
+        //Then
+        assertThat(response.getStatusCodeValue()).isEqualTo(404);
+    }
+
+
+    @Test
+    @WithMockUser(username = "thomas@robert.com", password = "password", roles = "ADMIN")
+    @DisplayName("Delete user will proceed with 400 when user id is not a number in string")
+    void delete_400() {
+        //Given
+        //When
+        ResponseEntity<?> response = controller.delete("abc");
+        //Then
+        assertThat(response.getStatusCodeValue()).isEqualTo(400);
     }
 }
