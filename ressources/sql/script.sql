@@ -1,6 +1,8 @@
 /*CREATE DATABASE test;
 
-USE test;*/
+ */
+
+USE test;
 
 CREATE TABLE `TEACHERS` (
   `id` INT PRIMARY KEY AUTO_INCREMENT,
