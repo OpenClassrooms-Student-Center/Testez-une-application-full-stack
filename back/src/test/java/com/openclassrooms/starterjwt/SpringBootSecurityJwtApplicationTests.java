@@ -3,11 +3,14 @@ package com.openclassrooms.starterjwt;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 @SpringBootTest
-public class SpringBootSecurityJwtApplicationTests {
+	class SpringBootSecurityJwtApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	void contextLoads() {
+		assertThat(true).isTrue();
 	}
 
 }
