@@ -34,6 +34,8 @@ public class UserController {
                 return ResponseEntity.notFound().build();
             }
 
+            //TODO: Mettre en place une vérification de l'utilisateur connecté
+
             return ResponseEntity.ok().body(this.userMapper.toDto(user));
         } catch (NumberFormatException e) {
             return ResponseEntity.badRequest().build();
@@ -41,7 +43,8 @@ public class UserController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<?> save(@PathVariable("id") String id) {
+    //TODO: fix this in main repository : saving method of user repository is only present in AuthController
+    public ResponseEntity<?> delete(@PathVariable("id") String id) {
         try {
             User user = this.userService.findById(Long.valueOf(id));
 
