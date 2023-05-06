@@ -113,6 +113,8 @@
 					<excludes>
 						<exclude>com/openclassrooms/**/*Dto.*</exclude>
 						<exclude>com/openclassrooms/starterjwt/SpringBootSecurityJwtApplication.*</exclude>
+						<exclude>com/openclassrooms/starterjwt/payload/**/*</exclude>
+						<exclude>com/openclassrooms/starterjwt/mapper/**/*</exclude>
 					</excludes>
 				</configuration>
 				<executions>
