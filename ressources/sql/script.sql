@@ -1,6 +1,6 @@
-/*CREATE DATABASE test;
+# CREATE DATABASE test;
 
-USE test;*/
+USE test;
 
 CREATE TABLE `TEACHERS` (
   `id` INT PRIMARY KEY AUTO_INCREMENT,
@@ -47,4 +47,11 @@ VALUES ('Margot', 'DELAHAYE'),
 
 INSERT INTO USERS (first_name, last_name, admin, email, password)
 VALUES ('Admin', 'Admin', true, 'yoga@studio.com', '$2a$10$.Hsa/ZjUVaHqi0tp9xieMeewrnZxrZ5pQRzddUXE/WjDu2ZThe6Iq');
+
+INSERT INTO SESSIONS (name, description, date, teacher_id)
+VALUES ('Yoga doux', 'Yoga doux pour débutant', '2020-12-12 10:00:00', 1),
+       ('Yoga dynamique', 'Yoga dynamique pour confirmé', '2020-12-12 12:00:00', 2),
+       ('Yoga doux', 'Yoga doux pour débutant', '2020-12-12 14:00:00', 1),
+       ('Yoga dynamique', 'Yoga dynamique pour confirmé', '2020-12-12 16:00:00', 2);
+
 

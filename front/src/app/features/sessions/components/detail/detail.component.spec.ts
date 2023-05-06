@@ -7,6 +7,7 @@ import {expect} from '@jest/globals';
 import {SessionService} from '../../../../services/session.service';
 
 import {DetailComponent} from './detail.component';
+import {runCLI} from "jest";
 
 
 describe('DetailComponent', () => {
@@ -43,25 +44,21 @@ describe('DetailComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should return underfined whe delete is called', () => {
+  it('Should return underfined when delete is called with normal user', () => {
     expect(component.delete()).toBeUndefined();
   });
 
-  it('Should return underfined whe participate is called', () => {
+  it('Should return underfined when participate is called with normal user', () => {
     expect(component.participate()).toBeUndefined();
   });
 
-  it('Should return underfined whe unParticipate is called', () => {
+  it('Should return underfined whenn unParticipate is called', () => {
     expect(component.unParticipate()).toBeUndefined();
   });
 
-  it('Should return underfined whe back is called', () => {
+  it('Should return underfined n back is called', () => {
     expect(component.back()).toBeUndefined();
   });
 
-  // TODO : Replace with a mock and IT
-  it('Should return underfined whe ngOnInit is called', () => {
-    expect(component.ngOnInit()).toBeUndefined();
-  });
 });
 

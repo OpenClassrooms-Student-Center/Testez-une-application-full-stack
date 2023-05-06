@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { AuthService } from './features/auth/services/auth.service';
-import { SessionInformation } from './interfaces/sessionInformation.interface';
-import { SessionService } from './services/session.service';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
+import {AuthService} from './features/auth/services/auth.service';
+import {SessionService} from './services/session.service';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +22,6 @@ export class AppComponent {
 
   public logout(): void {
     this.sessionService.logOut();
-    this.router.navigate([''])
+    this.router.navigate(['']).then(r => true);
   }
 }
