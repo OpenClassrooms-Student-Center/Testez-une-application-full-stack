@@ -5,6 +5,7 @@
     "start": "ng serve",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:ci": "jest --ci --coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "e2e:ci": "ng run yoga:e2e-ci",
