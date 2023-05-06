@@ -1,17 +1,15 @@
 package com.openclassrooms.starterjwt.security.services;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Objects;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Objects;
 
 @Builder
 @AllArgsConstructor
@@ -30,9 +28,10 @@ public class UserDetailsImpl implements UserDetails {
   private Boolean admin;
 
   @JsonIgnore
-  private String password;  
-  
-  public Collection<? extends GrantedAuthority> getAuthorities() {        
+  private String password;
+
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
       return new HashSet<GrantedAuthority>();
   }
 
