@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.openclassrooms</groupId>
 	<artifactId>yoga-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>yoga-app</name>
 	<description>The best backend for an Yoga app !</description>
 

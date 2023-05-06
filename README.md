@@ -6,8 +6,8 @@ This is a website for a yoga studio. It is a single page application that uses A
 
 ## Technologies Used
 
-* Angular
-* Spring Boot
+* Angular 14.1.0
+* Spring Boot 2.7.9
 
 For testing purpose :
   * Front :
@@ -50,7 +50,8 @@ Then create and populate the database with the script located in : `ressources/s
   ```
 * Run the application with 
     ```bash
-    mvn spring-boot:run```
+    mvn spring-boot:run
+  ```
   
 #### Coverage
 you will find the report in `target/site/jacoco/index.html`
@@ -87,7 +88,8 @@ The current result are the following :
   
 * run the application with 
     ```bash
-    npm run start```
+    npm run start
+  ```
   
 You application will be available at `http://localhost:4200`
 

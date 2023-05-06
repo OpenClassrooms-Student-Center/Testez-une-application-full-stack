@@ -1,6 +1,6 @@
 {
   "name": "yoga-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "start": "ng serve",
     "test": "jest",
