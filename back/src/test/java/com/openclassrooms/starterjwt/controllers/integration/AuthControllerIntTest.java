@@ -1,7 +1,6 @@
 package com.openclassrooms.starterjwt.controllers.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import com.openclassrooms.starterjwt.payload.request.LoginRequest;
 import com.openclassrooms.starterjwt.payload.request.SignupRequest;
 import org.junit.jupiter.api.Test;
@@ -10,7 +9,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
@@ -26,7 +24,7 @@ import java.util.UUID;
 public class AuthControllerIntTest {
     @Autowired
     private MockMvc mockMvc;
-    private ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
     public void testAuthenticateAdmin() throws Exception {
@@ -37,10 +35,9 @@ public class AuthControllerIntTest {
 
         mockMvc.perform(post("/api/auth/login")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(ow.writeValueAsString(loginRequest)))
+                .content(objectMapper.writeValueAsString(loginRequest)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.admin", is(true)))
-                .andDo(print());
+                .andExpect(jsonPath("$.admin", is(true)));
     }
 
     @Test
@@ -52,10 +49,9 @@ public class AuthControllerIntTest {
 
         mockMvc.perform(post("/api/auth/login")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(ow.writeValueAsString(loginRequest)))
+                .content(objectMapper.writeValueAsString(loginRequest)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.admin", is(false)))
-                .andDo(print());
+                .andExpect(jsonPath("$.admin", is(false)));
     }
 
     @Test
@@ -67,29 +63,9 @@ public class AuthControllerIntTest {
 
         mockMvc.perform(post("/api/auth/login")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(ow.writeValueAsString(loginRequest)))
-                .andExpect(status().isUnauthorized())
-                .andDo(print());
+                .content(objectMapper.writeValueAsString(loginRequest)))
+                .andExpect(status().isUnauthorized()));
     }
-
-    // @Test
-    // @DirtiesContext(methodMode = DirtiesContext.MethodMode.AFTER_METHOD)
-    // public void testRegisterUserOk() throws Exception {
-
-    // SignupRequest signupRequest = new SignupRequest();
-
-    // signupRequest.setEmail("newReguser" + UUID.randomUUID().toString() +
-    // "@mail.com");
-    // signupRequest.setFirstName("newUse");
-    // signupRequest.setLastName("newUse");
-    // signupRequest.setPassword("newUse");
-
-    // mockMvc.perform(post("/api/auth/register")
-    // .contentType(MediaType.APPLICATION_JSON)
-    // .content(ow.writeValueAsString(signupRequest)))
-    // .andExpect(status().isOk())
-    // .andDo(print());
-    // }
 
     @Test
     public void testRegisterUserEmailAlreadyTaken() throws Exception {
@@ -102,8 +78,36 @@ public class AuthControllerIntTest {
 
         mockMvc.perform(post("/api/auth/register")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(ow.writeValueAsString(signupRequest)))
-                .andExpect(status().isBadRequest())
-                .andDo(print());
+                .content(objectMapper.writeValueAsString(signupRequest)))
+                .andExpect(status().isBadRequest());
     }
+
+    @Test
+    @DirtiesContext(methodMode = DirtiesContext.MethodMode.AFTER_METHOD)
+    public void testRegisterUserOk() throws Exception {
+
+        SignupRequest signupRequest = new SignupRequest();
+        // generate a new email with a randomUUID
+        signupRequest.setEmail(UUID.randomUUID().toString() + "@mail.com");
+        signupRequest.setFirstName("newUse");
+        signupRequest.setLastName("newUse");
+        signupRequest.setPassword("newUse");
+
+        mockMvc.perform(post("/api/auth/register")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(signupRequest)))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void registerUser() throws Exception {
+        mockMvc.perform(post("/api/auth/register")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(
+                        "{ \"email\": \"thomas@robert.com\", \"password\": \"test!1234\", \"firstName\": \"Thomas\", \"lastName\": \"Robert\" }")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+
+    }
+
 }
