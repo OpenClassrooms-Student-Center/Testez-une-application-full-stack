@@ -1,6 +1,6 @@
 {
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/polyfills.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/polyfills.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\polyfills.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\polyfills.ts",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -13,17 +13,17 @@
       "names": [],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/polyfills.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\polyfills.ts"
       ],
       "sourcesContent": [
-        "/**\n * This file includes polyfills needed by Angular and is loaded before the app.\n * You can add your own extra polyfills to this file.\n *\n * This file is divided into 2 sections:\n *   1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.\n *   2. Application imports. Files imported after ZoneJS that should be loaded before your main\n *      file.\n *\n * The current setup is for so-called \"evergreen\" browsers; the last versions of browsers that\n * automatically update themselves. This includes recent versions of Safari, Chrome (including\n * Opera), Edge on the desktop, and iOS and Chrome on mobile.\n *\n * Learn more in https://angular.io/guide/browser-support\n */\n\n/***************************************************************************************************\n * BROWSER POLYFILLS\n */\n\n/**\n * By default, zone.js will patch all possible macroTask and DomEvents\n * user can disable parts of macroTask/DomEvents patch by setting following flags\n * because those flags need to be set before `zone.js` being loaded, and webpack\n * will put import in the top of bundle, so user need to create a separate file\n * in this directory (for example: zone-flags.ts), and put the following flags\n * into that file, and then add the following code before importing zone.js.\n * import './zone-flags';\n *\n * The flags allowed in zone-flags.ts are listed here.\n *\n * The following flags will work for all browsers.\n *\n * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame\n * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick\n * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames\n *\n *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js\n *  with the following flag, it will bypass `zone.js` patch for IE/Edge\n *\n *  (window as any).__Zone_enable_cross_context_check = true;\n *\n */\n\n/***************************************************************************************************\n * Zone JS is required by default for Angular itself.\n */\nimport 'zone.js';  // Included with Angular CLI.\n\n\n/***************************************************************************************************\n * APPLICATION IMPORTS\n */\n"
+        "/**\r\n * This file includes polyfills needed by Angular and is loaded before the app.\r\n * You can add your own extra polyfills to this file.\r\n *\r\n * This file is divided into 2 sections:\r\n *   1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.\r\n *   2. Application imports. Files imported after ZoneJS that should be loaded before your main\r\n *      file.\r\n *\r\n * The current setup is for so-called \"evergreen\" browsers; the last versions of browsers that\r\n * automatically update themselves. This includes recent versions of Safari, Chrome (including\r\n * Opera), Edge on the desktop, and iOS and Chrome on mobile.\r\n *\r\n * Learn more in https://angular.io/guide/browser-support\r\n */\r\n\r\n/***************************************************************************************************\r\n * BROWSER POLYFILLS\r\n */\r\n\r\n/**\r\n * By default, zone.js will patch all possible macroTask and DomEvents\r\n * user can disable parts of macroTask/DomEvents patch by setting following flags\r\n * because those flags need to be set before `zone.js` being loaded, and webpack\r\n * will put import in the top of bundle, so user need to create a separate file\r\n * in this directory (for example: zone-flags.ts), and put the following flags\r\n * into that file, and then add the following code before importing zone.js.\r\n * import './zone-flags';\r\n *\r\n * The flags allowed in zone-flags.ts are listed here.\r\n *\r\n * The following flags will work for all browsers.\r\n *\r\n * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame\r\n * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick\r\n * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames\r\n *\r\n *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js\r\n *  with the following flag, it will bypass `zone.js` patch for IE/Edge\r\n *\r\n *  (window as any).__Zone_enable_cross_context_check = true;\r\n *\r\n */\r\n\r\n/***************************************************************************************************\r\n * Zone JS is required by default for Angular itself.\r\n */\r\nimport 'zone.js';  // Included with Angular CLI.\r\n\r\n\r\n/***************************************************************************************************\r\n * APPLICATION IMPORTS\r\n */\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "9a3b81ed204555d90d1659e7f003a554453c5c8b"
+    "hash": "0f4f3c2bc3820284140cc173ceb70ffaa65f322d"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/session.service.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/session.service.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\services\\session.service.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\services\\session.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -385,10 +385,10 @@
       }
     },
     "s": {
-      "0": 4,
-      "1": 4,
-      "2": 4,
-      "3": 24,
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 6,
       "4": 0,
       "5": 0,
       "6": 0,
@@ -396,24 +396,24 @@
       "8": 0,
       "9": 0,
       "10": 0,
-      "11": 4,
-      "12": 4,
-      "13": 4,
-      "14": 4
+      "11": 1,
+      "12": 1,
+      "13": 1,
+      "14": 1
     },
     "f": {
-      "0": 4,
-      "1": 4,
-      "2": 24,
+      "0": 1,
+      "1": 1,
+      "2": 6,
       "3": 0,
       "4": 0,
       "5": 0,
-      "6": 4
+      "6": 1
     },
     "b": {
       "0": [
-        4,
-        4
+        1,
+        1
       ]
     },
     "inputSourceMap": {
@@ -438,17 +438,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/session.service.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\services\\session.service.ts"
       ],
       "sourcesContent": [
-        "import { Injectable } from '@angular/core';\nimport { BehaviorSubject, Observable } from 'rxjs';\nimport { SessionInformation } from '../interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SessionService {\n\n  public isLogged = false;\n  public sessionInformation: SessionInformation | undefined;\n\n  private isLoggedSubject = new BehaviorSubject<boolean>(this.isLogged);\n\n  public $isLogged(): Observable<boolean> {\n    return this.isLoggedSubject.asObservable();\n  }\n\n  public logIn(user: SessionInformation): void {\n    this.sessionInformation = user;\n    this.isLogged = true;\n    this.next();\n  }\n\n  public logOut(): void {\n    this.sessionInformation = undefined;\n    this.isLogged = false;\n    this.next();\n  }\n\n  private next(): void {\n    this.isLoggedSubject.next(this.isLogged);\n  }\n}\n"
+        "import { Injectable } from '@angular/core';\r\nimport { BehaviorSubject, Observable } from 'rxjs';\r\nimport { SessionInformation } from '../interfaces/sessionInformation.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class SessionService {\r\n\r\n  public isLogged = false;\r\n  public sessionInformation: SessionInformation | undefined;\r\n\r\n  private isLoggedSubject = new BehaviorSubject<boolean>(this.isLogged);\r\n\r\n  public $isLogged(): Observable<boolean> {\r\n    return this.isLoggedSubject.asObservable();\r\n  }\r\n\r\n  public logIn(user: SessionInformation): void {\r\n    this.sessionInformation = user;\r\n    this.isLogged = true;\r\n    this.next();\r\n  }\r\n\r\n  public logOut(): void {\r\n    this.sessionInformation = undefined;\r\n    this.isLogged = false;\r\n    this.next();\r\n  }\r\n\r\n  private next(): void {\r\n    this.isLoggedSubject.next(this.isLogged);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "1c7580cd9bc2570f9011ad5aeff0fc893b7f5689"
+    "hash": "c0ae06dad654c7b66880d19210d52cc1913fa344"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/user.service.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/user.service.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\services\\user.service.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\services\\user.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -702,18 +702,18 @@
       }
     },
     "s": {
-      "0": 4,
+      "0": 1,
       "1": 0,
       "2": 0,
       "3": 0,
       "4": 0,
-      "5": 4,
+      "5": 1,
       "6": 0,
-      "7": 4,
-      "8": 4
+      "7": 1,
+      "8": 1
     },
     "f": {
-      "0": 4,
+      "0": 1,
       "1": 0,
       "2": 0,
       "3": 0,
@@ -743,17 +743,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/user.service.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\services\\user.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { User } from '../interfaces/user.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class UserService {\n\n  private pathService = 'api/user';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public getById(id: string): Observable<User> {\n    return this.httpClient.get<User>(`${this.pathService}/${id}`);\n  }\n\n  public delete(id: string): Observable<any> {\n    return this.httpClient.delete(`${this.pathService}/${id}`);\n  }\n}\n"
+        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { User } from '../interfaces/user.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class UserService {\r\n\r\n  private pathService = 'api/user';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public getById(id: string): Observable<User> {\r\n    return this.httpClient.get<User>(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public delete(id: string): Observable<any> {\r\n    return this.httpClient.delete(`${this.pathService}/${id}`);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "c92e30d6390e2a3675b6f727ab47ea1437227f9e"
+    "hash": "62492c9220f6e98a6220031cd99cf975582c804c"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\components\\me\\me.component.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\components\\me\\me.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2285,7 +2285,7 @@
       "53": 0,
       "54": 0,
       "55": 0,
-      "56": 4,
+      "56": 1,
       "57": 0,
       "58": 0,
       "59": 0,
@@ -2297,9 +2297,9 @@
       "65": 0,
       "66": 0,
       "67": 0,
-      "68": 4,
+      "68": 1,
       "69": 0,
-      "70": 4,
+      "70": 1,
       "71": 0,
       "72": 0,
       "73": 0,
@@ -2316,14 +2316,14 @@
       "84": 0,
       "85": 0,
       "86": 0,
-      "87": 4
+      "87": 1
     },
     "f": {
       "0": 0,
       "1": 0,
       "2": 0,
       "3": 0,
-      "4": 4,
+      "4": 1,
       "5": 0,
       "6": 0,
       "7": 0,
@@ -2400,19 +2400,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.html",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\components\\me\\me.component.html",
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\components\\me\\me.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"m3\">\n  <mat-card>\n    <mat-card-title>\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <button mat-icon-button (click)=\"back()\">\n          <mat-icon>arrow_back</mat-icon>\n        </button>\n        <h1>User information</h1>\n      </div>\n    </mat-card-title>\n    <mat-card-content>\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\n        <p>Email: {{ user.email }}</p>\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\n          <p>Delete my account:</p>\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\n            <mat-icon>delete</mat-icon>\n            <span class=\"ml1\">Detail</span>\n          </button>\n        </div>\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\n\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\n        </div>\n      </div>\n    </mat-card-content>\n  </mat-card>\n</div>\n",
-        "import { Component, OnInit } from '@angular/core';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { Router } from '@angular/router';\nimport { User } from '../../interfaces/user.interface';\nimport { SessionService } from '../../services/session.service';\nimport { UserService } from '../../services/user.service';\n\n@Component({\n  selector: 'app-me',\n  templateUrl: './me.component.html',\n  styleUrls: ['./me.component.scss']\n})\nexport class MeComponent implements OnInit {\n\n  public user: User | undefined;\n\n  constructor(private router: Router,\n              private sessionService: SessionService,\n              private matSnackBar: MatSnackBar,\n              private userService: UserService) {\n  }\n\n  public ngOnInit(): void {\n    this.userService\n      .getById(this.sessionService.sessionInformation!.id.toString())\n      .subscribe((user: User) => this.user = user);\n  }\n\n  public back(): void {\n    window.history.back();\n  }\n\n  public delete(): void {\n    this.userService\n      .delete(this.sessionService.sessionInformation!.id.toString())\n      .subscribe((_) => {\n        this.matSnackBar.open(\"Your account has been deleted !\", 'Close', { duration: 3000 });\n        this.sessionService.logOut();\n        this.router.navigate(['/']);\n      })\n  }\n\n}\n"
+        "<div class=\"m3\">\r\n  <mat-card>\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <button mat-icon-button (click)=\"back()\">\r\n          <mat-icon>arrow_back</mat-icon>\r\n        </button>\r\n        <h1>User information</h1>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-content>\r\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\r\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\r\n        <p>Email: {{ user.email }}</p>\r\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\r\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\r\n          <p>Delete my account:</p>\r\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n        </div>\r\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\r\n\r\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\r\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\r\n        </div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
+        "import { Component, OnInit } from '@angular/core';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { Router } from '@angular/router';\r\nimport { User } from '../../interfaces/user.interface';\r\nimport { SessionService } from '../../services/session.service';\r\nimport { UserService } from '../../services/user.service';\r\n\r\n@Component({\r\n  selector: 'app-me',\r\n  templateUrl: './me.component.html',\r\n  styleUrls: ['./me.component.scss']\r\n})\r\nexport class MeComponent implements OnInit {\r\n\r\n  public user: User | undefined;\r\n\r\n  constructor(private router: Router,\r\n              private sessionService: SessionService,\r\n              private matSnackBar: MatSnackBar,\r\n              private userService: UserService) {\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    this.userService\r\n      .getById(this.sessionService.sessionInformation!.id.toString())\r\n      .subscribe((user: User) => this.user = user);\r\n  }\r\n\r\n  public back(): void {\r\n    window.history.back();\r\n  }\r\n\r\n  public delete(): void {\r\n    this.userService\r\n      .delete(this.sessionService.sessionInformation!.id.toString())\r\n      .subscribe((_) => {\r\n        this.matSnackBar.open(\"Your account has been deleted !\", 'Close', { duration: 3000 });\r\n        this.sessionService.logOut();\r\n        this.router.navigate(['/']);\r\n      })\r\n  }\r\n\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "cd1ce72cda39fe70df79d86da34755fc5b7e0d2b"
+    "hash": "72b5db105bd9d120b7507864df7dea5dde3605cc"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2654,29 +2654,29 @@
       }
     },
     "s": {
-      "0": 4,
-      "1": 4,
-      "2": 0,
-      "3": 4,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 4
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 3,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
     },
     "f": {
-      "0": 4,
-      "1": 0,
-      "2": 0
+      "0": 1,
+      "1": 1,
+      "2": 3
     },
     "b": {
       "0": [
-        0,
-        0
+        1,
+        1
       ],
       "1": [
-        0,
-        0
+        1,
+        2
       ]
     },
     "inputSourceMap": {
@@ -2693,19 +2693,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.ts",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.html"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.ts",
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\components\\not-found\\not-found.component.html"
       ],
       "sourcesContent": [
-        "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-not-found',\n  templateUrl: './not-found.component.html',\n  styleUrls: ['./not-found.component.scss']\n})\nexport class NotFoundComponent {\n}\n",
-        "<div class=\"flex justify-center mt3\">\n        <h1>Page not found !</h1>\n</div>"
+        "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-not-found',\r\n  templateUrl: './not-found.component.html',\r\n  styleUrls: ['./not-found.component.scss']\r\n})\r\nexport class NotFoundComponent {\r\n}\r\n",
+        "<div class=\"flex justify-center mt3\">\r\n        <h1>Page not found !</h1>\r\n</div>"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "fb1db802cda7c85e5a5621a8c60eef41cbe301d2"
+    "hash": "7c7135eef327f67acfad4aaa55d26610af42c0e5"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/auth.guard.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/auth.guard.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\guards\\auth.guard.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\guards\\auth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2991,20 +2991,20 @@
       }
     },
     "s": {
-      "0": 4,
+      "0": 1,
       "1": 0,
       "2": 0,
       "3": 0,
       "4": 0,
       "5": 0,
       "6": 0,
-      "7": 4,
+      "7": 1,
       "8": 0,
-      "9": 4,
-      "10": 4
+      "9": 1,
+      "10": 1
     },
     "f": {
-      "0": 4,
+      "0": 1,
       "1": 0,
       "2": 0,
       "3": 0
@@ -3037,17 +3037,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/auth.guard.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\guards\\auth.guard.ts"
       ],
       "sourcesContent": [
-        "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class AuthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (!this.sessionService.isLogged) {\n      this.router.navigate(['login']);\n      return false;\n    }\n    return true;\n  }\n}"
+        "import {Injectable} from \"@angular/core\";\r\nimport {CanActivate, Router} from \"@angular/router\"; \r\nimport { SessionService } from \"../services/session.service\";\r\n\r\n@Injectable({providedIn: 'root'})\r\nexport class AuthGuard implements CanActivate {\r\n\r\n  constructor( \r\n    private router: Router,\r\n    private sessionService: SessionService,\r\n  ) {\r\n  }\r\n\r\n  public canActivate(): boolean {\r\n    if (!this.sessionService.isLogged) {\r\n      this.router.navigate(['login']);\r\n      return false;\r\n    }\r\n    return true;\r\n  }\r\n}"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "2346bd7b83dc6466475cd81a46141c16bc2bec67"
+    "hash": "1616470e2afbd4bcbc3777a33524de5a2455bcbd"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/unauth.guard.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/unauth.guard.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\guards\\unauth.guard.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\guards\\unauth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3333,32 +3333,32 @@
       }
     },
     "s": {
-      "0": 4,
-      "1": 4,
-      "2": 4,
-      "3": 4,
+      "0": 1,
+      "1": 0,
+      "2": 0,
+      "3": 0,
       "4": 0,
       "5": 0,
-      "6": 4,
-      "7": 4,
-      "8": 4,
-      "9": 4,
-      "10": 4
+      "6": 0,
+      "7": 1,
+      "8": 0,
+      "9": 1,
+      "10": 1
     },
     "f": {
-      "0": 4,
-      "1": 4,
-      "2": 4,
-      "3": 4
+      "0": 1,
+      "1": 0,
+      "2": 0,
+      "3": 0
     },
     "b": {
       "0": [
         0,
-        4
+        0
       ],
       "1": [
-        4,
-        4
+        0,
+        0
       ]
     },
     "inputSourceMap": {
@@ -3379,17 +3379,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/unauth.guard.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\guards\\unauth.guard.ts"
       ],
       "sourcesContent": [
-        "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class UnauthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (this.sessionService.isLogged) {\n      this.router.navigate(['rentals']);\n      return false;\n    }\n    return true;\n  }\n}"
+        "import {Injectable} from \"@angular/core\";\r\nimport {CanActivate, Router} from \"@angular/router\"; \r\nimport { SessionService } from \"../services/session.service\";\r\n\r\n@Injectable({providedIn: 'root'})\r\nexport class UnauthGuard implements CanActivate {\r\n\r\n  constructor( \r\n    private router: Router,\r\n    private sessionService: SessionService,\r\n  ) {\r\n  }\r\n\r\n  public canActivate(): boolean {\r\n    if (this.sessionService.isLogged) {\r\n      this.router.navigate(['rentals']);\r\n      return false;\r\n    }\r\n    return true;\r\n  }\r\n}"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5b8da90e39f22933f4fa8fd881d7fc357bae7576"
+    "hash": "e647d95401852555e5a9f813a250075f0908eede"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app-routing.module.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app-routing.module.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app-routing.module.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3687,30 +3687,30 @@
       }
     },
     "s": {
-      "0": 4,
-      "1": 4,
-      "2": 4,
+      "0": 1,
+      "1": 1,
+      "2": 1,
       "3": 0,
       "4": 0,
-      "5": 4,
-      "6": 4,
-      "7": 4,
-      "8": 4,
-      "9": 4,
-      "10": 4
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1
     },
     "f": {
-      "0": 4,
-      "1": 4,
+      "0": 1,
+      "1": 1,
       "2": 0,
       "3": 0,
-      "4": 4,
-      "5": 4
+      "4": 1,
+      "5": 1
     },
     "b": {
       "0": [
-        4,
-        4
+        1,
+        1
       ]
     },
     "inputSourceMap": {
@@ -3737,17 +3737,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app-routing.module.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app-routing.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { MeComponent } from './components/me/me.component';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { AuthGuard } from './guards/auth.guard';\nimport { UnauthGuard } from './guards/unauth.guard';\n\nconst routes: Routes = [\n  {\n    path: '',\n    canActivate: [UnauthGuard],\n    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)\n  },\n  {\n    path: 'sessions',\n    canActivate: [AuthGuard],\n    loadChildren: () => import('./features/sessions/sessions.module').then(m => m.SessionsModule)\n  },\n  {\n    path: 'me',\n    canActivate: [AuthGuard],\n    component: MeComponent\n  },\n  { path: '404', component: NotFoundComponent },\n  { path: '**', redirectTo: '404' }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule {\n}\n"
+        "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { MeComponent } from './components/me/me.component';\r\nimport { NotFoundComponent } from './components/not-found/not-found.component';\r\nimport { AuthGuard } from './guards/auth.guard';\r\nimport { UnauthGuard } from './guards/unauth.guard';\r\n\r\nconst routes: Routes = [\r\n  {\r\n    path: '',\r\n    canActivate: [UnauthGuard],\r\n    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)\r\n  },\r\n  {\r\n    path: 'sessions',\r\n    canActivate: [AuthGuard],\r\n    loadChildren: () => import('./features/sessions/sessions.module').then(m => m.SessionsModule)\r\n  },\r\n  {\r\n    path: 'me',\r\n    canActivate: [AuthGuard],\r\n    component: MeComponent\r\n  },\r\n  { path: '404', component: NotFoundComponent },\r\n  { path: '**', redirectTo: '404' }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule {\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "75882c59e0ba1deb60c90d44def4d81b31f6902b"
+    "hash": "01c6febde7d19d72d01b8d40a714003a4e0a57d5"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/services/auth.service.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/services/auth.service.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\services\\auth.service.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\services\\auth.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -4001,32 +4001,32 @@
       }
     },
     "s": {
-      "0": 4,
-      "1": 4,
-      "2": 4,
+      "0": 1,
+      "1": 1,
+      "2": 1,
       "3": 0,
       "4": 0,
-      "5": 4,
-      "6": 4,
-      "7": 4,
-      "8": 4
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
     },
     "f": {
-      "0": 4,
-      "1": 4,
+      "0": 1,
+      "1": 1,
       "2": 0,
       "3": 0,
-      "4": 4
+      "4": 1
     },
     "b": {
       "0": [
-        4,
-        4
+        1,
+        1
       ]
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": ";;AAWA,WAAaA,WAAb;EAAM,MAAOA,WAAP,CAAkB;IAItBC,YAAoBC,UAApB,EAA0C;MAAtB;MAFZ,mBAAc,UAAd;IAEuC;;IAExCC,QAAQ,CAACC,eAAD,EAAiC;MAC9C,OAAO,KAAKF,UAAL,CAAgBG,IAAhB,CAAkC,GAAG,KAAKC,WAAW,WAArD,EAAkEF,eAAlE,CAAP;IACD;;IAEMG,KAAK,CAACC,YAAD,EAA2B;MACrC,OAAO,KAAKN,UAAL,CAAgBG,IAAhB,CAAyC,GAAG,KAAKC,WAAW,QAA5D,EAAsEE,YAAtE,CAAP;IACD;;EAZqB;;;qBAAXR,aAAWS;EAAA;;;WAAXT;IAAWU,SAAXV,WAAW;IAAAW,YAFV;;EAEd,OAAaX,WAAb;AAAA",
+      "mappings": ";;AAUA,WAAaA,WAAb;EAAM,MAAOA,WAAP,CAAkB;IAItBC,YAAoBC,UAApB,EAA0C;MAAtB;MAFZ,mBAAc,UAAd;IAEuC;;IAExCC,QAAQ,CAACC,eAAD,EAAiC;MAC9C,OAAO,KAAKF,UAAL,CAAgBG,IAAhB,CAA2B,GAAG,KAAKC,WAAW,WAA9C,EAA2DF,eAA3D,CAAP;IACD;;IAEMG,KAAK,CAACC,YAAD,EAA2B;MACrC,OAAO,KAAKN,UAAL,CAAgBG,IAAhB,CAAyC,GAAG,KAAKC,WAAW,QAA5D,EAAsEE,YAAtE,CAAP;IACD;;EAZqB;;;qBAAXR,aAAWS;EAAA;;;WAAXT;IAAWU,SAAXV,WAAW;IAAAW,YAFV;;EAEd,OAAaX,WAAb;AAAA",
       "names": [
         "AuthService",
         "constructor",
@@ -4043,17 +4043,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/services/auth.service.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\services\\auth.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { LoginRequest } from '../interfaces/loginRequest.interface';\nimport { AuthSuccess  } from '../interfaces/authSuccess.interface';\nimport { RegisterRequest } from '../interfaces/registerRequest.interface';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class AuthService {\n\n  private pathService = 'api/auth';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public register(registerRequest: RegisterRequest): Observable<AuthSuccess> {\n    return this.httpClient.post<AuthSuccess>(`${this.pathService}/register`, registerRequest);\n  }\n\n  public login(loginRequest: LoginRequest): Observable<SessionInformation> {\n    return this.httpClient.post<SessionInformation>(`${this.pathService}/login`, loginRequest);\n  }\n}\n"
+        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { LoginRequest } from '../interfaces/loginRequest.interface';\r\nimport { RegisterRequest } from '../interfaces/registerRequest.interface';\r\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class AuthService {\r\n\r\n  private pathService = 'api/auth';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public register(registerRequest: RegisterRequest): Observable<void> {\r\n    return this.httpClient.post<void>(`${this.pathService}/register`, registerRequest);\r\n  }\r\n\r\n  public login(loginRequest: LoginRequest): Observable<SessionInformation> {\r\n    return this.httpClient.post<SessionInformation>(`${this.pathService}/login`, loginRequest);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "9d5ec93e8ac0d6ccfb1c34b169de605b7b354f1a"
+    "hash": "b51d6957a36016a6c6dd906ae7a68fd6487932da"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app.component.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -4952,50 +4952,50 @@
       "12": 0,
       "13": 0,
       "14": 0,
-      "15": 28,
-      "16": 4,
-      "17": 4,
-      "18": 4,
-      "19": 4,
-      "20": 4,
-      "21": 4,
-      "22": 4,
-      "23": 4,
-      "24": 4,
-      "25": 4,
-      "26": 24,
+      "15": 7,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "20": 1,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "25": 1,
+      "26": 6,
       "27": 0,
       "28": 0,
-      "29": 4,
-      "30": 4,
-      "31": 4,
-      "32": 28,
-      "33": 4,
-      "34": 4,
-      "35": 4,
-      "36": 4,
-      "37": 4,
-      "38": 4,
-      "39": 4,
-      "40": 4,
-      "41": 4,
-      "42": 4,
-      "43": 28,
-      "44": 24,
-      "45": 24,
-      "46": 24,
-      "47": 4
+      "29": 1,
+      "30": 1,
+      "31": 1,
+      "32": 7,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 1,
+      "37": 1,
+      "38": 1,
+      "39": 1,
+      "40": 1,
+      "41": 1,
+      "42": 1,
+      "43": 7,
+      "44": 6,
+      "45": 6,
+      "46": 6,
+      "47": 1
     },
     "f": {
       "0": 0,
       "1": 0,
-      "2": 28,
-      "3": 4,
-      "4": 4,
-      "5": 24,
+      "2": 7,
+      "3": 1,
+      "4": 1,
+      "5": 6,
       "6": 0,
-      "7": 4,
-      "8": 28
+      "7": 1,
+      "8": 7
     },
     "b": {
       "0": [
@@ -5003,20 +5003,20 @@
         0
       ],
       "1": [
-        4,
-        24
+        1,
+        6
       ],
       "2": [
-        4,
-        4
+        1,
+        1
       ],
       "3": [
-        4,
-        24
+        1,
+        6
       ],
       "4": [
-        24,
-        4
+        6,
+        1
       ]
     },
     "inputSourceMap": {
@@ -5042,19 +5042,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.html",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app.component.html",
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"app\">\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n    <span>Yoga app</span>\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\n      <span routerLink=\"me\" class=\"link\">Account</span>\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\n    </div>\n    <ng-template #notLogged>\n      <div>\n        <span routerLink=\"login\" class=\"link\">Login</span>\n        <span routerLink=\"register\" class=\"link\">Register</span>\n      </div>\n    </ng-template>\n  </mat-toolbar>\n  <div>\n    <router-outlet></router-outlet>\n  </div>\n</div>\n",
-        "import { Component, OnInit } from '@angular/core';\nimport { Router } from '@angular/router';\nimport { Observable } from 'rxjs';\nimport { AuthService } from './features/auth/services/auth.service';\nimport { SessionInformation } from './interfaces/sessionInformation.interface';\nimport { SessionService } from './services/session.service';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  constructor(\n    private authService: AuthService,\n    private router: Router,\n    private sessionService: SessionService) {\n  }\n\n  public $isLogged(): Observable<boolean> {\n    return this.sessionService.$isLogged();\n  }\n\n  public logout(): void {\n    this.sessionService.logOut();\n    this.router.navigate([''])\n  }\n}\n"
+        "<div class=\"app\">\r\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n    <span>Yoga app</span>\r\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\r\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\r\n      <span routerLink=\"me\" class=\"link\">Account</span>\r\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\r\n    </div>\r\n    <ng-template #notLogged>\r\n      <div>\r\n        <span routerLink=\"login\" class=\"link\">Login</span>\r\n        <span routerLink=\"register\" class=\"link\">Register</span>\r\n      </div>\r\n    </ng-template>\r\n  </mat-toolbar>\r\n  <div>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n",
+        "import { Component, OnInit } from '@angular/core';\r\nimport { Router } from '@angular/router';\r\nimport { Observable } from 'rxjs';\r\nimport { AuthService } from './features/auth/services/auth.service';\r\nimport { SessionInformation } from './interfaces/sessionInformation.interface';\r\nimport { SessionService } from './services/session.service';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  constructor(\r\n    private authService: AuthService,\r\n    private router: Router,\r\n    private sessionService: SessionService) {\r\n  }\r\n\r\n  public $isLogged(): Observable<boolean> {\r\n    return this.sessionService.$isLogged();\r\n  }\r\n\r\n  public logout(): void {\r\n    this.sessionService.logOut();\r\n    this.router.navigate([''])\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "a0b025bc8a7a905de33180a3ffc6bee8b727add4"
+    "hash": "5127a2037dc89f19118e43d98538640f14638bf2"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/interceptors/jwt.interceptor.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/interceptors/jwt.interceptor.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\interceptors\\jwt.interceptor.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\interceptors\\jwt.interceptor.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5320,18 +5320,18 @@
       }
     },
     "s": {
-      "0": 4,
+      "0": 1,
       "1": 0,
       "2": 0,
       "3": 0,
       "4": 0,
-      "5": 4,
+      "5": 1,
       "6": 0,
-      "7": 4,
-      "8": 4
+      "7": 1,
+      "8": 1
     },
     "f": {
-      "0": 4,
+      "0": 1,
       "1": 0,
       "2": 0,
       "3": 0
@@ -5371,17 +5371,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/interceptors/jwt.interceptor.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\interceptors\\jwt.interceptor.ts"
       ],
       "sourcesContent": [
-        "import { HttpHandler, HttpInterceptor, HttpRequest } from \"@angular/common/http\";\nimport { Injectable } from \"@angular/core\";\nimport { SessionService } from '../services/session.service';\n\n@Injectable({ providedIn: 'root' })\nexport class JwtInterceptor implements HttpInterceptor {\n  constructor(private sessionService: SessionService) {}\n\n  public intercept(request: HttpRequest<any>, next: HttpHandler) {\n    if (this.sessionService.isLogged) {\n      request = request.clone({\n        setHeaders: {\n          Authorization: `Bearer ${this.sessionService.sessionInformation!.token}`,\n        },\n      });\n    }\n    return next.handle(request);\n  }\n}\n"
+        "import { HttpHandler, HttpInterceptor, HttpRequest } from \"@angular/common/http\";\r\nimport { Injectable } from \"@angular/core\";\r\nimport { SessionService } from '../services/session.service';\r\n\r\n@Injectable({ providedIn: 'root' })\r\nexport class JwtInterceptor implements HttpInterceptor {\r\n  constructor(private sessionService: SessionService) {}\r\n\r\n  public intercept(request: HttpRequest<any>, next: HttpHandler) {\r\n    if (this.sessionService.isLogged) {\r\n      request = request.clone({\r\n        setHeaders: {\r\n          Authorization: `Bearer ${this.sessionService.sessionInformation!.token}`,\r\n        },\r\n      });\r\n    }\r\n    return next.handle(request);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "b8fe7a2b4606d34c9e34046a6168eb10b739bd91"
+    "hash": "c134d66c7994a95838e7888acefc2f5f1424e73f"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.module.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.module.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app.module.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5543,22 +5543,22 @@
       }
     },
     "s": {
-      "0": 4,
-      "1": 4,
-      "2": 4,
-      "3": 4,
-      "4": 4,
-      "5": 4,
-      "6": 4
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
     },
     "f": {
-      "0": 4,
-      "1": 4
+      "0": 1,
+      "1": 1
     },
     "b": {
       "0": [
-        4,
-        4
+        1,
+        1
       ]
     },
     "inputSourceMap": {
@@ -5588,17 +5588,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.module.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\app.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';\nimport { JwtInterceptor } from './interceptors/jwt.interceptor';\nimport { MatCardModule } from '@angular/material/card';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { MeComponent } from './components/me/me.component';\n\nconst materialModule = [\n  MatButtonModule,\n  MatCardModule,\n  MatIconModule,\n  MatSnackBarModule,\n  MatToolbarModule,\n]\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    NotFoundComponent,\n    MeComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule, \n    FlexLayoutModule,\n    HttpClientModule,\n    ...materialModule\n  ],\n  providers: [\n    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },\n  ],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n"
+        "import { NgModule } from '@angular/core';\r\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { NotFoundComponent } from './components/not-found/not-found.component';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatToolbarModule } from '@angular/material/toolbar';\r\nimport { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';\r\nimport { JwtInterceptor } from './interceptors/jwt.interceptor';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { MeComponent } from './components/me/me.component';\r\n\r\nconst materialModule = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatIconModule,\r\n  MatSnackBarModule,\r\n  MatToolbarModule,\r\n]\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    NotFoundComponent,\r\n    MeComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule, \r\n    FlexLayoutModule,\r\n    HttpClientModule,\r\n    ...materialModule\r\n  ],\r\n  providers: [\r\n    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "a6e698b4c5d51521d451569e045fa650a0352018"
+    "hash": "3d015d42ee1be5c57334062f2ef18fe073eb6f96"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/environments/environment.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/environments/environment.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\environments\\environment.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\environments\\environment.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5614,7 +5614,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 4
+      "0": 1
     },
     "f": {},
     "b": {},
@@ -5628,17 +5628,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/environments/environment.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\environments\\environment.ts"
       ],
       "sourcesContent": [
-        "export const environment = {\n  baseUrl: 'localhost:8080/api/',\n  production: false\n};\n"
+        "export const environment = {\r\n  baseUrl: 'localhost:8080/api/',\r\n  production: false\r\n};\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "bb9194866a829376438d80f96707aeddc8f5ff60"
+    "hash": "220a7085d248ecc9f406e5b605d1f752a505a746"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/main.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/main.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\main.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\main.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5746,9 +5746,9 @@
       }
     },
     "s": {
-      "0": 4,
+      "0": 1,
       "1": 0,
-      "2": 4,
+      "2": 1,
       "3": 0
     },
     "f": {
@@ -5757,7 +5757,7 @@
     "b": {
       "0": [
         0,
-        4
+        1
       ]
     },
     "inputSourceMap": {
@@ -5777,17 +5777,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/main.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\main.ts"
       ],
       "sourcesContent": [
-        "import { enableProdMode } from '@angular/core';\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n\nimport { AppModule } from './app/app.module';\nimport { environment } from './environments/environment';\n\nif (environment.production) {\n  enableProdMode();\n}\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"
+        "import { enableProdMode } from '@angular/core';\r\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\r\n\r\nimport { AppModule } from './app/app.module';\r\nimport { environment } from './environments/environment';\r\n\r\nif (environment.production) {\r\n  enableProdMode();\r\n}\r\n\r\nplatformBrowserDynamic().bootstrapModule(AppModule)\r\n  .catch(err => console.error(err));\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "4a6fc756c5eab4a652a40ac79e03ba54c4d35c88"
+    "hash": "3dd30afd311c2ed5e180126edc225abd4a6aafc9"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5835,7 +5835,7 @@
           "column": 41
         },
         "end": {
-          "line": 109,
+          "line": 108,
           "column": 4
         }
       },
@@ -5905,457 +5905,457 @@
           "column": 6
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 9
         }
       },
       "12": {
         "start": {
-          "line": 40,
+          "line": 39,
           "column": 27
         },
         "end": {
-          "line": 40,
+          "line": 39,
           "column": 42
         }
       },
       "13": {
         "start": {
-          "line": 41,
+          "line": 40,
           "column": 6
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 9
         }
       },
       "14": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 10
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 46
         }
       },
       "15": {
         "start": {
-          "line": 44,
+          "line": 43,
           "column": 10
         },
         "end": {
-          "line": 44,
+          "line": 43,
           "column": 46
         }
       },
       "16": {
         "start": {
-          "line": 46,
+          "line": 45,
           "column": 24
         },
         "end": {
-          "line": 46,
+          "line": 45,
           "column": 43
         }
       },
       "17": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 2
         },
         "end": {
-          "line": 54,
+          "line": 53,
           "column": 4
         }
       },
       "18": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 4
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 187
         }
       },
       "19": {
         "start": {
-          "line": 56,
+          "line": 55,
           "column": 2
         },
         "end": {
-          "line": 107,
+          "line": 106,
           "column": 5
         }
       },
       "20": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 6
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 7
         }
       },
       "21": {
         "start": {
-          "line": 64,
+          "line": 63,
           "column": 8
         },
         "end": {
-          "line": 64,
+          "line": 63,
           "column": 100
         }
       },
       "22": {
         "start": {
-          "line": 65,
+          "line": 64,
           "column": 8
         },
         "end": {
-          "line": 65,
+          "line": 64,
           "column": 30
         }
       },
       "23": {
         "start": {
-          "line": 66,
+          "line": 65,
           "column": 8
         },
         "end": {
-          "line": 66,
+          "line": 65,
           "column": 28
         }
       },
       "24": {
         "start": {
-          "line": 67,
+          "line": 66,
           "column": 8
         },
         "end": {
-          "line": 67,
+          "line": 66,
           "column": 40
         }
       },
       "25": {
         "start": {
-          "line": 68,
+          "line": 67,
           "column": 8
         },
         "end": {
-          "line": 70,
+          "line": 69,
           "column": 11
         }
       },
       "26": {
         "start": {
-          "line": 69,
+          "line": 68,
           "column": 10
         },
         "end": {
-          "line": 69,
+          "line": 68,
           "column": 30
         }
       },
       "27": {
         "start": {
-          "line": 71,
+          "line": 70,
           "column": 8
         },
         "end": {
-          "line": 71,
+          "line": 70,
           "column": 76
         }
       },
       "28": {
         "start": {
-          "line": 72,
+          "line": 71,
           "column": 8
         },
         "end": {
-          "line": 72,
+          "line": 71,
           "column": 36
         }
       },
       "29": {
         "start": {
-          "line": 73,
+          "line": 72,
           "column": 8
         },
         "end": {
-          "line": 73,
+          "line": 72,
           "column": 26
         }
       },
       "30": {
         "start": {
-          "line": 74,
+          "line": 73,
           "column": 8
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 50
         }
       },
       "31": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 8
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 37
         }
       },
       "32": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 8
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 43
         }
       },
       "33": {
         "start": {
-          "line": 77,
+          "line": 76,
           "column": 8
         },
         "end": {
-          "line": 79,
+          "line": 78,
           "column": 11
         }
       },
       "34": {
         "start": {
-          "line": 78,
+          "line": 77,
           "column": 10
         },
         "end": {
-          "line": 78,
+          "line": 77,
           "column": 38
         }
       },
       "35": {
         "start": {
-          "line": 80,
+          "line": 79,
           "column": 8
         },
         "end": {
-          "line": 80,
+          "line": 79,
           "column": 42
         }
       },
       "36": {
         "start": {
-          "line": 81,
+          "line": 80,
           "column": 8
         },
         "end": {
-          "line": 81,
+          "line": 80,
           "column": 22
         }
       },
       "37": {
         "start": {
-          "line": 82,
+          "line": 81,
           "column": 8
         },
         "end": {
-          "line": 82,
+          "line": 81,
           "column": 32
         }
       },
       "38": {
         "start": {
-          "line": 83,
+          "line": 82,
           "column": 8
         },
         "end": {
-          "line": 83,
+          "line": 82,
           "column": 43
         }
       },
       "39": {
         "start": {
-          "line": 84,
+          "line": 83,
           "column": 8
         },
         "end": {
-          "line": 84,
+          "line": 83,
           "column": 32
         }
       },
       "40": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 8
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 26
         }
       },
       "41": {
         "start": {
-          "line": 86,
+          "line": 85,
           "column": 8
         },
         "end": {
-          "line": 86,
+          "line": 85,
           "column": 70
         }
       },
       "42": {
         "start": {
-          "line": 87,
+          "line": 86,
           "column": 8
         },
         "end": {
-          "line": 87,
+          "line": 86,
           "column": 30
         }
       },
       "43": {
         "start": {
-          "line": 90,
+          "line": 89,
           "column": 6
         },
         "end": {
-          "line": 103,
+          "line": 102,
           "column": 7
         }
       },
       "44": {
         "start": {
-          "line": 91,
+          "line": 90,
           "column": 8
         },
         "end": {
-          "line": 91,
+          "line": 90,
           "column": 24
         }
       },
       "45": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 8
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 45
         }
       },
       "46": {
         "start": {
-          "line": 93,
+          "line": 92,
           "column": 8
         },
         "end": {
-          "line": 93,
+          "line": 92,
           "column": 24
         }
       },
       "47": {
         "start": {
-          "line": 94,
+          "line": 93,
           "column": 8
         },
         "end": {
-          "line": 94,
+          "line": 93,
           "column": 62
         }
       },
       "48": {
         "start": {
-          "line": 95,
+          "line": 94,
           "column": 8
         },
         "end": {
-          "line": 95,
+          "line": 94,
           "column": 24
         }
       },
       "49": {
         "start": {
-          "line": 96,
+          "line": 95,
           "column": 8
         },
         "end": {
-          "line": 96,
+          "line": 95,
           "column": 80
         }
       },
       "50": {
         "start": {
-          "line": 97,
+          "line": 96,
           "column": 8
         },
         "end": {
-          "line": 97,
+          "line": 96,
           "column": 24
         }
       },
       "51": {
         "start": {
-          "line": 98,
+          "line": 97,
           "column": 8
         },
         "end": {
-          "line": 98,
+          "line": 97,
           "column": 73
         }
       },
       "52": {
         "start": {
-          "line": 99,
+          "line": 98,
           "column": 8
         },
         "end": {
-          "line": 99,
+          "line": 98,
           "column": 24
         }
       },
       "53": {
         "start": {
-          "line": 100,
+          "line": 99,
           "column": 8
         },
         "end": {
-          "line": 100,
+          "line": 99,
           "column": 52
         }
       },
       "54": {
         "start": {
-          "line": 101,
+          "line": 100,
           "column": 8
         },
         "end": {
-          "line": 101,
+          "line": 100,
           "column": 24
         }
       },
       "55": {
         "start": {
-          "line": 102,
+          "line": 101,
           "column": 8
         },
         "end": {
-          "line": 102,
+          "line": 101,
           "column": 43
         }
       },
       "56": {
         "start": {
-          "line": 108,
+          "line": 107,
           "column": 2
         },
         "end": {
-          "line": 108,
+          "line": 107,
           "column": 24
         }
       }
@@ -6403,7 +6403,7 @@
             "column": 48
           },
           "end": {
-            "line": 109,
+            "line": 108,
             "column": 1
           }
         },
@@ -6427,7 +6427,7 @@
             "column": 57
           },
           "end": {
-            "line": 37,
+            "line": 36,
             "column": 5
           }
         },
@@ -6437,169 +6437,169 @@
         "name": "(anonymous_3)",
         "decl": {
           "start": {
-            "line": 39,
+            "line": 38,
             "column": 4
           },
           "end": {
-            "line": 39,
+            "line": 38,
             "column": 5
           }
         },
         "loc": {
           "start": {
-            "line": 39,
+            "line": 38,
             "column": 13
           },
           "end": {
-            "line": 48,
+            "line": 47,
             "column": 5
           }
         },
-        "line": 39
+        "line": 38
       },
       "4": {
         "name": "(anonymous_4)",
         "decl": {
           "start": {
-            "line": 42,
+            "line": 41,
             "column": 14
           },
           "end": {
-            "line": 42,
+            "line": 41,
             "column": 15
           }
         },
         "loc": {
           "start": {
-            "line": 42,
+            "line": 41,
             "column": 26
           },
           "end": {
-            "line": 45,
+            "line": 44,
             "column": 9
           }
         },
-        "line": 42
+        "line": 41
       },
       "5": {
         "name": "(anonymous_5)",
         "decl": {
           "start": {
-            "line": 46,
+            "line": 45,
             "column": 15
           },
           "end": {
-            "line": 46,
+            "line": 45,
             "column": 16
           }
         },
         "loc": {
           "start": {
-            "line": 46,
+            "line": 45,
             "column": 24
           },
           "end": {
-            "line": 46,
+            "line": 45,
             "column": 43
           }
         },
-        "line": 46
+        "line": 45
       },
       "6": {
         "name": "LoginComponent_Factory",
         "decl": {
           "start": {
-            "line": 52,
+            "line": 51,
             "column": 33
           },
           "end": {
-            "line": 52,
+            "line": 51,
             "column": 55
           }
         },
         "loc": {
           "start": {
-            "line": 52,
+            "line": 51,
             "column": 59
           },
           "end": {
-            "line": 54,
+            "line": 53,
             "column": 3
           }
         },
-        "line": 52
+        "line": 51
       },
       "7": {
         "name": "LoginComponent_Template",
         "decl": {
           "start": {
-            "line": 62,
+            "line": 61,
             "column": 23
           },
           "end": {
-            "line": 62,
+            "line": 61,
             "column": 46
           }
         },
         "loc": {
           "start": {
-            "line": 62,
+            "line": 61,
             "column": 56
           },
           "end": {
-            "line": 104,
+            "line": 103,
             "column": 5
           }
         },
-        "line": 62
+        "line": 61
       },
       "8": {
         "name": "LoginComponent_Template_form_ngSubmit_5_listener",
         "decl": {
           "start": {
-            "line": 68,
+            "line": 67,
             "column": 43
           },
           "end": {
-            "line": 68,
+            "line": 67,
             "column": 91
           }
         },
         "loc": {
           "start": {
-            "line": 68,
+            "line": 67,
             "column": 94
           },
           "end": {
-            "line": 70,
+            "line": 69,
             "column": 9
           }
         },
-        "line": 68
+        "line": 67
       },
       "9": {
         "name": "LoginComponent_Template_button_click_11_listener",
         "decl": {
           "start": {
-            "line": 77,
+            "line": 76,
             "column": 40
           },
           "end": {
-            "line": 77,
+            "line": 76,
             "column": 88
           }
         },
         "loc": {
           "start": {
-            "line": 77,
+            "line": 76,
             "column": 91
           },
           "end": {
-            "line": 79,
+            "line": 78,
             "column": 9
           }
         },
-        "line": 77
+        "line": 76
       }
     },
     "branchMap": {
@@ -6642,11 +6642,11 @@
       "1": {
         "loc": {
           "start": {
-            "line": 53,
+            "line": 52,
             "column": 16
           },
           "end": {
-            "line": 53,
+            "line": 52,
             "column": 35
           }
         },
@@ -6654,35 +6654,35 @@
         "locations": [
           {
             "start": {
-              "line": 53,
+              "line": 52,
               "column": 16
             },
             "end": {
-              "line": 53,
+              "line": 52,
               "column": 17
             }
           },
           {
             "start": {
-              "line": 53,
+              "line": 52,
               "column": 21
             },
             "end": {
-              "line": 53,
+              "line": 52,
               "column": 35
             }
           }
         ],
-        "line": 53
+        "line": 52
       },
       "2": {
         "loc": {
           "start": {
-            "line": 63,
+            "line": 62,
             "column": 6
           },
           "end": {
-            "line": 88,
+            "line": 87,
             "column": 7
           }
         },
@@ -6690,35 +6690,35 @@
         "locations": [
           {
             "start": {
-              "line": 63,
+              "line": 62,
               "column": 6
             },
             "end": {
-              "line": 88,
+              "line": 87,
               "column": 7
             }
           },
           {
             "start": {
-              "line": 63,
+              "line": 62,
               "column": 6
             },
             "end": {
-              "line": 88,
+              "line": 87,
               "column": 7
             }
           }
         ],
-        "line": 63
+        "line": 62
       },
       "3": {
         "loc": {
           "start": {
-            "line": 90,
+            "line": 89,
             "column": 6
           },
           "end": {
-            "line": 103,
+            "line": 102,
             "column": 7
           }
         },
@@ -6726,35 +6726,35 @@
         "locations": [
           {
             "start": {
-              "line": 90,
+              "line": 89,
               "column": 6
             },
             "end": {
-              "line": 103,
+              "line": 102,
               "column": 7
             }
           },
           {
             "start": {
-              "line": 90,
+              "line": 89,
               "column": 6
             },
             "end": {
-              "line": 103,
+              "line": 102,
               "column": 7
             }
           }
         ],
-        "line": 90
+        "line": 89
       },
       "4": {
         "loc": {
           "start": {
-            "line": 94,
+            "line": 93,
             "column": 30
           },
           "end": {
-            "line": 94,
+            "line": 93,
             "column": 60
           }
         },
@@ -6762,35 +6762,35 @@
         "locations": [
           {
             "start": {
-              "line": 94,
+              "line": 93,
               "column": 41
             },
             "end": {
-              "line": 94,
+              "line": 93,
               "column": 51
             }
           },
           {
             "start": {
-              "line": 94,
+              "line": 93,
               "column": 54
             },
             "end": {
-              "line": 94,
+              "line": 93,
               "column": 60
             }
           }
         ],
-        "line": 94
+        "line": 93
       },
       "5": {
         "loc": {
           "start": {
-            "line": 98,
+            "line": 97,
             "column": 29
           },
           "end": {
-            "line": 98,
+            "line": 97,
             "column": 71
           }
         },
@@ -6798,26 +6798,26 @@
         "locations": [
           {
             "start": {
-              "line": 98,
+              "line": 97,
               "column": 40
             },
             "end": {
-              "line": 98,
+              "line": 97,
               "column": 56
             }
           },
           {
             "start": {
-              "line": 98,
+              "line": 97,
               "column": 59
             },
             "end": {
-              "line": 98,
+              "line": 97,
               "column": 71
             }
           }
         ],
-        "line": 98
+        "line": 97
       }
     },
     "s": {
@@ -6825,7 +6825,7 @@
       "1": 0,
       "2": 0,
       "3": 0,
-      "4": 4,
+      "4": 1,
       "5": 0,
       "6": 0,
       "7": 0,
@@ -6838,9 +6838,9 @@
       "14": 0,
       "15": 0,
       "16": 0,
-      "17": 4,
+      "17": 1,
       "18": 0,
-      "19": 4,
+      "19": 1,
       "20": 0,
       "21": 0,
       "22": 0,
@@ -6877,11 +6877,11 @@
       "53": 0,
       "54": 0,
       "55": 0,
-      "56": 4
+      "56": 1
     },
     "f": {
       "0": 0,
-      "1": 4,
+      "1": 1,
       "2": 0,
       "3": 0,
       "4": 0,
@@ -6919,7 +6919,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;;;ICmBYC;IAAiCA;IAAiBA;;;;ADP9D,WAAaC,cAAb;EAAM,MAAOA,cAAP,CAAqB;IAsBzBC,YAAoBC,WAApB,EACoBC,EADpB,EAEoBC,MAFpB,EAGoBC,cAHpB,EAGkD;MAH9B;MACA;MACA;MACA;MAxBb,YAAO,IAAP;MACA,eAAU,KAAV;MAEA,YAAO,KAAKF,EAAL,CAAQG,KAAR,CAAc;QAC1BC,KAAK,EAAE,CACL;QACA,gBAFK,EAGL,CACET,UAAU,CAACU,QADb,EAEEV,UAAU,CAACS,KAFb,CAHK,CADmB;QAS1BE,QAAQ,EAAE,CACR,WADQ,EAER,CACEX,UAAU,CAACU,QADb,EAEEV,UAAU,CAACY,GAAX,CAAe,CAAf,CAFF,CAFQ;MATgB,CAAd,CAAP;IAsBN;;IAEMC,MAAM;MACX,MAAMC,YAAY,GAAG,KAAKC,IAAL,CAAUC,KAA/B;MACA,KAAKZ,WAAL,CAAiBa,KAAjB,CAAuBH,YAAvB,EAAqCI,SAArC,CAA+C;QAC7CC,IAAI,EAAGC,QAAD,IAAiC;UACrC,KAAKb,cAAL,CAAoBc,KAApB,CAA0BD,QAA1B;UACA,KAAKd,MAAL,CAAYgB,QAAZ,CAAqB,CAAC,WAAD,CAArB;QACD,CAJ4C;QAK7CC,KAAK,EAAEA,KAAK,IAAI,KAAKC,OAAL,GAAe;MALc,CAA/C;IAOD;;EArCwB;;;qBAAdtB,gBAAcD;EAAA;;;UAAdC;IAAcuB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCb3B5B,+BAAgE,CAAhE,EAAgE,UAAhE,EAAgE,CAAhE,EAAgE,iBAAhE,EAAgE,CAAhE,EAAgE,CAAhE,EAAgE,gBAAhE;QAG4BA;QAAKA;QAEzBA;QAA4CA;UAAA,OAAY6B,YAAZ;QAAoB,CAApB;QACxC7B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QAEAA;QAAkCA;UAAA;QAAA;QAE9BA;QAAUA;QAA0CA;QAIhEA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAhByBA;QAAAA;QAMGA;QAAAA;QAEyCA;QAAAA,8CAAmC,cAAnC,EAAmC6B,QAAnC;QAE3C7B;QAAAA;QAIkCA;QAAAA;QACpDA;QAAAA;;;;;;EDPhB,OAAaC,cAAb;AAAA",
+      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;;;ICmBYC;IAAiCA;IAAiBA;;;;ADP9D,WAAaC,cAAb;EAAM,MAAOA,cAAP,CAAqB;IAqBzBC,YAAoBC,WAApB,EACoBC,EADpB,EAEoBC,MAFpB,EAGoBC,cAHpB,EAGkD;MAH9B;MACA;MACA;MACA;MAvBb,YAAO,IAAP;MACA,eAAU,KAAV;MAEA,YAAO,KAAKF,EAAL,CAAQG,KAAR,CAAc;QAC1BC,KAAK,EAAE,CACL,EADK,EAEL,CACET,UAAU,CAACU,QADb,EAEEV,UAAU,CAACS,KAFb,CAFK,CADmB;QAQ1BE,QAAQ,EAAE,CACR,EADQ,EAER,CACEX,UAAU,CAACU,QADb,EAEEV,UAAU,CAACY,GAAX,CAAe,CAAf,CAFF,CAFQ;MARgB,CAAd,CAAP;IAqBN;;IAEMC,MAAM;MACX,MAAMC,YAAY,GAAG,KAAKC,IAAL,CAAUC,KAA/B;MACA,KAAKZ,WAAL,CAAiBa,KAAjB,CAAuBH,YAAvB,EAAqCI,SAArC,CAA+C;QAC7CC,IAAI,EAAGC,QAAD,IAAiC;UACrC,KAAKb,cAAL,CAAoBc,KAApB,CAA0BD,QAA1B;UACA,KAAKd,MAAL,CAAYgB,QAAZ,CAAqB,CAAC,WAAD,CAArB;QACD,CAJ4C;QAK7CC,KAAK,EAAEA,KAAK,IAAI,KAAKC,OAAL,GAAe;MALc,CAA/C;IAOD;;EApCwB;;;qBAAdtB,gBAAcD;EAAA;;;UAAdC;IAAcuB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCb3B5B,+BAAgE,CAAhE,EAAgE,UAAhE,EAAgE,CAAhE,EAAgE,iBAAhE,EAAgE,CAAhE,EAAgE,CAAhE,EAAgE,gBAAhE;QAG4BA;QAAKA;QAEzBA;QAA4CA;UAAA,OAAY6B,YAAZ;QAAoB,CAApB;QACxC7B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QAEAA;QAAkCA;UAAA;QAAA;QAE9BA;QAAUA;QAA0CA;QAIhEA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAhByBA;QAAAA;QAMGA;QAAAA;QAEyCA;QAAAA,8CAAmC,cAAnC,EAAmC6B,QAAnC;QAE3C7B;QAAAA;QAIkCA;QAAAA;QACpDA;QAAAA;;;;;;EDPhB,OAAaC,cAAb;AAAA",
       "names": [
         "Validators",
         "i0",
@@ -6955,19 +6955,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.ts",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.html"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\login\\login.component.html"
       ],
       "sourcesContent": [
-        "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\nimport { SessionService } from 'src/app/services/session.service';\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\nimport { AuthService } from '../../services/auth.service';\n\n@Component({\n  selector: 'app-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss']\n})\nexport class LoginComponent {\n  public hide = true;\n  public onError = false;\n\n  public form = this.fb.group({\n    email: [\n      // 'test@test.com',\n      'toto3@toto.com',\n      [\n        Validators.required,\n        Validators.email\n      ]\n    ],\n    password: [\n      'test!1234',\n      [\n        Validators.required,\n        Validators.min(3)\n      ]\n    ]\n  });\n\n  constructor(private authService: AuthService,\n              private fb: FormBuilder,\n              private router: Router,\n              private sessionService: SessionService) {\n  }\n\n  public submit(): void {\n    const loginRequest = this.form.value as LoginRequest;\n    this.authService.login(loginRequest).subscribe({\n      next: (response: SessionInformation) => {\n        this.sessionService.logIn(response);\n        this.router.navigate(['/sessions']);\n      },\n      error: error => this.onError = true,\n    });\n  }\n}\n",
-        "<div class=\"login\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card>\n        <mat-card-header fxLayoutAlign=\"center center\">\n            <mat-card-title>Login</mat-card-title>\n        </mat-card-header>\n        <form class=\"login-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n            <mat-card-content fxLayout=\"column\">\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"Password\"\n                        formControlName=\"password\">\n                    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\n                        [attr.aria-pressed]=\"hide\">\n                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n                    </button>\n                </mat-form-field>\n            </mat-card-content>\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\n            <p *ngIf=\"onError\" class=\"error\">An error occurred</p>\n        </form>\n    </mat-card>\n</div>"
+        "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\r\nimport { SessionService } from 'src/app/services/session.service';\r\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\r\nimport { AuthService } from '../../services/auth.service';\r\n\r\n@Component({\r\n  selector: 'app-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.scss']\r\n})\r\nexport class LoginComponent {\r\n  public hide = true;\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(private authService: AuthService,\r\n              private fb: FormBuilder,\r\n              private router: Router,\r\n              private sessionService: SessionService) {\r\n  }\r\n\r\n  public submit(): void {\r\n    const loginRequest = this.form.value as LoginRequest;\r\n    this.authService.login(loginRequest).subscribe({\r\n      next: (response: SessionInformation) => {\r\n        this.sessionService.logIn(response);\r\n        this.router.navigate(['/sessions']);\r\n      },\r\n      error: error => this.onError = true,\r\n    });\r\n  }\r\n}\r\n",
+        "<div class=\"login\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Login</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"login-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"Password\"\r\n                        formControlName=\"password\">\r\n                    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\r\n                        [attr.aria-pressed]=\"hide\">\r\n                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\r\n                    </button>\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <p *ngIf=\"onError\" class=\"error\">An error occurred</p>\r\n        </form>\r\n    </mat-card>\r\n</div>"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "0f72f0c15c34fb65167da907c2a5dc61f48c42de"
+    "hash": "849dc229e79a645f2b950c88d269c01ab238d930"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -7829,7 +7829,7 @@
       "1": 0,
       "2": 0,
       "3": 0,
-      "4": 4,
+      "4": 1,
       "5": 0,
       "6": 0,
       "7": 0,
@@ -7839,9 +7839,9 @@
       "11": 0,
       "12": 0,
       "13": 0,
-      "14": 4,
+      "14": 1,
       "15": 0,
-      "16": 4,
+      "16": 1,
       "17": 0,
       "18": 0,
       "19": 0,
@@ -7873,11 +7873,11 @@
       "45": 0,
       "46": 0,
       "47": 0,
-      "48": 4
+      "48": 1
     },
     "f": {
       "0": 0,
-      "1": 4,
+      "1": 1,
       "2": 0,
       "3": 0,
       "4": 0,
@@ -7906,7 +7906,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;ICoBYC;IAAoCA;IAAiBA;;;;ADPjE,WAAaC,iBAAb;EAAM,MAAOA,iBAAP,CAAwB;IAW5BC,YAAoBC,WAApB,EACUC,EADV,EAEUC,MAFV,EAEwB;MAFJ;MACV;MACA;MAXH,eAAU,KAAV;MAEA,YAAO,KAAKD,EAAL,CAAQE,KAAR,CAAc;QAC1BC,KAAK,EAAE,CAAC,EAAD,EAAK,CAACR,UAAU,CAACS,QAAZ,EAAsBT,UAAU,CAACQ,KAAjC,CAAL,CADmB;QAE1BE,SAAS,EAAE,CAAC,EAAD,EAAK,CAACV,UAAU,CAACS,QAAZ,EAAsBT,UAAU,CAACW,GAAX,CAAe,CAAf,CAAtB,EAAyCX,UAAU,CAACY,GAAX,CAAe,EAAf,CAAzC,CAAL,CAFe;QAG1BC,QAAQ,EAAE,CAAC,EAAD,EAAK,CAACb,UAAU,CAACS,QAAZ,EAAsBT,UAAU,CAACW,GAAX,CAAe,CAAf,CAAtB,EAAyCX,UAAU,CAACY,GAAX,CAAe,EAAf,CAAzC,CAAL,CAHgB;QAI1BE,QAAQ,EAAE,CAAC,EAAD,EAAK,CAACd,UAAU,CAACS,QAAZ,EAAsBT,UAAU,CAACW,GAAX,CAAe,CAAf,CAAtB,EAAyCX,UAAU,CAACY,GAAX,CAAe,EAAf,CAAzC,CAAL;MAJgB,CAAd,CAAP;IASsB;;IAEtBG,MAAM;MACX,MAAMC,eAAe,GAAG,KAAKC,IAAL,CAAUC,KAAlC;MACA,KAAKd,WAAL,CAAiBe,QAAjB,CAA0BH,eAA1B,EAA2CI,SAA3C,CAAqD;QACjDC,IAAI,EAAGC,CAAD,IAAoB,KAAKhB,MAAL,CAAYiB,QAAZ,CAAqB,CAAC,QAAD,CAArB,CADuB;QAEjDC,KAAK,EAAEF,CAAC,IAAI,KAAKG,OAAL,GAAe;MAFsB,CAArD;IAKD;;EAtB2B;;;qBAAjBvB,mBAAiBD;EAAA;;;UAAjBC;IAAiBwB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCd9B7B,+BAAmE,CAAnE,EAAmE,UAAnE,EAAmE,CAAnE,EAAmE,iBAAnE,EAAmE,CAAnE,EAAmE,CAAnE,EAAmE,gBAAnE;QAG4BA;QAAQA;QAE5BA;QAA+CA;UAAA,OAAY8B,YAAZ;QAAoB,CAApB;QAC3C9B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QAEJA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAjB4BA;QAAAA;QAegCA;QAAAA;QACjDA;QAAAA;;;;;;EDPnB,OAAaC,iBAAb;AAAA",
+      "mappings": "AACA,SAAsBA,UAAtB,QAAwC,gBAAxC;;;;;;;;;;;;;;ICoBYC;IAAwCA;IAAiBA;;;;ADVrE,WAAaC,iBAAb;EAAM,MAAOA,iBAAP,CAAwB;IAsC5BC,YAAoBC,WAApB,EACoBC,EADpB,EAEoBC,MAFpB,EAEkC;MAFd;MACA;MACA;MAtCb,eAAU,KAAV;MAEA,YAAO,KAAKD,EAAL,CAAQE,KAAR,CAAc;QAC1BC,KAAK,EAAE,CACL,EADK,EAEL,CACER,UAAU,CAACS,QADb,EAEET,UAAU,CAACQ,KAFb,CAFK,CADmB;QAQ1BE,SAAS,EAAE,CACT,EADS,EAET,CACEV,UAAU,CAACS,QADb,EAEET,UAAU,CAACW,GAAX,CAAe,CAAf,CAFF,EAGEX,UAAU,CAACY,GAAX,CAAe,EAAf,CAHF,CAFS,CARe;QAgB1BC,QAAQ,EAAE,CACR,EADQ,EAER,CACEb,UAAU,CAACS,QADb,EAEET,UAAU,CAACW,GAAX,CAAe,CAAf,CAFF,EAGEX,UAAU,CAACY,GAAX,CAAe,EAAf,CAHF,CAFQ,CAhBgB;QAwB1BE,QAAQ,EAAE,CACR,EADQ,EAER,CACEd,UAAU,CAACS,QADb,EAEET,UAAU,CAACW,GAAX,CAAe,CAAf,CAFF,EAGEX,UAAU,CAACY,GAAX,CAAe,EAAf,CAHF,CAFQ;MAxBgB,CAAd,CAAP;IAqCN;;IAEMG,MAAM;MACX,MAAMC,eAAe,GAAG,KAAKC,IAAL,CAAUC,KAAlC;MACA,KAAKd,WAAL,CAAiBe,QAAjB,CAA0BH,eAA1B,EAA2CI,SAA3C,CAAqD;QACjDC,IAAI,EAAGC,CAAD,IAAa,KAAKhB,MAAL,CAAYiB,QAAZ,CAAqB,CAAC,QAAD,CAArB,CAD8B;QAEjDC,KAAK,EAAEF,CAAC,IAAI,KAAKG,OAAL,GAAe;MAFsB,CAArD;IAKD;;EAlD2B;;;qBAAjBvB,mBAAiBD;EAAA;;;UAAjBC;IAAiBwB;IAAAC;IAAAC;IAAAC;IAAAC;MAAA;QCX9B7B,+BAAmE,CAAnE,EAAmE,UAAnE,EAAmE,CAAnE,EAAmE,iBAAnE,EAAmE,CAAnE,EAAmE,CAAnE,EAAmE,gBAAnE;QAG4BA;QAAQA;QAE5BA;QAA+CA;UAAA,OAAY8B,YAAZ;QAAoB,CAApB;QAC3C9B,4CAAoC,CAApC,EAAoC,gBAApC,EAAoC,CAApC;QAEQA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QACAA;QACIA;QACJA;QAEJA;QAAkFA;QAAMA;QACxFA;QACJA;;;;QAjB4BA;QAAAA;QAegCA;QAAAA;QACjDA;QAAAA;;;;;;EDVnB,OAAaC,iBAAb;AAAA",
       "names": [
         "Validators",
         "i0",
@@ -7943,19 +7943,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.ts",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.html"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\components\\register\\register.component.html"
       ],
       "sourcesContent": [
-        "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { SessionService } from 'src/app/services/session.service';\nimport { AuthService } from '../../services/auth.service';\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\nimport { AuthSuccess } from '../../interfaces/authSuccess.interface';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\n\n@Component({\n  selector: 'app-register',\n  templateUrl: './register.component.html',\n  styleUrls: ['./register.component.scss']\n})\nexport class RegisterComponent {\n\n  public onError = false;\n\n  public form = this.fb.group({\n    email: ['', [Validators.required, Validators.email]],\n    firstName: ['', [Validators.required, Validators.min(3), Validators.max(20)]],\n    lastName: ['', [Validators.required, Validators.min(3), Validators.max(20)]],\n    password: ['', [Validators.required, Validators.min(3), Validators.max(40)]]\n  });\n\n  constructor(private authService: AuthService,\n    private fb: FormBuilder,\n    private router: Router) { }\n\n  public submit(): void {\n    const registerRequest = this.form.value as RegisterRequest;\n    this.authService.register(registerRequest).subscribe({\n        next: (_: AuthSuccess) => this.router.navigate(['/login']),\n        error: _ => this.onError = true,\n      }\n    );\n  }\n\n}\n",
-        "<div class=\"register\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card>\n        <mat-card-header fxLayoutAlign=\"center center\">\n            <mat-card-title>Register</mat-card-title>\n        </mat-card-header>\n        <form class=\"register-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n            <mat-card-content fxLayout=\"column\">\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\n                </mat-form-field>\n            </mat-card-content>\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\n            <span *ngIf=\"onError\" class=\"error\">An error occurred</span>\n        </form>\n    </mat-card>\n</div>\n"
+        "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { AuthService } from '../../services/auth.service';\r\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\r\n\r\n@Component({\r\n  selector: 'app-register',\r\n  templateUrl: './register.component.html',\r\n  styleUrls: ['./register.component.scss']\r\n})\r\nexport class RegisterComponent {\r\n\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    firstName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(20)\r\n      ]\r\n    ],\r\n    lastName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(20)\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(40)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(private authService: AuthService,\r\n              private fb: FormBuilder,\r\n              private router: Router) {\r\n  }\r\n\r\n  public submit(): void {\r\n    const registerRequest = this.form.value as RegisterRequest;\r\n    this.authService.register(registerRequest).subscribe({\r\n        next: (_: void) => this.router.navigate(['/login']),\r\n        error: _ => this.onError = true,\r\n      }\r\n    );\r\n  }\r\n\r\n}\r\n",
+        "<div class=\"register\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Register</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"register-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <span *ngIf=\"onError\" class=\"error ml2\">An error occurred</span>\r\n        </form>\r\n    </mat-card>\r\n</div>\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "993ead6b15608357c11d8b4c96f877374374b8b2"
+    "hash": "ef7800bd701dc67eaf34fadf9af4a89fc8cb1529"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth-routing.module.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth-routing.module.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth-routing.module.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8117,22 +8117,22 @@
       }
     },
     "s": {
-      "0": 4,
-      "1": 4,
-      "2": 4,
-      "3": 4,
-      "4": 4,
-      "5": 4,
-      "6": 4
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
     },
     "f": {
-      "0": 4,
-      "1": 4
+      "0": 1,
+      "1": 1
     },
     "b": {
       "0": [
-        4,
-        4
+        1,
+        1
       ]
     },
     "inputSourceMap": {
@@ -8151,17 +8151,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth-routing.module.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth-routing.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { LoginComponent } from './components/login/login.component';\nimport { RegisterComponent } from './components/register/register.component';\n\n\nconst routes: Routes = [\n  { title: 'Login', path: 'login', component: LoginComponent },\n  { title: 'Register', path: 'register', component: RegisterComponent }\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class AuthRoutingModule { }\n"
+        "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { LoginComponent } from './components/login/login.component';\r\nimport { RegisterComponent } from './components/register/register.component';\r\n\r\n\r\nconst routes: Routes = [\r\n  { title: 'Login', path: 'login', component: LoginComponent },\r\n  { title: 'Register', path: 'register', component: RegisterComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AuthRoutingModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5f99d4e85e42c81bb488846d88df0e0ccca7405d"
+    "hash": "dde519726edcad2b43e5f940d4a4e3be888dc874"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth.module.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth.module.ts",
+  "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth.module.ts": {
+    "path": "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8323,22 +8323,22 @@
       }
     },
     "s": {
-      "0": 4,
-      "1": 4,
-      "2": 4,
-      "3": 4,
-      "4": 4,
-      "5": 4,
-      "6": 4
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
     },
     "f": {
-      "0": 4,
-      "1": 4
+      "0": 1,
+      "1": 1
     },
     "b": {
       "0": [
-        4,
-        4
+        1,
+        1
       ]
     },
     "inputSourceMap": {
@@ -8360,13 +8360,13 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth.module.ts"
+        "C:\\Users\\mardejes\\Documents\\OpenClassRooms\\Projet 5\\Testez-une-application-full-stack\\front\\src\\app\\features\\auth\\auth.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { AuthRoutingModule } from './auth-routing.module';\nimport { RegisterComponent } from './components/register/register.component';\nimport { LoginComponent } from './components/login/login.component';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatInputModule } from '@angular/material/input';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { MatIconModule } from '@angular/material/icon';\n\nconst materialModules = [\n  MatButtonModule,\n  MatCardModule,\n  MatFormFieldModule,\n  MatIconModule,\n  MatInputModule\n]\n\n@NgModule({\n  declarations: [\n    RegisterComponent,\n    LoginComponent\n  ],\n  imports: [\n    AuthRoutingModule,\n    CommonModule,\n    FlexLayoutModule,\n    FormsModule,\n    ReactiveFormsModule,\n    ...materialModules\n  ]\n})\nexport class AuthModule { }\n"
+        "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { AuthRoutingModule } from './auth-routing.module';\r\nimport { RegisterComponent } from './components/register/register.component';\r\nimport { LoginComponent } from './components/login/login.component';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\nconst materialModules = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatFormFieldModule,\r\n  MatIconModule,\r\n  MatInputModule\r\n]\r\n\r\n@NgModule({\r\n  declarations: [\r\n    RegisterComponent,\r\n    LoginComponent\r\n  ],\r\n  imports: [\r\n    AuthRoutingModule,\r\n    CommonModule,\r\n    FlexLayoutModule,\r\n    FormsModule,\r\n    ReactiveFormsModule,\r\n    ...materialModules\r\n  ]\r\n})\r\nexport class AuthModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "e192f57dfbc63135d054f57c145470af830b1d27"
+    "hash": "e15f3b0618f589cdd30b05b29cb635ea26f643f4"
   }
 }
