@@ -25,6 +25,7 @@ describe('Session information', ()=>{
             updatedAt: "2023-07-28T00:00:00"
         }];
 
+        
         //Intercepter la session avec le data
         cy.intercept('GET', '/api/session', verifySessionInformation) as 'session';
     
@@ -68,5 +69,34 @@ describe('Session information', ()=>{
         cy.contains(sessionInformation.lastName).should('be.visible');
         cy.contains(sessionInformation.updatedAt).should('be.visible');
     
+        //Display Delete button for admin users
+
+        const session = {
+            id: 1,
+            name: "test",
+            date: "2023-07-27T22:00:00.000+00:00",
+            teacher_id: 1,
+            description: "test description",
+            users: [],
+            createdAt: "2023-07-28T00:00:00",
+            updatedAt: "2023-07-28T00:00:00"
+        };
+        const teacher = {
+            createdAt: "2023-07-03T15:55:49",
+            firstName: "Margot",
+            id: 1,
+            lastName: "DELAHAYE",
+            updatedAt: "2023-07-03T15:55:49"
+        };
+
+        cy.contains('Sessions').should('be.visible').click();
+
+        cy.intercept('GET', '/api/session/1', session);
+        cy.intercept('GET', '/api/teacher/1', teacher);
+        cy.contains('Detail').should('be.visible').click();
+        cy.contains('Delete').should('be.visible');
+        
     });
+
+   
 });
