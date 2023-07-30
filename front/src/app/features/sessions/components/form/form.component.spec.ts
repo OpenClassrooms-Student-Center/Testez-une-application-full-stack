@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {  FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import {  FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,12 +14,9 @@ import { SessionService } from 'src/app/services/session.service';
 import { SessionApiService } from '../../services/session-api.service';
 
 import { FormComponent } from './form.component';
-import { TeacherService } from 'src/app/services/teacher.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { of, tap, throwError } from 'rxjs';
+import { of } from 'rxjs';
 import { Session } from '../../interfaces/session.interface';
-import { any } from 'cypress/types/bluebird';
-import { error } from 'cypress/types/jquery';
 
 describe('FormComponent', () => {
   let component: FormComponent;
