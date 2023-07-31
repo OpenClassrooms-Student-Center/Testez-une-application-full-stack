@@ -74,7 +74,7 @@ describe('Session information', ()=>{
         const session = {
             id: 1,
             name: "test",
-            date: "2023-07-27T22:00:00.000+00:00",
+            date: "July 28, 2023",
             teacher_id: 1,
             description: "test description",
             users: [],
@@ -93,8 +93,15 @@ describe('Session information', ()=>{
 
         cy.intercept('GET', '/api/session/1', session);
         cy.intercept('GET', '/api/teacher/1', teacher);
-        cy.contains('Detail').should('be.visible').click();
-        cy.contains('Delete').should('be.visible');
+        
+           //Session informations presents
+           cy.contains(session.name).should('be.visible');
+           cy.contains(session.date).should('be.visible');
+           cy.contains(session.description).should('be.visible');
+
+           cy.contains('Edit').should('be.visible');
+           cy.contains('Detail').should('be.visible').click();
+           cy.contains('Delete').should('be.visible');
         
     });
 
