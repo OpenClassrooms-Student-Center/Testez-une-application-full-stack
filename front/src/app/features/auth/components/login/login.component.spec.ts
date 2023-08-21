@@ -61,8 +61,8 @@ describe('LoginComponent', () => {
     mockFB = new FormBuilder();
 
     const validRequest = {
-      email:'yoga@studio.com',
-      password:'test!1234'
+      email:'',
+      password:''
     };
 
     component = new LoginComponent(
