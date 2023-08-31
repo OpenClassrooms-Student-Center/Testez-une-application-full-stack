@@ -59,4 +59,19 @@ public class TeacherServiceTest {
         verify(teacherRepository, times(1))
                 .findById(id);
     }
+
+    @Test
+    @DisplayName("null")
+    void whenTeacherIsNull_thenReturnNull(){
+        Long id = null;
+        Teacher teacher = new Teacher();
+
+        when(teacherRepository.findById(id))
+                .thenReturn(Optional.of(teacher));
+
+        Teacher IsTeacherNull = teacherService.findById(id);
+
+        verify(teacherRepository).findById(id);
+        assertEquals("Null", teacher, IsTeacherNull);
+    }
 }
