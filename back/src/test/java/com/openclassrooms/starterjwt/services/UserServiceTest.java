@@ -35,8 +35,9 @@ public class UserServiceTest {
         Long id = 29L;
 
         userRepository.deleteById(id);
+        userService.delete(id);
 
-        verify(userRepository, times(1))
+        verify(userRepository, times(2))
                 .deleteById(id);
     }
 
