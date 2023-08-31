@@ -31,10 +31,8 @@ public class UserControllerTest {
     UserMapper userMapper;
     @Mock
     UserService userService;
-
     @Mock
     Authentication authentication;
-
     @Mock
     SecurityContext securityContext;
 
