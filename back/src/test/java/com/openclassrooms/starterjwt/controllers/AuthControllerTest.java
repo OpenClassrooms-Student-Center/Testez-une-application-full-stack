@@ -36,22 +36,16 @@ public class AuthControllerTest {
     AuthController authController;
     @Mock
     private AuthenticationManager authenticationManagerMock;
-
     @Mock
     private JwtUtils jwtUtilsMock;
-
     @Mock
     private UserRepository userRepositoryMock;
-
     @Mock
     private PasswordEncoder passwordEncoder;
-
     @Mock
     SecurityContext securityContext;
-
     @Mock
     Authentication authentication;
-
     @BeforeEach
     public void setUp() {
         authController = new AuthController(
@@ -60,7 +54,6 @@ public class AuthControllerTest {
                 jwtUtilsMock,
                 userRepositoryMock);
     }
-
     @Test
     @DisplayName("Login test")
     void whenUserIsAuthenticated_thenReturnJwtResponse() throws Exception {
@@ -123,10 +116,9 @@ public class AuthControllerTest {
 
         verify(userRepositoryMock, times(1)).findByEmail(userDetails.getUsername());
     }
-
     @Test
-    @DisplayName("User is null")
-    void whenUserIsNull_isAdminIsFalse() {
+    @DisplayName("Bad credentials")
+    void whenLoginAndPasswordIsWrong_thenShouldHaveAnError() {
         //GIVEN
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.setEmail("test@invalid.com");
@@ -165,7 +157,6 @@ public class AuthControllerTest {
 
         verify(userRepositoryMock, times(2)).findByEmail(userDetails.getUsername());
     }
-
     @Test
     @DisplayName("Register test")
     void whenSignupRequestIsValid_thenSaveUser() {
@@ -198,7 +189,6 @@ public class AuthControllerTest {
         verify(passwordEncoder, times(1)).encode(user.getPassword());
         verify(userRepositoryMock, times(1)).save(user);
     }
-
     @Test
     @DisplayName("BAD REQUEST")
     void whenEmailAlreadyExists_thenReturnBadRequest() {
