@@ -3,6 +3,7 @@ package com.openclassrooms.starterjwt.services;
 import com.openclassrooms.starterjwt.exception.BadRequestException;
 import com.openclassrooms.starterjwt.exception.NotFoundException;
 import com.openclassrooms.starterjwt.models.Session;
+import com.openclassrooms.starterjwt.models.Teacher;
 import com.openclassrooms.starterjwt.models.User;
 import com.openclassrooms.starterjwt.repository.SessionRepository;
 import com.openclassrooms.starterjwt.repository.UserRepository;
@@ -14,9 +15,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import javax.swing.text.html.Option;
 import java.sql.Date;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,7 +34,6 @@ public class SessionServiceTest {
 
     @InjectMocks
     SessionService sessionService;
-
     @Mock
     SessionRepository sessionRepository;
     @Mock
@@ -47,13 +50,20 @@ public class SessionServiceTest {
     @Test
     @DisplayName("create")
     void createSession(){
-        Session session = new Session();
+        Session session = Session.builder()
+                .id(1L)
+                .name("Test")
+                .date(Date.from(Instant.now()))
+                .description("Test Description")
+                .createdAt(LocalDateTime.parse("2023-08-31T11:45:00"))
+                .updatedAt(LocalDateTime.parse("2023-08-31T11:45:00"))
+                .build();
 
         when(sessionRepository.save(session)).thenReturn(session);
 
         Session createSession = sessionService.create(session);
 
-        verify(sessionRepository).save(session);
+        verify(sessionRepository, times(1)).save(session);
         assertEquals("Session created", session, createSession);
     }
 
@@ -63,20 +73,62 @@ public class SessionServiceTest {
         Long id = 16L;
 
         sessionRepository.deleteById(id);
+        sessionService.delete(id);
 
-        verify(sessionRepository).deleteById(id);
+        verify(sessionRepository, times(2)).deleteById(id);
     }
 
     @Test
     @DisplayName("findAll")
     void whenSessionListIsFound_thenReturnSessionList(){
-        List<Session> sessionList = new ArrayList<>();
+        User user = User.builder()
+                .id(1L)
+                .email("toto3@toto.com")
+                .lastName("TOTO")
+                .firstName("toto")
+                .password("test!1234")
+                .admin(false)
+                .createdAt(LocalDateTime.parse("2023-08-31T09:52:00"))
+                .updatedAt(LocalDateTime.parse("2023-08-31T09:52:00"))
+                .build();
+
+        List<User> users = Arrays.asList(user);
+        Teacher teacher = Teacher.builder()
+                .id(1L)
+                .lastName("DELAHAYE")
+                .firstName("Margot")
+                .createdAt(LocalDateTime.parse("2023-08-31T09:52:00"))
+                .updatedAt(LocalDateTime.parse("2023-08-31T09:52:00"))
+                .build();
+
+        Session session = Session.builder()
+                .id(1L)
+                .name("Test")
+                .date(Date.from(Instant.now()))
+                .description("Test session list")
+                .teacher(teacher)
+                .users(users)
+                .createdAt(LocalDateTime.parse("2023-08-31T09:52:00"))
+                .updatedAt(LocalDateTime.parse("2023-08-31T09:52:00"))
+                .build();
+        List<Session> sessionList = Arrays.asList(session);
+
 
         when(sessionRepository.findAll()).thenReturn(sessionList);
 
         List<Session> sessionListFound = sessionService.findAll();
 
         assertEquals("SessionList Found",sessionList,sessionListFound);
+        assertEquals("Id", sessionList.get(0).getId(), sessionListFound.get(0).getId());
+        assertEquals("Name", sessionList.get(0).getName(), sessionListFound.get(0).getName());
+        assertEquals("Date", sessionList.get(0).getDate(), sessionListFound.get(0).getDate());
+        assertEquals("Description", sessionList.get(0).getDescription(), sessionListFound.get(0).getDescription());
+        assertEquals("Teacher", sessionList.get(0).getTeacher(), sessionListFound.get(0).getTeacher());
+        assertEquals("Users", sessionList.get(0).getUsers(), sessionListFound.get(0).getUsers());
+        assertEquals("CreatedAt", sessionList.get(0).getCreatedAt(), sessionListFound.get(0).getCreatedAt());
+        assertEquals("UpdatedAt", sessionList.get(0).getUpdatedAt(), sessionListFound.get(0).getUpdatedAt());
+
+        assertThat(sessionList.size()).isEqualTo(sessionListFound.size());
         verify(sessionRepository, times(1)).findAll();
     }
 
@@ -125,36 +177,41 @@ public class SessionServiceTest {
 
     @Test
     @DisplayName("participate")
-    void whenSessionIdAndUserIdIsPresent_thenSaveSession(){
+    void whenSessionIdAndUserIdIsPresent_thenSaveSessionAsParticipated(){
         Long id = 21L;
         Long userId = 20L;
+
         List<User> users = new ArrayList<>();
+
         Session session = Session.builder()
                 .id(id)
-                .name("test session")
+                .name("Test")
+                .description("Test description")
                 .date(Date.from(Instant.now()))
-                .description("test description")
                 .users(users)
                 .build();
+
         User user = User.builder()
                 .id(userId)
-                .email("fumala@quaqui.com")
-                .lastName("Koala")
-                .firstName("Blanc")
-                .password("123")
-                .admin(true)
+                .email("toto3@toto.com")
+                .lastName("TOTO")
+                .firstName("Toto")
+                .password("test!1234")
+                .admin(false)
+                .createdAt(LocalDateTime.parse("2023-08-31T10:34:00"))
+                .updatedAt(LocalDateTime.parse("2023-08-31T10:34:00"))
                 .build();
 
-        sessionRepository.findById(id);
+        when(sessionRepository.findById(id)).thenReturn(Optional.of(session));
 
-        userRepository.findById(userId);
+        when(userRepository.findById(userId)).thenReturn(Optional.of(user));
 
-        session.getUsers().add(user);
         sessionRepository.save(session);
+        sessionService.participate(id, userId);
 
         verify(sessionRepository, times(1)).findById(id);
         verify(userRepository, times(1)).findById(userId);
-        verify(sessionRepository, times(1)).save(session);
+        verify(sessionRepository, times(2)).save(session);
     }
 
     @Test
@@ -208,20 +265,35 @@ public class SessionServiceTest {
         Long sessionId = 24L;
         Long userId = 25L;
 
-        Session session = new Session();
-        session.setUsers(new ArrayList<>());
-        User user = new User();
+        User user = User.builder()
+                .id(userId)
+                .lastName("Altina")
+                .firstName("Schinati")
+                .email("toto3@toto.com")
+                .admin(false)
+                .createdAt(LocalDateTime.parse("2023-08-31T11:39:00"))
+                .updatedAt(LocalDateTime.parse("2023-08-31T11:39:00"))
+                .password("test!1234")
+                .build();
+        List<User> users = new ArrayList<>();
+        users.add(user);
 
-        sessionRepository.findById(sessionId);
+        Session session = Session.builder()
+                .id(sessionId)
+                .name("Test")
+                .description("Test do not participate")
+                .users(users)
+                .build();
 
-        user.setId(userId);
-        session.getUsers().add(user);
+        when(sessionRepository.findById(sessionId)).thenReturn(Optional.of(session));
 
         sessionRepository.save(session);
 
+        sessionService.noLongerParticipate(sessionId, userId);
+
         verify(sessionRepository, times(1))
                 .findById(sessionId);
-        verify(sessionRepository, times(1))
+        verify(sessionRepository, times(2))
                 .save(session);
     }
 
