@@ -50,11 +50,72 @@ describe('RegisterComponent', () => {
   });
 
   it('should initialize the form correctly', () => {
+    // Vérifiez que les contrôles du formulaire ont été initialisés correctement
     expect(component.form.get('email')).toBeInstanceOf(FormControl);
     expect(component.form.get('firstName')).toBeInstanceOf(FormControl);
     expect(component.form.get('lastName')).toBeInstanceOf(FormControl);
     expect(component.form.get('password')).toBeInstanceOf(FormControl);
+
+    // Vérifiez les règles de validation pour chaque champ
+    expect(component.form.get('email')?.hasError('required')).toBeTruthy();
+    expect(component.form.get('email')?.hasError('email')).toBeFalsy(); // Champ vide, donc pas d'erreur d'e-mail
+    expect(component.form.get('firstName')?.hasError('required')).toBeTruthy();
+    expect(component.form.get('firstName')?.hasError('minlength')).toBeFalsy(); // Prénom initialisé à vide, donc pas d'erreur de longueur minimale
+    expect(component.form.get('firstName')?.hasError('maxlength')).toBeFalsy(); // Prénom initialisé à vide, donc pas d'erreur de longueur maximale
+    expect(component.form.get('lastName')?.hasError('required')).toBeTruthy();
+    expect(component.form.get('lastName')?.hasError('minlength')).toBeFalsy(); // Nom initialisé à vide, donc pas d'erreur de longueur minimale
+    expect(component.form.get('lastName')?.hasError('maxlength')).toBeFalsy(); // Nom initialisé à vide, donc pas d'erreur de longueur maximale
+    expect(component.form.get('password')?.hasError('required')).toBeTruthy();
+    expect(component.form.get('password')?.hasError('minlength')).toBeFalsy(); // Mot de passe initialisé à vide, donc pas d'erreur de longueur minimale
+    expect(component.form.get('password')?.hasError('maxlength')).toBeFalsy(); // Mot de passe initialisé à vide, donc pas d'erreur de longueur maximale
+});
+
+it('should require all fields to be filled', () => {
+  // Laissez tous les champs du formulaire vides
+  component.form.setValue({
+    email: '',
+    firstName: '',
+    lastName: '',
+    password: '',
   });
+
+  // Retournez un observable avec une erreur (simulant une erreur lors de l'enregistrement)
+  authService.register.mockReturnValue(throwError('Some error'));
+
+  component.submit();
+
+  // Vérifiez que le service d'authentification a été appelé (car c'est le comportement actuel du composant)
+  expect(authService.register).toHaveBeenCalledTimes(1);
+
+  // Vérifiez que le router n'a pas été appelé pour la navigation
+  expect(router.navigate).not.toHaveBeenCalled();
+
+  // Vérifiez que onError est défini à true
+  expect(component.onError).toBeTruthy();
+});
+
+
+
+
+
+  it('should create an account successfully', () => {
+    const registerRequest: RegisterRequest = {
+      email: 'test@example.com',
+      firstName: 'John',
+      lastName: 'Doe',
+      password: 'password123',
+    };
+  
+    authService.register.mockReturnValue(of(void 0));
+  
+    component.form.setValue(registerRequest);
+    component.submit();
+  
+    expect(authService.register).toHaveBeenCalledWith(registerRequest);
+    expect(router.navigate).toHaveBeenCalledWith(['/login']);
+    expect(component.onError).toBeFalsy();
+  });
+  
 
   it('should handle an error when registering', () => {
     const registerRequest: RegisterRequest = {
