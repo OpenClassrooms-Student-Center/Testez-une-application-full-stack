@@ -11,12 +11,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('RegisterComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
   let authService: jest.Mocked<AuthService>;
   let router: jest.Mocked<Router>;
+
 
   beforeEach(() => {
     authService = {
@@ -41,6 +43,7 @@ describe('RegisterComponent', () => {
         MatFormFieldModule,
         MatIconModule,
         MatInputModule,
+        HttpClientModule
       ],
     });
 
@@ -156,4 +159,3 @@ it('should require all fields to be filled', () => {
     expect(component.onError).toBeTruthy();
   });
 });
-
