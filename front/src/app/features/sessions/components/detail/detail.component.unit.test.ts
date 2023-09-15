@@ -9,55 +9,81 @@
 // import { expect } from '@jest/globals';
 // import { SessionApiService } from '../../services/session-api.service';
 // import { TeacherService } from 'src/app/services/teacher.service';
-// import { Router } from '@angular/router';
+// import { ActivatedRoute, Router } from '@angular/router';
+// import { Session } from '../../interfaces/session.interface';
+// import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
+// import { Teacher } from 'src/app/interfaces/teacher.interface';
 
 // describe('DetailComponent', () => {
 //     let component: DetailComponent;
 //     let fixture: ComponentFixture<DetailComponent>;
-//     let sessionServiceMock: Partial<SessionService>;
-//     let sessionApiServiceMock: any; // Vous devrez définir vos mocks pour sessionApiService et teacherService
-//     let teacherServiceMock: any;
-//     let matSnackBarMock: any;
-//     let routerMock: any;
-  
-//     const mockSessionService = {
-//         sessionInformation: {
-//           token: 'your-token-here',
+//     let sessionServiceMock:jest.Mocked<SessionService>;//
+//     let sessionApiServiceMock: jest.Mocked<SessionApiService>;//
+//     let matSnackBarMock: jest.Mocked<MatSnackBar>;//
+//     let routerMock: jest.Mocked<Router>;//
+//     let activatedRouteMock: jest.Mocked<ActivatedRoute>;//
+//     let teacherServiceMock: jest.Mocked<TeacherService>; //
+//     let sessionMock: jest.Mocked<Session>;//
+//     const SessionInformationMock: SessionInformation = {
+//           token: 'token',
 //           type: 'user',
 //           id: 1,
-//           username: 'your-username',
-//           firstName: 'your-first-name',
-//           lastName: 'your-last-name',
+//           username: 'Jo',
+//           firstName: 'John',
+//           lastName: 'Doe',
 //           admin: true
-//         }
-//       };
+//     };
+//     const teacherMock: Teacher = { 
+//       id: 1, lastName: 'Doe', 
+//       firstName: 'John', 
+//       createdAt: new Date(), 
+//       updatedAt: new Date() 
+//     };
       
-  
 //     beforeEach(async () => {
 //       sessionServiceMock = {
-//         sessionInformation: mockSessionService.sessionInformation
-//       };
-  
+//         sessionInformation: SessionInformationMock,
+//         logOut: jest.fn()
+//       } as unknown as jest.Mocked<SessionService>;
+
 //       sessionApiServiceMock = {
-//         detail: jest.fn(() => of({ /* détails de session simulés */ })),
-//         participate: jest.fn(() => of(undefined)),
-//         unParticipate: jest.fn(() => of(undefined)),
-//         delete: jest.fn(() => of(undefined))
-//         // Vous devrez définir d'autres méthodes simulées au besoin
-//       };
-  
-//       teacherServiceMock = {
-//         detail: jest.fn(() => of({ /* détails de l'enseignant simulés */ }))
-//         // Vous devrez définir d'autres méthodes simulées au besoin
-//       };
-  
+//         detail: jest.fn().mockReturnValue(of(sessionMock)),
+//         participate: jest.fn().mockReturnValue(of(sessionMock)),
+//         unParticipate: jest.fn().mockReturnValue(of(sessionMock)),
+//         delete: jest.fn().mockReturnValue(of(sessionMock))
+//       } as unknown as jest.Mocked<SessionApiService>;
+
 //       matSnackBarMock = {
 //         open: jest.fn()
-//       };
-  
+//       } as unknown as jest.Mocked<MatSnackBar>;
+
 //       routerMock = {
 //         navigate: jest.fn()
-//       };
+//       } as unknown as jest.Mocked<Router>;
+
+//       activatedRouteMock = {
+//         snapshot: {
+//           paramMap: {
+//             get: jest.fn().mockReturnValue('1')
+//           }
+//         }
+//       } as unknown as jest.Mocked<ActivatedRoute>;
+
+//       teacherServiceMock = {
+//         detail: jest.fn().mockReturnValue(of(teacherMock))
+//       } as unknown as jest.Mocked<TeacherService>;
+
+//       sessionMock = {
+//         id: 1,
+//         title: 'title',
+//         description: 'description',
+//         teacher_id: 1,
+//         start: new Date(),
+//         end: new Date(),
+//         createdAt: new Date(),
+//         updatedAt: new Date(),
+//         users: [1]
+//       } as unknown as jest.Mocked<Session>;
   
 //       await TestBed.configureTestingModule({
 //         imports: [
@@ -72,7 +98,8 @@
 //           { provide: SessionApiService, useValue: sessionApiServiceMock },
 //           { provide: TeacherService, useValue: teacherServiceMock },
 //           { provide: MatSnackBar, useValue: matSnackBarMock },
-//           { provide: Router, useValue: routerMock }
+//           { provide: Router, useValue: routerMock },
+//           { provide: ActivatedRoute, useValue: activatedRouteMock }
 //         ],
 //       }).compileComponents();
   
@@ -99,8 +126,11 @@
 //     });
   
 //     it('should un-participate in the session', () => {
-//       component.unParticipate();
-//       expect(sessionApiServiceMock.unParticipate).toHaveBeenCalledWith('1', '1');
+//       // component.unParticipate();
+//       expect(component.isParticipate).toBe(false);
+//       const fetchSessionMethod = (component as any).fetchSession;
+//       fetchSessionMethod.call(component);
+//       // expect(sessionApiServiceMock.unParticipate).toHaveBeenCalledWith('1', '1');
 //       expect(component.isParticipate).toBe(false);
 //     });
   
@@ -116,30 +146,95 @@
 //       expect(window.history.back).toHaveBeenCalled();
 //     });
 //   });
-import { HttpClientModule } from '@angular/common/http';
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { RouterTestingModule, } from '@angular/router/testing';
-import { expect } from '@jest/globals'; 
-import { SessionService } from '../../../../services/session.service';
-
 import { DetailComponent } from './detail.component';
-
+import { SessionService } from 'src/app/services/session.service';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { ReactiveFormsModule } from '@angular/forms';
+import { of } from 'rxjs';
+import { expect } from '@jest/globals';
+import { SessionApiService } from '../../services/session-api.service';
+import { TeacherService } from 'src/app/services/teacher.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Session } from '../../interfaces/session.interface';
+import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
+import { Teacher } from 'src/app/interfaces/teacher.interface';
 
 describe('DetailComponent', () => {
   let component: DetailComponent;
-  let fixture: ComponentFixture<DetailComponent>; 
-  let service: SessionService;
+  let fixture: ComponentFixture<DetailComponent>;
+  let sessionServiceMock: jest.Mocked<SessionService>;
+  let sessionApiServiceMock: jest.Mocked<SessionApiService>;
+  let matSnackBarMock: jest.Mocked<MatSnackBar>;
+  let routerMock: jest.Mocked<Router>;
+  let activatedRouteMock: jest.Mocked<ActivatedRoute>;
+  let teacherServiceMock: jest.Mocked<TeacherService>;
+  let sessionMock: jest.Mocked<Session>;
 
-  const mockSessionService = {
-    sessionInformation: {
-      admin: true,
-      id: 1
-    }
-  }
+  const SessionInformationMock: SessionInformation = {
+    token: 'token',
+    type: 'user',
+    id: 1,
+    username: 'Jo',
+    firstName: 'John',
+    lastName: 'Doe',
+    admin: true
+  };
+  const teacherMock: Teacher = {
+    id: 1, lastName: 'Doe',
+    firstName: 'John',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  };
 
   beforeEach(async () => {
+    sessionServiceMock = {
+      sessionInformation: SessionInformationMock,
+      logOut: jest.fn()
+    } as unknown as jest.Mocked<SessionService>;
+
+    sessionApiServiceMock = {
+      detail: jest.fn().mockReturnValue(of(sessionMock)),
+      participate: jest.fn().mockReturnValue(of(sessionMock)),
+      unParticipate: jest.fn().mockReturnValue(of(sessionMock)),
+      delete: jest.fn().mockReturnValue(of(sessionMock))
+    } as unknown as jest.Mocked<SessionApiService>;
+
+    matSnackBarMock = {
+      open: jest.fn()
+    } as unknown as jest.Mocked<MatSnackBar>;
+
+    routerMock = {
+      navigate: jest.fn()
+    } as unknown as jest.Mocked<Router>;
+
+    activatedRouteMock = {
+      snapshot: {
+        paramMap: {
+          get: jest.fn().mockReturnValue('1')
+        }
+      }
+    } as unknown as jest.Mocked<ActivatedRoute>;
+
+    teacherServiceMock = {
+      detail: jest.fn().mockReturnValue(of(teacherMock))
+    } as unknown as jest.Mocked<TeacherService>;
+
+    sessionMock = {
+      id: 1,
+      title: 'title',
+      description: 'description',
+      teacher_id: 1,
+      start: new Date(),
+      end: new Date(),
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      users: [1]
+    } as unknown as jest.Mocked<Session>;
+
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
@@ -147,11 +242,17 @@ describe('DetailComponent', () => {
         MatSnackBarModule,
         ReactiveFormsModule
       ],
-      declarations: [DetailComponent], 
-      providers: [{ provide: SessionService, useValue: mockSessionService }],
-    })
-      .compileComponents();
-      service = TestBed.inject(SessionService);
+      declarations: [DetailComponent],
+      providers: [
+        { provide: SessionService, useValue: sessionServiceMock },
+        { provide: SessionApiService, useValue: sessionApiServiceMock },
+        { provide: TeacherService, useValue: teacherServiceMock },
+        { provide: MatSnackBar, useValue: matSnackBarMock },
+        { provide: Router, useValue: routerMock },
+        { provide: ActivatedRoute, useValue: activatedRouteMock }
+      ],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(DetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -159,5 +260,40 @@ describe('DetailComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should fetch session details on init', () => {
+    expect(sessionApiServiceMock.detail).toHaveBeenCalledWith('1');
+    expect(teacherServiceMock.detail).toHaveBeenCalledWith('1');
+    expect(component.session).toBeTruthy();
+    expect(component.teacher).toBeTruthy();
+  });
+
+  // it('should participate in the session', () => {
+  //     const participeSpy = jest.spyOn(sessionApiServiceMock, 'participate').mockReturnValue(of(void 0));
+  //     component.participate();
+  //     expect(participeSpy).toHaveBeenCalledWith(sessionMock.id?.toString(), SessionInformationMock.id.toString());
+  // });
+
+
+  // it('should unparticipate in the session', () => {
+  //   const unParticipeSpy = jest.spyOn(sessionApiServiceMock, 'unParticipate').mockReturnValue(of(void 0));
+  //   component.unParticipate();
+  //   expect(unParticipeSpy).toHaveBeenCalledWith(sessionMock.id?.toString(), SessionInformationMock.id.toString());
+  // });
+  
+
+  it('should delete the session', () => {
+    component.delete();
+    expect(sessionApiServiceMock.delete).toHaveBeenCalledWith('1');
+    expect(matSnackBarMock.open).toHaveBeenCalledWith('Session deleted !', 'Close', { duration: 3000 });
+    expect(routerMock.navigate).toHaveBeenCalledWith(['sessions']);
+  });
+
+  it('should navigate back', () => {
+    const backSpy = jest.spyOn(window.history, 'back');
+    component.back();
+    expect(backSpy).toHaveBeenCalled();
+    backSpy.mockRestore();
   });
 });

@@ -53,13 +53,13 @@ describe('RegisterComponent', () => {
   });
 
   it('should initialize the form correctly', () => {
-    // Vérification que les contrôles du formulaire ont été initialisés correctement
+    // Vérification que les champs du formulaire ont été initialisés correctement
     expect(component.form.get('email')).toBeInstanceOf(FormControl);
     expect(component.form.get('firstName')).toBeInstanceOf(FormControl);
     expect(component.form.get('lastName')).toBeInstanceOf(FormControl);
     expect(component.form.get('password')).toBeInstanceOf(FormControl);
 
-    // Vérification les règles de validation pour chaque champ
+    // Vérification des règles de validation pour chaque champ
     expect(component.form.get('email')?.hasError('required')).toBeTruthy();
     expect(component.form.get('email')?.hasError('email')).toBeFalsy(); // Champ vide, donc pas d'erreur d'e-mail
     
@@ -111,6 +111,7 @@ it('should require all fields to be filled', () => {
     authService.register.mockReturnValue(of(void 0));
   
     component.form.setValue(registerRequest);
+    expect(component.form.valid).toBeTruthy();
     component.submit();
   
     expect(authService.register).toHaveBeenCalledWith(registerRequest);
@@ -118,25 +119,25 @@ it('should require all fields to be filled', () => {
     expect(component.onError).toBeFalsy();
   });
   
-
-  it('should handle an error when registering', () => {
-    const registerRequest: RegisterRequest = {
-      email: 'test@example.com',
-      firstName: 'John',
-      lastName: 'Doe',
-      password: 'password123',
-    };
+//idem!!
+  // it('should handle an error when registering', () => {
+  //   const registerRequest: RegisterRequest = {
+  //     email: 'test@example.com',
+  //     firstName: 'John',
+  //     lastName: 'Doe',
+  //     password: 'password123',
+  //   };
 
     
-    authService.register.mockReturnValue(of(void 0));
+  //   authService.register.mockReturnValue(of(void 0));
 
-    component.form.setValue(registerRequest);
-    component.submit();
+  //   component.form.setValue(registerRequest);
+  //   component.submit();
 
-    expect(authService.register).toHaveBeenCalledWith(registerRequest);
-    expect(router.navigate).toHaveBeenCalledWith(['/login']);
-    expect(component.onError).toBeFalsy();
-  });
+  //   expect(authService.register).toHaveBeenCalledWith(registerRequest);
+  //   expect(router.navigate).toHaveBeenCalledWith(['/login']);
+  //   expect(component.onError).toBeFalsy();
+  // });
 
   it('should set onError to true on error during register', () => {
     const registerRequest: RegisterRequest = {
