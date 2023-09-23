@@ -2,7 +2,7 @@
   <mat-card>
     <mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
       <mat-card-title class="m0">Yoga sessions</mat-card-title>
-      <button *ngIf="user!.admin" mat-raised-button color="primary" routerLink="create">
+      <button class="create-button" *ngIf="user!.admin" mat-raised-button color="primary" routerLink="create">
         <mat-icon>add</mat-icon>
         <span class="ml1">Create</span>
       </button>
@@ -24,7 +24,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button color="primary" [routerLink]="['detail',session.id]">
+          <button mat-raised-button class="detail-button" color="primary" [routerLink]="['detail',session.id]">
             <mat-icon>search</mat-icon>
             <span class="ml1">Detail</span>
           </button>
