@@ -63,6 +63,13 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-core</artifactId>
+		    <version>5.5.0</version> 
+		</dependency>
+
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -105,6 +112,16 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.5</version>
+				<configuration>
+					<excludes>
+						<exclude>
+							com/openclassrooms/starterjwt/dto/*.*
+						</exclude> 
+						<exclude>
+							com/openclassrooms/starterjwt/payload/request/*.*
+						</exclude>
+					</excludes>
+				</configuration>
 				<executions>
 					<execution>
 						<goals>
