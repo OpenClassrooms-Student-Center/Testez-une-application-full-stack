@@ -62,7 +62,7 @@ describe('LoginComponent', () => {
     it('should handle successful login', () => {
         const loginRequest = { email: 'test@example.com', password: 'password' };
         const sessionInfo = {
-            token: 'token',
+            token: 'user',
             type: 'type',
             id: 1,
             username: 'user',

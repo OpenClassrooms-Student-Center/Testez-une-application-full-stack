@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/features/auth/services/auth.service';
 import { Router } from '@angular/router';
 import { SessionApiService } from '../../services/session-api.service';
 
-describe('ListComponent', () => {
+describe('ListComponent unit tests suites', () => {
   let component: ListComponent;
   let fixture: ComponentFixture<ListComponent>;
   let authServiceMock: Partial<AuthService>;
@@ -21,12 +21,12 @@ describe('ListComponent', () => {
   let sessionApiServiceMock: Partial<SessionApiService>;
 
   const mockSessionInformation: SessionInformation = {
-    token: 'your-token-here',
+    token: 'token',
     type: 'user',
     id: 1,
-    username: 'your-username',
-    firstName: 'your-first-name',
-    lastName: 'your-last-name',
+    username: 'username',
+    firstName: 'firstname',
+    lastName: 'lastname',
     admin: true
   };
 
