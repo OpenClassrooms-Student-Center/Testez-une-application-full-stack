@@ -96,34 +96,6 @@ class AuthControllerTest {
                 assertNotNull(responseBody.getToken());
         }
 
-        // @Test
-        // public void authenticateUserWithBadCredentials() {
-        // // Mock user data
-        // String email = "alex@gmail.com";
-        // String password = "abcd1234";
-
-        // // Mock the behavior of authenticationManager to simulate bad credentials
-        // when(authenticationManager.authenticate(new
-        // UsernamePasswordAuthenticationToken(email, password)))
-        // .thenThrow(BadCredentialsException.class);
-
-        // // Create a login request
-        // LoginRequest loginRequest = new LoginRequest();
-        // loginRequest.setEmail(email);
-        // loginRequest.setPassword(password);
-
-        // // Create an instance of AuthController
-        // AuthController authController = new AuthController(authenticationManager,
-        // passwordEncoder, jwtUtils,
-        // userRepository);
-
-        // // Call the authenticateUser method
-        // ResponseEntity<?> response = authController.authenticateUser(loginRequest);
-
-        // // Assertion to verify the response
-        // assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
-        // }
-
         @Test
         public void registerUserOk() {
                 // Mock user data
@@ -173,32 +145,6 @@ class AuthControllerTest {
                 MessageResponse messageResponse = (MessageResponse) response.getBody();
                 assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
                 assertEquals("Error: Email is already taken!", messageResponse.getMessage());
-
         }
-
-        // test commented because there is a null pointer exception when email is null
-        // (not handled in the controller)
-        // @Test
-        // public void testRegisterUserMissingEmail() {
-        // // Create an instance of AuthController
-        // AuthController authController = new AuthController(authenticationManager,
-        // passwordEncoder, jwtUtils,
-        // userRepository);
-
-        // // Create a signup request with a missing email
-        // SignupRequest signupRequest = new SignupRequest();
-        // signupRequest.setEmail(null); // Null email
-        // signupRequest.setFirstName("John");
-        // signupRequest.setLastName("Doe");
-        // signupRequest.setPassword("password");
-
-        // // Call the registerUser method
-        // ResponseEntity<?> response = authController.registerUser(signupRequest);
-
-        // // Verify that the response contains the expected error message
-        // MessageResponse messageResponse = (MessageResponse) response.getBody();
-        // assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
-        // assertEquals("Error: Email is required!", messageResponse.getMessage());
-        // }
 
 }

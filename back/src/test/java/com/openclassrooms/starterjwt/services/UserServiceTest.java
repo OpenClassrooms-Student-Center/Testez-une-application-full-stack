@@ -21,7 +21,7 @@ public class UserServiceTest {
 	UserRepository userRepository;
 
 	@Test
-	void testGetUserById() {
+	void findUserByIdOk() {
 		// Arrange
 		User user = new User();
 		user.setId(1L);
@@ -36,7 +36,7 @@ public class UserServiceTest {
 	}
 
 	@Test
-	void testDeleteUser() {
+	void deleteUserOk() {
 		// Arrange
 		User user = new User();
 		user.setId(1L);

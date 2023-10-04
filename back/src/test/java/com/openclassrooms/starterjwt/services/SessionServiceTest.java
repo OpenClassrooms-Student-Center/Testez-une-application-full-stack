@@ -33,9 +33,23 @@ public class SessionServiceTest {
 	void setUp() {
 		sessionService = new SessionService(sessionRepository, userRepository);
 	}
-
+	
 	@Test
-	void testCreateSession() {
+	void findSessionByIdOk() {
+		// Arrange
+		Session session = new Session();
+		session.setId(1L);
+		when(sessionRepository.findById(anyLong())).thenReturn(Optional.of(session));
+
+		// Act
+		Session foundSession = sessionService.getById(session.getId());
+
+		// Assert
+		assertEquals(session.getId(), foundSession.getId());
+	}
+	
+	@Test
+	public void createSessionOk() {
 		// Arrange
 		Session session = new Session();
 		session.setId(1L);
@@ -49,21 +63,7 @@ public class SessionServiceTest {
 	}
 
 	@Test
-	void testDeleteSession() {
-		// Arrange
-		Session session = new Session();
-		session.setId(1L);
-		doNothing().when(sessionRepository).deleteById(anyLong());
-
-		// Act
-		sessionService.delete(session.getId());
-
-		// Assert
-		verify(sessionRepository, times(1)).deleteById(session.getId());
-	}
-
-	@Test
-	void testFindAllSessions() {
+	public void findAllSessionsOk() {
 		// Arrange
 		List<Session> sessionList = new ArrayList<>();
 		Session session = new Session();
@@ -79,21 +79,7 @@ public class SessionServiceTest {
 	}
 
 	@Test
-	void testGetSessionById() {
-		// Arrange
-		Session session = new Session();
-		session.setId(1L);
-		when(sessionRepository.findById(anyLong())).thenReturn(Optional.of(session));
-
-		// Act
-		Session foundSession = sessionService.getById(session.getId());
-
-		// Assert
-		assertEquals(session.getId(), foundSession.getId());
-	}
-
-	@Test
-	void testUpdateSession() {
+	public void updateSessionOk() {
 		// Arrange
 		Session session = new Session();
 		session.setId(1L);
@@ -105,9 +91,23 @@ public class SessionServiceTest {
 		// Assert
 		assertEquals(session.getId(), updatedSession.getId());
 	}
+	
+	@Test
+	void deleteSessionOk() {
+		// Arrange
+		Session session = new Session();
+		session.setId(1L);
+		doNothing().when(sessionRepository).deleteById(anyLong());
+
+		// Act
+		sessionService.delete(session.getId());
+
+		// Assert
+		verify(sessionRepository, times(1)).deleteById(session.getId());
+	}
 
 	@Test
-	void testParticipate() {
+	public void participateOk() {
 		// Arrange
 		Long sessionId = 1L;
 		Session session = Session.builder().name("Session Test").id(sessionId).users(new ArrayList<>()).build();
@@ -128,7 +128,7 @@ public class SessionServiceTest {
 	}
 
 	@Test
-	void testParticipateNotFoundException() {
+	public void participateNotFound() {
 		// Arrange
 		Long sessionId = 1L;
 		Long userId = 2L;
@@ -149,7 +149,7 @@ public class SessionServiceTest {
 	}
 
 	@Test
-	void testParticipateBadRequestException() {
+	public void participateBadRequest() {
 		// Arrange
 		Long sessionId = 1L;
 		Long userId = 2L;
@@ -169,7 +169,7 @@ public class SessionServiceTest {
 	}
 
 	@Test
-	void testNoLongerParticipate() {
+	public void noLongerParticipateOk() {
 		// Arrange
 		Long sessionId = 1L;
 		Long userId = 2L;
@@ -195,7 +195,7 @@ public class SessionServiceTest {
 	}
 
 	@Test
-	void testNoLongerParticipateBadRequestException() {
+	public void noLongerParticipateBadRequest() {
 		// Arrange
 		Long sessionId = 1L;
 		Long userId = 2L;
@@ -209,7 +209,7 @@ public class SessionServiceTest {
 	}
 
 	@Test
-	void testNoLongerParticipateNotFoundException() {
+	public void noLongerParticipateNotFound() {
 		// Arrange
 		Long sessionId = 1L;
 		Long userId = 2L;

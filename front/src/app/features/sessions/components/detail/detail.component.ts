@@ -62,7 +62,7 @@ export class DetailComponent implements OnInit {
     this.sessionApiService.unParticipate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());
   }
 
-  private fetchSession(): void {
+  public fetchSession(): void {
     this.sessionApiService
       .detail(this.sessionId)
       .subscribe((session: Session) => {

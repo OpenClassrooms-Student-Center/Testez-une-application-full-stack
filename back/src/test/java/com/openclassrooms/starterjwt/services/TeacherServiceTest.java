@@ -20,7 +20,7 @@ public class TeacherServiceTest {
 	TeacherRepository teacherRepository;
 
 	@Test
-	void testFindAllTeachers() {
+	public void findAllTeachersOk() {
 		// Arrange
 		List<Teacher> teacherList = new ArrayList<>();
 		Teacher teacher = new Teacher();
@@ -37,7 +37,7 @@ public class TeacherServiceTest {
 	}
 
 	@Test
-	void testGetTeacherById() {
+	public void findTeacherByIdOk() {
 		// Arrange
 		Teacher teacher = new Teacher();
 		teacher.setId(1L);

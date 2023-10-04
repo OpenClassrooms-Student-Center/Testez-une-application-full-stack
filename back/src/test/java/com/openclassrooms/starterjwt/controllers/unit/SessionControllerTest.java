@@ -114,7 +114,6 @@ class SessionControllerTest {
 		// sessionDtos
 		assertEquals(200, responseEntity.getStatusCodeValue());
 		assertEquals(sessionDtos, responseEntity.getBody());
-
 	}
 
 	// Test to verify that the create method of the sessionController returns a
@@ -191,7 +190,6 @@ class SessionControllerTest {
 
 		// verify that the status code is 200
 		assertEquals(HttpStatus.OK, response.getStatusCode());
-
 	}
 
 	// Test the noLongerParticipate method
