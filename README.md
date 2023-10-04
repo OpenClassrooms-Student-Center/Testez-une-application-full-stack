@@ -42,6 +42,10 @@ SQL script for creating the schema is available `ressources/sql/script.sql`
 By default the admin account is:
 - login: yoga@studio.com
 - password: test!1234
+
+Don't forget to add your database credentials in application.properties :
+- spring.datasource.username=xxxx
+- spring.datasource.password=xxxx
   
 ## For Testing
 ### Launching Frontend tests
