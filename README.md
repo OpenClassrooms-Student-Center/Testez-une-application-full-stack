@@ -68,9 +68,9 @@ Launching tests:
 
 > npm run test
 
-Generate coverage report :
+Report is available here:
 
-> npm jest:coverage
+> front/coverage/lcov-report/src/index.html
 
 for following change:
 
