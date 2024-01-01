@@ -42,6 +42,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -101,8 +102,8 @@ class AuthControllerTest {
     }
 
     public AuthControllerTest() {
-        // this.webApplicationContext = new WebApplicationContext();
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+        // this.webApplicationContext = mock(WebApplicationContext.class);
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
         this.objectMapper = new ObjectMapper();
     }
 
@@ -114,21 +115,6 @@ class AuthControllerTest {
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.setEmail("test@example.com");
         loginRequest.setPassword("testPassword");
-
-        // OngoingStubbing<Authentication> authentication =
-        // // Mocks the authenticationManager.authenticate() method
-        when(authenticationManager.authenticate(any())).thenAnswer(invocation -> {
-            return mockAuthentication();
-        });
-
-        // Mock the jwtUtils.generateJwtToken() method
-        when(jwtUtils.generateJwtToken(any())).thenReturn("mockedJwtToken");
-
-        // Mock the userRepository.findByEmail() method
-        when(userRepository.findByEmail(any())).thenReturn(Optional.of(new User(/*
-                                                                                 * provide necessary user
-                                                                                 * details
-                                                                                 */)));
 
         // Act
         ResultActions result = mockMvc.perform(post("/api/auth/login")
