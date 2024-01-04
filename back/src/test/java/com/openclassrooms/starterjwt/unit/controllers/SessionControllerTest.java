@@ -8,6 +8,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.text.MessageFormat;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Date;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -31,8 +34,12 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.starterjwt.controllers.AuthController;
+import com.openclassrooms.starterjwt.dto.SessionDto;
+import com.openclassrooms.starterjwt.models.Session;
+import com.openclassrooms.starterjwt.models.Teacher;
 import com.openclassrooms.starterjwt.repository.UserRepository;
 import com.openclassrooms.starterjwt.security.jwt.AuthTokenFilter;
 import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
@@ -150,7 +157,7 @@ public class SessionControllerTest {
     }
 
     @Test
-    @Tag("get_api/session/")
+    @Tag("get_api/session")
     @DisplayName("(HAPPY PATH) it should retrieve all the sessions from the database as an empty or full array")
     public void getAllSessions_returnsListOfAllSessions() {
 
@@ -170,11 +177,46 @@ public class SessionControllerTest {
     }
 
     @Test
-    @Tag("post_api/session/{id}")
+    @Tag("post_api/session")
     public void createSessionWithValidSessionDto_createsNewSession() {
-        // Arrange
+        try {
+            // Arrange
+            LocalDateTime now = LocalDateTime.now();
 
-        // Act
+            Teacher teacher = new Teacher();
+            teacher
+                    .setId(1L)
+                    .setLastName("DELAHAYE")
+                    .setFirstName("Margot")
+                    .setCreatedAt(now)
+                    .setUpdatedAt(now);
+
+            Session session = Session.builder()
+                    .name("session-1")
+                    .teacher(teacher)
+                    .users(null)
+                    .description("My description for the test")
+                    .date(new Date())
+                    .build();
+
+            SessionDto sessionDto = new SessionDto();
+            sessionDto.setTeacher_id(session.getTeacher().getId());
+            sessionDto.setName(session.getName());
+            sessionDto.setDate(session.getDate());
+            // sessionDto.setCreatedAt(session.getCreatedAt());
+            // sessionDto.setUpdatedAt(session.getUpdatedAt());
+
+            // Act
+            ResultActions result = mockMvc.perform(post("/api/session/")
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content(objectMapper.writeValueAsString(sessionDto)));
+
+            result.andExpect(status().isOk());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         // Assert
     }
