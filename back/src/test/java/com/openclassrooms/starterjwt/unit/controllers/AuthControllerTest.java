@@ -2,6 +2,7 @@ package com.openclassrooms.starterjwt.unit.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.starterjwt.controllers.AuthController;
+import com.openclassrooms.starterjwt.models.User;
 import com.openclassrooms.starterjwt.payload.request.LoginRequest;
 import com.openclassrooms.starterjwt.payload.request.SignupRequest;
 import com.openclassrooms.starterjwt.repository.UserRepository;
@@ -24,7 +25,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -32,7 +35,12 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.text.MessageFormat;
@@ -71,6 +79,12 @@ class AuthControllerTest {
 
     static private Instant startedAt;
 
+    public AuthControllerTest(WebApplicationContext webApplicationContext) {
+        this.webApplicationContext = webApplicationContext;
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
+        this.objectMapper = new ObjectMapper();
+    }
+
     @BeforeAll
     static public void initStartingTime() {
         logger.info("Before all the test suites");
@@ -85,23 +99,17 @@ class AuthControllerTest {
         Instant endedAt = Instant.now();
         long duration = Duration.between(startedAt, endedAt).toMillis();
 
-        logger.info(MessageFormat.format("Durée des tests : {0} ms", duration));
-    }
-
-    public AuthControllerTest() {
-        // this.webApplicationContext = mock(WebApplicationContext.class);
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
-        this.objectMapper = new ObjectMapper();
+        logger.info(MessageFormat.format("Duration of the tests : {0} ms", duration));
     }
 
     @Test
     @Tag("post_api/auth/login")
     @DisplayName("(HAPPY PATH) it should authenticate the user successfully and return a JWT")
-    void authenticateUser_shouldReturnJwtResponse() throws Exception {
+    void authenticateValidUser_shouldReturnJwtResponse() throws Exception {
         // Arrange
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.setEmail("test@example.com");
-        loginRequest.setPassword("testPassword");
+        loginRequest.setEmail("toto3@toto.com");
+        loginRequest.setPassword("test!1234");
 
         // Act
         ResultActions result = mockMvc.perform(post("/api/auth/login")
@@ -110,20 +118,36 @@ class AuthControllerTest {
 
         // Assert
         result.andExpect(status().isOk());
-        // .andExpect(/*
-        // */);
+    }
+
+    @Test
+    @Tag("post_api/auth/login")
+    @DisplayName("(EDGE CASE) it should authenticate the user successfully and return a JWT")
+    void authenticateInvalidUser_shouldReturnError() throws Exception {
+        // Arrange
+        LoginRequest loginRequest = new LoginRequest();
+        loginRequest.setEmail("toto3@toto.com");
+        loginRequest.setPassword("test!1234");
+
+        // Act
+        ResultActions result = mockMvc.perform(post("/api/auth/login")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(loginRequest)));
+
+        // Assert
+        result.andExpect(status().isOk());
     }
 
     @Test
     @Tag("post_api/auth/register")
     @DisplayName("(HAPPY PATH) it should register the user")
-    void registerUser_shouldReturnMessageResponse() throws Exception {
+    void registerValidUser_shouldReturnMessageResponse() throws Exception {
         // Arrange
         SignupRequest signupRequest = new SignupRequest();
 
-        signupRequest.setFirstName("John");
-        signupRequest.setLastName("Doe");
         signupRequest.setEmail("test@example.com");
+        signupRequest.setLastName("Doe");
+        signupRequest.setFirstName("John");
         signupRequest.setPassword("password");
 
         // Act
@@ -132,13 +156,33 @@ class AuthControllerTest {
                 .content(objectMapper.writeValueAsString(signupRequest)));
 
         // Assert
-        result.andExpect(status().isOk());
+        result.andExpect(status().isOk())
+                .andExpect(jsonPath("$.message").value("User registered successfully!"));
+    }
+
+    @Test
+    @Tag("post_api/auth/register")
+    @DisplayName("(EDGE CASE) it should not register the user")
+    void registerInvalidUser_shouldReturnErrorResponse() throws Exception {
+        // Arrange
+        SignupRequest signupRequest = new SignupRequest();
+
+        signupRequest.setFirstName("Toto");
+        signupRequest.setLastName("Toto");
+        signupRequest.setEmail("yoga@studio.com");
+        signupRequest.setPassword("test!1234");
+
+        // Act
+        ResultActions result = mockMvc.perform(post("/api/auth/register")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(signupRequest)));
+
+        // Assert
+        result.andExpect(status().isBadRequest());
     }
 
     // Define a method to create a mock Authentication object
     private Authentication mockAuthentication() {
-        // Create and return a mock Authentication object as needed for your test
-        // Example using Mockito:
         return Mockito.mock(Authentication.class);
     }
 }
