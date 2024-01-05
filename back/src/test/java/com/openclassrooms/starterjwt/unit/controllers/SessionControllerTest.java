@@ -47,61 +47,127 @@ import com.openclassrooms.starterjwt.models.Teacher;
 import com.openclassrooms.starterjwt.repository.UserRepository;
 import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
 
+/**
+ * This class contains test cases for the {@link SessionController} class,
+ * focusing on API endpoints related to session management.
+ *
+ * @implNote This class uses Mockito for mocking dependencies and performs tests
+ *           using the Spring MVC Test framework.
+ * @implSpec The tests cover both the happy path scenarios and edge cases,
+ *           asserting the expected outcomes for each endpoint.
+ * @implSpec All tests focus on the functionality of the
+ *           {@link SessionController} in handling teacher-related operations.
+ * @implNote The class utilizes JUnit 5, Mockito, and Spring's MockMvc for
+ *           testing.
+ *
+ * @see MockMvc
+ * @see UserRepository
+ * @see JwtUtils
+ * @see PasswordEncoder
+ * @see WebApplicationContext
+ *
+ * @author Younes LAHOUITI
+ * @version 1.0
+ * @since 2024-01-05
+ */
 @SpringBootTest
 @WebAppConfiguration
 @AutoConfigureMockMvc
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Session controller test: api/session")
 public class SessionControllerTest {
+
+    /**
+     * The logger instance for logging test-related information.
+     */
     private static final Logger logger = LoggerFactory.getLogger(SessionController.class);
 
+    /**
+     * The controller under test, injected with mock dependencies.
+     */
     @InjectMocks
     private SessionController sessionController;
 
+    /**
+     * Mocked authentication manager for simulating user authentication.
+     */
     @Mock
     private AuthenticationManager authenticationManager;
 
+    /**
+     * Mocked user repository for handling user data during tests.
+     */
     @Mock
     private UserRepository userRepository;
 
+    /**
+     * Mocked JWT utility class for working with JSON Web Tokens.
+     */
     @Mock
     private JwtUtils jwtUtils;
 
+    /**
+     * Mocked password encoder for encoding and decoding passwords.
+     */
     @Mock
     private PasswordEncoder passwordEncoder;
 
+    /**
+     * Mocked web application context for setting up the MockMvc instance.
+     */
     @Mock
     private WebApplicationContext webApplicationContext;
 
+    /**
+     * The MockMvc instance for simulating HTTP requests and responses.
+     */
     private MockMvc mockMvc;
 
+    /**
+     * ObjectMapper for converting objects to JSON and vice versa.
+     */
     private ObjectMapper objectMapper;
 
+    /**
+     * The starting time for test suites to calculate the duration of tests.
+     */
     static private Instant startedAt;
 
-    @BeforeAll
-    static public void initStartingTime() {
-        logger.info("Before all the test suites");
-
-        startedAt = Instant.now();
-    }
-
-    @AfterAll
-    static public void showTestDuration() {
-        logger.info("After all the test suites");
-
-        Instant endedAt = Instant.now();
-        long duration = Duration.between(startedAt, endedAt).toMillis();
-
-        logger.info(MessageFormat.format("Duration of the tests : {0} ms", duration));
-    }
-
+    /**
+     * Constructor to set up the web application context and initialize objects.
+     *
+     * @param webApplicationContext The web application context to be set.
+     */
     public SessionControllerTest(WebApplicationContext webApplicationContext) {
         this.webApplicationContext = webApplicationContext;
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
         this.objectMapper = new ObjectMapper();
     }
 
+    /**
+     * Initializes the starting time before all test suites are executed.
+     */
+    @BeforeAll
+    static public void initStartingTime() {
+        logger.info("Before all the test suites");
+        startedAt = Instant.now();
+    }
+
+    /**
+     * Displays the duration of all test suites after they have been executed.
+     */
+    @AfterAll
+    static public void showTestDuration() {
+        logger.info("After all the test suites");
+        Instant endedAt = Instant.now();
+        long duration = Duration.between(startedAt, endedAt).toMillis();
+        logger.info(MessageFormat.format("Duration of the tests: {0} ms", duration));
+    }
+
+    /**
+     * Test case for retrieving a session with the given existing ID.
+     * It should return a 200 status code
+     */
     @Test
     @Tag("get_api/session/{id}")
     @DisplayName("(HAPPY PATH) it should get the session from the database of the given id")
@@ -116,11 +182,14 @@ public class SessionControllerTest {
             // Assert
             result.andExpect(status().isOk());
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
+    /**
+     * Test case for retrieving a session from the database with an invalid ID.
+     * It should return a 400 error status code.
+     */
     @Test
     @Tag("get_api/session/{id}")
     @DisplayName("(EDGE CASE) it should return a 400 error")
@@ -135,11 +204,14 @@ public class SessionControllerTest {
             // Assert
             result.andExpect(status().isBadRequest());
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
+    /**
+     * Test case for retrieving a session from the database with a non-existent ID.
+     * It should return a 404 error status code.
+     */
     @Test
     @Tag("get_api/session/{id}")
     @DisplayName("(EDGE CASE) it should return a 404 error")
@@ -154,11 +226,15 @@ public class SessionControllerTest {
             // Assert
             result.andExpect(status().isNotFound());
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
+    /**
+     * Test case for retrieving all sessions from the database.
+     * It should return a list of sessions as an empty or full array with a 200
+     * status code.
+     */
     @Test
     @Tag("get_api/session")
     @DisplayName("(HAPPY PATH) it should retrieve all the sessions from the database as an empty or full array")
@@ -174,11 +250,14 @@ public class SessionControllerTest {
             // Assert
             result.andExpect(status().isOk()).andExpect(jsonPath("$").isArray());
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
+    /**
+     * Test case for creating a new session with valid data.
+     * It should return a 201 status code upon successful creation.
+     */
     @Test
     @Tag("post_api/session")
     @DisplayName("(HAPPY PATH) it should successfully create the session and return a 201 status code")
@@ -238,6 +317,10 @@ public class SessionControllerTest {
         }
     }
 
+    /**
+     * Test case for creating a new session with invalid data.
+     * It should return a 400 status code.
+     */
     @Test
     @Tag("post_api/session")
     @DisplayName("(EDGE CASE) it should not create a session and return a 400 status code")
@@ -260,6 +343,10 @@ public class SessionControllerTest {
         }
     }
 
+    /**
+     * Test case for updating an existing session with valid data.
+     * It should return a 200 status code upon successful update.
+     */
     @Test
     @Tag("put_api/session/{id}")
     @DisplayName("(HAPPY PATH) it should update the existing session and return a 200 status code")
@@ -317,6 +404,10 @@ public class SessionControllerTest {
 
     }
 
+    /**
+     * Test case for updating an existing session with an invalid payload.
+     * It should return a 400 status code.
+     */
     @Test
     @Tag("put_api/session/{id}")
     @DisplayName("(EDGE CASE) it should return a 400 status code")
@@ -337,6 +428,10 @@ public class SessionControllerTest {
 
     }
 
+    /**
+     * Test case for deleting an existing session with a valid ID.
+     * It should return a 200 status code upon successful deletion.
+     */
     @Test
     @Tag("delete_api/session/{id}")
     @DisplayName("(HAPPY PATH) it should delete the session and return a 200 status code")
@@ -356,10 +451,14 @@ public class SessionControllerTest {
         }
     }
 
+    /**
+     * Test case for deleting a session with a non-existent ID.
+     * It should return a 404 status code.
+     */
     @Test
     @Tag("delete_api/session/{id}")
     @DisplayName("(EDGE CASE) it should return a 404 status code")
-    public void deleteSession_withNonExistentId_returnsBadRequest() {
+    public void deleteSession_withNonExistentId_returnsNotFound() {
         try {
             // Arrange
             // Act
@@ -374,6 +473,10 @@ public class SessionControllerTest {
         }
     }
 
+    /**
+     * Test case for deleting a session with an invalid ID.
+     * It should return a 400 status code.
+     */
     @Test
     @Tag("delete_api/session/{id}")
     @DisplayName("(EDGE CASE) it should return a 400 status code")
@@ -393,8 +496,99 @@ public class SessionControllerTest {
         }
     }
 
+    /**
+     * Test case for adding a user to a session with valid IDs.
+     * It should return a 201 status code.
+     */
+    @Test
+    @Tag("post_api/session/{id}/participate/{userId}")
+    @DisplayName("(HAPPY PATH) it should delete the session and return a 200 status code")
+    public void addUserToSessionWithValidIds_shouldAddTheUserToSession() {
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(post("/api/session/1/participate/1")
+                    .contentType(MediaType.APPLICATION_JSON));
+
+            // Assert
+            result.andExpect(status().isCreated());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Test case for adding a user to a session with invalid session ID.
+     * It should return a 404 status code.
+     */
+    @Test
+    @Tag("post_api/session/{id}/participate/{userId}")
+    @DisplayName("(EDGE CASE) it should return a 404 status code")
+    public void addUserToSessionWithInvalidSessionId_shouldReturnNotFoundError() {
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(post("/api/session/0/participate/1")
+                    .contentType(MediaType.APPLICATION_JSON));
+
+            // Assert
+            result.andExpect(status().isNotFound());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    @Tag("post_api/session/{id}/participate/{userId}")
+    public void addUserToSessionWithInvalidUserId_shouldReturnAnError() {
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(post("/api/session/1/participate/0")
+                    .contentType(MediaType.APPLICATION_JSON));
+
+            // Assert
+            result.andExpect(status().isNotFound());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Test case for removing a user from a session with invalid session ID.
+     * It should return a 404 status code.
+     */
     @Test
     @Tag("delete_api/session/{id}/participate/{userId}")
+    public void removeUserFromSessionWithInvalidSessionId_shouldReturnNotFoundError() {
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(delete("/api/session/0/participate/1")
+                    .contentType(MediaType.APPLICATION_JSON));
+
+            // Assert
+            result.andExpect(status().isNotFound());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Test case for removing a user from a session with valid IDs.
+     * It should return a 200 status code upon successful removal.
+     */
+    @Test
+    @Tag("delete_api/session/{id}/participate/{userId}")
+    @DisplayName("(HAPPY PATH) it should delete the session and return a 200 status code")
     public void removeUserFromSessionWithValidIds_shouldRemoveTheUserFromSession() {
         try {
             // Arrange
@@ -404,15 +598,17 @@ public class SessionControllerTest {
 
             // Assert
             result.andExpect(status().isOk());
-        }
-        // catch (JsonProcessingException e) {
-        // e.printStackTrace();
-        // }
-        catch (Exception e) {
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * Test case for removing a user from a session with invalid IDs.
+     * It should return a 404 status code.
+     */
     @Test
     @Tag("delete_api/session/{id}/participate/{userId}")
     public void removeUserFromSessionWithInvalidIds_shouldReturnAnError() {
@@ -424,11 +620,9 @@ public class SessionControllerTest {
 
             // Assert
             result.andExpect(status().isNotFound());
-        }
-        // catch (JsonProcessingException e) {
-        // e.printStackTrace();
-        // }
-        catch (Exception e) {
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
