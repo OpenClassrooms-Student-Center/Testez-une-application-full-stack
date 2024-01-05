@@ -9,12 +9,16 @@ import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.BDDMockito.given;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -102,55 +106,13 @@ class AuthControllerTest {
     private PasswordEncoder passwordEncoder;
 
     /**
-     * Mocked web application context for setting up the MockMvc instance.
-     */
-    @Mock
-    private WebApplicationContext webApplicationContext;
-
-    /**
      * The MockMvc instance for simulating HTTP requests and responses.
      */
     private MockMvc mockMvc;
 
-    /**
-     * ObjectMapper for converting objects to JSON and vice versa.
-     */
-    private ObjectMapper objectMapper;
-
-    /**
-     * The starting time for test suites to calculate the duration of tests.
-     */
-    static private Instant startedAt;
-
-    /**
-     * Constructor to set up the web application context and initialize objects.
-     *
-     * @param webApplicationContext The web application context to be set.
-     */
-    public AuthControllerTest(WebApplicationContext webApplicationContext) {
-        this.webApplicationContext = webApplicationContext;
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
-        this.objectMapper = new ObjectMapper();
-    }
-
-    /**
-     * Initializes the starting time before all test suites are executed.
-     */
-    @BeforeAll
-    static public void initStartingTime() {
-        logger.info("Before all the test suites");
-        startedAt = Instant.now();
-    }
-
-    /**
-     * Displays the duration of all test suites after they have been executed.
-     */
-    @AfterAll
-    static public void showTestDuration() {
-        logger.info("After all the test suites");
-        Instant endedAt = Instant.now();
-        long duration = Duration.between(startedAt, endedAt).toMillis();
-        logger.info(MessageFormat.format("Duration of the tests: {0} ms", duration));
+    @BeforeEach
+    public void setup() {
+        mockMvc = MockMvcBuilders.standaloneSetup(authController).build();
     }
 
     /**
@@ -163,6 +125,7 @@ class AuthControllerTest {
     @Tag("post_api/auth/login")
     @DisplayName("(HAPPY PATH) it should authenticate the user successfully and return a JWT")
     void authenticateValidUser_shouldReturnJwtResponse() throws Exception {
+
         // Arrange
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.setEmail("toto3@toto.com");
@@ -171,7 +134,7 @@ class AuthControllerTest {
         // Act
         ResultActions result = mockMvc.perform(post("/api/auth/login")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(loginRequest)));
+                .content(new ObjectMapper().writeValueAsString(loginRequest)));
 
         // Assert
         result.andExpect(status().isOk());
@@ -194,7 +157,7 @@ class AuthControllerTest {
         // Act
         ResultActions result = mockMvc.perform(post("/api/auth/login")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(loginRequest)));
+                .content(new ObjectMapper().writeValueAsString(loginRequest)));
 
         // Assert
         result.andExpect(status().isBadRequest());
@@ -218,10 +181,13 @@ class AuthControllerTest {
         signupRequest.setFirstName("John");
         signupRequest.setPassword("password");
 
+        // given(userRepository.existsByEmail(signupRequest.getEmail())).willReturn(true);
+        String jsonRequest = new ObjectMapper().writeValueAsString(signupRequest);
+        given(passwordEncoder.encode(anyString())).willReturn("encodedPassword");
         // Act
         ResultActions result = mockMvc.perform(post("/api/auth/register")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(signupRequest)));
+                .content(jsonRequest));
 
         // Assert
         result.andExpect(status().isOk())
@@ -249,7 +215,7 @@ class AuthControllerTest {
         // Act
         ResultActions result = mockMvc.perform(post("/api/auth/register")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(signupRequest)));
+                .content(new ObjectMapper().writeValueAsString(signupRequest)));
 
         // Assert
         result.andExpect(status().isBadRequest());
