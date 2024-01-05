@@ -40,12 +40,11 @@ import org.springframework.web.context.WebApplicationContext;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.openclassrooms.starterjwt.controllers.AuthController;
+import com.openclassrooms.starterjwt.controllers.SessionController;
 import com.openclassrooms.starterjwt.dto.SessionDto;
 import com.openclassrooms.starterjwt.models.Session;
 import com.openclassrooms.starterjwt.models.Teacher;
 import com.openclassrooms.starterjwt.repository.UserRepository;
-import com.openclassrooms.starterjwt.security.jwt.AuthTokenFilter;
 import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
 
 @SpringBootTest
@@ -54,10 +53,10 @@ import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Session controller test: api/session")
 public class SessionControllerTest {
-    private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
+    private static final Logger logger = LoggerFactory.getLogger(SessionController.class);
 
     @InjectMocks
-    private AuthController authController;
+    private SessionController sessionController;
 
     @Mock
     private AuthenticationManager authenticationManager;
@@ -360,7 +359,7 @@ public class SessionControllerTest {
     @Test
     @Tag("delete_api/session/{id}")
     @DisplayName("(EDGE CASE) it should return a 404 status code")
-    public void deleteSession_withNonExistantId_returnsBadRequest() {
+    public void deleteSession_withNonExistentId_returnsBadRequest() {
         try {
             // Arrange
             // Act

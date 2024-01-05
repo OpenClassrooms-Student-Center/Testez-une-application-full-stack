@@ -5,7 +5,6 @@ import com.openclassrooms.starterjwt.controllers.AuthController;
 import com.openclassrooms.starterjwt.payload.request.LoginRequest;
 import com.openclassrooms.starterjwt.payload.request.SignupRequest;
 import com.openclassrooms.starterjwt.repository.UserRepository;
-import com.openclassrooms.starterjwt.security.jwt.AuthTokenFilter;
 import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
 
 import org.junit.jupiter.api.AfterAll;
@@ -16,7 +15,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +22,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -46,7 +43,7 @@ import java.time.Instant;
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Auth controller test: api/auth")
 class AuthControllerTest {
-    private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
+    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
 
     @InjectMocks
     private AuthController authController;
@@ -115,12 +112,11 @@ class AuthControllerTest {
 
     @Test
     @Tag("post_api/auth/login")
-    @DisplayName("(EDGE CASE) it should authenticate the user successfully and return a JWT")
+    @DisplayName("(EDGE CASE) it should return a 400 status code")
     void authenticateInvalidUser_shouldReturnError() throws Exception {
         // Arrange
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.setEmail("toto3@toto.com");
-        loginRequest.setPassword("test!1234");
+        loginRequest.setEmail("invalid");
 
         // Act
         ResultActions result = mockMvc.perform(post("/api/auth/login")
@@ -128,7 +124,7 @@ class AuthControllerTest {
                 .content(objectMapper.writeValueAsString(loginRequest)));
 
         // Assert
-        result.andExpect(status().isOk());
+        result.andExpect(status().isBadRequest());
     }
 
     @Test
