@@ -1,7 +1,9 @@
 package com.openclassrooms.starterjwt.unit.controllers;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -9,8 +11,10 @@ import java.text.MessageFormat;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -178,20 +182,26 @@ public class SessionControllerTest {
 
     @Test
     @Tag("post_api/session")
+    @DisplayName("(HAPPY PATH) it should successfully create the session and return a 201 status code")
     public void createSessionWithValidSessionDto_createsNewSession() {
         try {
             // Arrange
-            LocalDateTime now = LocalDateTime.now();
+            String isoString = "2023-12-30T10:27:21";
+
+            DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+
+            LocalDateTime localDateTime = LocalDateTime.parse(isoString, formatter);
 
             Teacher teacher = new Teacher();
             teacher
                     .setId(1L)
                     .setLastName("DELAHAYE")
                     .setFirstName("Margot")
-                    .setCreatedAt(now)
-                    .setUpdatedAt(now);
+                    .setCreatedAt(localDateTime)
+                    .setUpdatedAt(localDateTime);
 
             Session session = Session.builder()
+                    .id(1L)
                     .name("session-1")
                     .teacher(teacher)
                     .users(null)
@@ -199,18 +209,106 @@ public class SessionControllerTest {
                     .date(new Date())
                     .build();
 
+            List<Long> userIdsList = new ArrayList<Long>();
+            userIdsList.add(1L);
+            userIdsList.add(2L);
+
             SessionDto sessionDto = new SessionDto();
+            sessionDto.setId(session.getId());
             sessionDto.setTeacher_id(session.getTeacher().getId());
             sessionDto.setName(session.getName());
+            sessionDto.setUsers(userIdsList);
             sessionDto.setDate(session.getDate());
-            // sessionDto.setCreatedAt(session.getCreatedAt());
-            // sessionDto.setUpdatedAt(session.getUpdatedAt());
+            sessionDto.setDescription(session.getDescription());
+            sessionDto.setCreatedAt(session.getCreatedAt());
+            sessionDto.setUpdatedAt(session.getUpdatedAt());
 
             // Act
             ResultActions result = mockMvc.perform(post("/api/session/")
                     .contentType(MediaType.APPLICATION_JSON)
                     .content(objectMapper.writeValueAsString(sessionDto)));
 
+            // Assert
+            result.andExpect(status().isOk());
+        } catch (
+
+        JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    @Tag("post_api/session")
+    @DisplayName("(EDGE CASE) it should not create a session and return a 400 status code")
+    public void createSessionWithInvalidSessionDto_createsNewSession() {
+        try {
+            // Arrange
+            SessionDto sessionDto = new SessionDto();
+
+            // Act
+            ResultActions result = mockMvc.perform(post("/api/session/")
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content(objectMapper.writeValueAsString(sessionDto)));
+
+            // Assert
+            result.andExpect(status().isBadRequest());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    @Tag("put_api/session/{id}")
+    @DisplayName("(HAPPY PATH) it should update the existing session and return a 200 status code")
+    public void updateSession_withValidId_returnsUpdatedSession() {
+        try {
+            // Arrange
+            String isoString = "2023-12-30T10:27:21";
+
+            DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+
+            LocalDateTime localDateTime = LocalDateTime.parse(isoString, formatter);
+
+            Teacher teacher = new Teacher();
+            teacher
+                    .setId(1L)
+                    .setLastName("DELAHAYE")
+                    .setFirstName("Margot")
+                    .setCreatedAt(localDateTime)
+                    .setUpdatedAt(localDateTime);
+
+            Session session = Session.builder()
+                    .id(1L)
+                    .name("updated-session-1")
+                    .teacher(teacher)
+                    .users(null)
+                    .description("My updated description for the test")
+                    .date(new Date())
+                    .build();
+
+            List<Long> userIdsList = new ArrayList<Long>();
+            userIdsList.add(1L);
+
+            SessionDto sessionDto = new SessionDto();
+            sessionDto.setId(session.getId());
+            sessionDto.setTeacher_id(session.getTeacher().getId());
+            sessionDto.setName(session.getName());
+            sessionDto.setUsers(userIdsList);
+            sessionDto.setDate(session.getDate());
+            sessionDto.setDescription(session.getDescription());
+            sessionDto.setCreatedAt(session.getCreatedAt());
+            sessionDto.setUpdatedAt(session.getUpdatedAt());
+
+            // Act
+            ResultActions result = mockMvc.perform(put("/api/session/" + sessionDto.getId())
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content(objectMapper.writeValueAsString(sessionDto)));
+
+            // Assert
             result.andExpect(status().isOk());
         } catch (JsonProcessingException e) {
             e.printStackTrace();
@@ -218,46 +316,121 @@ public class SessionControllerTest {
             e.printStackTrace();
         }
 
-        // Assert
     }
 
     @Test
     @Tag("put_api/session/{id}")
+    @DisplayName("(EDGE CASE) it should return a 400 status code")
     public void updateSession_withInvalidId_returnsBadRequest() {
-        // Arrange
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(put("/api/session/1")
+                    .contentType(MediaType.APPLICATION_JSON));
 
-        // Act
+            // Assert
+            result.andExpect(status().isBadRequest());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        // Assert
     }
 
     @Test
     @Tag("delete_api/session/{id}")
+    @DisplayName("(HAPPY PATH) it should delete the session and return a 200 status code")
+    public void deleteSession_withValidId_returnsBadRequest() {
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(delete("/api/session/1")
+                    .contentType(MediaType.APPLICATION_JSON));
+
+            // Assert
+            result.andExpect(status().isOk());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    @Tag("delete_api/session/{id}")
+    @DisplayName("(EDGE CASE) it should return a 404 status code")
+    public void deleteSession_withNonExistantId_returnsBadRequest() {
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(delete("/api/session/0")
+                    .contentType(MediaType.APPLICATION_JSON));
+            // Assert
+            result.andExpect(status().isNotFound());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    @Tag("delete_api/session/{id}")
+    @DisplayName("(EDGE CASE) it should return a 400 status code")
     public void deleteSession_withInvalidId_returnsBadRequest() {
-        // Arrange
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(delete("/api/session/invalid")
+                    .contentType(MediaType.APPLICATION_JSON));
 
-        // Act
-
-        // Assert
+            // Assert
+            result.andExpect(status().isBadRequest());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
     @Tag("delete_api/session/{id}/participate/{userId}")
     public void removeUserFromSessionWithValidIds_shouldRemoveTheUserFromSession() {
-        // Arrange
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(delete("/api/session/1/participate/1")
+                    .contentType(MediaType.APPLICATION_JSON));
 
-        // Act
-
-        // Assert
+            // Assert
+            result.andExpect(status().isOk());
+        }
+        // catch (JsonProcessingException e) {
+        // e.printStackTrace();
+        // }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
     @Tag("delete_api/session/{id}/participate/{userId}")
-    public void removeUserFromSessionWithInvalidIds_shouldRemoveTheUserFromSession() {
-        // Arrange
+    public void removeUserFromSessionWithInvalidIds_shouldReturnAnError() {
+        try {
+            // Arrange
+            // Act
+            ResultActions result = mockMvc.perform(delete("/api/session/1/participate/0")
+                    .contentType(MediaType.APPLICATION_JSON));
 
-        // Act
-
-        // Assert
+            // Assert
+            result.andExpect(status().isNotFound());
+        }
+        // catch (JsonProcessingException e) {
+        // e.printStackTrace();
+        // }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
