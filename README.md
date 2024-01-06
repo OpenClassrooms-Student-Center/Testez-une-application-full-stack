@@ -142,6 +142,7 @@ VALUES ('Admin', 'Admin', true, 'yoga@studio.com', '$2a$10$.Hsa/ZjUVaHqi0tp9xieM
 ### Front-End
 
 ### Back-End
+
 **Cloning the project:**
 
 1. Clone this repository from GitHub: `git clone https://github.com/LePhenix47/Lahouiti_Younes_P5_30122023 .`
@@ -149,6 +150,7 @@ VALUES ('Admin', 'Admin', true, 'yoga@studio.com', '$2a$10$.Hsa/ZjUVaHqi0tp9xieM
 2. Configure the app in `application.properties`.
 
 Once you have cloned the repository, you'll need to add the `application.properties` file on the `src/main/resources/` folder containing these properties:
+
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/p5-numdev?allowPublicKeyRetrieval=true
 spring.datasource.username=root
@@ -165,3 +167,5 @@ server.port=8080
 ```
 
 3. Run the application using your IDE or by running `mvn spring-boot:run` in the project directory.
+
+4. To generate the code coverage of the back-end, run the following command: `mvn clean test`
