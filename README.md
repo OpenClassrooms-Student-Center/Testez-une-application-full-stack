@@ -11,6 +11,10 @@
   - [Installation procedure](#installation-procedure)
     - [Front-End](#front-end)
     - [Back-End](#back-end)
+  - [Miscellaneous](#miscellaneous)
+    - [Front-End](#front-end-1)
+    - [Back-End](#back-end-1)
+    - [Other](#other)
 
 ## Prerequisites
 
@@ -163,6 +167,102 @@ oc.app.jwtExpirationMs=86400000
 server.port=8080
 ```
 
+2. Install the project dependencies using the following command: `mvn clean install`
+
 3. Run the application using your IDE or by running `mvn spring-boot:run` in the project directory.
 
 4. To generate the code coverage of the back-end, run the following command: `mvn clean test`
+
+## Miscellaneous
+
+### Front-End
+
+
+
+### Back-End
+<details>
+  <summary>
+📚 API documentation
+  </summary>
+  <table>
+    <tr>
+        <td>Endpoint</td>
+        <td>Method</td>
+        <td>Description</td>
+    </tr>
+    <tr>
+        <td>/api/auth/login</td>
+        <td>POST</td>
+        <td>User authentication</td>
+    </tr>
+    <tr>
+        <td>/api/auth/register</td>
+        <td>POST</td>
+        <td>User registration</td>
+    </tr>
+    <tr>
+        <td>/api/session</td>
+        <td>GET</td>
+        <td>Retrieve all sessions</td>
+    </tr>
+    <tr>
+        <td>/api/session</td>
+        <td>POST</td>
+        <td>Create a new session</td>
+    </tr>
+    <tr>
+        <td>/api/session/{id}</td>
+        <td>DELETE</td>
+        <td>Delete a session by ID</td>
+    </tr>
+    <tr>
+        <td>/api/session/{id}</td>
+        <td>GET</td>
+        <td>Retrieve a session by ID</td>
+    </tr>
+    <tr>
+        <td>/api/session/{id}</td>
+        <td>PUT</td>
+        <td>Update a session by ID</td>
+    </tr>
+    <tr>
+        <td>/api/session/{id}/participate/{userId}</td>
+        <td>DELETE</td>
+        <td>Remove user participation</td>
+    </tr>
+    <tr>
+        <td>/api/session/{id}/participate/{userId}</td>
+        <td>POST</td>
+        <td>Add user participation</td>
+    </tr>
+    <tr>
+        <td>/api/teacher</td>
+        <td>GET</td>
+        <td>Retrieve all teachers</td>
+    </tr>
+    <tr>
+        <td>/api/teacher/{id}</td>
+        <td>GET</td>
+        <td>Retrieve a teacher by ID</td>
+    </tr>
+    <tr>
+        <td>/api/user/{id}</td>
+        <td>DELETE</td>
+        <td>Delete a user by ID</td>
+    </tr>
+    <tr>
+        <td>/api/user/{id}</td>
+        <td>GET</td>
+        <td>Retrieve a user by ID</td>
+    </tr>
+</table>
+</details>
+
+### Other
+
+<details>
+  <summary>🔗 Link to the original Repository</summary>
+  <a href="https://github.com/OpenClassrooms-Student-Center/Testez-une-application-full-stack">
+    Link to the original code
+  </a>
+</details>

@@ -10,6 +10,7 @@ import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
 import com.openclassrooms.starterjwt.security.services.UserDetailsImpl;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.springframework.security.core.Authentication;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
@@ -28,11 +30,13 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.TestingAuthenticationToken;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -135,17 +139,10 @@ class AuthControllerTest {
                 .password("test!1234")
                 .build();
 
-        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
-                userDetails, null);
+        given(authenticationManager.authenticate(any(UsernamePasswordAuthenticationToken.class)))
+                .willReturn(new TestingAuthenticationToken(userDetails, null));
 
-        given(authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(userDetails.getUsername(),
-                        userDetails.getPassword())))
-                .willReturn(authentication);
-
-        given(authentication.getPrincipal()).willReturn(userDetails);
-
-        given(jwtUtils.generateJwtToken(authentication)).willReturn("jwt");
+        given(jwtUtils.generateJwtToken(any(Authentication.class))).willReturn("jwt");
 
         given(userRepository.findByEmail(userDetails.getUsername()))
                 .willReturn(Optional.of(new User(userDetails.getUsername(), userDetails.getLastName(),
@@ -158,7 +155,8 @@ class AuthControllerTest {
         // Act
         ResultActions result = mockMvc.perform(post("/api/auth/login")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(new ObjectMapper().writeValueAsString(loginRequest)));
+                .content(new ObjectMapper().writeValueAsString(loginRequest)))
+                .andDo(MockMvcResultHandlers.print()); // Add this line to print the result
 
         // Assert
         result.andExpect(status().isOk());
