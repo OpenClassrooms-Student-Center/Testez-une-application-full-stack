@@ -2,13 +2,13 @@ package com.openclassrooms.starterjwt.unit.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.starterjwt.controllers.AuthController;
+import com.openclassrooms.starterjwt.models.User;
 import com.openclassrooms.starterjwt.payload.request.LoginRequest;
 import com.openclassrooms.starterjwt.payload.request.SignupRequest;
 import com.openclassrooms.starterjwt.repository.UserRepository;
 import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
+import com.openclassrooms.starterjwt.security.services.UserDetailsImpl;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -19,6 +19,8 @@ import org.mockito.Mock;
 
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.when;
+
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +28,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -37,9 +40,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import java.text.MessageFormat;
-import java.time.Duration;
-import java.time.Instant;
+import java.util.Optional;
 
 /**
  * This class contains test cases for the {@link AuthController} class, focusing
@@ -125,8 +126,31 @@ class AuthControllerTest {
     @Tag("post_api/auth/login")
     @DisplayName("(HAPPY PATH) it should authenticate the user successfully and return a JWT")
     void authenticateValidUser_shouldReturnJwtResponse() throws Exception {
-
         // Arrange
+        UserDetailsImpl userDetails = UserDetailsImpl.builder()
+                .id(1L)
+                .firstName("Toto")
+                .lastName("Toto")
+                .username("toto3@toto.com")
+                .password("test!1234")
+                .build();
+
+        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+                userDetails, null);
+
+        given(authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(userDetails.getUsername(),
+                        userDetails.getPassword())))
+                .willReturn(authentication);
+
+        given(authentication.getPrincipal()).willReturn(userDetails);
+
+        given(jwtUtils.generateJwtToken(authentication)).willReturn("jwt");
+
+        given(userRepository.findByEmail(userDetails.getUsername()))
+                .willReturn(Optional.of(new User(userDetails.getUsername(), userDetails.getLastName(),
+                        userDetails.getFirstName(), userDetails.getPassword(), false)));
+
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.setEmail("toto3@toto.com");
         loginRequest.setPassword("test!1234");
@@ -176,10 +200,10 @@ class AuthControllerTest {
         // Arrange
         SignupRequest signupRequest = new SignupRequest();
 
-        signupRequest.setEmail("test@example.com");
-        signupRequest.setLastName("Doe");
-        signupRequest.setFirstName("John");
-        signupRequest.setPassword("password");
+        signupRequest.setEmail("toto3@toto.com");
+        signupRequest.setLastName("Toto");
+        signupRequest.setFirstName("Toto");
+        signupRequest.setPassword("test!1234");
 
         // given(userRepository.existsByEmail(signupRequest.getEmail())).willReturn(true);
         String jsonRequest = new ObjectMapper().writeValueAsString(signupRequest);
