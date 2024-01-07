@@ -15,12 +15,13 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -60,7 +61,6 @@ import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
  * @since 2024-01-05
  */
 @SpringBootTest
-@WebAppConfiguration
 @AutoConfigureMockMvc
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Teacher controller test: api/teacher")
@@ -73,36 +73,31 @@ public class TeacherControllerTest {
     /**
      * The controller under test, annotated with {@link InjectMocks}.
      */
-    @InjectMocks
+    @MockBean
     private TeacherController teacherController;
 
     /**
      * A mock repository for simulating interactions with the user database.
      */
-    @Mock
+    @MockBean
     private UserRepository userRepository;
 
     /**
      * Mock utility class for handling JWT-related operations.
      */
-    @Mock
+    @MockBean
     private JwtUtils jwtUtils;
 
     /**
      * Mock encoder for handling password-related operations.
      */
-    @Mock
+    @MockBean
     private PasswordEncoder passwordEncoder;
-
-    /**
-     * Mocked web application context for setting up the mockMvc instance.
-     */
-    @Mock
-    private WebApplicationContext webApplicationContext;
 
     /**
      * The mockMvc instance for simulating HTTP requests in the tests.
      */
+    @Autowired
     private MockMvc mockMvc;
 
     /**
@@ -128,17 +123,6 @@ public class TeacherControllerTest {
         Instant endedAt = Instant.now();
         long duration = Duration.between(startedAt, endedAt).toMillis();
         logger.info(MessageFormat.format("Duration of the tests : {0} ms", duration));
-    }
-
-    /**
-     * Constructor for the test class, setting up the MockMvc instance for testing.
-     *
-     * @param webApplicationContext the WebApplicationContext to use for setting up
-     *                              MockMvc.
-     */
-    public TeacherControllerTest(WebApplicationContext webApplicationContext) {
-        this.webApplicationContext = webApplicationContext;
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
     }
 
     /**

@@ -22,20 +22,18 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -71,7 +69,6 @@ import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
  * @since 2024-01-05
  */
 @SpringBootTest
-@WebAppConfiguration
 @AutoConfigureMockMvc
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Session controller test: api/session")
@@ -85,64 +82,49 @@ public class SessionControllerTest {
     /**
      * The controller under test, injected with mock dependencies.
      */
-    @InjectMocks
+    @MockBean
     private SessionController sessionController;
 
     /**
      * Mocked authentication manager for simulating user authentication.
      */
-    @Mock
+    @MockBean
     private AuthenticationManager authenticationManager;
 
     /**
      * Mocked user repository for handling user data during tests.
      */
-    @Mock
+    @MockBean
     private UserRepository userRepository;
 
     /**
      * Mocked JWT utility class for working with JSON Web Tokens.
      */
-    @Mock
+    @MockBean
     private JwtUtils jwtUtils;
 
     /**
      * Mocked password encoder for encoding and decoding passwords.
      */
-    @Mock
+    @MockBean
     private PasswordEncoder passwordEncoder;
-
-    /**
-     * Mocked web application context for setting up the MockMvc instance.
-     */
-    @Mock
-    private WebApplicationContext webApplicationContext;
 
     /**
      * The MockMvc instance for simulating HTTP requests and responses.
      */
+    @Autowired
     private MockMvc mockMvc;
 
     /**
      * ObjectMapper for converting objects to JSON and vice versa.
      */
+    @Autowired
     private ObjectMapper objectMapper;
 
     /**
      * The starting time for test suites to calculate the duration of tests.
      */
     static private Instant startedAt;
-
-    /**
-     * Constructor to set up the web application context and initialize objects.
-     *
-     * @param webApplicationContext The web application context to be set.
-     */
-    public SessionControllerTest(WebApplicationContext webApplicationContext) {
-        this.webApplicationContext = webApplicationContext;
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
-        this.objectMapper = new ObjectMapper();
-    }
 
     /**
      * Initializes the starting time before all test suites are executed.

@@ -185,12 +185,13 @@ server.port=8080
 📚 API documentation
   </summary>
   <table>
-    <tr>
-        <td>Endpoint</td>
-        <td>Method</td>
-        <td>Description</td>
-    </tr>
-    <tr>
+  <thead>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Description</th>
+  </thead>
+  <tbody>
+  <tr>
         <td>/api/auth/login</td>
         <td>POST</td>
         <td>User authentication</td>
@@ -255,6 +256,8 @@ server.port=8080
         <td>GET</td>
         <td>Retrieve a user by ID</td>
     </tr>
+  </tbody>
+    
 </table>
 </details>
 
