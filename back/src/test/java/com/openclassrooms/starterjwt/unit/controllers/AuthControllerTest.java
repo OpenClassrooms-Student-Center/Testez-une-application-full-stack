@@ -39,8 +39,7 @@ import java.util.Optional;
  *           asserting the expected outcomes for each endpoint.
  * @implSpec All tests focus on the functionality of the
  *           {@link AuthController} in handling teacher-related operations.
- * @implNote The class utilizes JUnit 5, Mockito, and Spring's MockMvc for
- *           testing.
+ * @implNote The class utilizes JUnit 5 and Mockito for testing.
  *
  * @see UserRepository
  * @see JwtUtils
@@ -84,6 +83,16 @@ public class AuthControllerTest {
         @Mock
         private PasswordEncoder passwordEncoder;
 
+        /**
+         * Set up the test environment before each test case by initializing the
+         * {@link AuthController}.
+         * This method creates a new instance of the {@code AuthController} with the
+         * provided mock dependencies,
+         * including an authentication manager, password encoder, JWT utility class, and
+         * user repository.
+         * The initialized controller is then used in each test case for simulating HTTP
+         * requests and responses.
+         */
         @BeforeEach
         void setUp() {
                 authController = new AuthController(authenticationManager, passwordEncoder, jwtUtils, userRepository);

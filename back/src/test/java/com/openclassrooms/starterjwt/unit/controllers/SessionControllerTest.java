@@ -39,8 +39,7 @@ import com.openclassrooms.starterjwt.services.SessionService;
  *           asserting the expected outcomes for each endpoint.
  * @implSpec All tests focus on the functionality of the
  *           {@link SessionController} in handling teacher-related operations.
- * @implNote The class utilizes JUnit 5, Mockito, and Spring's MockMvc for
- *           testing.
+ * @implNote The class utilizes JUnit 5 and Mockito for testing.
  *
  * @see UserRepository
  * @see JwtUtils
@@ -87,17 +86,15 @@ public class SessionControllerTest {
     private SessionMapper sessionMapper;
 
     /**
-     * Mocked JWT utility class for working with JSON Web Tokens.
+     * Set up the test environment before each test case by initializing the
+     * {@link SessionController}.
+     * This method creates a new instance of the {@code SessionController} with the
+     * provided mock dependencies,
+     * including a session service, session mapper, and mockMvc for simulating HTTP
+     * requests and responses.
+     * The initialized controller is then used in each test case to evaluate the
+     * behavior of the session-related endpoints.
      */
-    @Mock
-    private JwtUtils jwtUtils;
-
-    /**
-     * Mocked password encoder for encoding and decoding passwords.
-     */
-    @Mock
-    private PasswordEncoder passwordEncoder;
-
     @BeforeEach
     void setUp() {
         // Initialize the controller with mock dependencies

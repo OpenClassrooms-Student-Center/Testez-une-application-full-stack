@@ -1,39 +1,31 @@
 package com.openclassrooms.starterjwt.unit.controllers;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.when;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import java.text.MessageFormat;
-import java.time.Duration;
-import java.time.Instant;
-import org.hamcrest.Matchers;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
-
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import com.openclassrooms.starterjwt.controllers.TeacherController;
+import com.openclassrooms.starterjwt.dto.TeacherDto;
+import com.openclassrooms.starterjwt.mapper.TeacherMapper;
 import com.openclassrooms.starterjwt.models.Teacher;
-import com.openclassrooms.starterjwt.repository.UserRepository;
-import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
+import com.openclassrooms.starterjwt.services.TeacherService;
 
 /**
  * Controller test class for the {@link TeacherController}, testing the
@@ -47,14 +39,7 @@ import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
  *           asserting the expected outcomes for each endpoint.
  * @implSpec All tests focus on the functionality of the
  *           {@link TeacherController} in handling teacher-related operations.
- * @implNote The class utilizes JUnit 5, Mockito, and Spring's MockMvc for
- *           testing.
- *
- * @see MockMvc
- * @see UserRepository
- * @see JwtUtils
- * @see PasswordEncoder
- * @see WebApplicationContext
+ * @implNote The class utilizes JUnit 5 and Mockito for testing.
  *
  * @author Younes LAHOUITI
  * @version 1.0
@@ -71,58 +56,37 @@ public class TeacherControllerTest {
     private static final Logger logger = LoggerFactory.getLogger(TeacherController.class);
 
     /**
-     * The controller under test, annotated with {@link InjectMocks}.
+     * The controller under test
      */
-    @MockBean
+    @Mock
     private TeacherController teacherController;
 
     /**
-     * A mock repository for simulating interactions with the user database.
+     * Mocked service for simulating interactions with the teacher database.
      */
-    @MockBean
-    private UserRepository userRepository;
+    @Mock
+    private TeacherService teacherService;
 
     /**
-     * Mock utility class for handling JWT-related operations.
+     * Mocked mapper for converting between Teacher entities and DTOs.
      */
-    @MockBean
-    private JwtUtils jwtUtils;
+    @Mock
+    private TeacherMapper teacherMapper;
 
     /**
-     * Mock encoder for handling password-related operations.
+     * Set up the test environment before each test case by initializing the
+     * {@link TeacherController}.
+     * This method creates a new instance of the {@code TeacherController} with the
+     * provided mock dependencies,
+     * including a teacher service, teacher mapper, and mockMvc for simulating HTTP
+     * requests and responses.
+     * The initialized controller is then used in each test case to evaluate the
+     * behavior of the teacher-related endpoints.
      */
-    @MockBean
-    private PasswordEncoder passwordEncoder;
-
-    /**
-     * The mockMvc instance for simulating HTTP requests in the tests.
-     */
-    @Autowired
-    private MockMvc mockMvc;
-
-    /**
-     * The timestamp when the test suite started, for measuring test duration.
-     */
-    static private Instant startedAt;
-
-    /**
-     * Initializes the starting time before all the test suites.
-     */
-    @BeforeAll
-    static public void initStartingTime() {
-        logger.info("Before all the test suites");
-        startedAt = Instant.now();
-    }
-
-    /**
-     * Displays the duration of the test suites after all the tests have run.
-     */
-    @AfterAll
-    static public void showTestDuration() {
-        logger.info("After all the test suites");
-        Instant endedAt = Instant.now();
-        long duration = Duration.between(startedAt, endedAt).toMillis();
-        logger.info(MessageFormat.format("Duration of the tests : {0} ms", duration));
+    @BeforeEach
+    void setUp() {
+        // Initialize the controller with mock dependencies
+        teacherController = new TeacherController(teacherService, teacherMapper);
     }
 
     /**
@@ -135,18 +99,56 @@ public class TeacherControllerTest {
     @Tag("get_api/teacher")
     @DisplayName("(HAPPY PATH) it should get all teachers from the database")
     public void getAllTeachers_shouldReturnAllTheTeachers() {
-        try {
-            // Arrange
-            // Act
-            ResultActions result = mockMvc.perform(
-                    get("/api/teacher")
-                            .contentType(MediaType.APPLICATION_JSON));
+        // Arrange
 
-            // Assert
-            result.andExpect(status().isOk()).andExpect(jsonPath("$").isArray());
-        } catch (Exception e) {
-            e.printStackTrace();
+        Teacher mockTeacher1 = new Teacher();
+        mockTeacher1.setId(1L);
+        mockTeacher1.setFirstName("John");
+        mockTeacher1.setLastName("Doe");
+        mockTeacher1.setCreatedAt(LocalDateTime.now());
+        mockTeacher1.setUpdatedAt(LocalDateTime.now());
+
+        Teacher mockTeacher2 = new Teacher();
+        mockTeacher2.setId(2L);
+        mockTeacher2.setFirstName("Jane");
+        mockTeacher2.setLastName("Doe");
+        mockTeacher2.setCreatedAt(LocalDateTime.now());
+        mockTeacher2.setUpdatedAt(LocalDateTime.now());
+
+        List<Teacher> mockTeachers = Arrays.asList(
+                mockTeacher1,
+                mockTeacher2);
+
+        when(teacherService.findAll()).thenReturn(mockTeachers);
+
+        // Create an array to hold TeacherDto objects
+        List<TeacherDto> expectedTeacherDtos = new ArrayList<>();
+
+        // Iterate over the teachers and create corresponding TeacherDto objects
+        for (int i = 0; i < mockTeachers.size(); i++) {
+            Teacher teacher = mockTeachers.get(i);
+            TeacherDto teacherDto = new TeacherDto();
+            teacherDto.setId(teacher.getId());
+            teacherDto.setFirstName(teacher.getFirstName());
+            teacherDto.setLastName(teacher.getLastName());
+            teacherDto.setCreatedAt(teacher.getCreatedAt());
+            teacherDto.setUpdatedAt(teacher.getUpdatedAt());
+
+            // Add the created TeacherDto to the array
+            expectedTeacherDtos.add(teacherDto);
         }
+
+        when(teacherMapper.toDto(mockTeachers)).thenReturn(expectedTeacherDtos); // You can create a mock TeacherDto as
+        // needed
+
+        // Act
+        ResponseEntity<?> result = teacherController.findAll();
+
+        // Assert
+        assertEquals(HttpStatus.OK, result.getStatusCode());
+
+        Boolean hasSameArrayLength = ((List<Teacher>) result.getBody()).size() == mockTeachers.size();
+        assertTrue(hasSameArrayLength);
     }
 
     /**
@@ -157,26 +159,26 @@ public class TeacherControllerTest {
     @Tag("get_api/teacher/{id}")
     @DisplayName("(HAPPY PATH) it should get the teacher from the database of the given id")
     public void getTeacherWithValidId_shouldReturnTheTeacher() {
-        try {
-            // Arrange
-            Teacher mockedTeacher = new Teacher();
-            mockedTeacher.setId(1L);
-            mockedTeacher.setFirstName("John");
-            mockedTeacher.setLastName("Doe");
+        // Arrange
+        Long teacherId = 1L;
+        Teacher mockTeacher = new Teacher();
+        mockTeacher.setId(teacherId);
+        mockTeacher.setFirstName("John");
+        mockTeacher.setLastName("Doe");
 
-            // Act
-            ResultActions result = mockMvc.perform(
-                    get("/api/teacher/1")
-                            .contentType(MediaType.APPLICATION_JSON));
+        TeacherDto mockTeacherDto = new TeacherDto();
+        mockTeacherDto.setId(mockTeacher.getId());
+        mockTeacherDto.setFirstName(mockTeacher.getFirstName());
+        mockTeacherDto.setLastName(mockTeacher.getLastName());
 
-            // Assert
-            result.andExpect(status().isOk())
-                    .andExpect(jsonPath("$.id", Matchers.equalTo(1)))
-                    .andExpect(jsonPath("$.firstName", Matchers.equalTo("Margot")))
-                    .andExpect(jsonPath("$.lastName", Matchers.equalTo("DELAHAYE")));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        when(teacherService.findById(teacherId)).thenReturn(mockTeacher);
+        when(teacherMapper.toDto(mockTeacher)).thenReturn(mockTeacherDto);
+
+        // Act
+        ResponseEntity<?> result = teacherController.findById(teacherId.toString());
+
+        // Assert
+        assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
     /**
@@ -187,20 +189,20 @@ public class TeacherControllerTest {
     @Tag("get_api/teacher/{id}")
     @DisplayName("(EDGE CASE) it should return a 404 status code")
     public void getTeacherWithNonExistentId_shouldReturnANotFoundError() {
-        try {
-            // Arrange
-            // when(userRepository.findById(0L)).thenReturn(Optional.empty());
+        // Arrange
+        Long teacherId = 0L;
+        Teacher mockTeacher = new Teacher();
+        mockTeacher.setId(teacherId);
+        mockTeacher.setFirstName("John");
+        mockTeacher.setLastName("Doe");
 
-            // Act
-            ResultActions result = mockMvc.perform(
-                    get("/api/teacher/0")
-                            .contentType(MediaType.APPLICATION_JSON));
+        when(teacherService.findById(teacherId)).thenReturn(null);
 
-            // Assert
-            result.andExpect(status().isNotFound());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // Act
+        ResponseEntity<?> result = teacherController.findById(teacherId.toString());
+
+        // Assert
+        assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
     }
 
     /**
@@ -211,18 +213,11 @@ public class TeacherControllerTest {
     @Tag("get_api/teacher/{id}")
     @DisplayName("(EDGE CASE) it should return a 400 status code")
     public void getTeacherWithInvalidId_shouldReturnABadRequestError() {
-        try {
-            // Arrange
-            // Act
-            ResultActions result = mockMvc.perform(
-                    get("/api/teacher/invalid")
-                            .contentType(MediaType.APPLICATION_JSON));
+        // Act
+        ResponseEntity<?> result = teacherController.findById("invalid");
 
-            // Assert
-            result.andExpect(status().isBadRequest());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // Assert
+        assertEquals(HttpStatus.BAD_REQUEST, result.getStatusCode());
     }
 
 }
