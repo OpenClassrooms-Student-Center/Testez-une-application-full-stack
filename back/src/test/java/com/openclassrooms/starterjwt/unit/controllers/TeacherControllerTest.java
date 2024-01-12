@@ -99,7 +99,7 @@ public class TeacherControllerTest {
     @Tag("get_api/teacher")
     @DisplayName("(HAPPY PATH) it should get all teachers from the database")
     public void getAllTeachers_shouldReturnAllTheTeachers() {
-        // Arrange
+        // * Arrange
 
         Teacher mockTeacher1 = new Teacher();
         mockTeacher1.setId(1L);
@@ -141,10 +141,10 @@ public class TeacherControllerTest {
         when(teacherMapper.toDto(mockTeachers)).thenReturn(expectedTeacherDtos); // You can create a mock TeacherDto as
         // needed
 
-        // Act
+        // * Act
         ResponseEntity<?> result = teacherController.findAll();
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
 
         Boolean hasSameArrayLength = ((List<Teacher>) result.getBody()).size() == mockTeachers.size();
@@ -159,7 +159,7 @@ public class TeacherControllerTest {
     @Tag("get_api/teacher/{id}")
     @DisplayName("(HAPPY PATH) it should get the teacher from the database of the given id")
     public void getTeacherWithValidId_shouldReturnTheTeacher() {
-        // Arrange
+        // * Arrange
         Long teacherId = 1L;
         Teacher mockTeacher = new Teacher();
         mockTeacher.setId(teacherId);
@@ -174,10 +174,10 @@ public class TeacherControllerTest {
         when(teacherService.findById(teacherId)).thenReturn(mockTeacher);
         when(teacherMapper.toDto(mockTeacher)).thenReturn(mockTeacherDto);
 
-        // Act
+        // * Act
         ResponseEntity<?> result = teacherController.findById(teacherId.toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
@@ -189,7 +189,7 @@ public class TeacherControllerTest {
     @Tag("get_api/teacher/{id}")
     @DisplayName("(EDGE CASE) it should return a 404 status code")
     public void getTeacherWithNonExistentId_shouldReturnANotFoundError() {
-        // Arrange
+        // * Arrange
         Long teacherId = 0L;
         Teacher mockTeacher = new Teacher();
         mockTeacher.setId(teacherId);
@@ -198,10 +198,10 @@ public class TeacherControllerTest {
 
         when(teacherService.findById(teacherId)).thenReturn(null);
 
-        // Act
+        // * Act
         ResponseEntity<?> result = teacherController.findById(teacherId.toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
     }
 
@@ -213,10 +213,10 @@ public class TeacherControllerTest {
     @Tag("get_api/teacher/{id}")
     @DisplayName("(EDGE CASE) it should return a 400 status code")
     public void getTeacherWithInvalidId_shouldReturnABadRequestError() {
-        // Act
+        // * Act
         ResponseEntity<?> result = teacherController.findById("invalid");
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.BAD_REQUEST, result.getStatusCode());
     }
 

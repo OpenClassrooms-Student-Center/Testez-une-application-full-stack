@@ -96,7 +96,7 @@ public class UserControllerTest {
     @Tag("get_api/user/{id}")
     @DisplayName("(HAPPY PATH) it should get the user from the database of the given id")
     public void getUserById_shouldReturnUserWithGivenId() {
-        // Arrange
+        // * Arrange
         User mockUser = new User();
         mockUser.setId(1L);
         mockUser.setEmail("test@example.com");
@@ -104,10 +104,10 @@ public class UserControllerTest {
         when(userService.findById(1L)).thenReturn(mockUser);
         when(userMapper.toDto(mockUser)).thenReturn(new UserDto());
 
-        // Act
+        // * Act
         ResponseEntity<?> result = userController.findById("1");
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
@@ -119,15 +119,15 @@ public class UserControllerTest {
     @Tag("get_api/user/{id}")
     @DisplayName("(EDGE CASE) it should return a 404 error for an invalid id")
     public void getUserWithInvalidId_shouldReturnNotFoundError() {
-        // Assert
+        // * Assert
         Long nonExistentId = 0L;
 
         when(userService.findById(nonExistentId)).thenReturn(null);
 
-        // Act
+        // * Act
         ResponseEntity<?> result = userController.findById(nonExistentId.toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
     }
 
@@ -139,7 +139,7 @@ public class UserControllerTest {
     @Tag("delete_api/user/{id}")
     @DisplayName("(HAPPY PATH) it should delete the user and return a 200 status code")
     public void deleteUserWithValidId_shouldReturnOk() {
-        // Arrange
+        // * Arrange
         Long userId = 1L;
         User mockUser = new User();
         mockUser.setId(userId);
@@ -152,10 +152,10 @@ public class UserControllerTest {
         SecurityContextHolder.getContext()
                 .setAuthentication(new UsernamePasswordAuthenticationToken(userDetails, null));
 
-        // Act
+        // * Act
         ResponseEntity<?> result = userController.save(userId.toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
@@ -167,7 +167,7 @@ public class UserControllerTest {
     @Tag("delete_api/user/{id}")
     @DisplayName("(EDGE CASE) it should return a 401 status code for an unauthorized user")
     public void deleteUserWithUnauthorizedUser_shouldReturnUnauthorized() {
-        // Arrange
+        // * Arrange
         Long userId = 1L;
         User mockUser = new User();
         mockUser.setId(userId);
@@ -180,10 +180,10 @@ public class UserControllerTest {
         SecurityContextHolder.getContext()
                 .setAuthentication(new UsernamePasswordAuthenticationToken(userDetails, null));
 
-        // Act
+        // * Act
         ResponseEntity<?> result = userController.save(userId.toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.UNAUTHORIZED, result.getStatusCode());
     }
 
@@ -195,14 +195,14 @@ public class UserControllerTest {
     @Tag("delete_api/user/{id}")
     @DisplayName("(EDGE CASE) it should return a 404 error for non existent id")
     public void deleteUserWithNonExistentId_shouldReturnNotFoundError() {
-        // Arrange
+        // * Arrange
         Long nonExistentId = 0L;
         when(userService.findById(anyLong())).thenReturn(null);
 
-        // Act
+        // * Act
         ResponseEntity<?> result = userController.save(nonExistentId.toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
     }
 
@@ -214,10 +214,10 @@ public class UserControllerTest {
     @Tag("delete_api/user/{id}")
     @DisplayName("(EDGE CASE) it should return a 400 error for a bad request")
     public void deleteUserWithInvalidId_shouldReturnNotFoundError() {
-        // Act
+        // * Act
         ResponseEntity<?> result = userController.save("invalid");
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.BAD_REQUEST, result.getStatusCode());
     }
 }

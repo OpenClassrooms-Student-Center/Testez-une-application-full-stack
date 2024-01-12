@@ -108,7 +108,7 @@ public class AuthControllerTest {
         @Tag("post_api/auth/login")
         @DisplayName("(HAPPY PATH) it should authenticate the user successfully and return a JWT")
         void authenticateValidUser_shouldReturnJwtResponse() throws Exception {
-                // Arrange
+                // * Arrange
                 UserDetailsImpl userDetails = UserDetailsImpl.builder()
                                 .id(1L)
                                 .firstName("Toto")
@@ -134,10 +134,10 @@ public class AuthControllerTest {
                 loginRequest.setEmail(userDetails.getUsername());
                 loginRequest.setPassword(userDetails.getPassword());
 
-                // Act
+                // * Act
                 ResponseEntity<?> result = authController.authenticateUser(loginRequest);
 
-                // Assert
+                // * Assert
                 assertEquals(HttpStatus.OK, result.getStatusCode());
         }
 
@@ -151,7 +151,7 @@ public class AuthControllerTest {
         @Tag("post_api/auth/register")
         @DisplayName("(HAPPY PATH) it should register the user")
         void registerValidUser_shouldReturnMessageResponse() throws Exception {
-                // Arrange
+                // * Arrange
                 SignupRequest signUpRequest = new SignupRequest();
 
                 signUpRequest.setEmail("toto3@toto.com");
@@ -167,10 +167,10 @@ public class AuthControllerTest {
 
                 when(userRepository.existsByEmail(signUpRequest.getEmail())).thenReturn(false);
 
-                // Act
+                // * Act
                 ResponseEntity<?> result = authController.registerUser(signUpRequest);
 
-                // Assert
+                // * Assert
                 assertEquals(HttpStatus.OK, result.getStatusCode());
                 assertEquals("User registered successfully!", ((MessageResponse) result.getBody()).getMessage());
 
@@ -187,7 +187,7 @@ public class AuthControllerTest {
         @Tag("post_api/auth/register")
         @DisplayName("(EDGE CASE) it should not register the user because the sign up request's payload is invalid")
         void registerAlreadyRegisteredUser_shouldReturnErrorResponse() throws Exception {
-                // Arrange
+                // * Arrange
                 SignupRequest signUpRequest = new SignupRequest();
 
                 signUpRequest.setEmail("yoga@studio.com");
@@ -197,10 +197,10 @@ public class AuthControllerTest {
 
                 when(userRepository.existsByEmail(signUpRequest.getEmail())).thenReturn(true);
 
-                // Act
+                // * Act
                 ResponseEntity<?> result = authController.registerUser(signUpRequest);
 
-                // Assert
+                // * Assert
                 assertEquals(HttpStatus.BAD_REQUEST, result.getStatusCode());
                 assertEquals("Error: Email is already taken!", ((MessageResponse) result.getBody()).getMessage());
         }

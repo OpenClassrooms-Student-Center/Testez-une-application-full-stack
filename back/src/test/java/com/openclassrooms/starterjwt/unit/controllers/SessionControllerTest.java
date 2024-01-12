@@ -109,16 +109,16 @@ public class SessionControllerTest {
     @Tag("get_api/session/{id}")
     @DisplayName("(HAPPY PATH) it should get the session from the database of the given id")
     public void getSessionById_returnsSessionWithGivenId() throws Exception {
-        // Arrange
+        // * Arrange
         Long sessionId = 1L;
         Session mockSession = new Session();
 
         when(sessionService.getById(sessionId)).thenReturn(mockSession);
 
-        // Act
+        // * Act
         ResponseEntity<?> result = sessionController.findById(sessionId.toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
@@ -130,15 +130,15 @@ public class SessionControllerTest {
     @Tag("get_api/session/{id}")
     @DisplayName("(EDGE CASE) it should return a 404 error")
     public void getSessionById_withInvalidId_returnsBadRequest() {
-        // Arrange
+        // * Arrange
         Long sessionId = 0L;
 
         when(sessionService.getById(sessionId)).thenReturn(null);
 
-        // Act
+        // * Act
         ResponseEntity<?> result = sessionController.findById(sessionId.toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
     }
 
@@ -151,11 +151,11 @@ public class SessionControllerTest {
     @Tag("get_api/session")
     @DisplayName("(HAPPY PATH) it should retrieve all the sessions from the database as an empty or full array")
     public void getAllSessions_returnsListOfAllSessions() {
-        // Arrange
-        // Act
+        // * Arrange
+        // * Act
         ResponseEntity<?> result = sessionController.findAll();
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
@@ -167,7 +167,7 @@ public class SessionControllerTest {
     @Tag("post_api/session")
     @DisplayName("(HAPPY PATH) it should successfully create the session and return a 201 status code")
     public void createSessionWithValidSessionDto_createsNewSession() {
-        // Arrange
+        // * Arrange
         String isoString = "2023-12-30T10:27:21";
 
         DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
@@ -206,10 +206,10 @@ public class SessionControllerTest {
         sessionDto.setUpdatedAt(session.getUpdatedAt());
 
         when(sessionService.create(sessionMapper.toEntity(sessionDto))).thenReturn(session);
-        // Act
+        // * Act
         ResponseEntity<?> result = sessionController.create(sessionDto);
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
@@ -221,7 +221,7 @@ public class SessionControllerTest {
     @Tag("put_api/session/{id}")
     @DisplayName("(HAPPY PATH) it should update the existing session and return a 200 status code")
     public void updateSession_withValidId_returnsUpdatedSession() {
-        // Arrange
+        // * Arrange
         String isoString = "2023-12-30T10:27:21";
 
         DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
@@ -260,10 +260,10 @@ public class SessionControllerTest {
 
         when(sessionService.update(sessionDto.getId(), sessionMapper.toEntity(sessionDto))).thenReturn(session);
 
-        // Act
+        // * Act
         ResponseEntity<?> result = sessionController.update(sessionDto.getId().toString(), sessionDto);
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
@@ -275,17 +275,17 @@ public class SessionControllerTest {
     @Tag("delete_api/session/{id}")
     @DisplayName("(HAPPY PATH) it should delete the session and return a 200 status code")
     public void deleteSession_withValidId_returnsBadRequest() {
-        // Arrange
+        // * Arrange
         SessionDto sessionDto = new SessionDto();
         sessionDto.setId(1L);
 
         Session mockSession = new Session();
 
         when(sessionService.getById(sessionDto.getId())).thenReturn(mockSession);
-        // Act
+        // * Act
         ResponseEntity<?> result = sessionController.save(sessionDto.getId().toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 
@@ -297,15 +297,15 @@ public class SessionControllerTest {
     @Tag("delete_api/session/{id}")
     @DisplayName("(EDGE CASE) it should return a 404 status code")
     public void deleteSession_withNonExistentId_returnsNotFound() {
-        // Arrange
+        // * Arrange
         SessionDto sessionDto = new SessionDto();
         sessionDto.setId(0L);
 
         when(sessionService.getById(sessionDto.getId())).thenReturn(null);
-        // Act
+        // * Act
         ResponseEntity<?> result = sessionController.save(sessionDto.getId().toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
     }
 
@@ -317,11 +317,11 @@ public class SessionControllerTest {
     @Tag("delete_api/session/{id}")
     @DisplayName("(EDGE CASE) it should return a 400 status code")
     public void deleteSession_withInvalidId_returnsBadRequest() {
-        // Arrange
-        // Act
+        // * Arrange
+        // * Act
         ResponseEntity<?> result = sessionController.save("invalid");
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.BAD_REQUEST, result.getStatusCode());
     }
 
@@ -333,16 +333,16 @@ public class SessionControllerTest {
     @Tag("post_api/session/{id}/participate/{userId}")
     @DisplayName("(HAPPY PATH) it should create the session and return a 200 status code")
     public void addUserToSessionWithValidIds_shouldAddTheUserToSession() {
-        // Arrange
+        // * Arrange
         SessionDto sessionDto = new SessionDto();
         sessionDto.setId(1L);
         sessionDto.setTeacher_id(1L);
 
-        // Act
+        // * Act
         ResponseEntity<?> result = sessionController.participate(sessionDto.getId().toString(),
                 sessionDto.getTeacher_id().toString());
 
-        // Assert
+        // * Assert
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 }
