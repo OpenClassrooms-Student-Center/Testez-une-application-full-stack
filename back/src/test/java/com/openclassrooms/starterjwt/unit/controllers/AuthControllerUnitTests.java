@@ -52,7 +52,7 @@ import java.util.Optional;
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Auth controller test: api/auth")
-public class AuthControllerTest {
+public class AuthControllerUnitTests {
         /**
          * The controller under test, injected with mock dependencies.
          */

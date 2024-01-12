@@ -53,7 +53,7 @@ import com.openclassrooms.starterjwt.services.SessionService;
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Session controller test: api/session")
-public class SessionControllerTest {
+public class SessionControllerUnitTests {
 
     /**
      * The controller under test, injected with mock dependencies.

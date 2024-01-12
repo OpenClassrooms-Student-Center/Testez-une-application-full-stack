@@ -41,7 +41,7 @@ import com.openclassrooms.starterjwt.services.UserService;
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 @DisplayName("User controller test: api/user")
-public class UserControllerTest {
+public class UserControllerUnitTests {
     /**
      * The logger instance for logging test-related information.
      */

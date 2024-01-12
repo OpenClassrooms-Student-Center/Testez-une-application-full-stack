@@ -49,7 +49,7 @@ import com.openclassrooms.starterjwt.services.TeacherService;
 @AutoConfigureMockMvc
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Teacher controller test: api/teacher")
-public class TeacherControllerTest {
+public class TeacherControllerUnitTests {
     /**
      * The logger instance for logging test-related information.
      */
