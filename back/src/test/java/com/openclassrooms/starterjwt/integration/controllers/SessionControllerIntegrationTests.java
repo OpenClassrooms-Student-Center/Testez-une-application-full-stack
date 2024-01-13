@@ -40,7 +40,7 @@ import com.openclassrooms.starterjwt.services.TeacherService;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@AutoConfigureTestDatabase
+// @AutoConfigureTestDatabase
 public class SessionControllerIntegrationTests {
         /**
          * MockBean for simulating the AuthenticationManager in the integration tests.
@@ -114,7 +114,7 @@ public class SessionControllerIntegrationTests {
                                 .content(objectMapper.writeValueAsString(sessionDto)))
                                 .andExpect(status().isOk());
 
-                mockMvc.perform(get("/api/session/{id}", 69L)
+                mockMvc.perform(get("/api/session/{id}", 1L)
                                 .contentType(MediaType.APPLICATION_JSON))
                                 .andExpect(status().isOk())
                                 .andExpect(jsonPath("$.name").value(sessionDto.getName()))
@@ -183,7 +183,7 @@ public class SessionControllerIntegrationTests {
                 // * Assert
                 mockMvc.perform(get("/api/session/{id}", 69L)
                                 .contentType(MediaType.APPLICATION_JSON))
-                                .andExpect(status().isOk());
+                                .andExpect(status().isNotFound());
         }
 
 }
