@@ -8,11 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.openclassrooms.starterjwt.controllers.AuthController;
 import com.openclassrooms.starterjwt.models.User;
 import com.openclassrooms.starterjwt.payload.request.LoginRequest;
 import com.openclassrooms.starterjwt.payload.request.SignupRequest;
 import com.openclassrooms.starterjwt.repository.UserRepository;
+import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
 import com.openclassrooms.starterjwt.security.services.UserDetailsImpl;
+
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -58,6 +62,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @SpringBootTest
 @AutoConfigureMockMvc
+@AutoConfigureTestDatabase
 public class AuthControllerIntegrationTests {
 
         /**
@@ -110,15 +115,6 @@ public class AuthControllerIntegrationTests {
                 signUpRequest.setLastName("Tester");
                 signUpRequest.setFirstName("Tester");
                 signUpRequest.setPassword(password);
-
-                User user = User.builder()
-                                .id(420L)
-                                .email(signUpRequest.getEmail())
-                                .firstName(signUpRequest.getFirstName())
-                                .lastName(signUpRequest.getLastName())
-                                .password(signUpRequest.getPassword()).build();
-
-                when(userRepository.save(user)).thenReturn(null);
 
                 UserDetailsImpl userDetails = UserDetailsImpl.builder()
                                 .id(420L)
