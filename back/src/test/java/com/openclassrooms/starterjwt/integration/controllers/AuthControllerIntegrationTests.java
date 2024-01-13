@@ -101,7 +101,7 @@ public class AuthControllerIntegrationTests {
          * @throws Exception if an error occurs during the test execution.
          */
         @Test
-        @Tag("post_api/auth/register-post_api/auth/login")
+        @Tag("post_api/auth/register---post_api/auth/login")
         @DisplayName("(HAPPY PATH) it should login the newly registered")
         // Test to register and login a new user
         public void testRegisterAndLoginWithValidCredentials() throws Exception {

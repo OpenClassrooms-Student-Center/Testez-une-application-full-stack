@@ -67,7 +67,7 @@ public class SessionControllerIntegrationTests {
         private SessionService sessionService;
 
         @Test
-        @Tag("post_api/session/-get_api/session/")
+        @Tag("post_api/session/---get_api/session/")
         @DisplayName("(HAPPY PATH) the session should be successfully registered and included in the array of all sessions")
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionCreationAndRetrieval() throws Exception {
@@ -75,7 +75,7 @@ public class SessionControllerIntegrationTests {
                 SessionDto sessionDto = new SessionDto();
                 sessionDto.setName("New INTEGRATION TEST Session");
                 sessionDto.setDate(new Date());
-                sessionDto.setTeacher_id(420L);
+                sessionDto.setTeacher_id(1L);
                 sessionDto.setDescription("New Session Description");
 
                 // Assuming you have a Session class with appropriate constructors and getters
@@ -103,9 +103,9 @@ public class SessionControllerIntegrationTests {
                                 .date(new Date())
                                 .build();
 
-                when(sessionService.create(any(Session.class))).thenReturn(mockSession);
+                // when(sessionService.create(any(Session.class))).thenReturn(mockSession);
 
-                when(sessionService.getById(69L)).thenReturn(mockSession);
+                // when(sessionService.getById(69L)).thenReturn(mockSession);
 
                 // * Act
                 // * Assert
