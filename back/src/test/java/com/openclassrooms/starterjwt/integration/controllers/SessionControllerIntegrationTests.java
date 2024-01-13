@@ -11,8 +11,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -71,12 +73,18 @@ public class SessionControllerIntegrationTests {
         @DisplayName("(HAPPY PATH) the session should be successfully registered and included in the array of all sessions")
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionCreationAndRetrieval() throws Exception {
+
+                List<Long> arrayOfUserIds = new ArrayList<>();
+                arrayOfUserIds.add(1L);
+                arrayOfUserIds.add(2L);
+
                 // * Arrange
                 SessionDto sessionDto = new SessionDto();
                 sessionDto.setName("New INTEGRATION TEST Session");
                 sessionDto.setDate(new Date());
                 sessionDto.setTeacher_id(1L);
                 sessionDto.setDescription("New Session Description");
+                sessionDto.setUsers(arrayOfUserIds);
 
                 // Assuming you have a Session class with appropriate constructors and getters
                 String isoString = "2023-12-30T10:27:21";
@@ -103,9 +111,9 @@ public class SessionControllerIntegrationTests {
                                 .date(new Date())
                                 .build();
 
-                // when(sessionService.create(any(Session.class))).thenReturn(mockSession);
+                when(sessionService.create(any(Session.class))).thenReturn(mockSession);
 
-                // when(sessionService.getById(69L)).thenReturn(mockSession);
+                when(sessionService.getById(69L)).thenReturn(mockSession);
 
                 // * Act
                 // * Assert
@@ -114,7 +122,7 @@ public class SessionControllerIntegrationTests {
                                 .content(objectMapper.writeValueAsString(sessionDto)))
                                 .andExpect(status().isOk());
 
-                mockMvc.perform(get("/api/session/{id}", 1L)
+                mockMvc.perform(get("/api/session/{id}", 69L)
                                 .contentType(MediaType.APPLICATION_JSON))
                                 .andExpect(status().isOk())
                                 .andExpect(jsonPath("$.name").value(sessionDto.getName()))

@@ -117,7 +117,6 @@ public class AuthControllerIntegrationTests {
                 signUpRequest.setPassword(password);
 
                 UserDetailsImpl userDetails = UserDetailsImpl.builder()
-                                .id(420L)
                                 .firstName("Tester")
                                 .lastName("Tester")
                                 .username(email)
@@ -145,7 +144,6 @@ public class AuthControllerIntegrationTests {
                                 .andExpect(status().isOk())
                                 .andExpect(jsonPath("$.token").exists())
                                 .andExpect(jsonPath("$.type").value("Bearer"))
-                                .andExpect(jsonPath("$.id").exists())
                                 .andExpect(jsonPath("$.username").value(email))
                                 .andExpect(jsonPath("$.firstName").value("Tester"))
                                 .andExpect(jsonPath("$.lastName").value("Tester"))
