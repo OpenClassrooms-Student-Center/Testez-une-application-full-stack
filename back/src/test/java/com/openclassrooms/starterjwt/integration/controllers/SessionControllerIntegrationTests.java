@@ -21,6 +21,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -38,7 +39,6 @@ import com.openclassrooms.starterjwt.services.SessionService;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-// @AutoConfigureTestDatabase
 public class SessionControllerIntegrationTests {
         /**
          * MockBean for simulating the AuthenticationManager in the integration tests.
@@ -65,7 +65,7 @@ public class SessionControllerIntegrationTests {
         private SessionService sessionService;
 
         @Test
-        @Tag("post_api/session/--get_api/session/")
+        @Tag("post_api/session/--get_api/session/{id}")
         @DisplayName("(HAPPY PATH) the session should be successfully registered and included in the array of all sessions")
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionCreationAndRetrieval() throws Exception {
@@ -94,6 +94,7 @@ public class SessionControllerIntegrationTests {
         }
 
         @Test
+        @Tag("put_api/session/{id}--get_api/session/{id}")
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionUpdateAndRetrieval() throws Exception {
                 // * Arrange
@@ -119,6 +120,7 @@ public class SessionControllerIntegrationTests {
         }
 
         @Test
+        @Tag("delete_api/session/{id}--get_api/session/{id}")
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionDeletionAndRetrieval() throws Exception {
                 // * Arrange
