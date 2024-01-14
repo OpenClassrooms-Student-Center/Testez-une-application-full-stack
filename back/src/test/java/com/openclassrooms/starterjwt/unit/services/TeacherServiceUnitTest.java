@@ -11,21 +11,34 @@ import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import com.openclassrooms.starterjwt.models.Teacher;
 import com.openclassrooms.starterjwt.repository.TeacherRepository;
 import com.openclassrooms.starterjwt.services.TeacherService;
 
+/**
+ * Unit tests for the {@link TeacherService} class.
+ * 
+ * It tests the functionality of finding teachers by ID and retrieving all
+ * teachers.
+ * 
+ * The tests use Mockito to mock the TeacherRepository dependency.
+ */
+@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class TeacherServiceUnitTest {
 
     /**
      * A mock instance of the TeacherService class.
      */
-    @InjectMocks
+    @Mock
     private TeacherService teacherService;
 
     /**
@@ -42,7 +55,7 @@ public class TeacherServiceUnitTest {
      */
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
+        teacherService = new TeacherService(teacherRepository);
     }
 
     /**
@@ -53,6 +66,8 @@ public class TeacherServiceUnitTest {
      * is equal to the original list of teachers.
      */
     @Test
+    @Tag("TeacherService.findAll()")
+    @DisplayName("Find all teacher")
     public void testFindAllTeachers() {
 
         LocalDateTime localDateTime = LocalDateTime.now();
@@ -94,6 +109,8 @@ public class TeacherServiceUnitTest {
      * is equal to the original teacher object.
      */
     @Test
+    @Tag("TeacherService.findById()")
+    @DisplayName("Find teacher by ID → found")
     public void testFindTeacherById() {
         LocalDateTime localDateTime = LocalDateTime.now();
 
@@ -123,6 +140,8 @@ public class TeacherServiceUnitTest {
      * method is called. It asserts that the returned teacher object is null.
      */
     @Test
+    @Tag("TeacherService.findById()")
+    @DisplayName("Find teacher by ID → not found")
     public void testFindTeacherByIdNotFound() {
         Long teacherId = 1L;
 
