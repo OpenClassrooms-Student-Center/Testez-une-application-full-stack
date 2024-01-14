@@ -67,7 +67,7 @@ public class TeacherServiceUnitTest {
      */
     @Test
     @Tag("TeacherService.findAll()")
-    @DisplayName("Find all teacher")
+    @DisplayName("Find all teachers")
     public void testFindAllTeachers() {
         // * Arrange
         LocalDateTime localDateTime = LocalDateTime.now();
