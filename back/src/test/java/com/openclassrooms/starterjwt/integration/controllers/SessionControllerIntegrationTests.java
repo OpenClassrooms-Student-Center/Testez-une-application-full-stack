@@ -1,6 +1,7 @@
 package com.openclassrooms.starterjwt.integration.controllers;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -12,6 +13,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -31,6 +33,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.starterjwt.dto.SessionDto;
 import com.openclassrooms.starterjwt.models.Session;
 import com.openclassrooms.starterjwt.models.Teacher;
+import com.openclassrooms.starterjwt.models.User;
 import com.openclassrooms.starterjwt.services.SessionService;
 
 @SpringBootTest
@@ -66,43 +69,10 @@ public class SessionControllerIntegrationTests {
         @DisplayName("(HAPPY PATH) the session should be successfully registered and included in the array of all sessions")
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionCreationAndRetrieval() throws Exception {
-
-                List<Long> arrayOfUserIds = new ArrayList<>();
-                arrayOfUserIds.add(1L);
-                arrayOfUserIds.add(2L);
-
                 // * Arrange
-                SessionDto sessionDto = new SessionDto();
-                sessionDto.setName("New INTEGRATION TEST Session");
-                sessionDto.setDate(new Date());
-                sessionDto.setTeacher_id(1L);
-                sessionDto.setDescription("New Session Description");
-                sessionDto.setUsers(arrayOfUserIds);
+                SessionDto sessionDto = createMockedSessionDto();
 
-                // Assuming you have a Session class with appropriate constructors and getters
-                String isoString = "2023-12-30T10:27:21";
-
-                DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
-
-                LocalDateTime localDateTime = LocalDateTime.parse(isoString, formatter);
-
-                Teacher teacher = new Teacher();
-                teacher
-                                .setId(sessionDto.getTeacher_id())
-                                .setLastName("DELAHAYE")
-                                .setFirstName("Margot")
-                                .setCreatedAt(localDateTime)
-                                .setUpdatedAt(localDateTime);
-
-                Session mockSession = Session.builder()
-                                .id(69L)
-                                .name(sessionDto.getName())
-                                .teacher(teacher)
-                                .users(null)
-                                .description(
-                                                sessionDto.getDescription())
-                                .date(new Date())
-                                .build();
+                Session mockSession = createMockedSession(sessionDto);
 
                 when(sessionService.create(any(Session.class))).thenReturn(mockSession);
 
@@ -127,33 +97,9 @@ public class SessionControllerIntegrationTests {
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionUpdateAndRetrieval() throws Exception {
                 // * Arrange
-                SessionDto sessionDto = new SessionDto();
-                sessionDto.setName("Updated INTEGRATION TEST Session");
-                sessionDto.setDate(new Date());
-                sessionDto.setTeacher_id(420L);
-                sessionDto.setDescription("Updated Session Description");
+                SessionDto sessionDto = createMockedSessionDto();
 
-                String isoString = "2023-12-30T10:27:21";
-
-                DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
-
-                LocalDateTime localDateTime = LocalDateTime.parse(isoString, formatter);
-
-                Teacher teacher = new Teacher();
-                teacher
-                                .setId(sessionDto.getTeacher_id())
-                                .setLastName("DELAHAYE")
-                                .setFirstName("Margot")
-                                .setCreatedAt(localDateTime)
-                                .setUpdatedAt(localDateTime);
-
-                Session mockSession = Session.builder()
-                                .name(sessionDto.getName())
-                                .teacher(teacher)
-                                .users(null)
-                                .description(sessionDto.getDescription())
-                                .date(new Date())
-                                .build();
+                Session mockSession = createMockedSession(sessionDto);
 
                 when(sessionService.update(any(Long.class), any(Session.class))).thenReturn(mockSession);
 
@@ -176,6 +122,8 @@ public class SessionControllerIntegrationTests {
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionDeletionAndRetrieval() throws Exception {
                 // * Arrange
+                doNothing().when(sessionService).delete(69L);
+
                 // * Act
                 mockMvc.perform(delete("/api/session/{id}", 69L)
                                 .contentType(MediaType.APPLICATION_JSON))
@@ -185,6 +133,80 @@ public class SessionControllerIntegrationTests {
                 mockMvc.perform(get("/api/session/{id}", 69L)
                                 .contentType(MediaType.APPLICATION_JSON))
                                 .andExpect(status().isNotFound());
+        }
+
+        /**
+         * Creates a mocked {@code SessionDto} for testing purposes.
+         *
+         * @return A mocked {@code SessionDto} instance.
+         */
+        private SessionDto createMockedSessionDto() {
+                SessionDto sessionDto = new SessionDto();
+                sessionDto.setName("New INTEGRATION TEST Session");
+                sessionDto.setDate(new Date());
+                sessionDto.setTeacher_id(1L);
+                sessionDto.setDescription("New Session Description");
+                sessionDto.setUsers(Arrays.asList(1L, 2L));
+                return sessionDto;
+        }
+
+        /**
+         * Creates a mocked Teacher based on the provided SessionDto for testing
+         * purposes.
+         *
+         * @param sessionDto The SessionDto containing information for creating the
+         *                   mocked Teacher.
+         * @return A mocked Teacher instance.
+         */
+        private Teacher createMockedTeacher(SessionDto sessionDto) {
+                String isoString = "2023-12-30T10:27:21";
+                DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+                LocalDateTime localDateTime = LocalDateTime.parse(isoString, formatter);
+
+                Teacher teacher = new Teacher();
+                teacher.setId(sessionDto.getTeacher_id())
+                                .setLastName("DELAHAYE")
+                                .setFirstName("Margot")
+                                .setCreatedAt(localDateTime)
+                                .setUpdatedAt(localDateTime);
+
+                return teacher;
+        }
+
+        /**
+         * Creates a mocked Session based on the provided {@code SessionDto} for testing
+         * purposes.
+         *
+         * @param sessionDto The SessionDto containing information for creating the
+         *                   mocked Session.
+         * @return A mocked Session instance.
+         */
+        private Session createMockedSession(SessionDto sessionDto) {
+                Teacher teacher = createMockedTeacher(sessionDto);
+
+                User mockedUser1 = new User("Toto", "Toto",
+                                "Toto69", "totoBruv", false);
+
+                mockedUser1.setId(1L);
+
+                User mockedUser2 = new User("Toto2", "Toto2",
+                                "Toto420", "totoBlud", false);
+                mockedUser2.setId(2L);
+
+                List<User> arrayOfUsers = new ArrayList<>();
+                arrayOfUsers.add(mockedUser1);
+                arrayOfUsers.add(mockedUser2);
+
+                Session mockedSession = Session.builder()
+                                .id(69L)
+                                .name(sessionDto.getName())
+                                .teacher(teacher)
+                                .users(arrayOfUsers)
+                                .description(sessionDto.getDescription())
+                                .date(new Date())
+                                .build();
+
+                return mockedSession;
         }
 
 }
