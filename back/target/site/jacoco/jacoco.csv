@@ -13,7 +13,7 @@ yoga-app,com.openclassrooms.starterjwt.dto,TeacherDto,250,23,46,0,6,2,33,6,10,6
 yoga-app,com.openclassrooms.starterjwt.security,WebSecurityConfig,0,71,0,0,0,14,0,6,0,6
 yoga-app,com.openclassrooms.starterjwt.security.jwt,AuthTokenFilter,38,38,4,4,8,11,3,5,0,4
 yoga-app,com.openclassrooms.starterjwt.security.jwt,AuthEntryPointJwt,0,55,0,0,0,13,0,3,0,3
-yoga-app,com.openclassrooms.starterjwt.security.jwt,JwtUtils,46,46,0,0,11,13,1,4,1,4
+yoga-app,com.openclassrooms.starterjwt.security.jwt,JwtUtils,36,56,0,0,10,14,0,5,0,5
 yoga-app,com.openclassrooms.starterjwt.models,User.UserBuilder,138,0,8,0,1,0,15,0,11,0
 yoga-app,com.openclassrooms.starterjwt.models,Teacher.TeacherBuilder,74,0,0,0,1,0,8,0,8,0
 yoga-app,com.openclassrooms.starterjwt.models,Session.SessionBuilder,47,63,0,0,0,1,1,10,1,10

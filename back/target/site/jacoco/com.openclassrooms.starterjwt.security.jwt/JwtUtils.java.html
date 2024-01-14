@@ -35,7 +35,7 @@ import io.jsonwebtoken.*;
   }
 
   public String getUserNameFromJwtToken(String token) {
-<span class="nc" id="L38">    return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody().getSubject();</span>
+<span class="fc" id="L38">    return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody().getSubject();</span>
   }
 
   public boolean validateJwtToken(String authToken) {
