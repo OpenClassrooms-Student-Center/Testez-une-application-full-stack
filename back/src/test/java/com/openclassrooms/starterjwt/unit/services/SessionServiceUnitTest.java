@@ -115,10 +115,13 @@ public class SessionServiceUnitTest {
     @Tag("SessionService.create()")
     @DisplayName("Test Creating New Session")
     public void testCreatingNewSession() {
+        // * Arrange
         when(sessionRepository.save(session)).thenReturn(session);
 
+        // * Act
         Session result = sessionService.create(session);
 
+        // * Assert
         verify(sessionRepository).save(session);
 
         assertEquals(session, result);
@@ -133,10 +136,14 @@ public class SessionServiceUnitTest {
     @Tag("SessionService.delete()")
     @DisplayName("Test Deleting a Session")
     public void testDeletingASession() {
+        // * Arrange
+
         doNothing().when(sessionRepository).deleteById(session.getId());
 
+        // * Act
         sessionService.delete(session.getId());
 
+        // * Assert
         verify(sessionRepository).deleteById(session.getId());
     }
 
@@ -151,6 +158,7 @@ public class SessionServiceUnitTest {
     @Tag("SessionService.findAll()")
     @DisplayName("Test Finding All Sessions")
     public void testFindingAllSessions() {
+        // * Arrange
 
         List<Session> sessions = new ArrayList<>();
         sessions.add(session);
@@ -158,8 +166,10 @@ public class SessionServiceUnitTest {
 
         when(sessionRepository.findAll()).thenReturn(sessions);
 
+        // * Act
         List<Session> result = sessionService.findAll();
 
+        // * Assert
         verify(sessionRepository).findAll();
 
         assertEquals(sessions, result);
@@ -176,11 +186,14 @@ public class SessionServiceUnitTest {
     @Tag("SessionService.getById()")
     @DisplayName("Test Get Session by Valid ID")
     public void testGetSessionByValidId() {
+        // * Arrange
 
         when(sessionRepository.findById(session.getId())).thenReturn(Optional.of(session));
 
+        // * Act
         Session result = sessionService.getById(session.getId());
 
+        // * Assert
         verify(sessionRepository).findById(session.getId());
 
         assertEquals(session, result);
@@ -197,11 +210,14 @@ public class SessionServiceUnitTest {
     @Tag("SessionService.update()")
     @DisplayName("Test Updating a Session")
     public void testUpdatingASession() {
+        // * Arrange
 
         when(sessionRepository.save(session)).thenReturn(session);
 
+        // * Act
         Session result = sessionService.update(session.getId(), session);
 
+        // * Assert
         verify(sessionRepository).save(session);
 
         assertEquals(session, result);
@@ -220,6 +236,8 @@ public class SessionServiceUnitTest {
     @Tag("SessionService.participate()")
     @DisplayName("Test Participate in a Session")
     public void testParticipateSession() {
+        // * Arrange
+
         Long userId = 69L;
         Long sessionId = 1L;
 
@@ -230,8 +248,10 @@ public class SessionServiceUnitTest {
         when(sessionRepository.findById(sessionId)).thenReturn(Optional.of(session));
         when(userRepository.findById(userId)).thenReturn(Optional.of(mockedUser));
 
+        // * Act
         sessionService.participate(sessionId, userId);
 
+        // * Assert
         verify(sessionRepository).findById(sessionId);
         verify(userRepository).findById(userId);
 
@@ -250,6 +270,8 @@ public class SessionServiceUnitTest {
     @Tag("SessionService.noLogerParticipate()")
     @DisplayName("Test No Longer Participate in a Session")
     public void testNoLongerParticipateSession() {
+        // * Arrange
+
         Long userIdToRemove = 420L;
         Long sessionId = 1L;
 
@@ -262,8 +284,10 @@ public class SessionServiceUnitTest {
         when(sessionRepository.findById(sessionId)).thenReturn(Optional.of(session));
         when(sessionRepository.save(session)).thenReturn(session);
 
+        // * Act
         sessionService.noLongerParticipate(sessionId, userIdToRemove);
 
+        // * Assert
         verify(sessionRepository).findById(sessionId);
 
         assertFalse(session.getUsers().contains(mockedUser));

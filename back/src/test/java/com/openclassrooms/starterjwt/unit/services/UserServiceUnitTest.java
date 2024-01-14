@@ -62,14 +62,17 @@ public class UserServiceUnitTest {
     @Tag("UserService.findById()")
     @DisplayName("Find user by ID → found user")
     public void testFindUserById() {
+        // * Arrange
         Long userId = 1L;
         User user = new User("John", "Doe", "john.doe@example.com", "password", false);
         user.setId(userId);
 
         when(userRepository.findById(userId)).thenReturn(Optional.of(user));
 
+        // * Act
         User result = userService.findById(userId);
 
+        // * Assert
         verify(userRepository).findById(userId);
 
         assertEquals(user, result);
@@ -86,12 +89,15 @@ public class UserServiceUnitTest {
     @Tag("UserService.findById()")
     @DisplayName("Find user by ID → user not found")
     public void testFindUserByIdNotFound() {
+        // * Arrange
         Long userId = 1L;
 
         when(userRepository.findById(userId)).thenReturn(Optional.empty());
 
+        // * Act
         User result = userService.findById(userId);
 
+        // * Assert
         verify(userRepository).findById(userId);
 
         assertNull(result);
@@ -106,10 +112,13 @@ public class UserServiceUnitTest {
     @Tag("UserService.delete()")
     @DisplayName("Delete a user by its ID")
     public void testDeleteUser() {
+        // * Arrange
         Long userId = 1L;
 
+        // * Act
         userService.delete(userId);
 
+        // * Assert
         verify(userRepository).deleteById(userId);
     }
 }

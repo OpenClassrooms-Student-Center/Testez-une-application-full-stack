@@ -69,7 +69,7 @@ public class TeacherServiceUnitTest {
     @Tag("TeacherService.findAll()")
     @DisplayName("Find all teacher")
     public void testFindAllTeachers() {
-
+        // * Arrange
         LocalDateTime localDateTime = LocalDateTime.now();
 
         List<Teacher> teachers = new ArrayList<>();
@@ -94,8 +94,10 @@ public class TeacherServiceUnitTest {
 
         when(teacherRepository.findAll()).thenReturn(teachers);
 
+        // * Act
         List<Teacher> result = teacherService.findAll();
 
+        // * Assert
         verify(teacherRepository).findAll();
 
         assertEquals(teachers, result);
@@ -112,6 +114,7 @@ public class TeacherServiceUnitTest {
     @Tag("TeacherService.findById()")
     @DisplayName("Find teacher by ID → found")
     public void testFindTeacherById() {
+        // * Arrange
         LocalDateTime localDateTime = LocalDateTime.now();
 
         Long teacherId = 1L;
@@ -124,9 +127,10 @@ public class TeacherServiceUnitTest {
                 .setUpdatedAt(localDateTime);
 
         when(teacherRepository.findById(teacherId)).thenReturn(Optional.of(teacher));
-
+        // * Act
         Teacher result = teacherService.findById(teacherId);
 
+        // * Assert
         verify(teacherRepository).findById(teacherId);
 
         assertEquals(teacher, result);
@@ -143,12 +147,15 @@ public class TeacherServiceUnitTest {
     @Tag("TeacherService.findById()")
     @DisplayName("Find teacher by ID → not found")
     public void testFindTeacherByIdNotFound() {
+        // * Arrange
         Long teacherId = 1L;
 
         when(teacherRepository.findById(teacherId)).thenReturn(Optional.empty());
 
+        // * Act
         Teacher result = teacherService.findById(teacherId);
 
+        // * Assert
         verify(teacherRepository).findById(teacherId);
 
         assertNull(result);

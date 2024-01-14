@@ -12,33 +12,26 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.starterjwt.dto.SessionDto;
 import com.openclassrooms.starterjwt.models.Session;
 import com.openclassrooms.starterjwt.models.Teacher;
-import com.openclassrooms.starterjwt.security.services.UserDetailsImpl;
 import com.openclassrooms.starterjwt.services.SessionService;
-import com.openclassrooms.starterjwt.services.TeacherService;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -69,7 +62,7 @@ public class SessionControllerIntegrationTests {
         private SessionService sessionService;
 
         @Test
-        @Tag("post_api/session/---get_api/session/")
+        @Tag("post_api/session/--get_api/session/")
         @DisplayName("(HAPPY PATH) the session should be successfully registered and included in the array of all sessions")
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionCreationAndRetrieval() throws Exception {
