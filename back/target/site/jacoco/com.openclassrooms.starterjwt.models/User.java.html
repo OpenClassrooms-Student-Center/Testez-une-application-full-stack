@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">yoga-app</a> &gt; <a href="index.source.html" class="el_package">com.openclassrooms.starterjwt.models</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">package com.openclassrooms.starterjwt.models;
+
+import lombok.*;
+import lombok.experimental.Accessors;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = &quot;USERS&quot;, uniqueConstraints = {
+    @UniqueConstraint(columnNames = &quot;email&quot;)
+})
+<span class="pc bpc" id="L18" title="7 of 8 branches missed.">@Data</span>
+@Accessors(chain = true)
+@EntityListeners(AuditingEntityListener.class)
+<span class="pc bpc" id="L21" title="8 of 14 branches missed.">@EqualsAndHashCode(of = {&quot;id&quot;})</span>
+<span class="nc bnc" id="L22" title="All 8 branches missed.">@Builder</span>
+<span class="fc" id="L23">@NoArgsConstructor</span>
+<span class="pc bpc" id="L24" title="4 of 8 branches missed.">@RequiredArgsConstructor</span>
+<span class="nc bnc" id="L25" title="All 8 branches missed.">@AllArgsConstructor</span>
+<span class="nc" id="L26">@ToString</span>
+public class User {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+<span class="fc" id="L30">  private Long id;</span>
+
+  @NonNull
+  @Size(max = 50)
+  @Email
+<span class="fc" id="L35">  private String email;</span>
+
+  @NonNull
+  @Size(max = 20)
+  @Column(name = &quot;last_name&quot;)
+<span class="nc" id="L40">  private String lastName;</span>
+
+  @NonNull
+  @Size(max = 20)
+  @Column(name = &quot;first_name&quot;)
+<span class="nc" id="L45">  private String firstName;</span>
+
+  @NonNull
+  @Size(max = 120)
+<span class="nc" id="L49">  private String password;</span>
+
+  @NonNull
+<span class="fc" id="L52">  private boolean admin;</span>
+
+  @CreatedDate
+  @Column(name = &quot;created_at&quot;, updatable = false)
+<span class="nc" id="L56">  private LocalDateTime createdAt;</span>
+
+  @UpdateTimestamp
+  @Column(name = &quot;updated_at&quot;)
+<span class="nc" id="L60">  private LocalDateTime updatedAt;</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
