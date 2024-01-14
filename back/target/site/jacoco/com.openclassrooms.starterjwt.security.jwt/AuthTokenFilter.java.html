@@ -29,7 +29,7 @@ import com.openclassrooms.starterjwt.security.services.UserDetailsServiceImpl;
 <span class="fc" id="L29">  private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);</span>
 
   @Override
-  protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+  public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
       throws ServletException, IOException {
     try {
 <span class="fc" id="L35">      String jwt = parseJwt(request);</span>
@@ -37,30 +37,29 @@ import com.openclassrooms.starterjwt.security.services.UserDetailsServiceImpl;
 <span class="nc" id="L37">        String username = jwtUtils.getUserNameFromJwtToken(jwt);</span>
 
 <span class="nc" id="L39">        UserDetails userDetails = userDetailsService.loadUserByUsername(username);</span>
-<span class="nc" id="L40">        UsernamePasswordAuthenticationToken authentication =</span>
-            new UsernamePasswordAuthenticationToken(
-                userDetails,
-                null,
-<span class="nc" id="L44">                userDetails.getAuthorities());</span>
-<span class="nc" id="L45">        authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</span>
+<span class="nc" id="L40">        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(</span>
+            userDetails,
+            null,
+<span class="nc" id="L43">            userDetails.getAuthorities());</span>
+<span class="nc" id="L44">        authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</span>
 
-<span class="nc" id="L47">        SecurityContextHolder.getContext().setAuthentication(authentication);</span>
+<span class="nc" id="L46">        SecurityContextHolder.getContext().setAuthentication(authentication);</span>
       }
-<span class="nc" id="L49">    } catch (Exception e) {</span>
-<span class="nc" id="L50">      logger.error(&quot;Cannot set user authentication: {}&quot;, e);</span>
-<span class="fc" id="L51">    }</span>
+<span class="nc" id="L48">    } catch (Exception e) {</span>
+<span class="nc" id="L49">      logger.error(&quot;Cannot set user authentication: {}&quot;, e);</span>
+<span class="fc" id="L50">    }</span>
 
-<span class="fc" id="L53">    filterChain.doFilter(request, response);</span>
-<span class="fc" id="L54">  }</span>
+<span class="fc" id="L52">    filterChain.doFilter(request, response);</span>
+<span class="fc" id="L53">  }</span>
 
-  private String parseJwt(HttpServletRequest request) {
-<span class="fc" id="L57">    String headerAuth = request.getHeader(&quot;Authorization&quot;);</span>
+  public String parseJwt(HttpServletRequest request) {
+<span class="fc" id="L56">    String headerAuth = request.getHeader(&quot;Authorization&quot;);</span>
 
-<span class="pc bpc" id="L59" title="3 of 4 branches missed.">    if (StringUtils.hasText(headerAuth) &amp;&amp; headerAuth.startsWith(&quot;Bearer &quot;)) {</span>
-<span class="nc" id="L60">      return headerAuth.substring(7, headerAuth.length());</span>
+<span class="pc bpc" id="L58" title="1 of 4 branches missed.">    if (StringUtils.hasText(headerAuth) &amp;&amp; headerAuth.startsWith(&quot;Bearer &quot;)) {</span>
+<span class="fc" id="L59">      return headerAuth.substring(7, headerAuth.length());</span>
     }
 
-<span class="fc" id="L63">    return null;</span>
+<span class="fc" id="L62">    return null;</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

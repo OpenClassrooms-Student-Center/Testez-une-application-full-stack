@@ -33,7 +33,7 @@ import com.openclassrooms.starterjwt.services.TeacherService;
  */
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
-public class TeacherServiceUnitTest {
+public class TeacherServiceUnitTests {
 
     /**
      * A mock instance of the TeacherService class.

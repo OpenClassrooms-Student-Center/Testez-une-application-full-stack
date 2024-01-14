@@ -23,7 +23,7 @@ import com.openclassrooms.starterjwt.security.services.UserDetailsImpl;
  */
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
-public class JwtUtilsUnitTest {
+public class JwtUtilsUnitTests {
     /**
      * Mocked authentication instance for simulating user authentication.
      */

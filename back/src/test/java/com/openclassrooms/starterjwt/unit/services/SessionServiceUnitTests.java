@@ -43,7 +43,7 @@ import com.openclassrooms.starterjwt.services.SessionService;
  */
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
-public class SessionServiceUnitTest {
+public class SessionServiceUnitTests {
     /**
      * A mock instance of the SessionService class.
      */

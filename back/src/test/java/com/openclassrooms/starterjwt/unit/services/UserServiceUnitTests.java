@@ -28,7 +28,7 @@ import java.util.Optional;
  */
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
-public class UserServiceUnitTest {
+public class UserServiceUnitTests {
 
     /**
      * A mock instance of the UserRepository class.

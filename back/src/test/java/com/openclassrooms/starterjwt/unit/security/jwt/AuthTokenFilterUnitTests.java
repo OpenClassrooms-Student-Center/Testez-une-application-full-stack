@@ -34,7 +34,7 @@ import com.openclassrooms.starterjwt.security.services.UserDetailsServiceImpl;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
-public class AuthTokenFilterUnitTest {
+public class AuthTokenFilterUnitTests {
 
     /**
      * Mocked authentication manager for simulating user authentication.
@@ -106,13 +106,9 @@ public class AuthTokenFilterUnitTest {
     @Tag("AuthTokenFilter.doFilterInternal()")
     @DisplayName("Test No Authentication with Invalid Token")
     void doFilterInternal_invalidToken_shouldNotSetAuthentication() throws ServletException, IOException {
-        String invalidToken = "invalidToken";
-
         HttpServletRequest request = mock(HttpServletRequest.class);
         HttpServletResponse response = mock(HttpServletResponse.class);
         FilterChain filterChain = mock(FilterChain.class);
-
-        when(jwtUtils.validateJwtToken(invalidToken)).thenReturn(false);
 
         authTokenFilter.doFilterInternal(request, response, filterChain);
 

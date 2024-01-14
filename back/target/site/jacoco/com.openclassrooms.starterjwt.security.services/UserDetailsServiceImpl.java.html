@@ -13,24 +13,24 @@ import com.openclassrooms.starterjwt.repository.UserRepository;
 public class UserDetailsServiceImpl implements UserDetailsService {
   UserRepository userRepository;
 
-<span class="fc" id="L16">  UserDetailsServiceImpl(UserRepository userRepository) {</span>
+<span class="fc" id="L16">  public UserDetailsServiceImpl(UserRepository userRepository) {</span>
 <span class="fc" id="L17">    this.userRepository = userRepository;</span>
 <span class="fc" id="L18">  }</span>
 
   @Override
   @Transactional
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-<span class="nc" id="L23">    User user = userRepository.findByEmail(username)</span>
-<span class="nc" id="L24">        .orElseThrow(() -&gt; new UsernameNotFoundException(&quot;User Not Found with email: &quot; + username));</span>
+<span class="fc" id="L23">    User user = userRepository.findByEmail(username)</span>
+<span class="fc" id="L24">        .orElseThrow(() -&gt; new UsernameNotFoundException(&quot;User Not Found with email: &quot; + username));</span>
 
-<span class="nc" id="L26">    return UserDetailsImpl</span>
-<span class="nc" id="L27">            .builder()</span>
-<span class="nc" id="L28">            .id(user.getId())</span>
-<span class="nc" id="L29">            .username(user.getEmail())</span>
-<span class="nc" id="L30">            .lastName(user.getLastName())</span>
-<span class="nc" id="L31">            .firstName(user.getFirstName())</span>
-<span class="nc" id="L32">            .password(user.getPassword())</span>
-<span class="nc" id="L33">            .build();</span>
+<span class="fc" id="L26">    return UserDetailsImpl</span>
+<span class="fc" id="L27">        .builder()</span>
+<span class="fc" id="L28">        .id(user.getId())</span>
+<span class="fc" id="L29">        .username(user.getEmail())</span>
+<span class="fc" id="L30">        .lastName(user.getLastName())</span>
+<span class="fc" id="L31">        .firstName(user.getFirstName())</span>
+<span class="fc" id="L32">        .password(user.getPassword())</span>
+<span class="fc" id="L33">        .build();</span>
   }
 
 }
