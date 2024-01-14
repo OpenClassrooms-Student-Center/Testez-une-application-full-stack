@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
-    date = &quot;2024-01-14T09:30:57+0100&quot;,
+    date = &quot;2024-01-14T11:16:24+0100&quot;,
     comments = &quot;version: 1.5.1.Final, compiler: javac, environment: Java 1.8.0_302 (Azul Systems, Inc.)&quot;
 )
 @Component
@@ -86,7 +86,7 @@ import org.springframework.stereotype.Component;
 <span class="fc" id="L86">        sessionDto.setCreatedAt( session.getCreatedAt() );</span>
 <span class="fc" id="L87">        sessionDto.setUpdatedAt( session.getUpdatedAt() );</span>
 
-<span class="pc" id="L89">        sessionDto.setUsers( Optional.ofNullable(session.getUsers()).orElseGet(Collections::emptyList).stream().map(u -&gt; u.getId()).collect(Collectors.toList()) );</span>
+<span class="fc" id="L89">        sessionDto.setUsers( Optional.ofNullable(session.getUsers()).orElseGet(Collections::emptyList).stream().map(u -&gt; u.getId()).collect(Collectors.toList()) );</span>
 
 <span class="fc" id="L91">        return sessionDto;</span>
     }

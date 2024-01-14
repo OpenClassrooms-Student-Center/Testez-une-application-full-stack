@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 <span class="fc" id="L23">@NoArgsConstructor</span>
 <span class="pc bpc" id="L24" title="4 of 8 branches missed.">@RequiredArgsConstructor</span>
 <span class="nc bnc" id="L25" title="All 8 branches missed.">@AllArgsConstructor</span>
-<span class="nc" id="L26">@ToString</span>
+<span class="fc" id="L26">@ToString</span>
 public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,27 +37,27 @@ public class User {
   @NonNull
   @Size(max = 20)
   @Column(name = &quot;last_name&quot;)
-<span class="nc" id="L40">  private String lastName;</span>
+<span class="fc" id="L40">  private String lastName;</span>
 
   @NonNull
   @Size(max = 20)
   @Column(name = &quot;first_name&quot;)
-<span class="nc" id="L45">  private String firstName;</span>
+<span class="fc" id="L45">  private String firstName;</span>
 
   @NonNull
   @Size(max = 120)
-<span class="nc" id="L49">  private String password;</span>
+<span class="fc" id="L49">  private String password;</span>
 
   @NonNull
 <span class="fc" id="L52">  private boolean admin;</span>
 
   @CreatedDate
   @Column(name = &quot;created_at&quot;, updatable = false)
-<span class="nc" id="L56">  private LocalDateTime createdAt;</span>
+<span class="fc" id="L56">  private LocalDateTime createdAt;</span>
 
   @UpdateTimestamp
   @Column(name = &quot;updated_at&quot;)
-<span class="nc" id="L60">  private LocalDateTime updatedAt;</span>
+<span class="fc" id="L60">  private LocalDateTime updatedAt;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

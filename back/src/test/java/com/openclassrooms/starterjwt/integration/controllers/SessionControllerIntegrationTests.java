@@ -122,13 +122,18 @@ public class SessionControllerIntegrationTests {
         @WithMockUser(username = "yoga@studio.com", roles = "ADMIN")
         public void testSessionDeletionAndRetrieval() throws Exception {
                 // * Arrange
-                doNothing().when(sessionService).delete(69L);
+                SessionDto sessionDto = createMockedSessionDto();
+
+                Session mockSession = createMockedSession(sessionDto);
+
+                when(sessionService.getById(69L)).thenReturn(mockSession);
 
                 // * Act
                 mockMvc.perform(delete("/api/session/{id}", 69L)
                                 .contentType(MediaType.APPLICATION_JSON))
                                 .andExpect(status().isOk());
 
+                when(sessionService.getById(69L)).thenReturn(null);
                 // * Assert
                 mockMvc.perform(get("/api/session/{id}", 69L)
                                 .contentType(MediaType.APPLICATION_JSON))
