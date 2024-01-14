@@ -127,6 +127,7 @@ public class TeacherServiceUnitTest {
                 .setUpdatedAt(localDateTime);
 
         when(teacherRepository.findById(teacherId)).thenReturn(Optional.of(teacher));
+
         // * Act
         Teacher result = teacherService.findById(teacherId);
 

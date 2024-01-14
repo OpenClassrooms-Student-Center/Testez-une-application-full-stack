@@ -137,7 +137,6 @@ public class SessionServiceUnitTest {
     @DisplayName("Test Deleting a Session")
     public void testDeletingASession() {
         // * Arrange
-
         doNothing().when(sessionRepository).deleteById(session.getId());
 
         // * Act
@@ -159,7 +158,6 @@ public class SessionServiceUnitTest {
     @DisplayName("Test Finding All Sessions")
     public void testFindingAllSessions() {
         // * Arrange
-
         List<Session> sessions = new ArrayList<>();
         sessions.add(session);
         sessions.add(session);
@@ -187,7 +185,6 @@ public class SessionServiceUnitTest {
     @DisplayName("Test Get Session by Valid ID")
     public void testGetSessionByValidId() {
         // * Arrange
-
         when(sessionRepository.findById(session.getId())).thenReturn(Optional.of(session));
 
         // * Act
@@ -211,7 +208,6 @@ public class SessionServiceUnitTest {
     @DisplayName("Test Updating a Session")
     public void testUpdatingASession() {
         // * Arrange
-
         when(sessionRepository.save(session)).thenReturn(session);
 
         // * Act
@@ -237,7 +233,6 @@ public class SessionServiceUnitTest {
     @DisplayName("Test Participate in a Session")
     public void testParticipateSession() {
         // * Arrange
-
         Long userId = 69L;
         Long sessionId = 1L;
 
@@ -271,7 +266,6 @@ public class SessionServiceUnitTest {
     @DisplayName("Test No Longer Participate in a Session")
     public void testNoLongerParticipateSession() {
         // * Arrange
-
         Long userIdToRemove = 420L;
         Long sessionId = 1L;
 
