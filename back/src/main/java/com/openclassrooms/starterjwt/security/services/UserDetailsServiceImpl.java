@@ -13,7 +13,7 @@ import com.openclassrooms.starterjwt.repository.UserRepository;
 public class UserDetailsServiceImpl implements UserDetailsService {
   UserRepository userRepository;
 
-  UserDetailsServiceImpl(UserRepository userRepository) {
+  public UserDetailsServiceImpl(UserRepository userRepository) {
     this.userRepository = userRepository;
   }
 
@@ -24,13 +24,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         .orElseThrow(() -> new UsernameNotFoundException("User Not Found with email: " + username));
 
     return UserDetailsImpl
-            .builder()
-            .id(user.getId())
-            .username(user.getEmail())
-            .lastName(user.getLastName())
-            .firstName(user.getFirstName())
-            .password(user.getPassword())
-            .build();
+        .builder()
+        .id(user.getId())
+        .username(user.getEmail())
+        .lastName(user.getLastName())
+        .firstName(user.getFirstName())
+        .password(user.getPassword())
+        .build();
   }
 
 }
