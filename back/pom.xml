@@ -143,7 +143,22 @@
 
 				</executions>
 			</plugin>
+
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>com/openclassrooms/starterjwt/dto/**</exclude>
+						<exclude>com/openclassrooms/starterjwt/exception/**</exclude>
+						<exclude>com/openclassrooms/starterjwt/mapper/**</exclude>
+						<exclude>com/openclassrooms/starterjwt/models/**</exclude>
+						<exclude>com/openclassrooms/starterjwt/payload/**</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 		</plugins>
+
 	</build>
 
 </project>

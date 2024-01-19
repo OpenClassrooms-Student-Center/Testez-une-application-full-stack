@@ -34,13 +34,13 @@ public class UserServiceUnitTests {
     /**
      * A mock instance of the UserRepository class.
      */
-    @InjectMocks
+    @Mock
     private UserRepository userRepository;
 
     /**
      * An instance of the UserService class with mocked dependencies.
      */
-    @Mock
+    @InjectMocks
     private UserService userService;
 
     /**
@@ -65,7 +65,8 @@ public class UserServiceUnitTests {
     public void testFindUserById() {
         // * Arrange
         Long userId = 1L;
-        User user = new User("John", "Doe", "john.doe@example.com", "password", false);
+        User user = new User("John", "Doe", "john.doe@example.com", "password",
+                false);
         user.setId(userId);
 
         when(userRepository.findById(userId)).thenReturn(Optional.of(user));

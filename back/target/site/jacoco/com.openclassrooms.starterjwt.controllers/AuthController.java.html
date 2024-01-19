@@ -54,7 +54,7 @@ public class AuthController {
 
 <span class="fc" id="L55">        boolean isAdmin = false;</span>
 <span class="fc" id="L56">        User user = this.userRepository.findByEmail(userDetails.getUsername()).orElse(null);</span>
-<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (user != null) {</span>
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">        if (user != null) {</span>
 <span class="fc" id="L58">            isAdmin = user.isAdmin();</span>
         }
 

@@ -33,17 +33,17 @@ import com.openclassrooms.starterjwt.security.services.UserDetailsServiceImpl;
       throws ServletException, IOException {
     try {
 <span class="fc" id="L35">      String jwt = parseJwt(request);</span>
-<span class="fc bfc" id="L36" title="All 4 branches covered.">      if (jwt != null &amp;&amp; jwtUtils.validateJwtToken(jwt)) {</span>
-<span class="fc" id="L37">        String username = jwtUtils.getUserNameFromJwtToken(jwt);</span>
+<span class="pc bpc" id="L36" title="3 of 4 branches missed.">      if (jwt != null &amp;&amp; jwtUtils.validateJwtToken(jwt)) {</span>
+<span class="nc" id="L37">        String username = jwtUtils.getUserNameFromJwtToken(jwt);</span>
 
-<span class="fc" id="L39">        UserDetails userDetails = userDetailsService.loadUserByUsername(username);</span>
-<span class="fc" id="L40">        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(</span>
+<span class="nc" id="L39">        UserDetails userDetails = userDetailsService.loadUserByUsername(username);</span>
+<span class="nc" id="L40">        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(</span>
             userDetails,
             null,
-<span class="fc" id="L43">            userDetails.getAuthorities());</span>
-<span class="fc" id="L44">        authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</span>
+<span class="nc" id="L43">            userDetails.getAuthorities());</span>
+<span class="nc" id="L44">        authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</span>
 
-<span class="fc" id="L46">        SecurityContextHolder.getContext().setAuthentication(authentication);</span>
+<span class="nc" id="L46">        SecurityContextHolder.getContext().setAuthentication(authentication);</span>
       }
 <span class="nc" id="L48">    } catch (Exception e) {</span>
 <span class="nc" id="L49">      logger.error(&quot;Cannot set user authentication: {}&quot;, e);</span>
