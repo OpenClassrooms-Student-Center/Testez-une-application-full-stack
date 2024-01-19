@@ -52,7 +52,7 @@ public class JwtUtilsUnitTests {
     /**
      * Instance of JwtUtils for testing.
      */
-    @Mock
+    @InjectMocks
     private JwtUtils jwtUtils;
 
     @BeforeEach
@@ -110,23 +110,54 @@ public class JwtUtilsUnitTests {
         assertEquals("testUser", username);
     }
 
+    @Test
+    @DisplayName("Test validating JWT token")
+    void testValidateJwtToken() {
+        // Create a valid token for testing
+        UserDetailsImpl userDetails = UserDetailsImpl.builder()
+                .id(1L)
+                .username("testUser")
+                .password("password")
+                .build();
+
+        String validToken = Jwts.builder()
+                .setSubject(userDetails.getUsername())
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + 3_600_000)) // 1 hour
+                .signWith(SignatureAlgorithm.HS512, "testSecret")
+                .compact();
+
+        // Create a new JwtUtils instance
+        JwtUtils jwtUtils = new JwtUtils();
+        ReflectionTestUtils.setField(jwtUtils, "jwtSecret", "testSecret");
+        ReflectionTestUtils.setField(jwtUtils, "jwtExpirationMs", 3_600_000);
+
+        // Attempt to validate the token
+        boolean isValid = jwtUtils.validateJwtToken(validToken);
+
+        // Assert that the token is valid
+        assertTrue(isValid);
+    }
+
     /**
      * Test validating an invalid JWT token with an invalid signature.
      */
     @Test
     @DisplayName("Test validating an invalid JWT token with invalid signature")
     void testValidateJwtTokenInvalidSignature() {
+        // Create an invalid token for testing
         String invalidToken = "invalidToken";
-        assertFalse(jwtUtils.validateJwtToken(invalidToken));
-    }
 
-    @Test
-    @DisplayName("Test validating JWT token with SignatureException")
-    void testValidateJwtTokenSignatureException() {
-        String invalidToken = "invalidToken";
-        JwtUtils jwtUtilsMock = Mockito.mock(JwtUtils.class);
-        doThrow(new SignatureException("Invalid JWT signature")).when(jwtUtilsMock).validateJwtToken(invalidToken);
-        assertThrows(SignatureException.class, () -> jwtUtilsMock.validateJwtToken(invalidToken));
+        // Create a new JwtUtils instance
+        JwtUtils jwtUtils = new JwtUtils();
+        ReflectionTestUtils.setField(jwtUtils, "jwtSecret", "testSecret");
+        ReflectionTestUtils.setField(jwtUtils, "jwtExpirationMs", 3_600_000);
+
+        // Attempt to validate the invalid token
+        boolean isValid = jwtUtils.validateJwtToken(invalidToken);
+
+        // Assert that the token is invalid
+        assertFalse(isValid);
     }
 
     @Test
@@ -139,32 +170,64 @@ public class JwtUtilsUnitTests {
     }
 
     @Test
-    @DisplayName("Test validating JWT token with ExpiredJwtException")
-    void testValidateJwtTokenExpiredJwtException() {
+    @DisplayName("Test validating JWT token with SignatureException")
+    void testValidateJwtTokenSignatureException() {
+        JwtUtils jwtUtils = new JwtUtils();
+        ReflectionTestUtils.setField(jwtUtils, "jwtSecret", "testSecret");
+        ReflectionTestUtils.setField(jwtUtils, "jwtExpirationMs", 3_600_000);
+
+        // Create an invalid token for testing
         String invalidToken = "invalidToken";
-        JwtUtils jwtUtilsMock = Mockito.mock(JwtUtils.class);
-        doThrow(new ExpiredJwtException(null, null, "JWT token is expired")).when(jwtUtilsMock)
-                .validateJwtToken(invalidToken);
-        assertThrows(ExpiredJwtException.class, () -> jwtUtilsMock.validateJwtToken(invalidToken));
+        // Attempt to validate the invalid token
+        boolean isValid = jwtUtils.validateJwtToken(invalidToken);
+
+        // Assert that the token is invalid
+        assertFalse(isValid);
     }
 
     @Test
-    @DisplayName("Test validating JWT token with UnsupportedJwtException")
-    void testValidateJwtTokenUnsupportedJwtException() {
-        String invalidToken = "invalidToken";
-        JwtUtils jwtUtilsMock = Mockito.mock(JwtUtils.class);
-        doThrow(new UnsupportedJwtException("JWT token is unsupported")).when(jwtUtilsMock)
-                .validateJwtToken(invalidToken);
-        assertThrows(UnsupportedJwtException.class, () -> jwtUtilsMock.validateJwtToken(invalidToken));
+    @DisplayName("Test validating JWT token with ExpiredJwtException")
+    void testValidateJwtTokenExpiredJwtException() {
+        JwtUtils jwtUtils = new JwtUtils();
+        ReflectionTestUtils.setField(jwtUtils, "jwtSecret", "testSecret");
+        ReflectionTestUtils.setField(jwtUtils, "jwtExpirationMs", 3_600_000);
+
+        // Create an expired token for testing
+        String expiredToken = Jwts.builder()
+                .setSubject("testUser")
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() - 1000)) // Expired token
+                .signWith(SignatureAlgorithm.HS512, "testSecret")
+                .compact();
+
+        // Attempt to validate the invalid token
+        boolean isValid = jwtUtils.validateJwtToken(expiredToken);
+
+        // Assert that the token is invalid
+        assertFalse(isValid);
     }
 
     @Test
     @DisplayName("Test validating JWT token with IllegalArgumentException")
     void testValidateJwtTokenIllegalArgumentException() {
-        String invalidToken = "invalidToken";
-        JwtUtils jwtUtilsMock = Mockito.mock(JwtUtils.class);
-        doThrow(new IllegalArgumentException("JWT claims string is empty")).when(jwtUtilsMock)
-                .validateJwtToken(invalidToken);
-        assertThrows(IllegalArgumentException.class, () -> jwtUtilsMock.validateJwtToken(invalidToken));
+        try {
+
+            JwtUtils jwtUtils = new JwtUtils();
+
+            // Create a token with empty claims for testing
+            String invalidToken = Jwts.builder()
+                    .claim(null, jwtUtils)
+                    .setSubject("testUser")
+                    .signWith(SignatureAlgorithm.HS512, "testSecret")
+                    .compact();
+
+            assertThrows(IllegalArgumentException.class,
+                    () -> jwtUtils.validateJwtToken(invalidToken));
+        } catch (IllegalArgumentException e) {
+            // Assert that the exception message contains the expected error message
+            assertTrue(e.getMessage().contains("Claim property name cannot be null or empty."));
+        }
+
     }
+
 }

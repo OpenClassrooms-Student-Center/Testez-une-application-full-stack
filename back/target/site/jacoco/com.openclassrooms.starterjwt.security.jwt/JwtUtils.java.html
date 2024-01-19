@@ -40,14 +40,14 @@ import io.jsonwebtoken.*;
 
   public boolean validateJwtToken(String authToken) {
     try {
-<span class="nc" id="L43">      Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(authToken);</span>
-<span class="nc" id="L44">      return true;</span>
+<span class="fc" id="L43">      Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(authToken);</span>
+<span class="fc" id="L44">      return true;</span>
 <span class="nc" id="L45">    } catch (SignatureException e) {</span>
 <span class="nc" id="L46">      logger.error(&quot;Invalid JWT signature: {}&quot;, e.getMessage());</span>
 <span class="fc" id="L47">    } catch (MalformedJwtException e) {</span>
 <span class="fc" id="L48">      logger.error(&quot;Invalid JWT token: {}&quot;, e.getMessage());</span>
-<span class="nc" id="L49">    } catch (ExpiredJwtException e) {</span>
-<span class="nc" id="L50">      logger.error(&quot;JWT token is expired: {}&quot;, e.getMessage());</span>
+<span class="fc" id="L49">    } catch (ExpiredJwtException e) {</span>
+<span class="fc" id="L50">      logger.error(&quot;JWT token is expired: {}&quot;, e.getMessage());</span>
 <span class="nc" id="L51">    } catch (UnsupportedJwtException e) {</span>
 <span class="nc" id="L52">      logger.error(&quot;JWT token is unsupported: {}&quot;, e.getMessage());</span>
 <span class="nc" id="L53">    } catch (IllegalArgumentException e) {</span>

@@ -80,7 +80,7 @@ public class AuthControllerIntegrationTests {
         /**
          * MockBean for simulating the UserRepository in the integration tests.
          */
-        @MockBean
+        @Mock
         private UserRepository userRepository;
 
         /**

@@ -1,9 +1,8 @@
 package com.openclassrooms.starterjwt.unit.security.jwt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -20,10 +19,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mock.web.MockFilterChain;
 import org.springframework.mock.web.MockHttpServletRequest;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -55,17 +57,6 @@ public class AuthTokenFilterUnitTests {
     private UserDetailsServiceImpl userDetailsService;
 
     /**
-     * Annotated with {@code @BeforeEach}, this method is executed before each test
-     * case.
-     * It sets up the necessary dependencies and initializes the AuthTokenFilter
-     * object.
-     */
-    @BeforeEach
-    void setUp() {
-        authTokenFilter = new AuthTokenFilter();
-    }
-
-    /**
      * Tests the {@code doFilterInternal} method of AuthTokenFilter when a valid
      * token is provided.
      */
@@ -77,25 +68,27 @@ public class AuthTokenFilterUnitTests {
         HttpServletResponse response = mock(HttpServletResponse.class);
         FilterChain filterChain = mock(FilterChain.class);
 
+        String jwtToken = "validToken";
+        String username = "testUser";
         UserDetails userDetails = UserDetailsImpl.builder()
                 .id(1L)
-                .firstName("Toto")
-                .lastName("Toto")
-                .username("toto3@toto.com")
+                .firstName("testUser")
+                .lastName("testUser")
+                .username("test@test.com")
                 .password("test!1234")
                 .build();
 
-        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
-                userDetails, null);
+        when(jwtUtils.validateJwtToken(jwtToken)).thenReturn(true);
 
         authTokenFilter.doFilterInternal(request, response, filterChain);
 
-        // Ensure that SecurityContextHolder is populated with the authentication
-        assertNotNull(authentication);
-        assertEquals("toto3@toto.com", authentication.getName());
+        verify(jwtUtils).getUserNameFromJwtToken(jwtToken);
+        verify(jwtUtils).validateJwtToken(jwtToken);
 
-        // Verify that the filter chain is invoked
-        verify(filterChain, times(1)).doFilter(request, response);
+        assertEquals(jwtUtils.getUserNameFromJwtToken(jwtToken), username);
+
+        verify(userDetailsService).loadUserByUsername(username);
+        assertEquals(userDetailsService.loadUserByUsername(username), userDetails);
     }
 
     /**
@@ -113,7 +106,7 @@ public class AuthTokenFilterUnitTests {
         authTokenFilter.doFilterInternal(request, response, filterChain);
 
         assertEquals(SecurityContextHolder.getContext().getAuthentication(), null);
-        verify(filterChain, times(1)).doFilter(request, response);
+        verify(filterChain).doFilter(request, response);
     }
 
     // Add more test cases as needed

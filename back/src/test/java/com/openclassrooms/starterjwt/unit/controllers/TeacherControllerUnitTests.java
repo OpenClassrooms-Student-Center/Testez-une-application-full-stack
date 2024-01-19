@@ -13,6 +13,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.slf4j.Logger;
@@ -58,7 +59,7 @@ public class TeacherControllerUnitTests {
     /**
      * The controller under test
      */
-    @Mock
+    @InjectMocks
     private TeacherController teacherController;
 
     /**

@@ -14,6 +14,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -56,7 +57,7 @@ public class AuthControllerUnitTests {
         /**
          * The controller under test, injected with mock dependencies.
          */
-        @Mock
+        @InjectMocks
         private AuthController authController;
 
         /**
@@ -88,14 +89,17 @@ public class AuthControllerUnitTests {
          * {@link AuthController}.
          * This method creates a new instance of the {@code AuthController} with the
          * provided mock dependencies,
-         * including an authentication manager, password encoder, JWT utility class, and
+         * including an authentication manager, password encoder, JWT utility class,
+         * and
          * user repository.
-         * The initialized controller is then used in each test case for simulating HTTP
+         * The initialized controller is then used in each test case for simulating
+         * HTTP
          * requests and responses.
          */
         @BeforeEach
         void setUp() {
-                authController = new AuthController(authenticationManager, passwordEncoder, jwtUtils, userRepository);
+                authController = new AuthController(authenticationManager, passwordEncoder,
+                                jwtUtils, userRepository);
         }
 
         /**
