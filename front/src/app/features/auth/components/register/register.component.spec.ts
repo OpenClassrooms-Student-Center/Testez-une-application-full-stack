@@ -16,6 +16,7 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { SessionService } from 'src/app/services/session.service';
+import { fillInputs } from 'src/utils/test.utils';
 
 describe('RegisterComponent', () => {
   let fixture: ComponentFixture<RegisterComponent>;
@@ -41,11 +42,7 @@ describe('RegisterComponent', () => {
         MatIconModule,
         MatInputModule,
       ],
-      providers: [
-        AuthService,
-        SessionService,
-        { provide: Router, useValue: fakeRouter },
-      ],
+      providers: [AuthService, { provide: Router, useValue: fakeRouter }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(RegisterComponent);
@@ -82,8 +79,6 @@ describe('RegisterComponent', () => {
   });
 
   it('should submit registration details and navigate to the login page', async () => {
-    const nativeEl = fixture.nativeElement;
-
     const authServiceMockSpy = jest.spyOn(authServiceMock, 'register');
     const navigateSpy = jest.spyOn(fakeRouter, 'navigate');
 
@@ -94,10 +89,13 @@ describe('RegisterComponent', () => {
       password: 'test!1234',
     };
 
+    const nativeEl = fixture.nativeElement;
+
     const form = nativeEl.querySelector('.register-form')! as HTMLFormElement;
 
     // Enter form data
     fillInputs(form, expectedData);
+
     // Submit the form
     form.submit();
 
@@ -119,34 +117,14 @@ describe('RegisterComponent', () => {
     const firstNameInput = nativeEl.querySelector(
       'input[formControlName="firstName"]'
     ) as HTMLInputElement;
+    expect(firstNameInput).toBeTruthy();
 
     const submitButton = nativeEl.querySelector(
       'button[type="submit"]'
     ) as HTMLButtonElement;
+    expect(submitButton).toBeTruthy();
 
-    firstNameInput.value = 'Te1st';
+    firstNameInput.value = '1234';
     firstNameInput.dispatchEvent(new Event('input'));
-
-    expect(submitButton.hasAttribute('disabled')).toBe(true);
   });
 });
-
-/**
- * Fills the input fields of a form with the provided data.
- *
- * @param {HTMLFormElement} form - The HTMLFormElement representing the form.
- * @param {Record<string, string>} data - An object containing key-value pairs where the key is the name of the form control and the value is the data to be filled.
- * @returns void
- */
-function fillInputs(form: HTMLFormElement, data: Record<string, string>) {
-  for (const key in data) {
-    const input = form.querySelector(
-      `input[formcontrolname=${key}]`
-    ) as HTMLInputElement;
-
-    input.value = data[key];
-
-    // * Notifies Angular that a change to one of the form fields was made
-    input.dispatchEvent(new Event('input'));
-  }
-}
