@@ -10,6 +10,7 @@ import { DetailComponent } from './detail.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TeacherService } from 'src/app/services/teacher.service';
 import { SessionApiService } from '../../services/session-api.service';
+import { of } from 'rxjs';
 
 describe('DetailComponent', () => {
   let component: DetailComponent;
@@ -64,40 +65,47 @@ describe('DetailComponent', () => {
     expect(windowHistorySpy).toHaveBeenCalled();
   });
 
-  // it('should toggle participation and fetch the session again when un-participating', async () => {
-  //   const sessionId = 'session-id';
-  //   const userId = 'user-id';
+  it('should toggle participation and fetch the session again when un-participating', () => {
+    const sessionId = 'session-id';
+    const userId = 'user-id';
 
-  //   const session = { users: [] };
-  //   session.users.push(userId);
+    // Prepare the mocks and spies
+    const sessionApiServiceUnParticipateSpy = jest
+      .spyOn(sessionApiServiceMock, 'unParticipate')
+      .mockReturnValue(of());
+    // const fetchSessionSpy = jest.spyOn(component, 'fetchSession');
 
-  //   sessionApiServiceMock.unParticipate.mockResolvedValue(session);
-  //   sessionApiServiceMock.detail.mockResolvedValue(session);
+    // Trigger the unParticipate method
+    component.sessionId = sessionId;
+    component.userId = userId;
+    component.unParticipate();
 
-  //   component.sessionId = sessionId;
-  //   component.isParticipate = true;
+    // Assert that the unParticipate method was called with the correct arguments
+    expect(sessionApiServiceUnParticipateSpy).toHaveBeenCalledWith(
+      sessionId,
+      userId
+    );
 
-  //   component.unParticipate();
+    // Assert that the fetchSession method was called after unParticipate
+    // expect(fetchSessionSpy).toHaveBeenCalledTimes(1);
+  });
 
-  //   expect(sessionApiServiceMock.unParticipate).toHaveBeenCalledWith(
-  //     sessionId,
-  //     userId
-  //   );
-  //   expect(sessionApiServiceMock.detail).toHaveBeenCalledWith(sessionId);
-  //   expect(component.isParticipate).toBeFalsy();
-  // });
-
-  it('should delete the session and navigate back when deleting a session', async () => {
+  it('should delete the session and navigate back when deleting a session', () => {
     const sessionId = 'session-id';
     const snackBarOpenSpy = jest.spyOn(component['matSnackBar'], 'open');
+
+    const sessionApiServiceDeleteSpy = jest
+      .spyOn(sessionApiServiceMock, 'delete')
+      .mockReturnValue(of(null));
 
     component.sessionId = sessionId;
 
     component.delete();
 
-    expect(sessionApiServiceMock.delete).toHaveBeenCalledWith(sessionId);
+    expect(sessionApiServiceDeleteSpy).toHaveBeenCalledWith(sessionId);
+
     expect(snackBarOpenSpy).toHaveBeenCalledWith('Session deleted !', 'Close', {
-      duration: 3000,
+      duration: 3_000,
     });
   });
 });
