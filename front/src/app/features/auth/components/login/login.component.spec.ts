@@ -22,10 +22,11 @@ describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
-  let authServiceMock: AuthService;
   const fakeRouter = {
     navigate: (commands: any[], extras?, options?: any) => {},
   } as Router;
+
+  let authServiceMock: AuthService;
   let sessionServiceMock: SessionService;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
