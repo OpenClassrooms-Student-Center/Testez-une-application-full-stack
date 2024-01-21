@@ -37,7 +37,11 @@ describe('DetailComponent', () => {
         ReactiveFormsModule,
       ],
       declarations: [DetailComponent],
-      providers: [SessionApiService, TeacherService],
+      providers: [
+        { provide: SessionApiService, useValue: sessionApiServiceMock },
+        { provide: TeacherService, useValue: teacherServiceMock },
+        { provide: SessionService, useValue: sessionServiceMock },
+      ],
     }).compileComponents();
     fixture = TestBed.createComponent(DetailComponent);
     component = fixture.componentInstance;
