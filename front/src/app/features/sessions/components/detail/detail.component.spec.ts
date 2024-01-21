@@ -1,5 +1,12 @@
 import { HttpClientModule } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+  fakeAsync,
+  flushMicrotasks,
+  tick,
+  waitForAsync,
+} from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -21,13 +28,6 @@ describe('DetailComponent', () => {
 
   let teacherServiceMock: TeacherService;
 
-  const mockSessionService = {
-    sessionInformation: {
-      admin: true,
-      id: 1,
-    },
-  };
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -37,11 +37,7 @@ describe('DetailComponent', () => {
         ReactiveFormsModule,
       ],
       declarations: [DetailComponent],
-      providers: [
-        { provide: SessionService, useValue: mockSessionService },
-        SessionApiService,
-        TeacherService,
-      ],
+      providers: [SessionApiService, TeacherService],
     }).compileComponents();
     fixture = TestBed.createComponent(DetailComponent);
     component = fixture.componentInstance;
@@ -65,6 +61,25 @@ describe('DetailComponent', () => {
     expect(windowHistorySpy).toHaveBeenCalled();
   });
 
+  it('should participate in the session and fetch the session again', fakeAsync(() => {
+    const sessionId = 'session-id';
+    const userId = 'user-id';
+
+    const sessionApiServiceParticipateSpy = jest
+      .spyOn(sessionApiServiceMock, 'participate')
+      .mockReturnValue(of());
+
+    component.sessionId = sessionId;
+    component.userId = userId;
+
+    component.participate();
+
+    expect(sessionApiServiceParticipateSpy).toHaveBeenCalledWith(
+      sessionId,
+      userId
+    );
+  }));
+
   it('should toggle participation and fetch the session again when un-participating', () => {
     const sessionId = 'session-id';
     const userId = 'user-id';
@@ -73,7 +88,6 @@ describe('DetailComponent', () => {
     const sessionApiServiceUnParticipateSpy = jest
       .spyOn(sessionApiServiceMock, 'unParticipate')
       .mockReturnValue(of());
-    // const fetchSessionSpy = jest.spyOn(component, 'fetchSession');
 
     // Trigger the unParticipate method
     component.sessionId = sessionId;
@@ -85,9 +99,6 @@ describe('DetailComponent', () => {
       sessionId,
       userId
     );
-
-    // Assert that the fetchSession method was called after unParticipate
-    // expect(fetchSessionSpy).toHaveBeenCalledTimes(1);
   });
 
   it('should delete the session and navigate back when deleting a session', () => {

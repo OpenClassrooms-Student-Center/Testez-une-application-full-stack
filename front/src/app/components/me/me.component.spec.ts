@@ -13,18 +13,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 
 import { expect } from '@jest/globals';
+import { formatDateWithOptions } from 'src/utils/date.utils';
 
 describe('MeComponent', () => {
-  const fakeUser: Partial<User> = {
+  const fakeUser: User = {
     id: 1,
-    email: 'test@gmail.com',
+    email: 'user@user.com',
     password: '',
     firstName: 'John',
     lastName: 'Doe',
     admin: false,
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    createdAt: new Date('06/13/2002'),
+    updatedAt: new Date('06/13/2002'),
   };
+  const fakeAdmin: User = { ...fakeUser, admin: true };
 
   const fakeSessionService = {
     sessionInformation: {
@@ -48,6 +50,7 @@ describe('MeComponent', () => {
   } as MatSnackBar;
 
   let fixture: ComponentFixture<MeComponent>;
+  let component: MeComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -63,11 +66,13 @@ describe('MeComponent', () => {
         { provide: UserService, useValue: fakeUserService },
         { provide: Router, useValue: fakeRouter },
         { provide: MatSnackBar, useValue: fakeMatSnackBar },
-        { provide: Observable, useValue: Observable },
       ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MeComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
   });
 
   it('renders the title and navigation button', () => {
@@ -83,65 +88,122 @@ describe('MeComponent', () => {
   });
 
   describe('when user data is retrieved successfully', () => {
-    beforeEach(async () => {
-      (fakeUserService.getById as jest.Mock).mockResolvedValue(of(fakeUser));
-      await fixture.whenStable();
+    it('displays user name, email and creation & update dates without the delete button as an admin', () => {
+      component.user = fakeAdmin;
+
       fixture.detectChanges();
-    });
 
-    it('displays user name, email and creation & update dates', () => {
-      const nameElement = fixture.nativeElement.querySelector('p:nth-child(1)');
-      const emailElement =
-        fixture.nativeElement.querySelector('p:nth-child(2)');
-      const createAtElement =
-        fixture.nativeElement.querySelector('p:nth-child(3)');
-      const updatedAtElement =
-        fixture.nativeElement.querySelector('p:nth-child(4)');
+      const [
+        nameElement,
+        emailElement,
+        adminStatusParagraph,
+        createAtElement,
+        updatedAtElement,
+      ] = fixture.nativeElement.querySelectorAll('p');
 
-      expect(nameElement.textContent).toEqual(`Name: John DOE`);
-      expect(emailElement.textContent).toEqual(`Email: ${fakeUser.email}`);
+      expect(nameElement.textContent).toEqual(
+        `Name: ${fakeAdmin.firstName} ${fakeAdmin.lastName.toUpperCase()}`
+      );
+
+      expect(emailElement.textContent).toEqual(`Email: ${fakeAdmin.email}`);
+
+      expect(adminStatusParagraph.textContent).toEqual('You are admin');
+
       expect(createAtElement.textContent).toEqual(
-        `Create at: ${fakeUser?.createdAt?.toLocaleDateString()}`
+        `Create at:  ${formatDateWithOptions(fakeAdmin.createdAt, 'en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}`
       );
+
       expect(updatedAtElement.textContent).toEqual(
-        `Last update: ${fakeUser?.updatedAt?.toLocaleDateString()}`
+        `Last update:  ${formatDateWithOptions(
+          fakeAdmin.updatedAt as Date,
+          'en-US',
+          {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          }
+        )}`
       );
     });
 
-    it('does NOT display delete button if user is an admin', () => {
-      fakeUser.admin = true;
-      fixture.detectChanges();
-      const deleteBtn = fixture.nativeElement.querySelector(
-        'button[mat-raised-button][color=warn]'
-      );
-      expect(deleteBtn).toBeFalsy();
-    });
+    it('displays user name, email and creation & update dates with the delete button as user', () => {
+      component.user = fakeUser;
 
-    it('display delete button if user is NOT an admin', () => {
       fixture.detectChanges();
-      const deleteBtn = fixture.nativeElement.querySelector(
-        'button[mat-raised-button][color=warn]'
+
+      const [
+        nameElement,
+        emailElement,
+        deleteAccountParagraph,
+        createAtElement,
+        updatedAtElement,
+      ] = fixture.nativeElement.querySelectorAll('p') as HTMLParagraphElement[];
+
+      const deleteAccountButton = fixture.nativeElement.querySelector(
+        'button'
+      ) as HTMLButtonElement;
+
+      expect(nameElement.textContent).toEqual(
+        `Name: ${fakeUser.firstName} ${fakeUser.lastName.toUpperCase()}`
       );
-      expect(deleteBtn).toBeTruthy();
+
+      expect(emailElement.textContent).toEqual(`Email: ${fakeUser.email}`);
+
+      expect(deleteAccountParagraph.textContent).toEqual('Delete my account:');
+      expect(deleteAccountButton).toBeTruthy();
+
+      expect(createAtElement.textContent).toEqual(
+        `Create at:  ${formatDateWithOptions(fakeUser.createdAt, 'en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}`
+      );
+
+      expect(updatedAtElement.textContent).toEqual(
+        `Last update:  ${formatDateWithOptions(
+          fakeUser.updatedAt as Date,
+          'en-US',
+          {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          }
+        )}`
+      );
     });
 
     it('deletes the user when clicking the delete button', async () => {
+      component.user = fakeUser;
+
+      fixture.detectChanges();
+
+      jest
+        .spyOn(fakeUserService, 'delete')
+        .mockImplementation(() => Promise.resolve());
       jest.spyOn(fakeMatSnackBar, 'open');
       jest.spyOn(fakeRouter, 'navigate');
       jest.spyOn(fakeSessionService, 'logOut');
 
       fixture.detectChanges();
-      const deleteBtn = fixture.nativeElement.querySelector(
+      const deleteAccountButton = fixture.nativeElement.querySelector(
         'button[mat-raised-button][color=warn]'
       );
 
-      await deleteBtn.dispatchEvent(new MouseEvent('click'));
+      expect(deleteAccountButton).toBeTruthy();
+
+      await deleteAccountButton.dispatchEvent(new MouseEvent('click'));
 
       expect(fakeUserService.delete).toHaveBeenCalledTimes(1);
+
       expect(fakeMatSnackBar.open).toHaveBeenCalledWith(
         'Your account has been deleted !',
         'Close',
-        { duration: 3000 }
+        { duration: 3_000 }
       );
 
       expect(fakeRouter.navigate).toHaveBeenCalledWith(['/']);
