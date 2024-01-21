@@ -2,8 +2,8 @@
  * Formats a given date using provided formatting options.
  *
  * @param {Date | string | number} date - The date to format.
- * @param {Object} options - The formatting options for Intl.DateTimeFormat.
  * @param {string} [locale="en-US"] - The locale for formatting the date.
+ * @param {Object} options - The formatting options for `Intl.DateTimeFormat`.
  * @returns {string} The formatted date string, or an error message if formatting fails.
  */
 export function formatDateWithOptions(
