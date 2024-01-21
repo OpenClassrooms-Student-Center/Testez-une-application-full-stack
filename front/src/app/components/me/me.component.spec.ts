@@ -39,7 +39,7 @@ describe('MeComponent', () => {
 
   const fakeUserService = {
     getById: jest.fn(() => of(fakeUser)),
-    delete: jest.fn(() => Promise.resolve()),
+    delete: jest.fn(() => of(null)),
   };
 
   const fakeRouter = {
@@ -182,9 +182,7 @@ describe('MeComponent', () => {
 
       fixture.detectChanges();
 
-      jest
-        .spyOn(fakeUserService, 'delete')
-        .mockImplementation(() => Promise.resolve());
+      jest.spyOn(fakeUserService, 'delete').mockReturnValue(of(null));
       jest.spyOn(fakeMatSnackBar, 'open');
       jest.spyOn(fakeRouter, 'navigate');
       jest.spyOn(fakeSessionService, 'logOut');
@@ -196,7 +194,7 @@ describe('MeComponent', () => {
 
       expect(deleteAccountButton).toBeTruthy();
 
-      await deleteAccountButton.dispatchEvent(new MouseEvent('click'));
+      deleteAccountButton.dispatchEvent(new MouseEvent('click'));
 
       expect(fakeUserService.delete).toHaveBeenCalledTimes(1);
 
