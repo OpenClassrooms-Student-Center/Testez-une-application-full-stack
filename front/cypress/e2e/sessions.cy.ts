@@ -5,9 +5,23 @@ describe('Sessions page', () => {
     beforeEach(() => {
       cy.visit('/login');
 
+      cy.intercept('POST', '/api/auth/login', {
+        body: {
+          id: 1,
+          username: 'userName',
+          firstName: 'firstName',
+          lastName: 'lastName',
+          admin: true,
+        },
+      }).as('login');
+
       // * Admin account
       cy.get('input[formControlName=email]').type('yoga@studio.com');
       cy.get('input[formControlName=password]').type(`test!1234{enter}{enter}`);
+
+      cy.wait('@login').then(({ response }) => {
+        expect(response!.statusCode).to.equal(200);
+      });
     });
 
     it('Performs the following actions:', () => {
@@ -52,11 +66,30 @@ describe('Sessions page', () => {
       // ? Views session details and does not see the delete button
       // TODO: Navigate to the details page
       // TODO: Check for absence of delete button
+      //
       // ? Enables and disables session participation
       // TODO: Navigate to the details page
       // TODO: Enable participation
       // TODO: Disable participation
       // TODO: Check that participation state changes appropriately
+      // TODO: Check that we do not have the button to delete a session
+      // TODO: Navigate back to the sessions page clicking the button
+
+      // Navigates to the /sessions page
+      cy.visit('/sessions');
+
+      // Clicks the first session's Details button
+      cy.get('button[mat-icon-button][aria-label="Details"]').first().click();
+
+      // Checks for the absence of the delete button
+      cy.get('button[aria-label="Delete"]').should('not.exist');
+
+      // Toggles the participation state and confirms the change
+      cy.get('button[mat-menu-item]:contains("Join")').should('exist').click();
+      cy.get('button[mat-menu-item]:contains("Leave")').should('exist');
+
+      // Returns to the /sessions page
+      cy.get('a[href="/sessions"]').click();
     });
   });
 });
