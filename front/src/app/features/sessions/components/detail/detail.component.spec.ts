@@ -17,23 +17,85 @@ import { DetailComponent } from './detail.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TeacherService } from 'src/app/services/teacher.service';
 import { SessionApiService } from '../../services/session-api.service';
-import { of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
+import { Session } from '../../interfaces/session.interface';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
 describe('DetailComponent', () => {
   let component: DetailComponent;
   let fixture: ComponentFixture<DetailComponent>;
-  let sessionServiceMock: SessionService;
-
   let sessionApiServiceMock: SessionApiService;
 
   let teacherServiceMock: TeacherService;
 
+  const sessionInformation: SessionInformation = {
+    admin: true,
+    id: 69,
+    token: '',
+    type: '',
+    username: '',
+    firstName: '',
+    lastName: '',
+  };
+
+  const session: Session = {
+    users: [],
+    name: '',
+    description: '',
+    date: new Date(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    teacher_id: 0,
+  };
+
+  let sessionServiceMock: Partial<SessionService>;
+
   beforeEach(async () => {
+    sessionServiceMock = {
+      sessionInformation,
+      isLogged: true,
+      //@ts-ignore
+      isLoggedSubject: new BehaviorSubject<boolean>(true),
+      $isLogged: () => of(true),
+      logIn: (_user: SessionInformation): void => {},
+      logOut: (): void => {},
+      next: (): void => {},
+    };
+
+    sessionApiServiceMock = {
+      pathService: '/api/session',
+      httpClient: {
+        // @ts-ignore
+        get: jest.fn(() => of(session)),
+        // @ts-ignore
+        post: jest.fn(() => of(session)),
+        // @ts-ignore
+        put: jest.fn(() => of(session)),
+        // @ts-ignore
+        delete: jest.fn(() => of(null)),
+      },
+      all: jest.fn(() => of([])),
+      detail: jest.fn((sessionId: string) => of(session)),
+      create: jest.fn(() => of(session)),
+      update: jest.fn(() => of(session)),
+      delete: jest.fn(() => of(null)),
+      participate: jest.fn((_sessionId: string, _userId: string) => of()),
+      unParticipate: jest.fn((_sessionId: string, _userId: string) => of()),
+    };
+
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
         HttpClientTestingModule,
         MatSnackBarModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
         ReactiveFormsModule,
       ],
       declarations: [DetailComponent],
@@ -43,10 +105,10 @@ describe('DetailComponent', () => {
         { provide: SessionService, useValue: sessionServiceMock },
       ],
     }).compileComponents();
+
     fixture = TestBed.createComponent(DetailComponent);
     component = fixture.componentInstance;
 
-    sessionServiceMock = TestBed.inject(SessionService);
     sessionApiServiceMock = TestBed.inject(SessionApiService);
     teacherServiceMock = TestBed.inject(TeacherService);
 
@@ -65,7 +127,7 @@ describe('DetailComponent', () => {
     expect(windowHistorySpy).toHaveBeenCalled();
   });
 
-  it('should participate in the session and fetch the session again', fakeAsync(() => {
+  it('should participate in the session and fetch the session again', () => {
     const sessionId = 'session-id';
     const userId = 'user-id';
 
@@ -82,7 +144,7 @@ describe('DetailComponent', () => {
       sessionId,
       userId
     );
-  }));
+  });
 
   it('should toggle participation and fetch the session again when un-participating', () => {
     const sessionId = 'session-id';
