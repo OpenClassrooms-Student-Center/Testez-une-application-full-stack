@@ -6,15 +6,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { expect } from '@jest/globals';
 import { SessionService } from 'src/app/services/session.service';
 import { SessionApiService } from '../../services/session-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { of } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormComponent } from './form.component';
+import { Session } from '../../interfaces/session.interface';
+import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
 
 describe('FormComponent', () => {
   let component: FormComponent;
@@ -24,11 +29,68 @@ describe('FormComponent', () => {
   let sessionApiServiceMock: SessionApiService;
 
   let fakeActivatedRoute: ActivatedRoute;
-  let fakeRouter: Router;
+
+  const fakeRouter = {
+    navigate: (commands: any[], extras?, options?: any) => {},
+    url: '/sessions',
+  } as Router;
+
+  const session: Session = {
+    users: [],
+    name: '',
+    description: '',
+    date: new Date(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    teacher_id: 0,
+  };
+
+  const sessionInformation: SessionInformation = {
+    admin: true,
+    id: 69,
+    token: '',
+    type: '',
+    username: '',
+    firstName: '',
+    lastName: '',
+  };
+
+  sessionApiServiceMock = {
+    pathService: '/api/session',
+    httpClient: {
+      // @ts-ignore
+      get: jest.fn(() => of(session)),
+      // @ts-ignore
+      post: jest.fn(() => of(session)),
+      // @ts-ignore
+      put: jest.fn(() => of(session)),
+      // @ts-ignore
+      delete: jest.fn(() => of(null)),
+    },
+    all: jest.fn(() => of([])),
+    detail: jest.fn((sessionId: string) => of(session)),
+    create: jest.fn(() => of(session)),
+    update: jest.fn(() => of(session)),
+    delete: jest.fn(() => of(null)),
+    participate: jest.fn((_sessionId: string, _userId: string) => of()),
+    unParticipate: jest.fn((_sessionId: string, _userId: string) => of()),
+  };
+
+  //@ts-ignore
+  sessionServiceMock = {
+    sessionInformation,
+    isLogged: true,
+    isLoggedSubject: new BehaviorSubject<boolean>(true),
+    $isLogged: () => of(true),
+    logIn: (_user: SessionInformation): void => {},
+    logOut: (): void => {},
+    next: (): void => {},
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
+        NoopAnimationsModule,
         RouterTestingModule,
         HttpClientTestingModule,
         MatCardModule,
@@ -38,11 +100,10 @@ describe('FormComponent', () => {
         ReactiveFormsModule,
         MatSnackBarModule,
         MatSelectModule,
-        BrowserAnimationsModule,
       ],
       providers: [
-        SessionService,
-        SessionApiService,
+        { provide: SessionService, useValue: sessionServiceMock },
+        { provide: SessionApiService, useValue: sessionApiServiceMock },
         { provide: ActivatedRoute, useValue: fakeActivatedRoute },
         { provide: Router, useValue: fakeRouter },
       ],
@@ -51,9 +112,6 @@ describe('FormComponent', () => {
 
     fixture = TestBed.createComponent(FormComponent);
 
-    sessionServiceMock = TestBed.inject(SessionService);
-    sessionApiServiceMock = TestBed.inject(SessionApiService);
-
     component = fixture.componentInstance;
 
     fixture.detectChanges();
@@ -61,19 +119,7 @@ describe('FormComponent', () => {
 
   // Add tests for the first part of the code block here
 
-  it('should create', async () => {
-    sessionServiceMock.sessionInformation = {
-      id: 1,
-      firstName: 'John',
-      lastName: 'Doe',
-      username: 'user@user.com',
-      token: 'jwt',
-      type: 'session',
-      admin: true,
-    };
-    fixture.detectChanges();
-    component.ngOnInit();
-
+  it('should render the component without any issues', () => {
     expect(component).toBeTruthy();
   });
 
@@ -115,7 +161,7 @@ describe('FormComponent', () => {
           duration: 3_000,
         }
       );
-      expect(routerNavigateSpy).toHaveBeenCalledWith('/sessions');
+      expect(routerNavigateSpy).toHaveBeenCalledWith(['sessions']);
     });
   });
 });
