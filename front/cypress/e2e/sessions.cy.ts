@@ -38,54 +38,113 @@ const EDITED_TEST_SESSION = {
   name: 'EDITED TEST session',
 };
 
+export const TEACHERS_LIST = [
+  {
+    id: 1,
+    lastName: 'DELAHAYE',
+    firstName: 'Margot',
+    createdAt: '2024-01-12T15:33:42',
+    updatedAt: '2024-01-12T15:33:42',
+  },
+  {
+    id: 2,
+    lastName: 'THIERCELIN',
+    firstName: 'Hélène',
+    createdAt: '2024-01-12T15:33:42',
+    updatedAt: '2024-01-12T15:33:42',
+  },
+];
+
 describe('Sessions page', () => {
+  beforeEach(() => {
+    cy.intercept('GET', '/api/session', (req) => {
+      req.reply(SESSIONS_LIST);
+    });
+    cy.intercept('POST', '/api/session', (req) => {
+      SESSIONS_LIST.push(TEST_SESSION);
+
+      req.reply(TEST_SESSION);
+    });
+
+    cy.intercept('GET', `/api/session/${TEST_SESSION.id}`, TEST_SESSION);
+
+    cy.intercept('DELETE', `/api/session/${TEST_SESSION.id}`, (req) => {
+      SESSIONS_LIST.splice(0, 1);
+
+      req.reply(EDITED_TEST_SESSION);
+    });
+
+    cy.intercept('PUT', `/api/session/${TEST_SESSION.id}`, (req) => {
+      SESSIONS_LIST.splice(0, 1, EDITED_TEST_SESSION);
+
+      req.reply(EDITED_TEST_SESSION);
+    });
+
+    cy.intercept('GET', `/api/teacher`, TEACHERS_LIST);
+  });
   describe('As an admin', () => {
     beforeEach(() => {
       cy.visit('/login');
 
       cy.intercept('POST', '/api/auth/login', ADMIN_DETAILS);
 
-      // Log in with valid credentials
       cy.get('input[formControlName=email]').type('yoga@studio.com');
       cy.get('input[formControlName=password]').type('test!1234{enter}{enter}');
-
-      cy.intercept('GET', '/api/session', SESSIONS_LIST);
-      cy.intercept('GET', `/api/session/${TEST_SESSION.id}`, TEST_SESSION);
-
-      cy.intercept('DELETE', `/api/session/${TEST_SESSION.id}`, {
-        body: null,
-      });
-
-      cy.intercept(
-        'PUT',
-        `/api/session/${TEST_SESSION.id}`,
-        EDITED_TEST_SESSION
-      );
 
       cy.url().should('include', '/sessions');
     });
 
     it('Performs the following actions:', () => {
-      // ? Visits the list of sessions and sees all active sessions
-      // TODO: Check for presence of rows representing active sessions
-      // ? Creates a new session and adds it to the list
-      // TODO: Open the create session dialog
-      // TODO: Fill in the form fields
-      // TODO: Submit the form
-      // TODO: Check for the new session in the list
-      // ? Navigates to the details page and ensures data matches
-      // TODO: Navigate to the details page
-      // TODO: Extract session data from the page
-      // TODO: Make API call to retrieve the session from the backend
-      // TODO: Compare extracted data with received data
-      // ? Deletes a session
-      // TODO: Delete a session
-      // TODO: Refresh the list page
-      // TODO: Check that the session no longer appears in the list
-      // ? Edits a session and saves the changes
-      // TODO: Edit a session
-      // TODO: Save the changes
-      // TODO: Compare the saved data with the updated data in the backend
+      // * Visits the list of sessions and sees all active sessions
+      cy.get('mat-card').should('have.length', 2);
+      cy.get('mat-card-title').should('contain', TEST_SESSION.name);
+
+      // * Creates a new session and adds it to the list
+      cy.get('button[mat-raised-button] span').contains('Create').click();
+      cy.get('input[formControlName="name"]').type(TEST_SESSION.name);
+
+      const formattedDate: string = TEST_SESSION.date.split('T')[0];
+
+      cy.get('input[formControlName="date"]').type(formattedDate);
+      cy.get('mat-select[formControlName="teacher_id"]').click();
+
+      cy.get('mat-option').contains(TEACHERS_LIST[0].firstName).click();
+      cy.get('textarea[formControlName="description"]').type(
+        TEST_SESSION.description
+      );
+
+      cy.get('button[mat-raised-button]').contains('Save').click();
+
+      cy.get('snack-bar-container')
+        .contains('Session created !')
+        .should('exist');
+      cy.get('snack-bar-container button span').contains('Close').click();
+
+      cy.get('mat-card').should('have.length', 3);
+
+      // * Edits a session and saves the changes
+      cy.get('button[mat-raised-button] span').contains('Edit').click();
+      cy.get('input[formControlName="name"]')
+        .clear()
+        .type('EDITED TEST session');
+      cy.get('button[mat-raised-button]').contains('Save').click();
+
+      cy.get('snack-bar-container')
+        .contains('Session updated !')
+        .should('exist');
+      cy.get('snack-bar-container button span').contains('Close').click();
+      cy.get('mat-card-title').should('contain', EDITED_TEST_SESSION.name);
+
+      // * Deletes a session
+      cy.get('button').contains('Detail').click();
+      cy.get('button').contains('Delete').click();
+
+      cy.get('snack-bar-container')
+        .contains('Session deleted !')
+        .should('exist');
+      cy.get('snack-bar-container button span').contains('Close').click();
+
+      cy.get('mat-card').should('have.length', 2);
     });
   });
 
@@ -95,30 +154,26 @@ describe('Sessions page', () => {
 
       cy.intercept('POST', '/api/auth/login', USER_DETAILS);
 
-      // Log in with valid credentials
       cy.get('input[formControlName=email]').type('user@user.com');
       cy.get('input[formControlName=password]').type('test!1234{enter}{enter}');
 
-      cy.intercept('GET', '/api/session', SESSIONS_LIST);
-      cy.intercept('GET', `/api/session/${TEST_SESSION.id}`, TEST_SESSION);
-
-      cy.intercept('DELETE', `/api/session/${TEST_SESSION.id}`, {
-        body: null,
+      cy.intercept('GET', '/api/session', (req) => {
+        req.reply(SESSIONS_LIST);
       });
-
-      cy.intercept(
-        'PUT',
-        `/api/session/${TEST_SESSION.id}`,
-        EDITED_TEST_SESSION
-      );
 
       cy.url().should('include', '/sessions');
     });
 
     it('Performs the following actions:', () => {
+      // * Navigate to the details page
+
       // ? Views session details and does not see the delete button
-      // TODO: Navigate to the details page
-      // TODO: Check for absence of delete button
+      cy.get('button[mat-raised-button] span')
+        .contains('Edit')
+        .should('not.exist');
+
+      cy.get('button[mat-raised-button] span').contains('Detail').click();
+      cy.get('button').contains('Delete').should('not.exist');
       //
       // ? Enables and disables session participation
       // TODO: Navigate to the details page
