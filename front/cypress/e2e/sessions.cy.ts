@@ -26,7 +26,7 @@ const TEST_SESSION = {
   date: '2024-01-13T13:27:22.000+00:00',
   teacher_id: 1,
   description: 'TEST description for the session',
-  users: [],
+  users: [2],
   createdAt: '2024-01-13T14:24:33',
   updatedAt: '2024-01-26T09:20:22',
 };
@@ -68,6 +68,28 @@ describe('Sessions page', () => {
 
     cy.intercept('GET', `/api/session/${TEST_SESSION.id}`, TEST_SESSION);
 
+    cy.intercept(
+      'POST',
+      `/api/session/${TEST_SESSION.id}/participate/${USER_DETAILS.id}`,
+      (req) => {
+        req.reply({
+          statusCode: 200,
+          body: {},
+        });
+      }
+    );
+
+    cy.intercept(
+      'DELETE',
+      `/api/session/${TEST_SESSION.id}/participate/${USER_DETAILS.id}`,
+      (req) => {
+        req.reply({
+          statusCode: 200,
+          body: {},
+        });
+      }
+    );
+
     cy.intercept('DELETE', `/api/session/${TEST_SESSION.id}`, (req) => {
       SESSIONS_LIST.splice(0, 1);
 
@@ -81,6 +103,11 @@ describe('Sessions page', () => {
     });
 
     cy.intercept('GET', `/api/teacher`, TEACHERS_LIST);
+    cy.intercept(
+      'GET',
+      `/api/teacher/${TEACHERS_LIST[0].id}`,
+      TEACHERS_LIST[0]
+    );
   });
   describe('As an admin', () => {
     beforeEach(() => {
@@ -174,14 +201,22 @@ describe('Sessions page', () => {
 
       cy.get('button[mat-raised-button] span').contains('Detail').click();
       cy.get('button').contains('Delete').should('not.exist');
-      //
-      // ? Enables and disables session participation
-      // TODO: Navigate to the details page
-      // TODO: Enable participation
-      // TODO: Disable participation
-      // TODO: Check that participation state changes appropriately
-      // TODO: Check that we do not have the button to delete a session
-      // TODO: Navigate back to the sessions page clicking the button
+
+      cy.get('button[mat-raised-button]').click();
+      cy.get('button[mat-raised-button]').contains('Do not participate');
+      //? Here we need to check that we have 0 attendees, then once we click on the "Participate" button we have 1, ofc vice versa
+      cy.get('span')
+        .contains('attendees')
+        .then((span: JQuery<HTMLSpanElement>) => {
+          const text: string = span.text();
+
+          const attendeesCount: number = Number(text.match(/\d+/)![0]);
+
+          expect(attendeesCount).equal(1);
+        });
+
+      cy.get('button[mat-raised-button]').click();
+      cy.get('button[mat-raised-button]').contains('Do not participate');
     });
   });
 });
