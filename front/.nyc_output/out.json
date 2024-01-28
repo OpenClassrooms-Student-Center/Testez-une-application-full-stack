@@ -385,36 +385,33 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 564,
-      "4": 3,
-      "5": 3,
-      "6": 3,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 3,
-      "11": 3,
-      "12": 3,
-      "13": 3,
-      "14": 3
+      "0": 21,
+      "1": 21,
+      "2": 21,
+      "3": 1311,
+      "4": 13,
+      "5": 13,
+      "6": 13,
+      "7": 2,
+      "8": 2,
+      "9": 2,
+      "10": 15,
+      "11": 21,
+      "12": 21,
+      "13": 21,
+      "14": 21
     },
     "f": {
-      "0": 3,
-      "1": 3,
-      "2": 564,
-      "3": 3,
-      "4": 0,
-      "5": 3,
-      "6": 3
+      "0": 21,
+      "1": 21,
+      "2": 1311,
+      "3": 13,
+      "4": 2,
+      "5": 15,
+      "6": 21
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [21, 21]
     },
     "inputSourceMap": {
       "version": 3,
@@ -438,17 +435,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\services\\session.service.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/services/session.service.ts"
       ],
       "sourcesContent": [
-        "import { Injectable } from '@angular/core';\r\nimport { BehaviorSubject, Observable } from 'rxjs';\r\nimport { SessionInformation } from '../interfaces/sessionInformation.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class SessionService {\r\n\r\n  public isLogged = false;\r\n  public sessionInformation: SessionInformation | undefined;\r\n\r\n  private isLoggedSubject = new BehaviorSubject<boolean>(this.isLogged);\r\n\r\n  public $isLogged(): Observable<boolean> {\r\n    return this.isLoggedSubject.asObservable();\r\n  }\r\n\r\n  public logIn(user: SessionInformation): void {\r\n    this.sessionInformation = user;\r\n    this.isLogged = true;\r\n    this.next();\r\n  }\r\n\r\n  public logOut(): void {\r\n    this.sessionInformation = undefined;\r\n    this.isLogged = false;\r\n    this.next();\r\n  }\r\n\r\n  private next(): void {\r\n    this.isLoggedSubject.next(this.isLogged);\r\n  }\r\n}\r\n"
+        "import { Injectable } from '@angular/core';\nimport { BehaviorSubject, Observable } from 'rxjs';\nimport { SessionInformation } from '../interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SessionService {\n\n  public isLogged = false;\n  public sessionInformation: SessionInformation | undefined;\n\n  private isLoggedSubject = new BehaviorSubject<boolean>(this.isLogged);\n\n  public $isLogged(): Observable<boolean> {\n    return this.isLoggedSubject.asObservable();\n  }\n\n  public logIn(user: SessionInformation): void {\n    this.sessionInformation = user;\n    this.isLogged = true;\n    this.next();\n  }\n\n  public logOut(): void {\n    this.sessionInformation = undefined;\n    this.isLogged = false;\n    this.next();\n  }\n\n  private next(): void {\n    this.isLoggedSubject.next(this.isLogged);\n  }\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "77b413e4ee276fb93d9c58f8eece4f5eb73ccca7"
+    "hash": "4b9e6e10d1c1347e43e7f5271a8a9341b22f3757"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\services\\user.service.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\services\\user.service.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/services/user.service.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/services/user.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -702,28 +699,25 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 0,
-      "2": 0,
-      "3": 0,
+      "0": 21,
+      "1": 1,
+      "2": 1,
+      "3": 1,
       "4": 0,
-      "5": 3,
-      "6": 0,
-      "7": 3,
-      "8": 3
+      "5": 21,
+      "6": 1,
+      "7": 21,
+      "8": 21
     },
     "f": {
-      "0": 3,
-      "1": 0,
-      "2": 0,
+      "0": 21,
+      "1": 1,
+      "2": 1,
       "3": 0,
-      "4": 0
+      "4": 1
     },
     "b": {
-      "0": [
-        0,
-        0
-      ]
+      "0": [1, 1]
     },
     "inputSourceMap": {
       "version": 3,
@@ -743,17 +737,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\services\\user.service.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/services/user.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { User } from '../interfaces/user.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class UserService {\r\n\r\n  private pathService = 'api/user';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public getById(id: string): Observable<User> {\r\n    return this.httpClient.get<User>(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public delete(id: string): Observable<any> {\r\n    return this.httpClient.delete(`${this.pathService}/${id}`);\r\n  }\r\n}\r\n"
+        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { User } from '../interfaces/user.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class UserService {\n\n  private pathService = 'api/user';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public getById(id: string): Observable<User> {\n    return this.httpClient.get<User>(`${this.pathService}/${id}`);\n  }\n\n  public delete(id: string): Observable<any> {\n    return this.httpClient.delete(`${this.pathService}/${id}`);\n  }\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "9f2ee7027557fc366964321bc153e786b7483f65"
+    "hash": "90ab3b4d886fdaf5eff51a2326c6c99cf0c39ea8"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\components\\me\\me.component.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\components\\me\\me.component.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/components/me/me.component.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/components/me/me.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2229,10 +2223,10 @@
       }
     },
     "s": {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
+      "0": 5,
+      "1": 1,
+      "2": 1,
+      "3": 1,
       "4": 0,
       "5": 0,
       "6": 0,
@@ -2249,120 +2243,99 @@
       "17": 0,
       "18": 0,
       "19": 0,
-      "20": 0,
-      "21": 0,
-      "22": 0,
-      "23": 0,
-      "24": 0,
-      "25": 0,
-      "26": 0,
-      "27": 0,
-      "28": 0,
-      "29": 0,
-      "30": 0,
-      "31": 0,
-      "32": 0,
-      "33": 0,
-      "34": 0,
-      "35": 0,
-      "36": 0,
-      "37": 0,
-      "38": 0,
-      "39": 0,
-      "40": 0,
-      "41": 0,
-      "42": 0,
-      "43": 0,
-      "44": 0,
-      "45": 0,
-      "46": 0,
-      "47": 0,
-      "48": 0,
-      "49": 0,
-      "50": 0,
-      "51": 0,
-      "52": 0,
-      "53": 0,
-      "54": 0,
-      "55": 0,
-      "56": 3,
-      "57": 0,
-      "58": 0,
-      "59": 0,
-      "60": 0,
-      "61": 0,
-      "62": 0,
-      "63": 0,
+      "20": 5,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "25": 1,
+      "26": 1,
+      "27": 1,
+      "28": 1,
+      "29": 1,
+      "30": 1,
+      "31": 1,
+      "32": 1,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 1,
+      "37": 1,
+      "38": 1,
+      "39": 1,
+      "40": 1,
+      "41": 1,
+      "42": 5,
+      "43": 4,
+      "44": 4,
+      "45": 4,
+      "46": 4,
+      "47": 4,
+      "48": 4,
+      "49": 4,
+      "50": 4,
+      "51": 4,
+      "52": 4,
+      "53": 4,
+      "54": 4,
+      "55": 4,
+      "56": 21,
+      "57": 1,
+      "58": 1,
+      "59": 1,
+      "60": 1,
+      "61": 1,
+      "62": 1,
+      "63": 1,
       "64": 0,
       "65": 0,
       "66": 0,
       "67": 0,
-      "68": 3,
-      "69": 0,
-      "70": 3,
-      "71": 0,
-      "72": 0,
-      "73": 0,
-      "74": 0,
-      "75": 0,
-      "76": 0,
-      "77": 0,
-      "78": 0,
-      "79": 0,
-      "80": 0,
-      "81": 0,
-      "82": 0,
-      "83": 0,
-      "84": 0,
-      "85": 0,
-      "86": 0,
-      "87": 3
+      "68": 21,
+      "69": 1,
+      "70": 21,
+      "71": 10,
+      "72": 1,
+      "73": 1,
+      "74": 1,
+      "75": 1,
+      "76": 1,
+      "77": 1,
+      "78": 1,
+      "79": 1,
+      "80": 1,
+      "81": 1,
+      "82": 1,
+      "83": 1,
+      "84": 10,
+      "85": 9,
+      "86": 9,
+      "87": 21
     },
     "f": {
-      "0": 0,
+      "0": 5,
       "1": 0,
       "2": 0,
-      "3": 0,
-      "4": 3,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
+      "3": 5,
+      "4": 21,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
       "9": 0,
       "10": 0,
-      "11": 0,
-      "12": 0,
-      "13": 0
+      "11": 1,
+      "12": 10,
+      "13": 1
     },
     "b": {
-      "0": [
-        0,
-        0
-      ],
-      "1": [
-        0,
-        0
-      ],
-      "2": [
-        0,
-        0
-      ],
-      "3": [
-        0,
-        0
-      ],
-      "4": [
-        0,
-        0
-      ],
-      "5": [
-        0,
-        0
-      ],
-      "6": [
-        0,
-        0
-      ]
+      "0": [1, 4],
+      "1": [0, 0],
+      "2": [1, 4],
+      "3": [4, 1],
+      "4": [1, 1],
+      "5": [1, 9],
+      "6": [9, 1]
     },
     "inputSourceMap": {
       "version": 3,
@@ -2400,19 +2373,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\components\\me\\me.component.html",
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\components\\me\\me.component.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/components/me/me.component.html",
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/components/me/me.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"m3\">\r\n  <mat-card>\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <button mat-icon-button (click)=\"back()\">\r\n          <mat-icon>arrow_back</mat-icon>\r\n        </button>\r\n        <h1>User information</h1>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-content>\r\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\r\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\r\n        <p>Email: {{ user.email }}</p>\r\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\r\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\r\n          <p>Delete my account:</p>\r\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n        </div>\r\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\r\n\r\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\r\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\r\n        </div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
-        "import { Component, OnInit } from '@angular/core';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { Router } from '@angular/router';\r\nimport { User } from '../../interfaces/user.interface';\r\nimport { SessionService } from '../../services/session.service';\r\nimport { UserService } from '../../services/user.service';\r\n\r\n@Component({\r\n  selector: 'app-me',\r\n  templateUrl: './me.component.html',\r\n  styleUrls: ['./me.component.scss']\r\n})\r\nexport class MeComponent implements OnInit {\r\n\r\n  public user: User | undefined;\r\n\r\n  constructor(private router: Router,\r\n              private sessionService: SessionService,\r\n              private matSnackBar: MatSnackBar,\r\n              private userService: UserService) {\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    this.userService\r\n      .getById(this.sessionService.sessionInformation!.id.toString())\r\n      .subscribe((user: User) => this.user = user);\r\n  }\r\n\r\n  public back(): void {\r\n    window.history.back();\r\n  }\r\n\r\n  public delete(): void {\r\n    this.userService\r\n      .delete(this.sessionService.sessionInformation!.id.toString())\r\n      .subscribe((_) => {\r\n        this.matSnackBar.open(\"Your account has been deleted !\", 'Close', { duration: 3000 });\r\n        this.sessionService.logOut();\r\n        this.router.navigate(['/']);\r\n      })\r\n  }\r\n\r\n}\r\n"
+        "<div class=\"m3\">\n  <mat-card>\n    <mat-card-title>\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <button mat-icon-button (click)=\"back()\">\n          <mat-icon>arrow_back</mat-icon>\n        </button>\n        <h1>User information</h1>\n      </div>\n    </mat-card-title>\n    <mat-card-content>\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\n        <p>Email: {{ user.email }}</p>\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\n          <p>Delete my account:</p>\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\n            <mat-icon>delete</mat-icon>\n            <span class=\"ml1\">Detail</span>\n          </button>\n        </div>\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\n\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\n        </div>\n      </div>\n    </mat-card-content>\n  </mat-card>\n</div>\n",
+        "import { Component, OnInit } from '@angular/core';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { Router } from '@angular/router';\nimport { User } from '../../interfaces/user.interface';\nimport { SessionService } from '../../services/session.service';\nimport { UserService } from '../../services/user.service';\n\n@Component({\n  selector: 'app-me',\n  templateUrl: './me.component.html',\n  styleUrls: ['./me.component.scss']\n})\nexport class MeComponent implements OnInit {\n\n  public user: User | undefined;\n\n  constructor(private router: Router,\n              private sessionService: SessionService,\n              private matSnackBar: MatSnackBar,\n              private userService: UserService) {\n  }\n\n  public ngOnInit(): void {\n    this.userService\n      .getById(this.sessionService.sessionInformation!.id.toString())\n      .subscribe((user: User) => this.user = user);\n  }\n\n  public back(): void {\n    window.history.back();\n  }\n\n  public delete(): void {\n    this.userService\n      .delete(this.sessionService.sessionInformation!.id.toString())\n      .subscribe((_) => {\n        this.matSnackBar.open(\"Your account has been deleted !\", 'Close', { duration: 3000 });\n        this.sessionService.logOut();\n        this.router.navigate(['/']);\n      })\n  }\n\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "f8526e2cdaa6fac3e849795d6397a29da42b345c"
+    "hash": "93591662858ad8e60c0b447f552bd8660e476e54"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\components\\not-found\\not-found.component.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\components\\not-found\\not-found.component.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/components/not-found/not-found.component.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/components/not-found/not-found.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2654,30 +2627,24 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 0,
-      "3": 3,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 3
+      "0": 21,
+      "1": 21,
+      "2": 2,
+      "3": 21,
+      "4": 6,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 21
     },
     "f": {
-      "0": 3,
-      "1": 0,
-      "2": 0
+      "0": 21,
+      "1": 2,
+      "2": 6
     },
     "b": {
-      "0": [
-        0,
-        0
-      ],
-      "1": [
-        0,
-        0
-      ]
+      "0": [2, 2],
+      "1": [2, 4]
     },
     "inputSourceMap": {
       "version": 3,
@@ -2693,19 +2660,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\components\\not-found\\not-found.component.ts",
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\components\\not-found\\not-found.component.html"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/components/not-found/not-found.component.ts",
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/components/not-found/not-found.component.html"
       ],
       "sourcesContent": [
-        "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-not-found',\r\n  templateUrl: './not-found.component.html',\r\n  styleUrls: ['./not-found.component.scss']\r\n})\r\nexport class NotFoundComponent {\r\n}\r\n",
-        "<div class=\"flex justify-center mt3\">\r\n        <h1>Page not found !</h1>\r\n</div>"
+        "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-not-found',\n  templateUrl: './not-found.component.html',\n  styleUrls: ['./not-found.component.scss']\n})\nexport class NotFoundComponent {\n}\n",
+        "<div class=\"flex justify-center mt3\">\n        <h1>Page not found !</h1>\n</div>"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "68da37b2f5cbf42ae342e2976c766b88b3404998"
+    "hash": "ceff16086b9bbcd24745f6ee0dceccd532744e51"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\guards\\auth.guard.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\guards\\auth.guard.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/guards/auth.guard.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/guards/auth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2991,33 +2958,27 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3,
+      "0": 21,
+      "1": 13,
+      "2": 13,
+      "3": 15,
       "4": 0,
       "5": 0,
-      "6": 3,
-      "7": 3,
-      "8": 3,
-      "9": 3,
-      "10": 3
+      "6": 15,
+      "7": 21,
+      "8": 13,
+      "9": 21,
+      "10": 21
     },
     "f": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3
+      "0": 21,
+      "1": 13,
+      "2": 15,
+      "3": 13
     },
     "b": {
-      "0": [
-        0,
-        3
-      ],
-      "1": [
-        3,
-        3
-      ]
+      "0": [0, 15],
+      "1": [13, 13]
     },
     "inputSourceMap": {
       "version": 3,
@@ -3037,17 +2998,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\guards\\auth.guard.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/guards/auth.guard.ts"
       ],
       "sourcesContent": [
-        "import {Injectable} from \"@angular/core\";\r\nimport {CanActivate, Router} from \"@angular/router\"; \r\nimport { SessionService } from \"../services/session.service\";\r\n\r\n@Injectable({providedIn: 'root'})\r\nexport class AuthGuard implements CanActivate {\r\n\r\n  constructor( \r\n    private router: Router,\r\n    private sessionService: SessionService,\r\n  ) {\r\n  }\r\n\r\n  public canActivate(): boolean {\r\n    if (!this.sessionService.isLogged) {\r\n      this.router.navigate(['login']);\r\n      return false;\r\n    }\r\n    return true;\r\n  }\r\n}"
+        "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class AuthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (!this.sessionService.isLogged) {\n      this.router.navigate(['login']);\n      return false;\n    }\n    return true;\n  }\n}"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "014e3d0309d39789aa5a2263ae21e729a0b616b6"
+    "hash": "1d34dcc2fc2d617d658e2f2bd3034b3514c476ed"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\guards\\unauth.guard.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\guards\\unauth.guard.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/guards/unauth.guard.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/guards/unauth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3333,33 +3294,27 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3,
+      "0": 21,
+      "1": 19,
+      "2": 19,
+      "3": 21,
       "4": 0,
       "5": 0,
-      "6": 3,
-      "7": 3,
-      "8": 3,
-      "9": 3,
-      "10": 3
+      "6": 21,
+      "7": 21,
+      "8": 19,
+      "9": 21,
+      "10": 21
     },
     "f": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3
+      "0": 21,
+      "1": 19,
+      "2": 21,
+      "3": 19
     },
     "b": {
-      "0": [
-        0,
-        3
-      ],
-      "1": [
-        3,
-        3
-      ]
+      "0": [0, 21],
+      "1": [19, 19]
     },
     "inputSourceMap": {
       "version": 3,
@@ -3379,17 +3334,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\guards\\unauth.guard.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/guards/unauth.guard.ts"
       ],
       "sourcesContent": [
-        "import {Injectable} from \"@angular/core\";\r\nimport {CanActivate, Router} from \"@angular/router\"; \r\nimport { SessionService } from \"../services/session.service\";\r\n\r\n@Injectable({providedIn: 'root'})\r\nexport class UnauthGuard implements CanActivate {\r\n\r\n  constructor( \r\n    private router: Router,\r\n    private sessionService: SessionService,\r\n  ) {\r\n  }\r\n\r\n  public canActivate(): boolean {\r\n    if (this.sessionService.isLogged) {\r\n      this.router.navigate(['rentals']);\r\n      return false;\r\n    }\r\n    return true;\r\n  }\r\n}"
+        "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class UnauthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (this.sessionService.isLogged) {\n      this.router.navigate(['rentals']);\n      return false;\n    }\n    return true;\n  }\n}"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "ee3e2a7bf245be15996598387724a857241c2769"
+    "hash": "a2201c6fda7146df57232f9cf3e88acb2bd331cb"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app-routing.module.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app-routing.module.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app-routing.module.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3687,31 +3642,28 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3,
-      "4": 3,
-      "5": 3,
-      "6": 3,
-      "7": 3,
-      "8": 3,
-      "9": 3,
-      "10": 3
+      "0": 21,
+      "1": 21,
+      "2": 21,
+      "3": 13,
+      "4": 13,
+      "5": 21,
+      "6": 21,
+      "7": 21,
+      "8": 21,
+      "9": 21,
+      "10": 21
     },
     "f": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3,
-      "4": 3,
-      "5": 3
+      "0": 21,
+      "1": 21,
+      "2": 13,
+      "3": 13,
+      "4": 21,
+      "5": 21
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [21, 21]
     },
     "inputSourceMap": {
       "version": 3,
@@ -3737,17 +3689,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app-routing.module.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app-routing.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { MeComponent } from './components/me/me.component';\r\nimport { NotFoundComponent } from './components/not-found/not-found.component';\r\nimport { AuthGuard } from './guards/auth.guard';\r\nimport { UnauthGuard } from './guards/unauth.guard';\r\n\r\nconst routes: Routes = [\r\n  {\r\n    path: '',\r\n    canActivate: [UnauthGuard],\r\n    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)\r\n  },\r\n  {\r\n    path: 'sessions',\r\n    canActivate: [AuthGuard],\r\n    loadChildren: () => import('./features/sessions/sessions.module').then(m => m.SessionsModule)\r\n  },\r\n  {\r\n    path: 'me',\r\n    canActivate: [AuthGuard],\r\n    component: MeComponent\r\n  },\r\n  { path: '404', component: NotFoundComponent },\r\n  { path: '**', redirectTo: '404' }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule {\r\n}\r\n"
+        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { MeComponent } from './components/me/me.component';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { AuthGuard } from './guards/auth.guard';\nimport { UnauthGuard } from './guards/unauth.guard';\n\nconst routes: Routes = [\n  {\n    path: '',\n    canActivate: [UnauthGuard],\n    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)\n  },\n  {\n    path: 'sessions',\n    canActivate: [AuthGuard],\n    loadChildren: () => import('./features/sessions/sessions.module').then(m => m.SessionsModule)\n  },\n  {\n    path: 'me',\n    canActivate: [AuthGuard],\n    component: MeComponent\n  },\n  { path: '404', component: NotFoundComponent },\n  { path: '**', redirectTo: '404' }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule {\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "3a6036745c2270cc35f512419bfe394d5f01d631"
+    "hash": "9710336396ad4db57fe6e6fc4d46b41b29a085b7"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\services\\auth.service.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\services\\auth.service.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/services/auth.service.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/services/auth.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -4001,28 +3953,25 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 0,
-      "4": 3,
-      "5": 3,
-      "6": 3,
-      "7": 3,
-      "8": 3
+      "0": 21,
+      "1": 21,
+      "2": 21,
+      "3": 4,
+      "4": 15,
+      "5": 21,
+      "6": 21,
+      "7": 21,
+      "8": 21
     },
     "f": {
-      "0": 3,
-      "1": 3,
-      "2": 0,
-      "3": 3,
-      "4": 3
+      "0": 21,
+      "1": 21,
+      "2": 4,
+      "3": 15,
+      "4": 21
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [21, 21]
     },
     "inputSourceMap": {
       "version": 3,
@@ -4043,17 +3992,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\services\\auth.service.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/services/auth.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { LoginRequest } from '../interfaces/loginRequest.interface';\r\nimport { RegisterRequest } from '../interfaces/registerRequest.interface';\r\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class AuthService {\r\n\r\n  private pathService = 'api/auth';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public register(registerRequest: RegisterRequest): Observable<void> {\r\n    return this.httpClient.post<void>(`${this.pathService}/register`, registerRequest);\r\n  }\r\n\r\n  public login(loginRequest: LoginRequest): Observable<SessionInformation> {\r\n    return this.httpClient.post<SessionInformation>(`${this.pathService}/login`, loginRequest);\r\n  }\r\n}\r\n"
+        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { LoginRequest } from '../interfaces/loginRequest.interface';\nimport { RegisterRequest } from '../interfaces/registerRequest.interface';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class AuthService {\n\n  private pathService = 'api/auth';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public register(registerRequest: RegisterRequest): Observable<void> {\n    return this.httpClient.post<void>(`${this.pathService}/register`, registerRequest);\n  }\n\n  public login(loginRequest: LoginRequest): Observable<SessionInformation> {\n    return this.httpClient.post<SessionInformation>(`${this.pathService}/login`, loginRequest);\n  }\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "3ac48ede920218308e1416e62515e68ae361afd0"
+    "hash": "4c8585417e955605e765ca2b488ba7147c8b785f"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app.component.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app.component.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app.component.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -4937,87 +4886,72 @@
       }
     },
     "s": {
-      "0": 437,
-      "1": 3,
-      "2": 3,
-      "3": 3,
-      "4": 3,
-      "5": 3,
-      "6": 3,
-      "7": 3,
-      "8": 3,
-      "9": 3,
-      "10": 0,
-      "11": 0,
-      "12": 0,
-      "13": 3,
-      "14": 3,
-      "15": 133,
-      "16": 3,
-      "17": 3,
-      "18": 3,
-      "19": 3,
-      "20": 3,
-      "21": 3,
-      "22": 3,
-      "23": 3,
-      "24": 3,
-      "25": 3,
-      "26": 564,
-      "27": 0,
-      "28": 0,
-      "29": 3,
-      "30": 3,
-      "31": 3,
-      "32": 567,
-      "33": 3,
-      "34": 3,
-      "35": 3,
-      "36": 3,
-      "37": 3,
-      "38": 3,
-      "39": 3,
-      "40": 3,
-      "41": 3,
-      "42": 3,
-      "43": 567,
-      "44": 564,
-      "45": 564,
-      "46": 564,
-      "47": 3
+      "0": 422,
+      "1": 13,
+      "2": 13,
+      "3": 13,
+      "4": 13,
+      "5": 13,
+      "6": 13,
+      "7": 13,
+      "8": 13,
+      "9": 13,
+      "10": 2,
+      "11": 2,
+      "12": 2,
+      "13": 13,
+      "14": 13,
+      "15": 925,
+      "16": 23,
+      "17": 23,
+      "18": 23,
+      "19": 23,
+      "20": 23,
+      "21": 23,
+      "22": 21,
+      "23": 21,
+      "24": 21,
+      "25": 21,
+      "26": 1311,
+      "27": 2,
+      "28": 2,
+      "29": 21,
+      "30": 21,
+      "31": 21,
+      "32": 1332,
+      "33": 21,
+      "34": 21,
+      "35": 21,
+      "36": 21,
+      "37": 21,
+      "38": 21,
+      "39": 21,
+      "40": 21,
+      "41": 21,
+      "42": 21,
+      "43": 1332,
+      "44": 1311,
+      "45": 1311,
+      "46": 1311,
+      "47": 21
     },
     "f": {
-      "0": 437,
-      "1": 0,
-      "2": 133,
-      "3": 3,
-      "4": 3,
-      "5": 564,
-      "6": 0,
-      "7": 3,
-      "8": 567
+      "0": 422,
+      "1": 2,
+      "2": 925,
+      "3": 21,
+      "4": 21,
+      "5": 1311,
+      "6": 2,
+      "7": 21,
+      "8": 1332
     },
     "b": {
-      "0": [
-        3,
-        434
-      ],
-      "1": [
-        3,
-        130
-      ],
-      "2": [
-        3,
-        3
-      ],
-      "3": [
-        3,
-        564
-      ],
-      "4": [
-        564,
-        3
-      ]
+      "0": [13, 409],
+      "1": [23, 902],
+      "2": [21, 21],
+      "3": [21, 1311],
+      "4": [1311, 21]
     },
     "inputSourceMap": {
       "version": 3,
@@ -5042,19 +4976,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app.component.html",
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app.component.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app.component.html",
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"app\">\r\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n    <span>Yoga app</span>\r\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\r\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\r\n      <span routerLink=\"me\" class=\"link\">Account</span>\r\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\r\n    </div>\r\n    <ng-template #notLogged>\r\n      <div>\r\n        <span routerLink=\"login\" class=\"link\">Login</span>\r\n        <span routerLink=\"register\" class=\"link\">Register</span>\r\n      </div>\r\n    </ng-template>\r\n  </mat-toolbar>\r\n  <div>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n",
-        "import { Component, OnInit } from '@angular/core';\r\nimport { Router } from '@angular/router';\r\nimport { Observable } from 'rxjs';\r\nimport { AuthService } from './features/auth/services/auth.service';\r\nimport { SessionInformation } from './interfaces/sessionInformation.interface';\r\nimport { SessionService } from './services/session.service';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  constructor(\r\n    private authService: AuthService,\r\n    private router: Router,\r\n    private sessionService: SessionService) {\r\n  }\r\n\r\n  public $isLogged(): Observable<boolean> {\r\n    return this.sessionService.$isLogged();\r\n  }\r\n\r\n  public logout(): void {\r\n    this.sessionService.logOut();\r\n    this.router.navigate([''])\r\n  }\r\n}\r\n"
+        "<div class=\"app\">\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n    <span>Yoga app</span>\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\n      <span routerLink=\"me\" class=\"link\">Account</span>\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\n    </div>\n    <ng-template #notLogged>\n      <div>\n        <span routerLink=\"login\" class=\"link\">Login</span>\n        <span routerLink=\"register\" class=\"link\">Register</span>\n      </div>\n    </ng-template>\n  </mat-toolbar>\n  <div>\n    <router-outlet></router-outlet>\n  </div>\n</div>\n",
+        "import { Component, OnInit } from '@angular/core';\nimport { Router } from '@angular/router';\nimport { Observable } from 'rxjs';\nimport { AuthService } from './features/auth/services/auth.service';\nimport { SessionInformation } from './interfaces/sessionInformation.interface';\nimport { SessionService } from './services/session.service';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  constructor(\n    private authService: AuthService,\n    private router: Router,\n    private sessionService: SessionService) {\n  }\n\n  public $isLogged(): Observable<boolean> {\n    return this.sessionService.$isLogged();\n  }\n\n  public logout(): void {\n    this.sessionService.logOut();\n    this.router.navigate([''])\n  }\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "fb060c5c4e268634e598f859aaf18ba107402217"
+    "hash": "5e7a5df67d70868378e97651e99d92fa6d04ce83"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\interceptors\\jwt.interceptor.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\interceptors\\jwt.interceptor.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/interceptors/jwt.interceptor.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/interceptors/jwt.interceptor.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5320,31 +5254,25 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 36,
-      "3": 33,
-      "4": 36,
-      "5": 3,
-      "6": 3,
-      "7": 3,
-      "8": 3
+      "0": 21,
+      "1": 19,
+      "2": 56,
+      "3": 37,
+      "4": 56,
+      "5": 21,
+      "6": 19,
+      "7": 21,
+      "8": 21
     },
     "f": {
-      "0": 3,
-      "1": 3,
-      "2": 36,
-      "3": 3
+      "0": 21,
+      "1": 19,
+      "2": 56,
+      "3": 19
     },
     "b": {
-      "0": [
-        33,
-        3
-      ],
-      "1": [
-        3,
-        3
-      ]
+      "0": [37, 19],
+      "1": [19, 19]
     },
     "inputSourceMap": {
       "version": 3,
@@ -5371,17 +5299,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\interceptors\\jwt.interceptor.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/interceptors/jwt.interceptor.ts"
       ],
       "sourcesContent": [
-        "import { HttpHandler, HttpInterceptor, HttpRequest } from \"@angular/common/http\";\r\nimport { Injectable } from \"@angular/core\";\r\nimport { SessionService } from '../services/session.service';\r\n\r\n@Injectable({ providedIn: 'root' })\r\nexport class JwtInterceptor implements HttpInterceptor {\r\n  constructor(private sessionService: SessionService) {}\r\n\r\n  public intercept(request: HttpRequest<any>, next: HttpHandler) {\r\n    if (this.sessionService.isLogged) {\r\n      request = request.clone({\r\n        setHeaders: {\r\n          Authorization: `Bearer ${this.sessionService.sessionInformation!.token}`,\r\n        },\r\n      });\r\n    }\r\n    return next.handle(request);\r\n  }\r\n}\r\n"
+        "import { HttpHandler, HttpInterceptor, HttpRequest } from \"@angular/common/http\";\nimport { Injectable } from \"@angular/core\";\nimport { SessionService } from '../services/session.service';\n\n@Injectable({ providedIn: 'root' })\nexport class JwtInterceptor implements HttpInterceptor {\n  constructor(private sessionService: SessionService) {}\n\n  public intercept(request: HttpRequest<any>, next: HttpHandler) {\n    if (this.sessionService.isLogged) {\n      request = request.clone({\n        setHeaders: {\n          Authorization: `Bearer ${this.sessionService.sessionInformation!.token}`,\n        },\n      });\n    }\n    return next.handle(request);\n  }\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "49dbec218902f4d9f50ac74b0f3c9be44c7bdead"
+    "hash": "109abbdc93e69715e4ca201691df21e7119578da"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app.module.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app.module.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app.module.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5543,23 +5471,20 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3,
-      "4": 3,
-      "5": 3,
-      "6": 3
+      "0": 21,
+      "1": 21,
+      "2": 21,
+      "3": 21,
+      "4": 21,
+      "5": 21,
+      "6": 21
     },
     "f": {
-      "0": 3,
-      "1": 3
+      "0": 21,
+      "1": 21
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [21, 21]
     },
     "inputSourceMap": {
       "version": 3,
@@ -5588,17 +5513,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\app.module.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/app.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\r\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { NotFoundComponent } from './components/not-found/not-found.component';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatToolbarModule } from '@angular/material/toolbar';\r\nimport { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';\r\nimport { JwtInterceptor } from './interceptors/jwt.interceptor';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { MeComponent } from './components/me/me.component';\r\n\r\nconst materialModule = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatIconModule,\r\n  MatSnackBarModule,\r\n  MatToolbarModule,\r\n]\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    NotFoundComponent,\r\n    MeComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule, \r\n    FlexLayoutModule,\r\n    HttpClientModule,\r\n    ...materialModule\r\n  ],\r\n  providers: [\r\n    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n"
+        "import { NgModule } from '@angular/core';\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';\nimport { JwtInterceptor } from './interceptors/jwt.interceptor';\nimport { MatCardModule } from '@angular/material/card';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { MeComponent } from './components/me/me.component';\n\nconst materialModule = [\n  MatButtonModule,\n  MatCardModule,\n  MatIconModule,\n  MatSnackBarModule,\n  MatToolbarModule,\n]\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    NotFoundComponent,\n    MeComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule, \n    FlexLayoutModule,\n    HttpClientModule,\n    ...materialModule\n  ],\n  providers: [\n    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },\n  ],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "694b57615502517b2c4ae6fc0ee765df951030dd"
+    "hash": "bdc29884fde7776985d0c208896121591ece3af9"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\environments\\environment.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\environments\\environment.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/environments/environment.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/environments/environment.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5614,31 +5539,27 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 3
+      "0": 21
     },
     "f": {},
     "b": {},
     "inputSourceMap": {
       "version": 3,
       "mappings": "AAAA,OAAO,MAAMA,WAAW,GAAG;EACzBC,OAAO,EAAE,qBADgB;EAEzBC,UAAU,EAAE;AAFa,CAApB",
-      "names": [
-        "environment",
-        "baseUrl",
-        "production"
-      ],
+      "names": ["environment", "baseUrl", "production"],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\environments\\environment.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/environments/environment.ts"
       ],
       "sourcesContent": [
-        "export const environment = {\r\n  baseUrl: 'localhost:8080/api/',\r\n  production: false\r\n};\r\n"
+        "export const environment = {\n  baseUrl: 'localhost:8080/api/',\n  production: false\n};\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "503249ef2e58bd4b3a6b33ff63631ef50710e5e4"
+    "hash": "f147d1e846d0e25631d30d92e9ee8cfda298f991"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\main.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\main.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/main.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/main.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5746,19 +5667,16 @@
       }
     },
     "s": {
-      "0": 3,
+      "0": 21,
       "1": 0,
-      "2": 3,
+      "2": 21,
       "3": 0
     },
     "f": {
       "0": 0
     },
     "b": {
-      "0": [
-        0,
-        3
-      ]
+      "0": [0, 21]
     },
     "inputSourceMap": {
       "version": 3,
@@ -5777,17 +5695,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\main.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/main.ts"
       ],
       "sourcesContent": [
-        "import { enableProdMode } from '@angular/core';\r\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\r\n\r\nimport { AppModule } from './app/app.module';\r\nimport { environment } from './environments/environment';\r\n\r\nif (environment.production) {\r\n  enableProdMode();\r\n}\r\n\r\nplatformBrowserDynamic().bootstrapModule(AppModule)\r\n  .catch(err => console.error(err));\r\n"
+        "import { enableProdMode } from '@angular/core';\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n\nimport { AppModule } from './app/app.module';\nimport { environment } from './environments/environment';\n\nif (environment.production) {\n  enableProdMode();\n}\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "a5c70d00f6d026b81b8eeea0f306113a9df9d712"
+    "hash": "8a1e59e266b97f56b80c16768bfe98243919bdd3"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/components/login/login.component.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/components/login/login.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -6821,101 +6739,83 @@
       }
     },
     "s": {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 3,
-      "5": 3,
-      "6": 3,
-      "7": 3,
-      "8": 3,
-      "9": 3,
-      "10": 3,
-      "11": 3,
-      "12": 3,
-      "13": 3,
-      "14": 3,
-      "15": 3,
-      "16": 0,
-      "17": 3,
-      "18": 3,
-      "19": 3,
-      "20": 127,
-      "21": 3,
-      "22": 3,
-      "23": 3,
-      "24": 3,
-      "25": 3,
-      "26": 3,
-      "27": 3,
-      "28": 3,
-      "29": 3,
-      "30": 3,
-      "31": 3,
-      "32": 3,
-      "33": 3,
-      "34": 6,
-      "35": 3,
-      "36": 3,
-      "37": 3,
-      "38": 3,
-      "39": 3,
-      "40": 3,
-      "41": 3,
-      "42": 3,
-      "43": 127,
-      "44": 124,
-      "45": 124,
-      "46": 124,
-      "47": 124,
-      "48": 124,
-      "49": 124,
-      "50": 124,
-      "51": 124,
-      "52": 124,
-      "53": 124,
-      "54": 124,
-      "55": 124,
-      "56": 3
+      "0": 6,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 21,
+      "5": 17,
+      "6": 17,
+      "7": 17,
+      "8": 17,
+      "9": 17,
+      "10": 17,
+      "11": 17,
+      "12": 15,
+      "13": 15,
+      "14": 13,
+      "15": 13,
+      "16": 2,
+      "17": 21,
+      "18": 17,
+      "19": 21,
+      "20": 651,
+      "21": 17,
+      "22": 17,
+      "23": 17,
+      "24": 17,
+      "25": 17,
+      "26": 15,
+      "27": 17,
+      "28": 17,
+      "29": 17,
+      "30": 17,
+      "31": 17,
+      "32": 17,
+      "33": 17,
+      "34": 30,
+      "35": 17,
+      "36": 17,
+      "37": 17,
+      "38": 17,
+      "39": 17,
+      "40": 17,
+      "41": 17,
+      "42": 17,
+      "43": 651,
+      "44": 634,
+      "45": 634,
+      "46": 634,
+      "47": 634,
+      "48": 634,
+      "49": 634,
+      "50": 634,
+      "51": 634,
+      "52": 634,
+      "53": 634,
+      "54": 634,
+      "55": 634,
+      "56": 21
     },
     "f": {
-      "0": 0,
-      "1": 3,
-      "2": 3,
-      "3": 3,
-      "4": 3,
-      "5": 0,
-      "6": 3,
-      "7": 127,
-      "8": 3,
-      "9": 6
+      "0": 6,
+      "1": 21,
+      "2": 17,
+      "3": 15,
+      "4": 13,
+      "5": 2,
+      "6": 17,
+      "7": 651,
+      "8": 15,
+      "9": 30
     },
     "b": {
-      "0": [
-        0,
-        0
-      ],
-      "1": [
-        3,
-        3
-      ],
-      "2": [
-        3,
-        124
-      ],
-      "3": [
-        124,
-        3
-      ],
-      "4": [
-        118,
-        6
-      ],
-      "5": [
-        118,
-        6
-      ]
+      "0": [2, 4],
+      "1": [17, 17],
+      "2": [17, 634],
+      "3": [634, 17],
+      "4": [604, 30],
+      "5": [604, 30]
     },
     "inputSourceMap": {
       "version": 3,
@@ -6955,19 +6855,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\components\\login\\login.component.html"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/components/login/login.component.ts",
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/components/login/login.component.html"
       ],
       "sourcesContent": [
-        "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\r\nimport { SessionService } from 'src/app/services/session.service';\r\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\r\nimport { AuthService } from '../../services/auth.service';\r\n\r\n@Component({\r\n  selector: 'app-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.scss']\r\n})\r\nexport class LoginComponent {\r\n  public hide = true;\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(private authService: AuthService,\r\n              private fb: FormBuilder,\r\n              private router: Router,\r\n              private sessionService: SessionService) {\r\n  }\r\n\r\n  public submit(): void {\r\n    const loginRequest = this.form.value as LoginRequest;\r\n    this.authService.login(loginRequest).subscribe({\r\n      next: (response: SessionInformation) => {\r\n        this.sessionService.logIn(response);\r\n        this.router.navigate(['/sessions']);\r\n      },\r\n      error: error => this.onError = true,\r\n    });\r\n  }\r\n}\r\n",
-        "<div class=\"login\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Login</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"login-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"Password\"\r\n                        formControlName=\"password\">\r\n                    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\r\n                        [attr.aria-pressed]=\"hide\">\r\n                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\r\n                    </button>\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <p *ngIf=\"onError\" class=\"error\">An error occurred</p>\r\n        </form>\r\n    </mat-card>\r\n</div>"
+        "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\nimport { SessionService } from 'src/app/services/session.service';\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\nimport { AuthService } from '../../services/auth.service';\n\n@Component({\n  selector: 'app-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss']\n})\nexport class LoginComponent {\n  public hide = true;\n  public onError = false;\n\n  public form = this.fb.group({\n    email: [\n      '',\n      [\n        Validators.required,\n        Validators.email\n      ]\n    ],\n    password: [\n      '',\n      [\n        Validators.required,\n        Validators.min(3)\n      ]\n    ]\n  });\n\n  constructor(private authService: AuthService,\n              private fb: FormBuilder,\n              private router: Router,\n              private sessionService: SessionService) {\n  }\n\n  public submit(): void {\n    const loginRequest = this.form.value as LoginRequest;\n    this.authService.login(loginRequest).subscribe({\n      next: (response: SessionInformation) => {\n        this.sessionService.logIn(response);\n        this.router.navigate(['/sessions']);\n      },\n      error: error => this.onError = true,\n    });\n  }\n}\n",
+        "<div class=\"login\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card>\n        <mat-card-header fxLayoutAlign=\"center center\">\n            <mat-card-title>Login</mat-card-title>\n        </mat-card-header>\n        <form class=\"login-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n            <mat-card-content fxLayout=\"column\">\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput [type]=\"hide ? 'password' : 'text'\" placeholder=\"Password\"\n                        formControlName=\"password\">\n                    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\n                        [attr.aria-pressed]=\"hide\">\n                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n                    </button>\n                </mat-form-field>\n            </mat-card-content>\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\n            <p *ngIf=\"onError\" class=\"error\">An error occurred</p>\n        </form>\n    </mat-card>\n</div>"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "bf89fd42360df2fe4499a739b339298fba658a9c"
+    "hash": "2ccff29a7d627c458981ada75b3be82cb3fea823"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/components/register/register.component.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/components/register/register.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -7825,84 +7725,72 @@
       }
     },
     "s": {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 3,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 0,
-      "11": 0,
-      "12": 0,
-      "13": 0,
-      "14": 3,
-      "15": 0,
-      "16": 3,
-      "17": 0,
-      "18": 0,
-      "19": 0,
-      "20": 0,
-      "21": 0,
-      "22": 0,
-      "23": 0,
-      "24": 0,
-      "25": 0,
-      "26": 0,
-      "27": 0,
-      "28": 0,
-      "29": 0,
-      "30": 0,
-      "31": 0,
-      "32": 0,
-      "33": 0,
-      "34": 0,
-      "35": 0,
-      "36": 0,
-      "37": 0,
-      "38": 0,
-      "39": 0,
-      "40": 0,
-      "41": 0,
-      "42": 0,
-      "43": 0,
-      "44": 0,
-      "45": 0,
-      "46": 0,
-      "47": 0,
-      "48": 3
+      "0": 6,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 21,
+      "5": 4,
+      "6": 4,
+      "7": 4,
+      "8": 4,
+      "9": 4,
+      "10": 4,
+      "11": 4,
+      "12": 2,
+      "13": 2,
+      "14": 21,
+      "15": 4,
+      "16": 21,
+      "17": 208,
+      "18": 4,
+      "19": 4,
+      "20": 4,
+      "21": 4,
+      "22": 4,
+      "23": 4,
+      "24": 4,
+      "25": 4,
+      "26": 4,
+      "27": 4,
+      "28": 4,
+      "29": 4,
+      "30": 4,
+      "31": 4,
+      "32": 4,
+      "33": 4,
+      "34": 4,
+      "35": 4,
+      "36": 4,
+      "37": 4,
+      "38": 4,
+      "39": 4,
+      "40": 4,
+      "41": 208,
+      "42": 204,
+      "43": 204,
+      "44": 204,
+      "45": 204,
+      "46": 204,
+      "47": 204,
+      "48": 21
     },
     "f": {
-      "0": 0,
-      "1": 3,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0
+      "0": 6,
+      "1": 21,
+      "2": 4,
+      "3": 4,
+      "4": 2,
+      "5": 2,
+      "6": 4,
+      "7": 208,
+      "8": 4
     },
     "b": {
-      "0": [
-        0,
-        0
-      ],
-      "1": [
-        0,
-        0
-      ],
-      "2": [
-        0,
-        0
-      ],
-      "3": [
-        0,
-        0
-      ]
+      "0": [2, 4],
+      "1": [4, 4],
+      "2": [4, 204],
+      "3": [204, 4]
     },
     "inputSourceMap": {
       "version": 3,
@@ -7943,19 +7831,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\components\\register\\register.component.html"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/components/register/register.component.ts",
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/components/register/register.component.html"
       ],
       "sourcesContent": [
-        "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { AuthService } from '../../services/auth.service';\r\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\r\n\r\n@Component({\r\n  selector: 'app-register',\r\n  templateUrl: './register.component.html',\r\n  styleUrls: ['./register.component.scss']\r\n})\r\nexport class RegisterComponent {\r\n\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    firstName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(20)\r\n      ]\r\n    ],\r\n    lastName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(20)\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3),\r\n        Validators.max(40)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(private authService: AuthService,\r\n              private fb: FormBuilder,\r\n              private router: Router) {\r\n  }\r\n\r\n  public submit(): void {\r\n    const registerRequest = this.form.value as RegisterRequest;\r\n    this.authService.register(registerRequest).subscribe({\r\n        next: (_: void) => this.router.navigate(['/login']),\r\n        error: _ => this.onError = true,\r\n      }\r\n    );\r\n  }\r\n\r\n}\r\n",
-        "<div class=\"register\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <mat-card>\r\n        <mat-card-header fxLayoutAlign=\"center center\">\r\n            <mat-card-title>Register</mat-card-title>\r\n        </mat-card-header>\r\n        <form class=\"register-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\r\n            <mat-card-content fxLayout=\"column\">\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\r\n                </mat-form-field>\r\n                <mat-form-field fxFlex>\r\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\r\n                </mat-form-field>\r\n            </mat-card-content>\r\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\r\n            <span *ngIf=\"onError\" class=\"error ml2\">An error occurred</span>\r\n        </form>\r\n    </mat-card>\r\n</div>\r\n"
+        "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { AuthService } from '../../services/auth.service';\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\n\n@Component({\n  selector: 'app-register',\n  templateUrl: './register.component.html',\n  styleUrls: ['./register.component.scss']\n})\nexport class RegisterComponent {\n\n  public onError = false;\n\n  public form = this.fb.group({\n    email: [\n      '',\n      [\n        Validators.required,\n        Validators.email\n      ]\n    ],\n    firstName: [\n      '',\n      [\n        Validators.required,\n        Validators.min(3),\n        Validators.max(20)\n      ]\n    ],\n    lastName: [\n      '',\n      [\n        Validators.required,\n        Validators.min(3),\n        Validators.max(20)\n      ]\n    ],\n    password: [\n      '',\n      [\n        Validators.required,\n        Validators.min(3),\n        Validators.max(40)\n      ]\n    ]\n  });\n\n  constructor(private authService: AuthService,\n              private fb: FormBuilder,\n              private router: Router) {\n  }\n\n  public submit(): void {\n    const registerRequest = this.form.value as RegisterRequest;\n    this.authService.register(registerRequest).subscribe({\n        next: (_: void) => this.router.navigate(['/login']),\n        error: _ => this.onError = true,\n      }\n    );\n  }\n\n}\n",
+        "<div class=\"register\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card>\n        <mat-card-header fxLayoutAlign=\"center center\">\n            <mat-card-title>Register</mat-card-title>\n        </mat-card-header>\n        <form class=\"register-form\" [formGroup]=\"form\" (ngSubmit)=\"submit()\">\n            <mat-card-content fxLayout=\"column\">\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Email\" formControlName=\"email\">\n                </mat-form-field>\n                <mat-form-field fxFlex>\n                    <input matInput placeholder=\"Password\" formControlName=\"password\">\n                </mat-form-field>\n            </mat-card-content>\n            <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"form.invalid\">Submit</button>\n            <span *ngIf=\"onError\" class=\"error ml2\">An error occurred</span>\n        </form>\n    </mat-card>\n</div>\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "3e0421ae368f1e7c3510c10dea7b0ebdd198df77"
+    "hash": "bdceb8f1412a8052ce56ef79196c92b2958ba656"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\auth-routing.module.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\auth-routing.module.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/auth-routing.module.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/auth-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8117,23 +8005,20 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3,
-      "4": 3,
-      "5": 3,
-      "6": 3
+      "0": 21,
+      "1": 21,
+      "2": 21,
+      "3": 21,
+      "4": 21,
+      "5": 21,
+      "6": 21
     },
     "f": {
-      "0": 3,
-      "1": 3
+      "0": 21,
+      "1": 21
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [21, 21]
     },
     "inputSourceMap": {
       "version": 3,
@@ -8151,17 +8036,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\auth-routing.module.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/auth-routing.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { LoginComponent } from './components/login/login.component';\r\nimport { RegisterComponent } from './components/register/register.component';\r\n\r\n\r\nconst routes: Routes = [\r\n  { title: 'Login', path: 'login', component: LoginComponent },\r\n  { title: 'Register', path: 'register', component: RegisterComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AuthRoutingModule { }\r\n"
+        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { LoginComponent } from './components/login/login.component';\nimport { RegisterComponent } from './components/register/register.component';\n\n\nconst routes: Routes = [\n  { title: 'Login', path: 'login', component: LoginComponent },\n  { title: 'Register', path: 'register', component: RegisterComponent }\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class AuthRoutingModule { }\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "bff112db1656edabb3985ef3b122157a074aec27"
+    "hash": "b3fe0c9bf4ad70898dabd9150de8e4b57abc1f33"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\auth.module.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\auth.module.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/auth.module.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/auth.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8323,23 +8208,20 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3,
-      "4": 3,
-      "5": 3,
-      "6": 3
+      "0": 21,
+      "1": 21,
+      "2": 21,
+      "3": 21,
+      "4": 21,
+      "5": 21,
+      "6": 21
     },
     "f": {
-      "0": 3,
-      "1": 3
+      "0": 21,
+      "1": 21
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [21, 21]
     },
     "inputSourceMap": {
       "version": 3,
@@ -8360,17 +8242,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\auth\\auth.module.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/auth/auth.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { AuthRoutingModule } from './auth-routing.module';\r\nimport { RegisterComponent } from './components/register/register.component';\r\nimport { LoginComponent } from './components/login/login.component';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\nconst materialModules = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatFormFieldModule,\r\n  MatIconModule,\r\n  MatInputModule\r\n]\r\n\r\n@NgModule({\r\n  declarations: [\r\n    RegisterComponent,\r\n    LoginComponent\r\n  ],\r\n  imports: [\r\n    AuthRoutingModule,\r\n    CommonModule,\r\n    FlexLayoutModule,\r\n    FormsModule,\r\n    ReactiveFormsModule,\r\n    ...materialModules\r\n  ]\r\n})\r\nexport class AuthModule { }\r\n"
+        "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { AuthRoutingModule } from './auth-routing.module';\nimport { RegisterComponent } from './components/register/register.component';\nimport { LoginComponent } from './components/login/login.component';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatInputModule } from '@angular/material/input';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { MatIconModule } from '@angular/material/icon';\n\nconst materialModules = [\n  MatButtonModule,\n  MatCardModule,\n  MatFormFieldModule,\n  MatIconModule,\n  MatInputModule\n]\n\n@NgModule({\n  declarations: [\n    RegisterComponent,\n    LoginComponent\n  ],\n  imports: [\n    AuthRoutingModule,\n    CommonModule,\n    FlexLayoutModule,\n    FormsModule,\n    ReactiveFormsModule,\n    ...materialModules\n  ]\n})\nexport class AuthModule { }\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "8b5fb0bb7714751cbc2ea606268f71a60fcc1400"
+    "hash": "5bea0e3b5cc083d8dd6f3fa0c3b9e221ceea8d3c"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/services/session-api.service.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/services/session-api.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8794,38 +8676,35 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 9,
-      "4": 7,
+      "0": 13,
+      "1": 13,
+      "2": 13,
+      "3": 20,
+      "4": 4,
       "5": 2,
       "6": 2,
       "7": 2,
       "8": 0,
-      "9": 2,
-      "10": 3,
-      "11": 3,
-      "12": 3,
-      "13": 3
+      "9": 0,
+      "10": 13,
+      "11": 13,
+      "12": 13,
+      "13": 13
     },
     "f": {
-      "0": 3,
-      "1": 3,
-      "2": 9,
-      "3": 7,
+      "0": 13,
+      "1": 13,
+      "2": 20,
+      "3": 4,
       "4": 2,
       "5": 2,
       "6": 2,
       "7": 0,
-      "8": 2,
-      "9": 3
+      "8": 0,
+      "9": 13
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [13, 13]
     },
     "inputSourceMap": {
       "version": 3,
@@ -8854,17 +8733,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/services/session-api.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { Session } from '../interfaces/session.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class SessionApiService {\r\n\r\n  private pathService = 'api/session';\r\n\r\n  constructor(private httpClient: HttpClient) {\r\n  }\r\n\r\n  public all(): Observable<Session[]> {\r\n    return this.httpClient.get<Session[]>(this.pathService);\r\n  }\r\n\r\n  public detail(id: string): Observable<Session> {\r\n    return this.httpClient.get<Session>(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public delete(id: string): Observable<any> {\r\n    return this.httpClient.delete(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public create(session: Session): Observable<Session> {\r\n    return this.httpClient.post<Session>(this.pathService, session);\r\n  }\r\n\r\n  public update(id: string, session: Session): Observable<Session> {\r\n    return this.httpClient.put<Session>(`${this.pathService}/${id}`, session);\r\n  }\r\n\r\n  public participate(id: string, userId: string): Observable<void> {\r\n    return this.httpClient.post<void>(`${this.pathService}/${id}/participate/${userId}`, null);\r\n  }\r\n\r\n  public unParticipate(id: string, userId: string): Observable<void> {\r\n    return this.httpClient.delete<void>(`${this.pathService}/${id}/participate/${userId}`);\r\n  }\r\n\r\n}\r\n"
+        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { Session } from '../interfaces/session.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SessionApiService {\n\n  private pathService = 'api/session';\n\n  constructor(private httpClient: HttpClient) {\n  }\n\n  public all(): Observable<Session[]> {\n    return this.httpClient.get<Session[]>(this.pathService);\n  }\n\n  public detail(id: string): Observable<Session> {\n    return this.httpClient.get<Session>(`${this.pathService}/${id}`);\n  }\n\n  public delete(id: string): Observable<any> {\n    return this.httpClient.delete(`${this.pathService}/${id}`);\n  }\n\n  public create(session: Session): Observable<Session> {\n    return this.httpClient.post<Session>(this.pathService, session);\n  }\n\n  public update(id: string, session: Session): Observable<Session> {\n    return this.httpClient.put<Session>(`${this.pathService}/${id}`, session);\n  }\n\n  public participate(id: string, userId: string): Observable<void> {\n    return this.httpClient.post<void>(`${this.pathService}/${id}/participate/${userId}`, null);\n  }\n\n  public unParticipate(id: string, userId: string): Observable<void> {\n    return this.httpClient.delete<void>(`${this.pathService}/${id}/participate/${userId}`);\n  }\n\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "2a716613dcaa487bc65e2bfe5b47e624203a416e"
+    "hash": "dfa4a4b9e4ab2feb76dde488c910f4a1813536a3"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\services\\teacher.service.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\services\\teacher.service.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/services/teacher.service.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/services/teacher.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -9118,28 +8997,25 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
+      "0": 13,
+      "1": 6,
+      "2": 6,
       "3": 4,
-      "4": 5,
-      "5": 3,
-      "6": 3,
-      "7": 3,
-      "8": 3
+      "4": 2,
+      "5": 13,
+      "6": 6,
+      "7": 13,
+      "8": 13
     },
     "f": {
-      "0": 3,
-      "1": 3,
+      "0": 13,
+      "1": 6,
       "2": 4,
-      "3": 5,
-      "4": 3
+      "3": 2,
+      "4": 6
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [6, 6]
     },
     "inputSourceMap": {
       "version": 3,
@@ -9159,17 +9035,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\services\\teacher.service.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/services/teacher.service.ts"
       ],
       "sourcesContent": [
-        "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { Teacher } from '../interfaces/teacher.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class TeacherService {\r\n\r\n  private pathService = 'api/teacher';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public all(): Observable<Teacher[]> {\r\n    return this.httpClient.get<Teacher[]>(this.pathService);\r\n  }\r\n\r\n  public detail(id: string): Observable<Teacher> {\r\n    return this.httpClient.get<Teacher>(`${this.pathService}/${id}`);\r\n  }\r\n}\r\n"
+        "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { Teacher } from '../interfaces/teacher.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class TeacherService {\n\n  private pathService = 'api/teacher';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public all(): Observable<Teacher[]> {\n    return this.httpClient.get<Teacher[]>(this.pathService);\n  }\n\n  public detail(id: string): Observable<Teacher> {\n    return this.httpClient.get<Teacher>(`${this.pathService}/${id}`);\n  }\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "7964c60dcbd22befaaf03fe3bbc3cfd0612b3aff"
+    "hash": "92f860aca1aaf32cd83e8650e212c26a1ebafb48"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/detail/detail.component.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/detail/detail.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -11973,7 +11849,7 @@
       }
     },
     "s": {
-      "0": 28,
+      "0": 26,
       "1": 2,
       "2": 2,
       "3": 2,
@@ -11999,232 +11875,196 @@
       "23": 0,
       "24": 0,
       "25": 0,
-      "26": 47,
-      "27": 1,
-      "28": 1,
-      "29": 1,
-      "30": 2,
-      "31": 2,
-      "32": 2,
-      "33": 1,
-      "34": 1,
-      "35": 1,
-      "36": 1,
-      "37": 1,
-      "38": 1,
-      "39": 47,
-      "40": 1,
-      "41": 1,
-      "42": 1,
-      "43": 1,
-      "44": 47,
-      "45": 46,
-      "46": 46,
-      "47": 46,
-      "48": 46,
-      "49": 46,
-      "50": 57,
-      "51": 3,
-      "52": 3,
-      "53": 3,
-      "54": 3,
-      "55": 3,
-      "56": 3,
-      "57": 3,
-      "58": 57,
-      "59": 54,
-      "60": 54,
-      "61": 54,
-      "62": 75,
-      "63": 3,
-      "64": 3,
-      "65": 3,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "30": 0,
+      "31": 0,
+      "32": 0,
+      "33": 0,
+      "34": 0,
+      "35": 0,
+      "36": 0,
+      "37": 0,
+      "38": 0,
+      "39": 0,
+      "40": 0,
+      "41": 0,
+      "42": 0,
+      "43": 0,
+      "44": 0,
+      "45": 0,
+      "46": 0,
+      "47": 0,
+      "48": 0,
+      "49": 0,
+      "50": 14,
+      "51": 2,
+      "52": 2,
+      "53": 2,
+      "54": 2,
+      "55": 2,
+      "56": 2,
+      "57": 2,
+      "58": 14,
+      "59": 12,
+      "60": 12,
+      "61": 12,
+      "62": 26,
+      "63": 2,
+      "64": 2,
+      "65": 2,
       "66": 0,
       "67": 0,
       "68": 0,
-      "69": 3,
-      "70": 3,
-      "71": 3,
-      "72": 3,
-      "73": 3,
-      "74": 3,
-      "75": 3,
-      "76": 3,
-      "77": 3,
-      "78": 3,
-      "79": 3,
-      "80": 3,
-      "81": 3,
-      "82": 3,
-      "83": 3,
-      "84": 3,
-      "85": 3,
-      "86": 3,
-      "87": 3,
-      "88": 3,
-      "89": 3,
-      "90": 3,
-      "91": 3,
-      "92": 3,
-      "93": 3,
-      "94": 3,
-      "95": 3,
-      "96": 3,
-      "97": 3,
-      "98": 3,
-      "99": 3,
-      "100": 3,
-      "101": 3,
-      "102": 3,
-      "103": 3,
-      "104": 3,
-      "105": 3,
-      "106": 3,
-      "107": 3,
-      "108": 3,
-      "109": 3,
-      "110": 3,
-      "111": 3,
-      "112": 3,
-      "113": 3,
-      "114": 3,
-      "115": 75,
-      "116": 72,
-      "117": 72,
-      "118": 72,
-      "119": 72,
-      "120": 72,
-      "121": 72,
-      "122": 72,
-      "123": 72,
-      "124": 72,
-      "125": 72,
-      "126": 72,
-      "127": 72,
-      "128": 72,
-      "129": 72,
-      "130": 72,
-      "131": 72,
-      "132": 72,
-      "133": 72,
-      "134": 72,
-      "135": 3,
-      "136": 3,
-      "137": 3,
-      "138": 3,
-      "139": 3,
-      "140": 3,
-      "141": 3,
-      "142": 3,
-      "143": 3,
-      "144": 3,
-      "145": 3,
-      "146": 3,
-      "147": 3,
-      "148": 3,
+      "69": 2,
+      "70": 2,
+      "71": 2,
+      "72": 2,
+      "73": 2,
+      "74": 2,
+      "75": 2,
+      "76": 2,
+      "77": 2,
+      "78": 2,
+      "79": 2,
+      "80": 2,
+      "81": 2,
+      "82": 2,
+      "83": 2,
+      "84": 2,
+      "85": 2,
+      "86": 2,
+      "87": 2,
+      "88": 2,
+      "89": 2,
+      "90": 2,
+      "91": 2,
+      "92": 2,
+      "93": 2,
+      "94": 2,
+      "95": 2,
+      "96": 2,
+      "97": 2,
+      "98": 2,
+      "99": 2,
+      "100": 2,
+      "101": 2,
+      "102": 2,
+      "103": 2,
+      "104": 2,
+      "105": 2,
+      "106": 2,
+      "107": 2,
+      "108": 2,
+      "109": 2,
+      "110": 2,
+      "111": 2,
+      "112": 2,
+      "113": 2,
+      "114": 2,
+      "115": 26,
+      "116": 24,
+      "117": 24,
+      "118": 24,
+      "119": 24,
+      "120": 24,
+      "121": 24,
+      "122": 24,
+      "123": 24,
+      "124": 24,
+      "125": 24,
+      "126": 24,
+      "127": 24,
+      "128": 24,
+      "129": 24,
+      "130": 24,
+      "131": 24,
+      "132": 24,
+      "133": 24,
+      "134": 24,
+      "135": 13,
+      "136": 2,
+      "137": 2,
+      "138": 2,
+      "139": 2,
+      "140": 2,
+      "141": 2,
+      "142": 2,
+      "143": 2,
+      "144": 2,
+      "145": 2,
+      "146": 2,
+      "147": 2,
+      "148": 2,
       "149": 0,
       "150": 2,
       "151": 2,
       "152": 2,
       "153": 0,
       "154": 0,
-      "155": 2,
-      "156": 2,
-      "157": 5,
-      "158": 5,
-      "159": 5,
-      "160": 5,
-      "161": 5,
-      "162": 5,
-      "163": 3,
-      "164": 3,
-      "165": 3,
-      "166": 92,
-      "167": 3,
-      "168": 3,
-      "169": 3,
-      "170": 92,
-      "171": 89,
-      "172": 89,
-      "173": 3
+      "155": 0,
+      "156": 0,
+      "157": 2,
+      "158": 2,
+      "159": 2,
+      "160": 6,
+      "161": 2,
+      "162": 2,
+      "163": 13,
+      "164": 2,
+      "165": 13,
+      "166": 36,
+      "167": 2,
+      "168": 2,
+      "169": 2,
+      "170": 36,
+      "171": 34,
+      "172": 34,
+      "173": 13
     },
     "f": {
-      "0": 28,
+      "0": 26,
       "1": 2,
       "2": 0,
       "3": 0,
-      "4": 47,
-      "5": 2,
-      "6": 47,
-      "7": 57,
-      "8": 75,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 14,
+      "8": 26,
       "9": 0,
-      "10": 3,
-      "11": 3,
-      "12": 3,
+      "10": 13,
+      "11": 2,
+      "12": 2,
       "13": 0,
       "14": 2,
       "15": 2,
       "16": 0,
       "17": 0,
-      "18": 2,
-      "19": 2,
-      "20": 5,
-      "21": 5,
-      "22": 5,
-      "23": 5,
-      "24": 3,
-      "25": 92
+      "18": 0,
+      "19": 0,
+      "20": 2,
+      "21": 2,
+      "22": 6,
+      "23": 2,
+      "24": 2,
+      "25": 36
     },
     "b": {
-      "0": [
-        2,
-        26
-      ],
-      "1": [
-        0,
-        0
-      ],
-      "2": [
-        1,
-        46
-      ],
-      "3": [
-        1,
-        46
-      ],
-      "4": [
-        46,
-        1
-      ],
-      "5": [
-        3,
-        54
-      ],
-      "6": [
-        54,
-        3
-      ],
-      "7": [
-        3,
-        72
-      ],
-      "8": [
-        72,
-        3
-      ],
-      "9": [
-        3,
-        3
-      ],
-      "10": [
-        3,
-        89
-      ],
-      "11": [
-        89,
-        3
-      ]
+      "0": [2, 24],
+      "1": [0, 0],
+      "2": [0, 0],
+      "3": [0, 0],
+      "4": [0, 0],
+      "5": [2, 12],
+      "6": [12, 2],
+      "7": [2, 24],
+      "8": [24, 2],
+      "9": [2, 2],
+      "10": [2, 34],
+      "11": [34, 2]
     },
     "inputSourceMap": {
       "version": 3,
@@ -12279,19 +12119,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.html",
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/detail/detail.component.html",
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/detail/detail.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"m3\">\r\n  <mat-card *ngIf=\"session\">\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n          <button mat-icon-button (click)=\"back()\">\r\n            <mat-icon>arrow_back</mat-icon>\r\n          </button>\r\n          <h1>{{session.name | titlecase}}</h1>\r\n        </div>\r\n        <div>\r\n          <button *ngIf=\"isAdmin\" mat-raised-button color=\"warn\" (click)=\"delete()\">\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Delete</span>\r\n          </button>\r\n          <div *ngIf=\"!isAdmin\">\r\n            <button *ngIf=\"!isParticipate\" mat-raised-button color=\"primary\" (click)=\"participate()\">\r\n              <mat-icon>person_add</mat-icon>\r\n              <span class=\"ml1\">Participate</span>\r\n            </button>\r\n            <button *ngIf=\"isParticipate\" mat-raised-button color=\"warn\" (click)=\"unParticipate()\">\r\n              <mat-icon>person_remove</mat-icon>\r\n              <span class=\"ml1\">Do not participate</span>\r\n            </button>\r\n\r\n          </div>\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-subtitle *ngIf=\"teacher\">\r\n      <div fxLayoutAlign=\"start center\" class=\"ml3\">\r\n        <mat-icon>\r\n          people\r\n        </mat-icon>\r\n        <span class=\"ml1\">{{ teacher.firstName }} {{ teacher.lastName | uppercase }}</span>\r\n      </div>\r\n    </mat-card-subtitle>\r\n    <div mat-card-image fxLayoutAlign=\"center center\">\r\n      <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n    </div>\r\n    <mat-card-content>\r\n      <div class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            group\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.users.length }} attendees</span>\r\n        </div>\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            calendar_month\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.date | date: 'longDate'}}</span>\r\n        </div>\r\n      </div>\r\n      <div class=\"description\">\r\n        <p>Description:</p>\r\n        {{ session.description }}\r\n        <br>\r\n      </div>\r\n      <div class=\"date\" class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div class=\"created\"><i>Create at: </i> {{ session.createdAt| date: 'longDate'}}</div>\r\n        <div class=\"updated\"><i>Last update: </i> {{ session.updatedAt| date: 'longDate'}}</div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
-        "import { Component, OnInit } from '@angular/core';\r\nimport { FormBuilder } from '@angular/forms';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { ActivatedRoute, Router } from '@angular/router';\r\nimport { Teacher } from '../../../../interfaces/teacher.interface';\r\nimport { SessionService } from '../../../../services/session.service';\r\nimport { TeacherService } from '../../../../services/teacher.service';\r\nimport { Session } from '../../interfaces/session.interface';\r\nimport { SessionApiService } from '../../services/session-api.service';\r\n\r\n@Component({\r\n  selector: 'app-detail',\r\n  templateUrl: './detail.component.html',\r\n  styleUrls: ['./detail.component.scss']\r\n})\r\nexport class DetailComponent implements OnInit {\r\n  public session: Session | undefined;\r\n  public teacher: Teacher | undefined;\r\n\r\n  public isParticipate = false;\r\n  public isAdmin = false;\r\n\r\n  public sessionId: string;\r\n  public userId: string;\r\n\r\n  constructor(\r\n    private route: ActivatedRoute,\r\n    private fb: FormBuilder,\r\n    private sessionService: SessionService,\r\n    private sessionApiService: SessionApiService,\r\n    private teacherService: TeacherService,\r\n    private matSnackBar: MatSnackBar,\r\n    private router: Router) {\r\n    this.sessionId = this.route.snapshot.paramMap.get('id')!;\r\n    this.isAdmin = this.sessionService.sessionInformation!.admin;\r\n    this.userId = this.sessionService.sessionInformation!.id.toString();\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    this.fetchSession();\r\n  }\r\n\r\n  public back() {\r\n    window.history.back();\r\n  }\r\n\r\n  public delete(): void {\r\n    this.sessionApiService\r\n      .delete(this.sessionId)\r\n      .subscribe((_: any) => {\r\n          this.matSnackBar.open('Session deleted !', 'Close', { duration: 3000 });\r\n          this.router.navigate(['sessions']);\r\n        }\r\n      );\r\n  }\r\n\r\n  public participate(): void {\r\n    this.sessionApiService.participate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\r\n  }\r\n\r\n  public unParticipate(): void {\r\n    this.sessionApiService.unParticipate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\r\n  }\r\n\r\n  private fetchSession(): void {\r\n    this.sessionApiService\r\n      .detail(this.sessionId)\r\n      .subscribe((session: Session) => {\r\n        this.session = session;\r\n        this.isParticipate = session.users.some(u => u === this.sessionService.sessionInformation!.id);\r\n        this.teacherService\r\n          .detail(session.teacher_id.toString())\r\n          .subscribe((teacher: Teacher) => this.teacher = teacher);\r\n      });\r\n  }\r\n\r\n}\r\n"
+        "<div class=\"m3\">\n  <mat-card *ngIf=\"session\">\n    <mat-card-title>\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\n          <button mat-icon-button (click)=\"back()\">\n            <mat-icon>arrow_back</mat-icon>\n          </button>\n          <h1>{{session.name | titlecase}}</h1>\n        </div>\n        <div>\n          <button *ngIf=\"isAdmin\" mat-raised-button color=\"warn\" (click)=\"delete()\">\n            <mat-icon>delete</mat-icon>\n            <span class=\"ml1\">Delete</span>\n          </button>\n          <div *ngIf=\"!isAdmin\">\n            <button *ngIf=\"!isParticipate\" mat-raised-button color=\"primary\" (click)=\"participate()\">\n              <mat-icon>person_add</mat-icon>\n              <span class=\"ml1\">Participate</span>\n            </button>\n            <button *ngIf=\"isParticipate\" mat-raised-button color=\"warn\" (click)=\"unParticipate()\">\n              <mat-icon>person_remove</mat-icon>\n              <span class=\"ml1\">Do not participate</span>\n            </button>\n\n          </div>\n\n\n        </div>\n      </div>\n    </mat-card-title>\n    <mat-card-subtitle *ngIf=\"teacher\">\n      <div fxLayoutAlign=\"start center\" class=\"ml3\">\n        <mat-icon>\n          people\n        </mat-icon>\n        <span class=\"ml1\">{{ teacher.firstName }} {{ teacher.lastName | uppercase }}</span>\n      </div>\n    </mat-card-subtitle>\n    <div mat-card-image fxLayoutAlign=\"center center\">\n      <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\n    </div>\n    <mat-card-content>\n      <div class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n        <div fxLayoutAlign=\"start center\">\n          <mat-icon>\n            group\n          </mat-icon>\n          <span class=\"ml1\">{{ session.users.length }} attendees</span>\n        </div>\n        <div fxLayoutAlign=\"start center\">\n          <mat-icon>\n            calendar_month\n          </mat-icon>\n          <span class=\"ml1\">{{ session.date | date: 'longDate'}}</span>\n        </div>\n      </div>\n      <div class=\"description\">\n        <p>Description:</p>\n        {{ session.description }}\n        <br>\n      </div>\n      <div class=\"date\" class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n        <div class=\"created\"><i>Create at: </i> {{ session.createdAt| date: 'longDate'}}</div>\n        <div class=\"updated\"><i>Last update: </i> {{ session.updatedAt| date: 'longDate'}}</div>\n      </div>\n    </mat-card-content>\n  </mat-card>\n</div>\n",
+        "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder } from '@angular/forms';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { ActivatedRoute, Router } from '@angular/router';\nimport { Teacher } from '../../../../interfaces/teacher.interface';\nimport { SessionService } from '../../../../services/session.service';\nimport { TeacherService } from '../../../../services/teacher.service';\nimport { Session } from '../../interfaces/session.interface';\nimport { SessionApiService } from '../../services/session-api.service';\n\n@Component({\n  selector: 'app-detail',\n  templateUrl: './detail.component.html',\n  styleUrls: ['./detail.component.scss']\n})\nexport class DetailComponent implements OnInit {\n  public session: Session | undefined;\n  public teacher: Teacher | undefined;\n\n  public isParticipate = false;\n  public isAdmin = false;\n\n  public sessionId: string;\n  public userId: string;\n\n  constructor(\n    private route: ActivatedRoute,\n    private fb: FormBuilder,\n    private sessionService: SessionService,\n    private sessionApiService: SessionApiService,\n    private teacherService: TeacherService,\n    private matSnackBar: MatSnackBar,\n    private router: Router) {\n    this.sessionId = this.route.snapshot.paramMap.get('id')!;\n    this.isAdmin = this.sessionService.sessionInformation!.admin;\n    this.userId = this.sessionService.sessionInformation!.id.toString();\n  }\n\n  public ngOnInit(): void {\n    this.fetchSession();\n  }\n\n  public back() {\n    window.history.back();\n  }\n\n  public delete(): void {\n    this.sessionApiService\n      .delete(this.sessionId)\n      .subscribe((_: any) => {\n          this.matSnackBar.open('Session deleted !', 'Close', { duration: 3000 });\n          this.router.navigate(['sessions']);\n        }\n      );\n  }\n\n  public participate(): void {\n    this.sessionApiService.participate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\n  }\n\n  public unParticipate(): void {\n    this.sessionApiService.unParticipate(this.sessionId, this.userId).subscribe(_ => this.fetchSession());\n  }\n\n  private fetchSession(): void {\n    this.sessionApiService\n      .detail(this.sessionId)\n      .subscribe((session: Session) => {\n        this.session = session;\n        this.isParticipate = session.users.some(u => u === this.sessionService.sessionInformation!.id);\n        this.teacherService\n          .detail(session.teacher_id.toString())\n          .subscribe((teacher: Teacher) => this.teacher = teacher);\n      });\n  }\n\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "af5780cc6284e55d81403642a05c1bd4a75480e8"
+    "hash": "ceafbe5a03b34f41abfbe4e8c07af59393b82bb3"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/form/form.component.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/form/form.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -14309,24 +14149,24 @@
       }
     },
     "s": {
-      "0": 170,
+      "0": 120,
       "1": 2,
       "2": 2,
       "3": 2,
-      "4": 90,
+      "4": 72,
       "5": 2,
       "6": 2,
       "7": 2,
-      "8": 444,
-      "9": 8,
-      "10": 8,
-      "11": 8,
-      "12": 444,
-      "13": 436,
-      "14": 436,
-      "15": 436,
-      "16": 436,
-      "17": 248,
+      "8": 156,
+      "9": 4,
+      "10": 4,
+      "11": 4,
+      "12": 156,
+      "13": 152,
+      "14": 152,
+      "15": 152,
+      "16": 152,
+      "17": 182,
       "18": 4,
       "19": 4,
       "20": 4,
@@ -14358,15 +14198,15 @@
       "46": 4,
       "47": 4,
       "48": 4,
-      "49": 248,
-      "50": 244,
-      "51": 244,
-      "52": 244,
-      "53": 244,
-      "54": 244,
-      "55": 244,
-      "56": 244,
-      "57": 3,
+      "49": 182,
+      "50": 178,
+      "51": 178,
+      "52": 178,
+      "53": 178,
+      "54": 178,
+      "55": 178,
+      "56": 178,
+      "57": 13,
       "58": 4,
       "59": 4,
       "60": 4,
@@ -14394,10 +14234,10 @@
       "82": 4,
       "83": 4,
       "84": 4,
-      "85": 3,
+      "85": 13,
       "86": 4,
-      "87": 3,
-      "88": 260,
+      "87": 13,
+      "88": 192,
       "89": 4,
       "90": 4,
       "91": 4,
@@ -14406,22 +14246,22 @@
       "94": 4,
       "95": 4,
       "96": 4,
-      "97": 260,
-      "98": 256,
-      "99": 256,
-      "100": 256,
-      "101": 256,
-      "102": 256,
-      "103": 256,
-      "104": 3
+      "97": 192,
+      "98": 188,
+      "99": 188,
+      "100": 188,
+      "101": 188,
+      "102": 188,
+      "103": 188,
+      "104": 13
     },
     "f": {
-      "0": 170,
-      "1": 90,
-      "2": 444,
-      "3": 248,
+      "0": 120,
+      "1": 72,
+      "2": 156,
+      "3": 182,
       "4": 4,
-      "5": 3,
+      "5": 13,
       "6": 4,
       "7": 4,
       "8": 2,
@@ -14431,73 +14271,25 @@
       "12": 4,
       "13": 4,
       "14": 4,
-      "15": 260
+      "15": 192
     },
     "b": {
-      "0": [
-        2,
-        168
-      ],
-      "1": [
-        2,
-        88
-      ],
-      "2": [
-        8,
-        436
-      ],
-      "3": [
-        436,
-        8
-      ],
-      "4": [
-        4,
-        244
-      ],
-      "5": [
-        244,
-        4
-      ],
-      "6": [
-        0,
-        4
-      ],
-      "7": [
-        2,
-        2
-      ],
-      "8": [
-        2,
-        2
-      ],
-      "9": [
-        2,
-        2
-      ],
-      "10": [
-        2,
-        2
-      ],
-      "11": [
-        2,
-        2
-      ],
-      "12": [
-        2,
-        2
-      ],
-      "13": [
-        4,
-        4
-      ],
-      "14": [
-        4,
-        256
-      ],
-      "15": [
-        256,
-        4
-      ]
+      "0": [2, 118],
+      "1": [2, 70],
+      "2": [4, 152],
+      "3": [152, 4],
+      "4": [4, 178],
+      "5": [178, 4],
+      "6": [0, 4],
+      "7": [2, 2],
+      "8": [2, 2],
+      "9": [2, 2],
+      "10": [2, 2],
+      "11": [2, 2],
+      "12": [2, 2],
+      "13": [4, 4],
+      "14": [4, 188],
+      "15": [188, 4]
     },
     "inputSourceMap": {
       "version": 3,
@@ -14558,19 +14350,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts",
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\form\\form.component.html"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/form/form.component.ts",
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/form/form.component.html"
       ],
       "sourcesContent": [
-        "import { Component, OnInit } from '@angular/core';\r\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { ActivatedRoute, Router } from '@angular/router';\r\nimport { SessionService } from '../../../../services/session.service';\r\nimport { TeacherService } from '../../../../services/teacher.service';\r\nimport { Session } from '../../interfaces/session.interface';\r\nimport { SessionApiService } from '../../services/session-api.service';\r\n\r\n@Component({\r\n  selector: 'app-form',\r\n  templateUrl: './form.component.html',\r\n  styleUrls: ['./form.component.scss']\r\n})\r\nexport class FormComponent implements OnInit {\r\n\r\n  public onUpdate: boolean = false;\r\n  public sessionForm: FormGroup | undefined;\r\n  public teachers$ = this.teacherService.all();\r\n  private id: string | undefined;\r\n\r\n  constructor(\r\n    private route: ActivatedRoute,\r\n    private fb: FormBuilder,\r\n    private matSnackBar: MatSnackBar,\r\n    private sessionApiService: SessionApiService,\r\n    private sessionService: SessionService,\r\n    private teacherService: TeacherService,\r\n    private router: Router\r\n  ) {\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    if (!this.sessionService.sessionInformation!.admin) {\r\n      this.router.navigate(['/sessions']);\r\n    }\r\n    const url = this.router.url;\r\n    if (url.includes('update')) {\r\n      this.onUpdate = true;\r\n      this.id = this.route.snapshot.paramMap.get('id')!;\r\n      this.sessionApiService\r\n        .detail(this.id)\r\n        .subscribe((session: Session) => this.initForm(session));\r\n    } else {\r\n      this.initForm();\r\n    }\r\n  }\r\n\r\n  public submit(): void {\r\n    const session = this.sessionForm?.value as Session;\r\n\r\n    if (!this.onUpdate) {\r\n      this.sessionApiService\r\n        .create(session)\r\n        .subscribe((_: Session) => this.exitPage('Session created !'));\r\n    } else {\r\n      this.sessionApiService\r\n        .update(this.id!, session)\r\n        .subscribe((_: Session) => this.exitPage('Session updated !'));\r\n    }\r\n  }\r\n\r\n  private initForm(session?: Session): void {\r\n    this.sessionForm = this.fb.group({\r\n      name: [\r\n        session ? session.name : '',\r\n        [Validators.required]\r\n      ],\r\n      date: [\r\n        session ? new Date(session.date).toISOString().split('T')[0] : '',\r\n        [Validators.required]\r\n      ],\r\n      teacher_id: [\r\n        session ? session.teacher_id : '',\r\n        [Validators.required]\r\n      ],\r\n      description: [\r\n        session ? session.description : '',\r\n        [\r\n          Validators.required,\r\n          Validators.max(2000)\r\n        ]\r\n      ],\r\n    });\r\n  }\r\n\r\n  private exitPage(message: string): void {\r\n    this.matSnackBar.open(message, 'Close', { duration: 3000 });\r\n    this.router.navigate(['sessions']);\r\n  }\r\n}\r\n",
-        "<div class=\"create m3\">\r\n  <mat-card>\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <button mat-icon-button routerLink=\"/sessions\">\r\n          <mat-icon>arrow_back</mat-icon>\r\n        </button>\r\n        <h1 *ngIf=\"!onUpdate\">Create session</h1>\r\n        <h1 *ngIf=\"onUpdate\">Update session</h1>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-content *ngIf=\"sessionForm\">\r\n      <form class=\"mt2\" fxLayout=\"column\" [formGroup]=\"sessionForm\" (ngSubmit)=\"submit()\">\r\n        <mat-form-field appearance=\"outline\" class=\"\" fxFlex>\r\n          <mat-label>Name</mat-label>\r\n          <input matInput formControlName=\"name\">\r\n        </mat-form-field>\r\n        <mat-form-field appearance=\"outline\" fxFlex>\r\n          <mat-label>Date</mat-label>\r\n          <input matInput type=\"date\" formControlName=\"date\">\r\n        </mat-form-field>\r\n        <mat-form-field appearance=\"outline\">\r\n          <mat-label>Teacher</mat-label>\r\n          <mat-select ngDefaultControl formControlName=\"teacher_id\">\r\n            <mat-option *ngFor=\"let teacher of teachers$ | async\" [value]=\"teacher.id\">\r\n              {{teacher.firstName}} {{teacher.lastName}}\r\n            </mat-option>\r\n          </mat-select>\r\n        </mat-form-field>\r\n        <mat-form-field appearance=\"outline\" fxFlex>\r\n          <mat-label>Description</mat-label>\r\n          <textarea matInput rows=\"8\" formControlName=\"description\"></textarea>\r\n        </mat-form-field>\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n          <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"sessionForm.invalid\">\r\n            Save\r\n          </button>\r\n        </div>\r\n      </form>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n"
+        "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { ActivatedRoute, Router } from '@angular/router';\nimport { SessionService } from '../../../../services/session.service';\nimport { TeacherService } from '../../../../services/teacher.service';\nimport { Session } from '../../interfaces/session.interface';\nimport { SessionApiService } from '../../services/session-api.service';\n\n@Component({\n  selector: 'app-form',\n  templateUrl: './form.component.html',\n  styleUrls: ['./form.component.scss']\n})\nexport class FormComponent implements OnInit {\n\n  public onUpdate: boolean = false;\n  public sessionForm: FormGroup | undefined;\n  public teachers$ = this.teacherService.all();\n  private id: string | undefined;\n\n  constructor(\n    private route: ActivatedRoute,\n    private fb: FormBuilder,\n    private matSnackBar: MatSnackBar,\n    private sessionApiService: SessionApiService,\n    private sessionService: SessionService,\n    private teacherService: TeacherService,\n    private router: Router\n  ) {\n  }\n\n  public ngOnInit(): void {\n    if (!this.sessionService.sessionInformation!.admin) {\n      this.router.navigate(['/sessions']);\n    }\n    const url = this.router.url;\n    if (url.includes('update')) {\n      this.onUpdate = true;\n      this.id = this.route.snapshot.paramMap.get('id')!;\n      this.sessionApiService\n        .detail(this.id)\n        .subscribe((session: Session) => this.initForm(session));\n    } else {\n      this.initForm();\n    }\n  }\n\n  public submit(): void {\n    const session = this.sessionForm?.value as Session;\n\n    if (!this.onUpdate) {\n      this.sessionApiService\n        .create(session)\n        .subscribe((_: Session) => this.exitPage('Session created !'));\n    } else {\n      this.sessionApiService\n        .update(this.id!, session)\n        .subscribe((_: Session) => this.exitPage('Session updated !'));\n    }\n  }\n\n  private initForm(session?: Session): void {\n    this.sessionForm = this.fb.group({\n      name: [\n        session ? session.name : '',\n        [Validators.required]\n      ],\n      date: [\n        session ? new Date(session.date).toISOString().split('T')[0] : '',\n        [Validators.required]\n      ],\n      teacher_id: [\n        session ? session.teacher_id : '',\n        [Validators.required]\n      ],\n      description: [\n        session ? session.description : '',\n        [\n          Validators.required,\n          Validators.max(2000)\n        ]\n      ],\n    });\n  }\n\n  private exitPage(message: string): void {\n    this.matSnackBar.open(message, 'Close', { duration: 3000 });\n    this.router.navigate(['sessions']);\n  }\n}\n",
+        "<div class=\"create m3\">\n  <mat-card>\n    <mat-card-title>\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <button mat-icon-button routerLink=\"/sessions\">\n          <mat-icon>arrow_back</mat-icon>\n        </button>\n        <h1 *ngIf=\"!onUpdate\">Create session</h1>\n        <h1 *ngIf=\"onUpdate\">Update session</h1>\n      </div>\n    </mat-card-title>\n    <mat-card-content *ngIf=\"sessionForm\">\n      <form class=\"mt2\" fxLayout=\"column\" [formGroup]=\"sessionForm\" (ngSubmit)=\"submit()\">\n        <mat-form-field appearance=\"outline\" class=\"\" fxFlex>\n          <mat-label>Name</mat-label>\n          <input matInput formControlName=\"name\">\n        </mat-form-field>\n        <mat-form-field appearance=\"outline\" fxFlex>\n          <mat-label>Date</mat-label>\n          <input matInput type=\"date\" formControlName=\"date\">\n        </mat-form-field>\n        <mat-form-field appearance=\"outline\">\n          <mat-label>Teacher</mat-label>\n          <mat-select ngDefaultControl formControlName=\"teacher_id\">\n            <mat-option *ngFor=\"let teacher of teachers$ | async\" [value]=\"teacher.id\">\n              {{teacher.firstName}} {{teacher.lastName}}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n        <mat-form-field appearance=\"outline\" fxFlex>\n          <mat-label>Description</mat-label>\n          <textarea matInput rows=\"8\" formControlName=\"description\"></textarea>\n        </mat-form-field>\n        <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\n          <button mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"sessionForm.invalid\">\n            Save\n          </button>\n        </div>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "4dcc26689d1b67239e4118e0743c4073bd433976"
+    "hash": "e838feb30c0e066e0c332bdc63750ae49983dd7f"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/list/list.component.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/list/list.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -15906,132 +15698,108 @@
       }
     },
     "s": {
-      "0": 83,
-      "1": 8,
-      "2": 8,
-      "3": 8,
-      "4": 8,
-      "5": 8,
-      "6": 8,
-      "7": 3,
-      "8": 12,
-      "9": 55,
-      "10": 12,
-      "11": 12,
-      "12": 12,
-      "13": 12,
-      "14": 12,
-      "15": 12,
-      "16": 55,
-      "17": 43,
-      "18": 43,
-      "19": 3,
-      "20": 13,
-      "21": 58,
-      "22": 13,
-      "23": 13,
-      "24": 13,
-      "25": 13,
-      "26": 13,
-      "27": 13,
-      "28": 13,
-      "29": 13,
-      "30": 13,
-      "31": 13,
-      "32": 13,
-      "33": 13,
-      "34": 13,
-      "35": 13,
-      "36": 13,
-      "37": 13,
-      "38": 13,
-      "39": 13,
-      "40": 13,
-      "41": 13,
-      "42": 13,
-      "43": 58,
-      "44": 45,
-      "45": 45,
-      "46": 45,
-      "47": 45,
-      "48": 45,
-      "49": 45,
-      "50": 45,
-      "51": 45,
-      "52": 45,
-      "53": 45,
-      "54": 45,
-      "55": 45,
-      "56": 3,
-      "57": 9,
-      "58": 9,
-      "59": 9,
-      "60": 128,
-      "61": 3,
-      "62": 9,
-      "63": 3,
-      "64": 92,
-      "65": 9,
-      "66": 9,
-      "67": 9,
-      "68": 9,
-      "69": 9,
-      "70": 9,
-      "71": 9,
-      "72": 9,
-      "73": 9,
-      "74": 92,
-      "75": 83,
-      "76": 83,
-      "77": 83,
-      "78": 83,
-      "79": 3
+      "0": 172,
+      "1": 20,
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 20,
+      "7": 13,
+      "8": 30,
+      "9": 102,
+      "10": 30,
+      "11": 30,
+      "12": 30,
+      "13": 30,
+      "14": 30,
+      "15": 30,
+      "16": 102,
+      "17": 72,
+      "18": 72,
+      "19": 13,
+      "20": 30,
+      "21": 102,
+      "22": 30,
+      "23": 30,
+      "24": 30,
+      "25": 30,
+      "26": 30,
+      "27": 30,
+      "28": 30,
+      "29": 30,
+      "30": 30,
+      "31": 30,
+      "32": 30,
+      "33": 30,
+      "34": 30,
+      "35": 30,
+      "36": 30,
+      "37": 30,
+      "38": 30,
+      "39": 30,
+      "40": 30,
+      "41": 30,
+      "42": 30,
+      "43": 102,
+      "44": 72,
+      "45": 72,
+      "46": 72,
+      "47": 72,
+      "48": 72,
+      "49": 72,
+      "50": 72,
+      "51": 72,
+      "52": 72,
+      "53": 72,
+      "54": 72,
+      "55": 72,
+      "56": 13,
+      "57": 20,
+      "58": 20,
+      "59": 20,
+      "60": 224,
+      "61": 13,
+      "62": 20,
+      "63": 13,
+      "64": 172,
+      "65": 20,
+      "66": 20,
+      "67": 20,
+      "68": 20,
+      "69": 20,
+      "70": 20,
+      "71": 20,
+      "72": 20,
+      "73": 20,
+      "74": 172,
+      "75": 152,
+      "76": 152,
+      "77": 152,
+      "78": 152,
+      "79": 13
     },
     "f": {
-      "0": 83,
-      "1": 12,
-      "2": 55,
-      "3": 13,
-      "4": 58,
-      "5": 3,
-      "6": 9,
-      "7": 128,
-      "8": 9,
-      "9": 92
+      "0": 172,
+      "1": 30,
+      "2": 102,
+      "3": 30,
+      "4": 102,
+      "5": 13,
+      "6": 20,
+      "7": 224,
+      "8": 20,
+      "9": 172
     },
     "b": {
-      "0": [
-        8,
-        75
-      ],
-      "1": [
-        12,
-        43
-      ],
-      "2": [
-        43,
-        12
-      ],
-      "3": [
-        13,
-        45
-      ],
-      "4": [
-        45,
-        13
-      ],
-      "5": [
-        9,
-        9
-      ],
-      "6": [
-        9,
-        83
-      ],
-      "7": [
-        83,
-        9
-      ]
+      "0": [20, 152],
+      "1": [30, 72],
+      "2": [72, 30],
+      "3": [30, 72],
+      "4": [72, 30],
+      "5": [20, 20],
+      "6": [20, 152],
+      "7": [152, 20]
     },
     "inputSourceMap": {
       "version": 3,
@@ -16053,19 +15821,19 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\list\\list.component.html",
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/list/list.component.html",
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/components/list/list.component.ts"
       ],
       "sourcesContent": [
-        "<div class=\"list\">\r\n  <mat-card>\r\n    <mat-card-header fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n      <mat-card-title class=\"m0\">Rentals available</mat-card-title>\r\n      <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\" routerLink=\"create\">\r\n        <mat-icon>add</mat-icon>\r\n        <span class=\"ml1\">Create</span>\r\n      </button>\r\n    </mat-card-header>\r\n    <div class=\"items mt2\" fxLayout=\"row wrap\" fxLayout.lt-md=\"column\">\r\n      <mat-card class=\"item\" *ngFor=\"let session of (sessions$ | async)\" fxFlex>\r\n        <mat-card-header>\r\n          <mat-card-title>{{ session.name }}</mat-card-title>\r\n          <mat-card-subtitle>\r\n            Session on {{ session.date | date: 'longDate'}}\r\n          </mat-card-subtitle>\r\n        </mat-card-header>\r\n        <div mat-card-image fxLayoutAlign=\"center center\">\r\n          <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n        </div>\r\n        <mat-card-content>\r\n          <p>\r\n            {{ session.description }}\r\n          </p>\r\n        </mat-card-content>\r\n        <mat-card-actions>\r\n          <button mat-raised-button color=\"primary\" [routerLink]=\"['detail',session.id]\">\r\n            <mat-icon>search</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n          <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\"\r\n                  [routerLink]=\"['update',session.id]\">\r\n            <mat-icon>edit</mat-icon>\r\n            <span class=\"ml1\">Edit</span>\r\n          </button>\r\n        </mat-card-actions>\r\n      </mat-card>\r\n    </div>\r\n  </mat-card>\r\n</div>\r\n",
-        "import { Component } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { SessionInformation } from '../../../../interfaces/sessionInformation.interface';\r\nimport { SessionService } from '../../../../services/session.service';\r\nimport { Session } from '../../interfaces/session.interface';\r\nimport { SessionApiService } from '../../services/session-api.service';\r\n\r\n@Component({\r\n  selector: 'app-list',\r\n  templateUrl: './list.component.html',\r\n  styleUrls: ['./list.component.scss']\r\n})\r\nexport class ListComponent {\r\n\r\n  public sessions$: Observable<Session[]> = this.sessionApiService.all();\r\n\r\n  constructor(\r\n    private sessionService: SessionService,\r\n    private sessionApiService: SessionApiService\r\n  ) { }\r\n\r\n  get user(): SessionInformation | undefined {\r\n    return this.sessionService.sessionInformation;\r\n  }\r\n}\r\n"
+        "<div class=\"list\">\n  <mat-card>\n    <mat-card-header fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n      <mat-card-title class=\"m0\">Rentals available</mat-card-title>\n      <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\" routerLink=\"create\">\n        <mat-icon>add</mat-icon>\n        <span class=\"ml1\">Create</span>\n      </button>\n    </mat-card-header>\n    <div class=\"items mt2\" fxLayout=\"row wrap\" fxLayout.lt-md=\"column\">\n      <mat-card class=\"item\" *ngFor=\"let session of (sessions$ | async)\" fxFlex>\n        <mat-card-header>\n          <mat-card-title>{{ session.name }}</mat-card-title>\n          <mat-card-subtitle>\n            Session on {{ session.date | date: 'longDate'}}\n          </mat-card-subtitle>\n        </mat-card-header>\n        <div mat-card-image fxLayoutAlign=\"center center\">\n          <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\n        </div>\n        <mat-card-content>\n          <p>\n            {{ session.description }}\n          </p>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [routerLink]=\"['detail',session.id]\">\n            <mat-icon>search</mat-icon>\n            <span class=\"ml1\">Detail</span>\n          </button>\n          <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\"\n                  [routerLink]=\"['update',session.id]\">\n            <mat-icon>edit</mat-icon>\n            <span class=\"ml1\">Edit</span>\n          </button>\n        </mat-card-actions>\n      </mat-card>\n    </div>\n  </mat-card>\n</div>\n",
+        "import { Component } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { SessionInformation } from '../../../../interfaces/sessionInformation.interface';\nimport { SessionService } from '../../../../services/session.service';\nimport { Session } from '../../interfaces/session.interface';\nimport { SessionApiService } from '../../services/session-api.service';\n\n@Component({\n  selector: 'app-list',\n  templateUrl: './list.component.html',\n  styleUrls: ['./list.component.scss']\n})\nexport class ListComponent {\n\n  public sessions$: Observable<Session[]> = this.sessionApiService.all();\n\n  constructor(\n    private sessionService: SessionService,\n    private sessionApiService: SessionApiService\n  ) { }\n\n  get user(): SessionInformation | undefined {\n    return this.sessionService.sessionInformation;\n  }\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "0e0412f797197c2bbfb5b3ac23c744bf88d7e102"
+    "hash": "21fdfe2a1c3484522c0be0529f5e09f95d6ee5ec"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/sessions-routing.module.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/sessions-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -16227,23 +15995,20 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3,
-      "4": 3,
-      "5": 3,
-      "6": 3
+      "0": 13,
+      "1": 13,
+      "2": 13,
+      "3": 13,
+      "4": 13,
+      "5": 13,
+      "6": 13
     },
     "f": {
-      "0": 3,
-      "1": 3
+      "0": 13,
+      "1": 13
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [13, 13]
     },
     "inputSourceMap": {
       "version": 3,
@@ -16262,17 +16027,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/sessions-routing.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { DetailComponent } from './components/detail/detail.component';\r\nimport { FormComponent } from './components/form/form.component';\r\nimport { ListComponent } from './components/list/list.component';\r\n\r\nconst routes: Routes = [\r\n  { path: '', title: 'Sessions', component: ListComponent },\r\n  { path: 'detail/:id', title: 'Sessions - detail', component: DetailComponent },\r\n  { path: 'create', title: 'Sessions - create', component: FormComponent },\r\n  { path: 'update/:id', title: 'Sessions - update', component: FormComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class SessionsRoutingModule {\r\n}\r\n"
+        "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { DetailComponent } from './components/detail/detail.component';\nimport { FormComponent } from './components/form/form.component';\nimport { ListComponent } from './components/list/list.component';\n\nconst routes: Routes = [\n  { path: '', title: 'Sessions', component: ListComponent },\n  { path: 'detail/:id', title: 'Sessions - detail', component: DetailComponent },\n  { path: 'create', title: 'Sessions - create', component: FormComponent },\n  { path: 'update/:id', title: 'Sessions - update', component: FormComponent }\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class SessionsRoutingModule {\n}\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "23a50b23f3cb3aa22f9c0cea5f2099a769059583"
+    "hash": "a6356a3d04a8ce3117d8aa26a3e8c39568e92b95"
   },
-  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\sessions.module.ts": {
-    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\sessions.module.ts",
+  "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/sessions.module.ts": {
+    "path": "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/sessions.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -16444,24 +16209,21 @@
       }
     },
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 3,
-      "4": 3,
-      "5": 3,
-      "6": 3,
-      "7": 3
+      "0": 13,
+      "1": 13,
+      "2": 13,
+      "3": 13,
+      "4": 13,
+      "5": 13,
+      "6": 13,
+      "7": 13
     },
     "f": {
-      "0": 3,
-      "1": 3
+      "0": 13,
+      "1": 13
     },
     "b": {
-      "0": [
-        3,
-        3
-      ]
+      "0": [13, 13]
     },
     "inputSourceMap": {
       "version": 3,
@@ -16485,13 +16247,13 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\app\\features\\sessions\\sessions.module.ts"
+        "C:\\Users\\lolle\\Desktop\\OpenClassrooms\\Projets de formation OC\\Projets à coder (FS Java-Angular)\\P5\\workspace\\front\\src\\/app/features/sessions/sessions.module.ts"
       ],
       "sourcesContent": [
-        "import { NgModule } from '@angular/core';\r\nimport { CommonModule, registerLocaleData } from '@angular/common';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { ReactiveFormsModule } from '@angular/forms';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\r\nimport { ListComponent } from './components/list/list.component';\r\nimport { FormComponent } from './components/form/form.component';\r\nimport { DetailComponent } from './components/detail/detail.component';\r\nimport { SessionsRoutingModule } from './sessions-routing.module';\r\nimport localeFr from '@angular/common/locales/fr';\r\nregisterLocaleData(localeFr);\r\n\r\nconst materialModules = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatFormFieldModule,\r\n  MatIconModule,\r\n  MatInputModule,\r\n  MatSnackBarModule,\r\n  MatSelectModule\r\n];\r\n\r\n@NgModule({\r\n  declarations: [\r\n    ListComponent,\r\n    FormComponent,\r\n    DetailComponent\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    FlexLayoutModule,\r\n    ReactiveFormsModule,\r\n    SessionsRoutingModule,\r\n    ...materialModules\r\n  ]\r\n})\r\nexport class SessionsModule { }\r\n"
+        "import { NgModule } from '@angular/core';\nimport { CommonModule, registerLocaleData } from '@angular/common';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatSelectModule } from '@angular/material/select';\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\nimport { ListComponent } from './components/list/list.component';\nimport { FormComponent } from './components/form/form.component';\nimport { DetailComponent } from './components/detail/detail.component';\nimport { SessionsRoutingModule } from './sessions-routing.module';\nimport localeFr from '@angular/common/locales/fr';\nregisterLocaleData(localeFr);\n\nconst materialModules = [\n  MatButtonModule,\n  MatCardModule,\n  MatFormFieldModule,\n  MatIconModule,\n  MatInputModule,\n  MatSnackBarModule,\n  MatSelectModule\n];\n\n@NgModule({\n  declarations: [\n    ListComponent,\n    FormComponent,\n    DetailComponent\n  ],\n  imports: [\n    CommonModule,\n    FlexLayoutModule,\n    ReactiveFormsModule,\n    SessionsRoutingModule,\n    ...materialModules\n  ]\n})\nexport class SessionsModule { }\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "e7a7bfebf1f7270b3611cfc17c37adc3e16ccd8f"
+    "hash": "ac4a0d8dd757cc70b6c071ad5fe4ed8030cff916"
   }
 }
