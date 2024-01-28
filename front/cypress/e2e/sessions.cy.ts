@@ -1,61 +1,60 @@
 /// <reference types="Cypress" />
 
-const ADMIN_DETAILS = {
-  token: 'jwt',
-  type: 'Bearer',
-  id: 1,
-  username: 'yoga@studio.com',
-  firstName: 'Admin',
-  lastName: 'Admin',
-  admin: true,
-};
-
-const USER_DETAILS = {
-  token: 'jwt',
-  type: 'Bearer',
-  id: 2,
-  username: 'user@user.com',
-  firstName: 'User',
-  lastName: 'User',
-  admin: false,
-};
-
-const TEST_SESSION = {
-  id: 1,
-  name: 'TEST session',
-  date: '2024-01-13T13:27:22.000+00:00',
-  teacher_id: 1,
-  description: 'TEST description for the session',
-  users: [2],
-  createdAt: '2024-01-13T14:24:33',
-  updatedAt: '2024-01-26T09:20:22',
-};
-
-const SESSIONS_LIST = [TEST_SESSION];
-
-const EDITED_TEST_SESSION = {
-  ...TEST_SESSION,
-  name: 'EDITED TEST session',
-};
-
-export const TEACHERS_LIST = [
-  {
-    id: 1,
-    lastName: 'DELAHAYE',
-    firstName: 'Margot',
-    createdAt: '2024-01-12T15:33:42',
-    updatedAt: '2024-01-12T15:33:42',
-  },
-  {
-    id: 2,
-    lastName: 'THIERCELIN',
-    firstName: 'Hélène',
-    createdAt: '2024-01-12T15:33:42',
-    updatedAt: '2024-01-12T15:33:42',
-  },
-];
-
 describe('Sessions page', () => {
+  const ADMIN_DETAILS = {
+    token: 'jwt',
+    type: 'Bearer',
+    id: 1,
+    username: 'yoga@studio.com',
+    firstName: 'Admin',
+    lastName: 'Admin',
+    admin: true,
+  };
+
+  const USER_DETAILS = {
+    token: 'jwt',
+    type: 'Bearer',
+    id: 2,
+    username: 'user@user.com',
+    firstName: 'User',
+    lastName: 'User',
+    admin: false,
+  };
+
+  const TEST_SESSION = {
+    id: 1,
+    name: 'TEST session',
+    date: '2024-01-13T13:27:22.000+00:00',
+    teacher_id: 1,
+    description: 'TEST description for the session',
+    users: [2],
+    createdAt: '2024-01-13T14:24:33',
+    updatedAt: '2024-01-26T09:20:22',
+  };
+
+  const SESSIONS_LIST = [TEST_SESSION];
+
+  const EDITED_TEST_SESSION = {
+    ...TEST_SESSION,
+    name: 'EDITED TEST session',
+  };
+
+  const TEACHERS_LIST = [
+    {
+      id: 1,
+      lastName: 'DELAHAYE',
+      firstName: 'Margot',
+      createdAt: '2024-01-12T15:33:42',
+      updatedAt: '2024-01-12T15:33:42',
+    },
+    {
+      id: 2,
+      lastName: 'THIERCELIN',
+      firstName: 'Hélène',
+      createdAt: '2024-01-12T15:33:42',
+      updatedAt: '2024-01-12T15:33:42',
+    },
+  ];
   beforeEach(() => {
     cy.intercept('GET', '/api/session', (req) => {
       req.reply(SESSIONS_LIST);

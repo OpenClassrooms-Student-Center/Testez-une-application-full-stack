@@ -1,13 +1,12 @@
 /// <reference types="Cypress" />
 
-const FIRST_NAME_INPUT = 'input[formcontrolname="firstName"]';
-const LAST_NAME_INPUT = 'input[formcontrolname="lastName"]';
-const EMAIL_INPUT = 'input[formcontrolname="email"]';
-const PASSWORD_INPUT = 'input[formcontrolname="password"]';
-const REGISTER_BUTTON = 'button[type="submit"]';
-const ERROR_MESSAGE = '.error';
-
 describe('Register page', () => {
+  const FIRST_NAME_INPUT = 'input[formcontrolname="firstName"]';
+  const LAST_NAME_INPUT = 'input[formcontrolname="lastName"]';
+  const EMAIL_INPUT = 'input[formcontrolname="email"]';
+  const PASSWORD_INPUT = 'input[formcontrolname="password"]';
+  const REGISTER_BUTTON = 'button[type="submit"]';
+  const ERROR_MESSAGE = '.error';
   beforeEach(() => {
     cy.visit('/register');
   });
