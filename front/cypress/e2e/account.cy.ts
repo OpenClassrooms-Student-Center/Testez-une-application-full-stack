@@ -5,9 +5,9 @@ describe('Account page', () => {
     token: 'jwt',
     type: 'Bearer',
     id: 1,
-    username: 'yoga@studio.com',
+    email: 'yoga@studio.com',
     firstName: 'Admin',
-    lastName: 'Admin',
+    lastName: 'ADMIN',
     admin: true,
     createdAt: '2024-01-12T15:33:42',
     updatedAt: '2024-01-12T15:33:42',
@@ -17,9 +17,9 @@ describe('Account page', () => {
     token: 'jwt',
     type: 'Bearer',
     id: 2,
-    username: 'user@user.com',
+    email: 'user@user.com',
     firstName: 'User',
-    lastName: 'User',
+    lastName: 'USER',
     admin: false,
     createdAt: '2024-01-12T15:33:42',
     updatedAt: '2024-01-12T15:33:42',
@@ -29,6 +29,8 @@ describe('Account page', () => {
     cy.intercept('GET', '/api/session', (req) => {
       req.reply([]);
     });
+
+    cy.intercept('DELETE', '/api/user');
   });
 
   describe('As an admin', () => {
@@ -51,6 +53,21 @@ describe('Account page', () => {
       cy.get('span.link').contains('Account').click();
 
       cy.url().should('include', '/me');
+
+      // * We check that all the info matches
+      cy.get('mat-card-title h1').should('contain', 'User information');
+      cy.get('p')
+        .eq(0)
+        .should(
+          'contain',
+          `Name: ${ADMIN_DETAILS.firstName} ${ADMIN_DETAILS.lastName}`
+        );
+      cy.get('p').eq(1).should('contain', `Email: ${ADMIN_DETAILS.email}`);
+      cy.get('p').eq(2).should('contain', `You are admin`);
+      cy.get('p').eq(3).should('contain', `Create at:  January 12, 2024`);
+      cy.get('p').eq(4).should('contain', `Last update:  January 12, 2024`);
+
+      cy.get('button[mat-raised-button]').should('not.exist');
     });
   });
   describe('As a regular user', () => {
@@ -73,6 +90,20 @@ describe('Account page', () => {
       cy.get('span.link').contains('Account').click();
 
       cy.url().should('include', '/me');
+
+      cy.get('mat-card-title h1').should('contain', 'User information');
+      cy.get('p')
+        .eq(0)
+        .should(
+          'contain',
+          `Name: ${USER_DETAILS.firstName} ${USER_DETAILS.lastName}`
+        );
+      cy.get('p').eq(1).should('contain', `Email: ${USER_DETAILS.email}`);
+      cy.get('p').eq(2).should('contain', `Delete my account:`);
+      cy.get('p').eq(3).should('contain', `Create at:  January 12, 2024`);
+      cy.get('p').eq(4).should('contain', `Last update:  January 12, 2024`);
+
+      cy.get('button[mat-raised-button]').should('exist');
     });
   });
 });
