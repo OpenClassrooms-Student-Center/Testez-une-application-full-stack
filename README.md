@@ -2,9 +2,14 @@
 
 ![NumDev Logo](./ressources/images/banner-numdev.png)
 
+## Overview
+
+The goal of this project is to complete the testing phase for a yoga studio application called Savasana. Becoming responsible for finishing the testing process, encompassing Front-End, Back-End, and end-to-end functionalities. Thorough testing is essential to ensure a minimum code coverage of 80%, with at least 30% originating from integration tests. Once accomplished, the project requires submission of coverage reports and code on GitHub, alongside a README outlining how to launch the application. Preparation for a presentation to the manager is also expected.
+
 ## Table of contents
 
 - [Numdev Project](#numdev-project)
+  - [Overview](#overview)
   - [Table of contents](#table-of-contents)
   - [Prerequisites](#prerequisites)
   - [Configuration](#configuration)
