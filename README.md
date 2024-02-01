@@ -217,6 +217,12 @@ Get Test Code Coverage for Front-End (Angular):
 jest -t --coverage
 ```
 
+- To get the Cypress E2E tests coverage, use the following command:
+
+```shell
+npm run e2e:coverage
+```
+
 Upon completion, the terminal displays the tests outcome (pass/fail), accompanied by a comprehensive table showing the code coverage %
 
 ### Back-End
