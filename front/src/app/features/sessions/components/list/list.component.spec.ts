@@ -6,6 +6,8 @@ import { expect } from '@jest/globals';
 import { SessionService } from 'src/app/services/session.service';
 
 import { ListComponent } from './list.component';
+import { of } from 'rxjs';
+import { SessionApiService } from '../../services/session-api.service';
 
 describe('ListComponent', () => {
   let component: ListComponent;
@@ -13,17 +15,23 @@ describe('ListComponent', () => {
 
   const mockSessionService = {
     sessionInformation: {
-      admin: true
-    }
-  }
+      admin: true,
+    },
+  };
+
+  const mockSessionApiService = {
+    all: jest.fn(() => of<any>([])),
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ListComponent],
       imports: [HttpClientModule, MatCardModule, MatIconModule],
-      providers: [{ provide: SessionService, useValue: mockSessionService }]
-    })
-      .compileComponents();
+      providers: [
+        { provide: SessionService, useValue: mockSessionService },
+        { provide: SessionApiService, useValue: mockSessionApiService },
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ListComponent);
     component = fixture.componentInstance;
@@ -32,5 +40,19 @@ describe('ListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should retrieve the session list', () => {
+    const sessionsObservable = of([
+      { id: 1, name: 'Test Session', date: new Date(), location: 'Location X' },
+    ]);
+
+    mockSessionApiService.all.mockReturnValue(sessionsObservable);
+
+    component.sessions$.subscribe((sessions) => {
+      expect(sessions).toEqual(sessionsObservable);
+    });
+
+    expect(mockSessionApiService.all).toHaveBeenCalled();
   });
 });
