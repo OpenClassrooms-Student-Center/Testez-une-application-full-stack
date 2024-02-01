@@ -11,10 +11,10 @@
   - [Installation procedure](#installation-procedure)
     - [Front-End](#front-end)
     - [Back-End](#back-end)
-  - [Miscellaneous](#miscellaneous)
+  - [Code coverage reports](#code-coverage-reports)
     - [Front-End](#front-end-1)
     - [Back-End](#back-end-1)
-    - [Other](#other)
+  - [Miscellaneous](#miscellaneous)
 
 ## Prerequisites
 
@@ -146,6 +146,33 @@ To clone this repository from GitHub, run the following command: `git clone http
 
 ### Front-End
 
+1. Install the dependencies:
+
+To start the Angular Front-End project, follow these steps:
+
+- Navigate to the Front-End directory in your terminal:
+
+```shell
+cd numdev-frontend
+```
+
+- Install project dependencies using npm:
+
+```shell
+npm install
+```
+
+2. Starting the server
+
+- After the dependencies are installed, you can start the development server by running:
+
+```shell
+npm start
+```
+
+This command will compile the Angular application and start a development server.
+You can then access the application in your browser at `http://localhost:4200`.
+
 ### Back-End
 
 1. Configure the application in the `application.properties` file
@@ -173,22 +200,45 @@ server.port=8080
 
 4. To generate the code coverage of the back-end, run the following command: `mvn clean test`
 
-## Miscellaneous
+## Code coverage reports
 
 ### Front-End
 
+Get Test Code Coverage for Front-End (Angular):
 
+- To run test and get code coverage for the Angular Front-End, you can use the Jest command:
+
+```shell
+jest -t --coverage
+```
+
+Upon completion, the terminal displays the tests outcome (pass/fail), accompanied by a comprehensive table showing the code coverage %
 
 ### Back-End
+
+Get Test Code Coverage for Back-End (Spring Boot):
+
+- Run the following command in the terminal to execute tests and generate a coverage report using JaCoCo for the Spring Boot backend:
+
+```shell
+mvn clean site
+```
+
+Following successful execution, locate and open in your browser the `index.html` file for the coverage report under the `target/site/jacoco` directory in the project.
+
+## Miscellaneous
+
 <details>
   <summary>
 📚 API documentation
   </summary>
   <table>
   <thead>
-        <th>Endpoint</th>
-        <th>Method</th>
-        <th>Description</th>
+    <tr>
+       <th>Endpoint</th>
+       <th>Method</th>
+       <th>Description</th>
+    </tr>
   </thead>
   <tbody>
   <tr>
@@ -257,11 +307,8 @@ server.port=8080
         <td>Retrieve a user by ID</td>
     </tr>
   </tbody>
-    
 </table>
 </details>
-
-### Other
 
 <details>
   <summary>🔗 Link to the original Repository</summary>
