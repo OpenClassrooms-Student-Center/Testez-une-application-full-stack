@@ -172,7 +172,7 @@ npm install
 - After the dependencies are installed, you can start the development server by running:
 
 ```shell
-npm start
+npm run start
 ```
 
 This command will compile the Angular application and start a development server.
