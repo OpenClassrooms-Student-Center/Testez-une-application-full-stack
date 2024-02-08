@@ -70,8 +70,8 @@ describe('LoginComponent integration tests', () => {
     submitButton.click();
 
     expect(authServiceSpy).toHaveBeenCalledWith(component.form.value);
-    expect(sessionServiceSpy).toHaveBeenCalled;
-    expect(sessionService.isLogged).toBeTruthy;
+    expect(sessionServiceSpy).toHaveBeenCalled();
+    expect(sessionService.isLogged).toBeTruthy();
     expect(sessionService.sessionInformation).toBe(sessionInformation);
     expect(routerSpy).toHaveBeenCalledWith(['/sessions']);
     expect(component.onError).toBeFalsy();
