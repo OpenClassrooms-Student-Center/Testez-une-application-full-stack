@@ -78,11 +78,12 @@ export class FormComponent implements OnInit {
         session ? session.description : '',
         [
           Validators.required,
-          Validators.max(2000)
+          Validators.maxLength(2000)
         ]
       ],
     });
   }
+  
 
   private exitPage(message: string): void {
     this.matSnackBar.open(message, 'Close', { duration: 3000 });

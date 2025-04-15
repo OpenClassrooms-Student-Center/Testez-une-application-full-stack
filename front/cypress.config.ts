@@ -1,4 +1,4 @@
-import { defineConfig } from 'cypress'
+import { defineConfig } from 'cypress';
 
 export default defineConfig({
   videosFolder: 'cypress/videos',
@@ -6,11 +6,11 @@ export default defineConfig({
   fixturesFolder: 'cypress/fixtures',
   video: false,
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.ts').default(on, config)
+      const registerCodeCoverageTasks = require('@cypress/code-coverage/task');
+      registerCodeCoverageTasks(on, config);
+      return config;
     },
     baseUrl: 'http://localhost:4200',
   },
-})
+});
