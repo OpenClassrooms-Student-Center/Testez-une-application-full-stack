@@ -17,11 +17,12 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2020",
-    "module": "es2020",
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "module": "commonjs",   
+    "preserveValueImports": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -29,5 +30,8 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "exclude": ["cypress"]
+  
+  
+  "exclude": ["cypress.config.ts", "cypress", "node_modules"]
+
 }

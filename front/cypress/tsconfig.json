@@ -1,9 +1,19 @@
-{
-  "extends": "../tsconfig.json",
+/// <reference types="cypress" />
+//{
+//  "compilerOptions": {
+//    "target": "es5",
+//    "lib": ["es5", "dom"],
+//    "sourceMap": true,
+//    "types": ["cypress", "node"]
+//  },
+//  "include": ["**/*.ts"]
+//}
+  {
   "compilerOptions": {
-    "isolatedModules": false
-  },
-  "include": [
-    "../node_modules/cypress"
-  ]
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"]
+    }
+  }
 }
+

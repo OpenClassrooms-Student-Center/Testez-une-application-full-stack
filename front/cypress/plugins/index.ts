@@ -1,8 +1,9 @@
-/**
- * @type {Cypress.PluginConfig}
- */
- import * as registerCodeCoverageTasks from '@cypress/code-coverage/task';
+/// <reference types="node" />
+// @ts-ignore
+const cypressTypeScriptPreprocessor = require('./cy-ts-preprocessor')
 
- export default (on, config) => {
-   return registerCodeCoverageTasks(on, config);
- };
+module.exports = (on, config) => {
+  require('@cypress/code-coverage/task')(on, config)
+  on('file:preprocessor', cypressTypeScriptPreprocessor);
+  return config
+}
