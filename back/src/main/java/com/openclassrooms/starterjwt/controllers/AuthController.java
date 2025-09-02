@@ -59,9 +59,9 @@ public class AuthController {
         }
 
         return ResponseEntity.ok(new JwtResponse(jwt,
-                userDetails.getId(),
+                user != null ? user.getId() : null,
                 userDetails.getUsername(),
-                userDetails.getFirstName(),
+                user != null ? user.getFirstName() : null,
                 userDetails.getLastName(),
                 isAdmin));
     }

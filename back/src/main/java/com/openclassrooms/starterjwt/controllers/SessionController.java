@@ -1,6 +1,5 @@
 package com.openclassrooms.starterjwt.controllers;
 
-
 import com.openclassrooms.starterjwt.dto.SessionDto;
 import com.openclassrooms.starterjwt.mapper.SessionMapper;
 import com.openclassrooms.starterjwt.models.Session;
@@ -17,12 +16,13 @@ import java.util.List;
 @RequestMapping("/api/session")
 @Log4j2
 public class SessionController {
+    private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager
+            .getLogger(SessionController.class);
     private final SessionMapper sessionMapper;
     private final SessionService sessionService;
 
-
     public SessionController(SessionService sessionService,
-                             SessionMapper sessionMapper) {
+            SessionMapper sessionMapper) {
         this.sessionMapper = sessionMapper;
         this.sessionService = sessionService;
     }

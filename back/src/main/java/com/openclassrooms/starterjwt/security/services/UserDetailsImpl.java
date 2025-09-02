@@ -30,10 +30,10 @@ public class UserDetailsImpl implements UserDetails {
   private Boolean admin;
 
   @JsonIgnore
-  private String password;  
-  
-  public Collection<? extends GrantedAuthority> getAuthorities() {        
-      return new HashSet<GrantedAuthority>();
+  private String password;
+
+  public Collection<? extends GrantedAuthority> getAuthorities() {
+    return new HashSet<GrantedAuthority>();
   }
 
   @Override
@@ -64,5 +64,18 @@ public class UserDetailsImpl implements UserDetails {
       return false;
     UserDetailsImpl user = (UserDetailsImpl) o;
     return Objects.equals(id, user.id);
-  } 
+  }
+
+  public String getUsername() {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
+
+  @Override
+  public String getPassword() {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
+
+  public String getLastName() {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
 }

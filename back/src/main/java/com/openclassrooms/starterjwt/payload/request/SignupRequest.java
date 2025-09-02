@@ -22,4 +22,20 @@ public class SignupRequest {
   @NotBlank
   @Size(min = 6, max = 40)
   private String password;
+
+  public String getEmail() {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public String getLastName() { // Add getter for lastName
+    return lastName;
+  }
 }
