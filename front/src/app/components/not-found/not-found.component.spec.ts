@@ -9,9 +9,8 @@ describe('NotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NotFoundComponent ]
-    })
-    .compileComponents();
+      declarations: [NotFoundComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NotFoundComponent);
     component = fixture.componentInstance;
@@ -20,5 +19,13 @@ describe('NotFoundComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render the not-found message in the template', () => {
+    const compiled: HTMLElement = fixture.nativeElement;
+    const value = compiled.querySelector('h1');
+    expect(value).toBeTruthy();
+    expect(value?.tagName).toBe('H1');
+    expect(value!.textContent?.trim()).toMatch(/^page not found!?$/i);
   });
 });
