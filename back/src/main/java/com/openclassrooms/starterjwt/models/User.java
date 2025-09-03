@@ -21,12 +21,10 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(of = { "id" })
 @Builder
 @NoArgsConstructor
-
+@RequiredArgsConstructor
 @AllArgsConstructor
 @ToString
 public class User {
-
-  // Removed duplicate constructor to avoid compile error
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -60,25 +58,5 @@ public class User {
   @UpdateTimestamp
   @Column(name = "updated_at")
   private LocalDateTime updatedAt;
-
-  public User(String email, String lastName, String firstName, String password, boolean admin) {
-    this.email = email;
-    this.lastName = lastName;
-    this.firstName = firstName;
-    this.password = password;
-    this.admin = admin;
-  }
-
-  public boolean isAdmin() {
-    throw new UnsupportedOperationException("Not supported yet.");
-  }
-
-  public Long getId() {
-    return this.id;
-  }
-
-  public String getFirstName() {
-    throw new UnsupportedOperationException("Not supported yet.");
-  }
 
 }

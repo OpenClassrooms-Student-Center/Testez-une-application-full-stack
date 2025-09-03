@@ -65,17 +65,4 @@ public class UserDetailsImpl implements UserDetails {
     UserDetailsImpl user = (UserDetailsImpl) o;
     return Objects.equals(id, user.id);
   }
-
-  public String getUsername() {
-    throw new UnsupportedOperationException("Not supported yet.");
-  }
-
-  @Override
-  public String getPassword() {
-    throw new UnsupportedOperationException("Not supported yet.");
-  }
-
-  public String getLastName() {
-    throw new UnsupportedOperationException("Not supported yet.");
-  }
 }
