@@ -1,89 +1,78 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSnackBar } from '@angular/material/snack-bar';
+// me.component.spec.ts
+import { TestBed, ComponentFixture } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { of } from 'rxjs';
-import { expect } from '@jest/globals';
-
 import { MeComponent } from './me.component';
-import { SessionService } from 'src/app/services/session.service';
-import { UserService } from 'src/app/services/user.service';
-import { MaterialModule } from 'src/app/material.module';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SessionService } from '../../services/session.service';
+import { UserService } from '../../services/user.service';
+import { expect } from '@jest/globals'; // utile si ton setup ne rend pas expect global
 
-describe('MeComponent', () => {
-  let component: MeComponent;
+describe('MeComponent (Jest)', () => {
   let fixture: ComponentFixture<MeComponent>;
-  let userService: any;
-  let snackBar: MatSnackBar;
+  let component: MeComponent;
 
-  const mockSessionService = {
-    sessionInformation: {
-      admin: true,
-      id: 1,
-    },
+  const routerMock = { navigate: jest.fn() } as unknown as Router;
+  const snackMock = { open: jest.fn() } as unknown as MatSnackBar;
+  const sessionMock = {
+    sessionInformation: { id: 1, admin: true },
     logOut: jest.fn(),
-  };
+  } as unknown as SessionService;
+
+  const mockUser = { id: '1', name: 'John Doe' } as any;
+
+  const userServiceMock = {
+    getById: jest.fn().mockReturnValue(of(mockUser)),
+    delete: jest.fn().mockReturnValue(of(void 0)),
+  } as unknown as UserService;
 
   beforeEach(async () => {
-    console.warn = jest.fn();
-    userService = {
-      getById: jest
-        .fn()
-        .mockReturnValue(of({ id: 1, firstName: 'John', lastName: 'Doe' })),
-      delete: jest.fn().mockReturnValue(of({})),
-    };
-
     await TestBed.configureTestingModule({
       declarations: [MeComponent],
-      imports: [
-        RouterTestingModule,
-        HttpClientTestingModule,
-        BrowserAnimationsModule,
-        MaterialModule,
-      ],
       providers: [
-        { provide: SessionService, useValue: mockSessionService },
-        { provide: UserService, useValue: userService },
+        { provide: Router, useValue: routerMock },
+        { provide: MatSnackBar, useValue: snackMock },
+        { provide: SessionService, useValue: sessionMock },
+        { provide: UserService, useValue: userServiceMock },
       ],
-    }).compileComponents();
+      schemas: [NO_ERRORS_SCHEMA],
+    })
+      .overrideComponent(MeComponent, { set: { template: '' } })
+      .compileComponents();
 
     fixture = TestBed.createComponent(MeComponent);
     component = fixture.componentInstance;
-    snackBar = TestBed.inject(MatSnackBar);
-
-    jest.spyOn(snackBar, 'open').mockImplementation();
-
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
-  it('should load user on init', () => {
-    expect(userService.getById).toHaveBeenCalledWith('1');
-    expect(component.user).toEqual({
-      id: 1,
-      firstName: 'John',
-      lastName: 'Doe',
-    });
+  it('ngOnInit charge le user via getById avec l’id de session', () => {
+    fixture.detectChanges(); // déclenche ngOnInit
+    expect(userServiceMock.getById).toHaveBeenCalledWith('1');
+    expect(component.user).toBe(mockUser);
   });
 
-  it('should call window.history.back() when back() is triggered', () => {
-    const spy = jest.spyOn(window.history, 'back').mockImplementation(() => {});
-    component.back();
-    expect(spy).toHaveBeenCalled();
-  });
-
-  it('should delete user and log out', () => {
+  it('delete() supprime, affiche le snackbar, logout et navigue /', () => {
     component.delete();
-    expect(userService.delete).toHaveBeenCalledWith('1');
-    expect(snackBar.open).toHaveBeenCalledWith(
+
+    expect(userServiceMock.delete).toHaveBeenCalledWith('1');
+    expect(snackMock.open).toHaveBeenCalledWith(
       'Your account has been deleted !',
       'Close',
       { duration: 3000 }
     );
-    expect(mockSessionService.logOut).toHaveBeenCalled();
+    expect(sessionMock.logOut).toHaveBeenCalled();
+    expect(routerMock.navigate).toHaveBeenCalledWith(['/']);
+  });
+
+  it('back() appelle window.history.back()', () => {
+    const backSpy = jest
+      .spyOn(window.history, 'back')
+      .mockImplementation(() => undefined as any);
+    component.back();
+    expect(backSpy).toHaveBeenCalled();
   });
 });
