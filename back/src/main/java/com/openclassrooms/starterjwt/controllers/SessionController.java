@@ -4,7 +4,7 @@ import com.openclassrooms.starterjwt.dto.SessionDto;
 import com.openclassrooms.starterjwt.mapper.SessionMapper;
 import com.openclassrooms.starterjwt.models.Session;
 import com.openclassrooms.starterjwt.services.SessionService;
-import lombok.extern.log4j.Log4j2;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +14,6 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/session")
-@Log4j2
 public class SessionController {
     private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager
             .getLogger(SessionController.class);
@@ -79,7 +78,7 @@ public class SessionController {
                 return ResponseEntity.notFound().build();
             }
 
-            this.sessionService.delete(Long.parseLong(id));
+            this.sessionService.delete(Long.valueOf(id));
             return ResponseEntity.ok().build();
         } catch (NumberFormatException e) {
             return ResponseEntity.badRequest().build();
@@ -89,7 +88,7 @@ public class SessionController {
     @PostMapping("{id}/participate/{userId}")
     public ResponseEntity<?> participate(@PathVariable("id") String id, @PathVariable("userId") String userId) {
         try {
-            this.sessionService.participate(Long.parseLong(id), Long.parseLong(userId));
+            this.sessionService.participate(Long.valueOf(id), Long.valueOf(userId));
 
             return ResponseEntity.ok().build();
         } catch (NumberFormatException e) {
@@ -100,7 +99,7 @@ public class SessionController {
     @DeleteMapping("{id}/participate/{userId}")
     public ResponseEntity<?> noLongerParticipate(@PathVariable("id") String id, @PathVariable("userId") String userId) {
         try {
-            this.sessionService.noLongerParticipate(Long.parseLong(id), Long.parseLong(userId));
+            this.sessionService.noLongerParticipate(Long.valueOf(id), Long.valueOf(userId));
 
             return ResponseEntity.ok().build();
         } catch (NumberFormatException e) {
