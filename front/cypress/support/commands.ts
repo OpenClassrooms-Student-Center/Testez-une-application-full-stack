@@ -1,43 +1,78 @@
 // ***********************************************
-// This example namespace declaration will help
-// with Intellisense and code completion in your
-// IDE or Text Editor.
+// Cette déclaration de namespace permet
+// l'autocomplétion dans VS Code ou autres IDE.
 // ***********************************************
-// declare namespace Cypress {
-//   interface Chainable<Subject = any> {
-//     customCommand(param: any): typeof customCommand;
-//   }
-// }
-//
-// function customCommand(param: any): void {
-//   console.warn(param);
-// }
-//
-// NOTE: You can use it like so:
-// Cypress.Commands.add('customCommand', customCommand);
-//
+
+/// <reference types="cypress" />
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      /**
+       * Simule une authentification utilisateur (admin ou non)
+       * et intercepte les appels HTTP nécessaires à l'application.
+       *
+       * @example
+       * cy.loginAs({ admin: true, email: 'admin@example.com' });
+       */
+      loginAs(
+        user?: Partial<{
+          id: number;
+          admin: boolean;
+          email: string;
+          firstName: string;
+          lastName: string;
+          username: string;
+        }>
+      ): Chainable<void>;
+    }
+  }
+}
+
 // ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
+// Définition de la commande personnalisée : cy.loginAs()
 // ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add("login", (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('loginAs', (user = {}) => {
+  const u = {
+    id: 1,
+    admin: true,
+    email: 'john.doe@example.com',
+    firstName: 'John',
+    lastName: 'Doe',
+    username: 'user',
+    ...user,
+  };
+
+  // Interception de la requête GET /api/session (utilisée par les guards)
+  cy.intercept('GET', '**/api/session', {
+    id: u.id,
+    admin: u.admin,
+  }).as('sessions');
+
+  // Interception de la requête POST /api/auth/login (lors de la soumission du formulaire)
+  cy.intercept('POST', '**/api/auth/login', {
+    statusCode: 200,
+    body: {
+      id: u.id,
+      admin: u.admin,
+      username: u.username,
+      firstName: u.firstName,
+      lastName: u.lastName,
+    },
+  }).as('login');
+
+  // Simulation de l'action utilisateur : login
+  cy.visit('/login');
+  cy.get('input[formControlName="email"]').type(u.email);
+  cy.get('input[formControlName="password"]').type('test!1234');
+  cy.get('button[type="submit"]').click();
+
+  // Attente des deux requêtes HTTP interceptées
+  return cy
+    .wait('@login')
+    .then(() => cy.wait('@sessions'))
+    .then(() => {}) as unknown as Cypress.Chainable<void>;
+});
+
+export {};
