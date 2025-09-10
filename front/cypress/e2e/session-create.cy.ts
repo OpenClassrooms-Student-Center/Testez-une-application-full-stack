@@ -47,7 +47,6 @@ describe('Session create (FormComponent)', () => {
       { id: 8, firstName: 'Marc', lastName: 'Zed' },
     ]).as('teachers');
 
-    // ⬇︎ singulier
     cy.intercept('POST', '**/api/session', {
       statusCode: 201,
       body: { id: 123 },

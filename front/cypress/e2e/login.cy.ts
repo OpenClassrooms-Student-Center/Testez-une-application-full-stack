@@ -1,9 +1,9 @@
-// cypress/e2e/login.cy.ts
 /// <reference types="cypress" />
 
 describe('Login', () => {
   it('succès', () => {
     let loggedIn = false;
+
     cy.intercept('GET', '**/api/session', (req) => {
       if (loggedIn) {
         req.reply({ id: 1, admin: true });
@@ -22,6 +22,7 @@ describe('Login', () => {
           firstName: 'firstName',
           lastName: 'lastName',
           admin: true,
+          token: 'fake-jwt-token', // 🔑 nécessaire pour JwtInterceptor
         },
       });
     }).as('loginOk');
@@ -29,7 +30,6 @@ describe('Login', () => {
     cy.visit('/login');
     cy.get('input[formControlName="email"]').type('yoga@studio.com');
     cy.get('input[formControlName="password"]').type('test!1234');
-
     cy.get('button[type="submit"]').click();
 
     cy.wait('@loginOk');
@@ -45,10 +45,8 @@ describe('Login', () => {
     }).as('login401');
 
     cy.visit('/login');
-
     cy.get('input[formControlName="email"]').type('yoga@studio.com');
     cy.get('input[formControlName="password"]').type('wrong');
-
     cy.get('button[type="submit"]').click();
 
     cy.wait('@login401');
