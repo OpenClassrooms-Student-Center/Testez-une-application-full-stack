@@ -29,6 +29,13 @@ class JwtUtilsTest {
     }
 
     @Test
+    /**
+     * Generate a JWT from an Authentication object, then verify that:
+     * - the token is not blank,
+     * - the token validates successfully,
+     * - the username can be extracted from the token.
+     */
+
     void generateJwtToken_withAuthentication_returnsValidToken() {
         Authentication authentication = mock(Authentication.class);
         UserDetailsImpl principal = mock(UserDetailsImpl.class);
@@ -43,6 +50,11 @@ class JwtUtilsTest {
     }
 
     @Test
+=======
+    /**
+     * Build a valid JWT manually (using the test secret) and assert that
+     * getUserNameFromJwtToken returns the expected subject (username).
+     */
     void getUserNameFromJwtToken_ok() {
         String token = Jwts.builder()
                 .setSubject("alice@example.com")
@@ -55,6 +67,11 @@ class JwtUtilsTest {
     }
 
     @Test
+=======
+    /**
+     * Validate a correctly-signed, non-expired token: validateJwtToken should
+     * return true.
+     */
     void validateJwtToken_ok() {
         String token = Jwts.builder()
                 .setSubject("ok@example.com")
@@ -67,6 +84,12 @@ class JwtUtilsTest {
     }
 
     @Test
+=======
+    /**
+     * Create a token signed with a different secret and assert that validation
+     * fails
+     * due to invalid signature.
+     */
     void validateJwtToken_invalidSignature() {
         String otherSecret = "some-other-secret";
         String token = Jwts.builder()
@@ -80,11 +103,22 @@ class JwtUtilsTest {
     }
 
     @Test
+=======
+    /**
+     * Pass a malformed string that is not a JWT and assert that validation returns
+     * false.
+     */
     void validateJwtToken_malformed() {
         assertThat(jwtUtils.validateJwtToken("this.is.not.a.jwt")).isFalse();
     }
 
     @Test
+=======
+    /**
+     * Create a token with a very short expiration, wait until it expires, then
+     * assert that
+     * validation reports the token as expired (false).
+     */
     void validateJwtToken_expired() throws InterruptedException {
         ReflectionTestUtils.setField(jwtUtils, "jwtExpirationMs", 1);
 
@@ -100,6 +134,12 @@ class JwtUtilsTest {
     }
 
     @Test
+=======
+    /**
+     * Build an unsigned JWT (alg="none") which is unsupported by the parser and
+     * assert
+     * that validation returns false.
+     */
     void validateJwtToken_unsupported() {
         // Build a compact JWT with alg "none" (unsigned token): header.payload.
         String headerJson = "{\"alg\":\"none\",\"typ\":\"JWT\"}";
@@ -121,6 +161,10 @@ class JwtUtilsTest {
     }
 
     @Test
+=======
+    /**
+     * Pass an empty string to the validator and assert that it returns false.
+     */
     void validateJwtToken_illegalArgument_empty() {
         assertThat(jwtUtils.validateJwtToken("")).isFalse();
     }
