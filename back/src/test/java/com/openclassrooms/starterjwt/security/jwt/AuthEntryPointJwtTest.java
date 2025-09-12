@@ -32,6 +32,13 @@ class AuthEntryPointJwtTest {
     }
 
     @Test
+    /**
+     * When authentication fails, the entry point should set the response status to
+     * 401,
+     * content type to application/json and write a JSON body containing status,
+     * error,
+     * message and path fields.
+     */
     void commence_setsUnauthorizedResponse() throws Exception {
         when(request.getServletPath()).thenReturn("/api/test");
         when(authException.getMessage()).thenReturn("Bad credentials");
