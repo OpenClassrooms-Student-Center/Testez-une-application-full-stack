@@ -50,7 +50,6 @@ class JwtUtilsTest {
     }
 
     @Test
-=======
     /**
      * Build a valid JWT manually (using the test secret) and assert that
      * getUserNameFromJwtToken returns the expected subject (username).
@@ -67,7 +66,6 @@ class JwtUtilsTest {
     }
 
     @Test
-=======
     /**
      * Validate a correctly-signed, non-expired token: validateJwtToken should
      * return true.
@@ -84,7 +82,6 @@ class JwtUtilsTest {
     }
 
     @Test
-=======
     /**
      * Create a token signed with a different secret and assert that validation
      * fails
@@ -103,7 +100,6 @@ class JwtUtilsTest {
     }
 
     @Test
-=======
     /**
      * Pass a malformed string that is not a JWT and assert that validation returns
      * false.
@@ -113,7 +109,6 @@ class JwtUtilsTest {
     }
 
     @Test
-=======
     /**
      * Create a token with a very short expiration, wait until it expires, then
      * assert that
@@ -134,7 +129,6 @@ class JwtUtilsTest {
     }
 
     @Test
-=======
     /**
      * Build an unsigned JWT (alg="none") which is unsupported by the parser and
      * assert
@@ -161,7 +155,6 @@ class JwtUtilsTest {
     }
 
     @Test
-=======
     /**
      * Pass an empty string to the validator and assert that it returns false.
      */
