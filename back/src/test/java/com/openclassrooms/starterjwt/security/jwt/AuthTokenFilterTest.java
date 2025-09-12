@@ -50,6 +50,14 @@ class AuthTokenFilterTest {
     }
 
     @Test
+    /**
+     * When a valid Bearer JWT is present in the Authorization header, the filter
+     * should:
+     * - validate the token,
+     * - load the user details,
+     * - set a UsernamePasswordAuthenticationToken into the SecurityContext,
+     * - and continue the filter chain.
+     */
     void doFilterInternal_setsAuthentication_whenValidJwt() throws Exception {
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.addHeader("Authorization", "Bearer good.jwt.token");
@@ -73,6 +81,10 @@ class AuthTokenFilterTest {
     }
 
     @Test
+    /**
+     * When the Authorization header contains a Bearer token but validation fails,
+     * the filter should NOT set any authentication and must continue the chain.
+     */
     void doFilterInternal_doesNotAuthenticate_whenInvalidJwt() throws Exception {
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.addHeader("Authorization", "Bearer bad.jwt.token");
@@ -91,6 +103,11 @@ class AuthTokenFilterTest {
     }
 
     @Test
+    /**
+     * If there is no Authorization header, the filter should do nothing and
+     * continue the chain
+     * without setting any authentication.
+     */
     void doFilterInternal_doesNotAuthenticate_whenNoAuthorizationHeader() throws Exception {
         MockHttpServletRequest request = new MockHttpServletRequest(); // no header
         MockHttpServletResponse response = new MockHttpServletResponse();
@@ -105,6 +122,11 @@ class AuthTokenFilterTest {
     }
 
     @Test
+    /**
+     * If JWT processing throws an exception, the filter must catch it, not set
+     * authentication,
+     * and still continue the filter chain (fail-safe behavior).
+     */
     void doFilterInternal_continuesChain_whenJwtProcessingThrows() throws Exception {
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.addHeader("Authorization", "Bearer boom.jwt.token");
@@ -122,6 +144,12 @@ class AuthTokenFilterTest {
     }
 
     @Test
+    /**
+     * If the Authorization header does not start with "Bearer ", the filter should
+     * ignore it,
+     * not attempt token validation, and continue the chain without setting
+     * authentication.
+     */
     void doFilterInternal_ignoresNonBearerAuthorization() throws Exception {
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.addHeader("Authorization", "Token xyz"); // not "Bearer "
